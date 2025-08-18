@@ -1,6 +1,6 @@
 from sys import path
 # BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.1"
-BRICKSTOCK_PATH = "/"
+BRICKSTOCK_PATH = "/workspaces/UntilVrac.github.io"
 path.append(BRICKSTOCK_PATH)
 
 import serveur_tools.scripts_gestion_bdd.gestion_bdd as bdd
@@ -51,6 +51,8 @@ def get_params(requete:str) -> dict :
 
 def page_exist(url:str) -> bool :
     liste_pages = ["BrickStock", "*404", "BrickStock/pieces", "BrickStock/pieces/prix", "BrickStock/designs", "BrickStock/categories", "BrickStock/couleurs", "BrickStock/sets", "BrickStock/sets/exemplaires_du_set", "BrickStock/sets/prix", "BrickStock/minifigures", "BrickStock/minifigures/prix", "BrickStock/sets/minifigs_du_set", "BrickStock/sets/pieces_du_set", "BrickStock/sets/gammes", "BrickStock/minifigures/gammes", "*Fin"]
+    if len(url) == 0 :
+        url = "/"
     if url[-1] == "/" :
         url = url[:-1]
     L = len(url)
@@ -166,7 +168,7 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
     else :
         url = href
         if len(url) == 0 :
-            url = [""]
+            url = "/"
         params_get = {}
         if url[-1] == "/" :
             url = url[:-1]

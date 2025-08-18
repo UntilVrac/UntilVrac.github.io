@@ -20,8 +20,6 @@ def set_brickstock_path(current_path:str) -> None :
                     for e in content :
                         if e.startswith("BRICKSTOCK_PATH = ") :
                             e = f'BRICKSTOCK_PATH = "{BRICKSTOCK_PATH}"'
-                        elif "BRICKSTOCK_PATH" in e :
-                            print(e)
                         content_bis.append(e)
                     file = open(path, "w")
                     file.write("\n".join(content_bis))
@@ -32,5 +30,5 @@ def set_brickstock_path(current_path:str) -> None :
 
 if __name__ == "__main__" :
     set_brickstock_path(BRICKSTOCK_PATH)
-    n = 0
     print(f"end : {n} files affected")
+    n = 0
