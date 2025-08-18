@@ -5,6 +5,7 @@ path.append(BRICKSTOCK_PATH)
 
 DATABASE_NAME = BRICKSTOCK_PATH + "/databases/BrickStock database.db"
 MOC = BRICKSTOCK_PATH + "/databases/My Own Collection.db"
+print(DATABASE_NAME, MOC)
 
 from os.path import exists
 # assert exists(DATABASE_NAME), "erreur d'importation : base de données non trouvée"
