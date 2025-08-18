@@ -212,4 +212,6 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
     elif filename[-1] == "pieces_du_set" :
         params = get_piece_in_set_request(params_get, HISTORIQUE, script)
         return render_template("gammes.html", entete, params=params)
+    elif filename[-1] == "Fin" :
+        return render_template("Fin.html", entete)
     assert False
