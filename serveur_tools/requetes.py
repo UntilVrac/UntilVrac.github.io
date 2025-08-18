@@ -165,6 +165,8 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
         params_get = {e.split("=")[0] : e.split("=")[1] for e in params_get.split("&")}
     else :
         url = href
+        if len(url) == 0 :
+            url = [""]
         params_get = {}
         if url[-1] == "/" :
             url = url[:-1]
