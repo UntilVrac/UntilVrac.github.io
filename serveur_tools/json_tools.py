@@ -1,6 +1,7 @@
 from os.path import exists
 
-BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.1"
+# BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.1"
+BRICKSTOCK_PATH = "/"
 
 def convert_json_to_str(data:any) -> str :
     """

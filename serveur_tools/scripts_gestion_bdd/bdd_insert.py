@@ -1,5 +1,6 @@
 from sys import path
-BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.1"
+# BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.1"
+BRICKSTOCK_PATH = "/"
 path.append(BRICKSTOCK_PATH)
 from time import sleep
 from tqdm import tqdm
