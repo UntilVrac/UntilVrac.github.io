@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BrickStock - Minifigures</title>
+        <link rel="stylesheet" type="text/css" href="http://localhost:1520/css/styles.css">
+        <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+        <link rel="shortcut icon" href="http://localhost:1520/css/favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="../css/favicon.ico" type="image/x-icon"> -->
+    </head>
+    <body>
+        <div class="fond" id="panneau_add">
+            <img class="croix" id="fermer" src="http://localhost:1520/BrickStock/images/croix.svg">
+            <div class="fenetre">
+                <h4>Ajouter une minifigure</h4>
+                <form method="POST">
+                    <input type="hidden" name="form_name" value="add_minifig">
+                    <span>id de la minifig&nbsp;:</span>
+                    <input required type="text" name="id_minifigure" placeholder="saisissez un id" id="add1">
+                    <separator></separator>
+                    <span>nom&nbsp;:</span>
+                    <input required type="text" name="nom" placeholder="saisissez un nom" id="add2">
+                    <separator></separator>
+                    <span>gamme&nbsp;:</span>
+                    <select name="gamme" id="add3">
+                        <option value="0">--sélectionner une gamme--</option>
+                        {liste_gammes}
+                    </select>
+                    <separator></separator>
+                    <!-- <span>image d'aperçu&nbsp;:</span>
+                    <input required type="text" name="image_ref" placeholder="saisissez un url ou un chemin d'accès" id="add4">
+                    <separator></separator> -->
+                    <input type="submit" value="Ajouter" style="cursor: pointer;">
+                </form>
+            </div>
+        </div>
+        <div class="fond" id="panneau_item">
+            <img class="croix" id="fermer_bis" src="http://localhost:1520/BrickStock/images/croix.svg">
+            <div class="fenetre" style="text-align: left;">
+                <h3 id="item_nom"></h3>
+                <a class="item_img" href="" id="item_image_ref_href" target="_blank">
+                    <img class="item_img" src="" id="item_image_ref_src">
+                </a>
+                <div>
+                    <span id="item_id_minifig">id de la minifig&nbsp;:&nbsp;</span><br/>
+                    <span id="item_gamme">gamme&nbsp;:&nbsp;</span><br/>
+                    <span>sets incluant la minifig&nbsp;:</span><br/>
+                    <ul class="liste_sets_with_minifig" id="item_sets">
+                    </ul><br/>
+                    <br/><span>Prix&nbsp;: <a id="item_prix" href="">voir les offres</a></span>
+                    <form class="item_piece" method="POST">
+                        <input type="hidden" name="form_name" value="minifig_quantity">
+                        <input type="hidden" name="id_minifig" id="id_minifig_qt">
+                        <div class="quantity_box">
+                            <label style="vertical-align: middle;">Nombre d'exemplaires&nbsp;:</label>
+                            <button type="button" class="bouton_moins" id="-1">
+                                <svg class="minus" width="14px" height="2px" viewBox="0 0 14 2" aria-hidden="true"><polygon fill="black" points="14 2 0 2 0 -6.03961325e-14 14 -6.03961325e-14"></polygon></svg>
+                            </button><input required type="number" class="valeur" min="0" id="val1" name="quantite"><button type="button" class="bouton_plus" id="+1">
+                                <svg class="add" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" aria-hidden="true"><polygon fill="#FFFFFF" points="14 8 0 8 0 6 14 6"></polygon><rect fill="#FFFFFF" fill-rule="nonzero" x="6" y="0" width="2" height="14"></rect></svg>
+                            </button>
+                        </div>
+                        <div class="bouton_validation_infos_div"><input type="submit" value="ENREGISTRER" class="bouton_validation_infos enregistrer"><a id="reset" class="bouton_validation_infos reinitialiser">RÉINITIALISER</a></div>
+                        <input type="hidden" name="linkId" value="" id="linkId">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="/BrickStock/pieces">Pièces</a></li><li>
+                        <a href="/BrickStock/designs">Designs</a></li><li>
+                        <a href="/BrickStock/categories">Categories</a></li><li>
+                        <a href="/BrickStock/couleurs">Couleurs</a></li><li>
+                        <a href="/BrickStock/sets">Sets</a></li><li class="main">
+                        <a href="/BrickStock/minifigures">Minifigures</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="layout">
+                <button id="ajouter" class="ajouter"><img src="http://localhost:1520/BrickStock/images/bouton_plus_carre.svg"></button>
+                <a style="float: right; margin: 24px 12px 0;" href="/BrickStock/minifigures/gammes">Voir les gammes</a><br/>
+                <div class="filter_zone">
+                    <h3>Filtres&nbsp;:</h3>
+                    <form method="GET">
+                        <span>Nom&nbsp;:</span><br/>
+                        <input type="text" name="nom" value="{nom}" placeholder="saisissez un nom" id="filter1"><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del1">
+                        <separator></separator>
+                        <span>Gamme&nbsp;:</span><br/>
+                        <select name="gamme" value="{gamme}" id="filter2">
+                            <option value="0">--sélectionner une gamme--</option>
+                            {liste_gammes}
+                        </select><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del2">
+                        <separator></separator>
+                        <span>Set&nbsp;:</span><br/>
+                        <input type="text" name="id_set" value="{id_set}" placeholder="saisissez un id de set" id="filter3"><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del3">
+                        <separator></separator>
+                        <input type="submit" value="Rechercher" class="rechercher">
+                    </form>
+                </div><div class="table_zone">
+                    {cases}
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" name="gestion filtres - 1/2">
+            let defaut = {1 : "", 2 : 0, 3 : ""}
+            let indexFilterTon = 0;
+            let indexFilterCategories = 0;
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_filtres.js"></script>
+        <script type="text/javascript" name="gestion filtres - 2/2">
+            addEventListenerForFiltres(3);
+        </script>
+        <script type="text/javascript" name="gestion panneau ajouter">
+            let nAdd = 3;
+            let defautAdd = {1 : "", 2 : "", 3 : 0};    //, 4 : ""
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_panneau_add.js"></script>
+        <script type="text/javascript" name="data">
+            let resultats = {resultats};
+        </script>
+        <script type="text/javascript" name="gestion boites résultats">
+            let panneauItem = document.getElementById("panneau_item");
+            panneauItem.classList.add("hide");
+            let defaultValue = null;
+
+            function showItem(e) {
+                if (panneauItem.classList.contains("hide")) {
+                    panneauItem.classList.remove("hide");
+                }
+                var i = this.id.substring(8);
+                var data = resultats[i - 1];
+                document.getElementById("id_minifig_qt").value = data["id_minifig"];
+                document.getElementById("item_id_minifig").innerHTML = "id de la minifig&nbsp;: " + data["id_minifig"];
+                document.getElementById("item_gamme").innerHTML = "gamme&nbsp;: " + data["gamme"];
+                var ul = document.getElementById("item_sets");
+                ul.innerHTML = "";
+                var listeSets = data["sets"];
+                if (listeSets.length == 0) {
+                    ul.innerHTML = "<li>aucun</li>";
+                }
+                else {
+                    for (var i=0; i<listeSets.length; i++) {
+                        var li = document.createElement("li");
+                        var a = document.createElement("a");
+                        a.href = "http://localhost:1520/BrickStock/sets?id_set=" + listeSets[i][0];
+                        a.appendChild(document.createTextNode(listeSets[i][0] + " - " + listeSets[i][2]));
+                        li.appendChild(a);
+                        ul.appendChild(li);
+                    }
+                }
+                document.getElementById("item_image_ref_href").href = data["image_ref"];
+                document.getElementById("item_image_ref_src").src = data["image_ref"];
+                document.getElementById("val1").value = data["quantite"];
+                document.getElementById("linkId").value = this.id;
+                document.getElementById("item_nom").innerHTML = data["nom"];
+                document.getElementById("item_prix").href = "http://localhost:1520/BrickStock/minifigures/prix?id_minifig=" + data["id_minifig"];
+                defaultValue = data["quantite"];
+            }
+
+            function hideItem() {
+                if (!panneauItem.classList.contains("hide")) {
+                    panneauItem.classList.add("hide");
+                }
+            }
+
+            var i = 0;
+            while (document.getElementById("resultat" + (i + 1)) !== null) {
+                i++
+            }
+            for (var j=1; j<=i; j++) {
+                document.getElementById("resultat" + j).addEventListener("click", showItem)
+                if (j % 3 == 0) {
+                    document.getElementById("resultat" + j).classList.add("last");
+                }
+            }
+            document.getElementById("fermer_bis").addEventListener("click", hideItem);
+        </script>
+        <script name="gestion spinbox">
+            let inputQuantite = document.getElementById("val1");
+
+            function plus(e) {
+                var i = this.id.substring(1);
+                if (i == 1) {
+                    inputQuantite.value++
+                }
+            }
+
+            function moins(e) {
+                var i = this.id.substring(1);
+                if (i == 1 & inputQuantite.value > 0) {
+                    inputQuantite.value--
+                }
+            }
+
+            function verif(e) {
+                if (this.value != "") {
+                    var i = this.id.substring(3);
+                    if (inputQuantite.value < 0) {
+                        inputQuantite.value = 0;
+                    }
+                }
+            }
+
+            function reset(e) {
+                inputQuantite.value = defaultValue;
+            }
+
+            for (var i=1; i<=1; i++) {
+                document.getElementById("+" + i).addEventListener("click", plus);
+                document.getElementById("-" + i).addEventListener("click", moins);
+                document.getElementById("val" + i).addEventListener("input", verif);
+            }
+            document.getElementById("reset").addEventListener("click", reset);
+        </script>
+        {script}
+    </body>
+</html>

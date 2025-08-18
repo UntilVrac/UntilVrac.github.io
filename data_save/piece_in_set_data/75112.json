@@ -1,0 +1,780 @@
+[
+    {
+        "design" : {
+            "id_lego" : [
+                90630
+            ],
+            "id_bricklink" : "90630",
+            "id_rebrickable" : "90630",
+            "nom_rebrickable" : "Large Figure Connector, Perpendicular 3L with 2 Pins and 2 Ball Joints",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                15976
+            ],
+            "id_bricklink" : "15976",
+            "id_rebrickable" : "15976",
+            "nom_rebrickable" : "Large Figure Foot, with Ball Socket 3 x 5 x 2",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                15367
+            ],
+            "id_bricklink" : "15367",
+            "id_rebrickable" : "15367",
+            "nom_rebrickable" : "Large Figure Foot, with Ball Socket 5 x 6 x 2",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90634
+            ],
+            "id_bricklink" : "90634",
+            "id_rebrickable" : "90634",
+            "nom_rebrickable" : "Large Figure Skeletal, Connector, Perpendicular, 3L with 2 Pins, 3 Ball Joints on Axle",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90609
+            ],
+            "id_bricklink" : "90609",
+            "id_rebrickable" : "90609",
+            "nom_rebrickable" : "Large Figure Skeletal, Limb, 5L with Ball Joint on Axle and Ball Socket",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90607
+            ],
+            "id_bricklink" : "90607",
+            "id_rebrickable" : "90607",
+            "nom_rebrickable" : "Large Figure Skeletal, Limb with Ball Joint on Axle and Ball Socket",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 11
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90622
+            ],
+            "id_bricklink" : "90622",
+            "id_rebrickable" : "90622",
+            "nom_rebrickable" : "Large Figure Skeletal, Limb with Ball Sockets",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 3
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90626
+            ],
+            "id_bricklink" : "90626",
+            "id_rebrickable" : "90626",
+            "nom_rebrickable" : "Large Figure Skeletal, Torso with 7 Ball Joints, and 6 Holes, Small",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90623
+            ],
+            "id_bricklink" : "90623",
+            "id_rebrickable" : "90623",
+            "nom_rebrickable" : "Large Figure Skeletal, Torso with 9 Ball Joints, and 8 Holes, Large",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                40146,
+                6536
+            ],
+            "id_bricklink" : "6536",
+            "id_rebrickable" : "6536",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Perpendicular",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                93571
+            ],
+            "id_bricklink" : "93571",
+            "id_rebrickable" : "93571",
+            "nom_rebrickable" : "Technic Axle Connector 2 x 3 with Ball Socket, Open Lower Axle Holes",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                17141,
+                32523,
+                41482
+            ],
+            "id_bricklink" : "32523",
+            "id_rebrickable" : "32523",
+            "nom_rebrickable" : "Technic Beam 1 x 3 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                40490,
+                64289
+            ],
+            "id_bricklink" : "40490",
+            "id_rebrickable" : "40490",
+            "nom_rebrickable" : "Technic Beam 1 x 9 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                60484
+            ],
+            "id_bricklink" : "60484",
+            "id_rebrickable" : "60484",
+            "nom_rebrickable" : "Technic Beam 3 x 3 T-Shape Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 5
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                87082
+            ],
+            "id_bricklink" : "87082",
+            "id_rebrickable" : "87082",
+            "nom_rebrickable" : "Technic Pin Connector Hub with 2 Pins with Friction Ridges Lengthwise [Big Squared Pin Holes]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32557
+            ],
+            "id_bricklink" : "32557",
+            "id_rebrickable" : "32557",
+            "nom_rebrickable" : "Technic Pin Connector Perpendicular Long",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32138
+            ],
+            "id_bricklink" : "32138",
+            "id_rebrickable" : "32138",
+            "nom_rebrickable" : "Technic Pin Double with Axle Hole",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                2780
+            ],
+            "id_bricklink" : "2780",
+            "id_rebrickable" : "2780",
+            "nom_rebrickable" : "Technic Pin with Friction Ridges Lengthwise and Center Slots",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 24
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                43093
+            ],
+            "id_bricklink" : "43093",
+            "id_rebrickable" : "43093",
+            "nom_rebrickable" : "Technic Axle Pin with Friction Ridges Lengthwise",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1404
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                6558
+            ],
+            "id_bricklink" : "6558",
+            "id_rebrickable" : "6558",
+            "nom_rebrickable" : "Technic Pin Long with Friction Ridges Lengthwise, 2 Center Slots",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1404
+        },
+        "quantite" : 13
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                74261
+            ],
+            "id_bricklink" : "98613",
+            "id_rebrickable" : "74261",
+            "nom_rebrickable" : "Large Figure Skeletal, Joint Extender [High Friction]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90617
+            ],
+            "id_bricklink" : "90617",
+            "id_rebrickable" : "90617",
+            "nom_rebrickable" : "Large Figure Skeletal, Limb with 2 Ball Joints, and Ball Socket",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90613
+            ],
+            "id_bricklink" : "90613",
+            "id_rebrickable" : "90613",
+            "nom_rebrickable" : "Large Figure Skeletal, Limb with 2 Ball Joints, Ball Socket and Four Holes",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90612
+            ],
+            "id_bricklink" : "90612",
+            "id_rebrickable" : "90612",
+            "nom_rebrickable" : "Large Figure Skeletal, Limb with Ball Joint and Ball Socket, Short",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 5
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90608
+            ],
+            "id_bricklink" : "90608",
+            "id_rebrickable" : "90608",
+            "nom_rebrickable" : "Large Figure Skeletal, Limb with Ball Joint on Axle and Ball Socket and Hole",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                98577
+            ],
+            "id_bricklink" : "98577",
+            "id_rebrickable" : "98577",
+            "nom_rebrickable" : "Technic Beam 1 x 3 with Ball Joint in Middle",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 7
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                21755,
+                25672
+            ],
+            "id_bricklink" : "21755",
+            "id_rebrickable" : "21755",
+            "nom_rebrickable" : "Large Figure Weapon Lightsaber Hilt Half 2L with Axle Hole",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 2104
+        },
+        "quantite" : 8
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                4519
+            ],
+            "id_bricklink" : "4519",
+            "id_rebrickable" : "4519",
+            "nom_rebrickable" : "Technic Axle 3",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                42191,
+                63869
+            ],
+            "id_bricklink" : "63869",
+            "id_rebrickable" : "63869",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Perpendicular Triple",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                14720
+            ],
+            "id_bricklink" : "14720",
+            "id_rebrickable" : "14720",
+            "nom_rebrickable" : "Technic Beam 3 x 5 Thick [90° Offset Centre Beam Holes]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                4274
+            ],
+            "id_bricklink" : "4274",
+            "id_rebrickable" : "4274",
+            "nom_rebrickable" : "Technic Pin 1/2",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                48989
+            ],
+            "id_bricklink" : "48989",
+            "id_rebrickable" : "48989",
+            "nom_rebrickable" : "Technic Pin Connector Hub Perpendicular 3L with 4 Pins",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32054
+            ],
+            "id_bricklink" : "32054",
+            "id_rebrickable" : "32054",
+            "nom_rebrickable" : "Technic Pin Long with Friction Ridges Lengthwise and Stop Bush [3 Lateral Holes, Big Pin Hole]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                20473
+            ],
+            "id_bricklink" : "20473",
+            "id_rebrickable" : "20473",
+            "nom_rebrickable" : "Large Figure Torso Cover, Armour, Ribbed",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1103
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                20252
+            ],
+            "id_bricklink" : "20252",
+            "id_rebrickable" : "20252",
+            "nom_rebrickable" : "Large Figure Weapon Claw, Bent and Notched with Clip",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1103
+        },
+        "quantite" : 6
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32062
+            ],
+            "id_bricklink" : "32062",
+            "id_rebrickable" : "32062",
+            "nom_rebrickable" : "Technic Axle 2 Notched",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1901
+        },
+        "quantite" : 18
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                98603
+            ],
+            "id_bricklink" : "98603",
+            "id_rebrickable" : "98603",
+            "nom_rebrickable" : "Large Figure Chest Cover, Armour Small",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1701
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                22882
+            ],
+            "id_bricklink" : "98603pb022",
+            "id_rebrickable" : "98603pr0017",
+            "nom_rebrickable" : "Large Figure Chest Cover, Armour Small with Robe over Lime Circle Print",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1701
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                93575
+            ],
+            "id_bricklink" : "93575",
+            "id_rebrickable" : "93575",
+            "nom_rebrickable" : "Large Figure Hand, Fist with Axle Hole, 4 Fingers",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1701
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                21921
+            ],
+            "id_bricklink" : "bb0671c01pb01",
+            "id_rebrickable" : "21921",
+            "nom_rebrickable" : "Large Figure Head General Grievous",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1701
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90650
+            ],
+            "id_bricklink" : "90650",
+            "id_rebrickable" : "90650",
+            "nom_rebrickable" : "Large Figure Limb Cover, Armor, Shoulder",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1701
+        },
+        "quantite" : 3
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                21562
+            ],
+            "id_bricklink" : "21562",
+            "id_rebrickable" : "21562",
+            "nom_rebrickable" : "Large Figure Limb Cover, Leg Shin Guard with Ball Joint Socket",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1701
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90638
+            ],
+            "id_bricklink" : "90638",
+            "id_rebrickable" : "90638",
+            "nom_rebrickable" : "Large Figure Limb Cover, Size 6, Armor with Ball Joint Socket",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1701
+        },
+        "quantite" : 3
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90652
+            ],
+            "id_bricklink" : "90652",
+            "id_rebrickable" : "90652",
+            "nom_rebrickable" : "Large Figure Torso Cover, Armour with 2 Chest Holes and Ball Joint Socket",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1701
+        },
+        "quantite" : 3
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                11946,
+                43499
+            ],
+            "id_bricklink" : "11946",
+            "id_rebrickable" : "11946",
+            "nom_rebrickable" : "Technic Panel Fairing #21 5L Small Smooth, Side B",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1701
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                11947,
+                43500
+            ],
+            "id_bricklink" : "11947",
+            "id_rebrickable" : "11947",
+            "nom_rebrickable" : "Technic Panel Fairing #22 5L Small Smooth, Side A",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1701
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                21987,
+                35583
+            ],
+            "id_bricklink" : "21987",
+            "id_rebrickable" : "21987",
+            "nom_rebrickable" : "Large Figure Weapon, Lightsaber Blade 16L with Axle Hole",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1551
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                21987,
+                35583
+            ],
+            "id_bricklink" : "21987",
+            "id_rebrickable" : "21987",
+            "nom_rebrickable" : "Large Figure Weapon, Lightsaber Blade 16L with Axle Hole",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1453
+        },
+        "quantite" : 2
+    }
+]

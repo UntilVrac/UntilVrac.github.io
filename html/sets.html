@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BrickStock - Sets</title>
+        <link rel="stylesheet" type="text/css" href="/BrickStock/css/styles.css">
+        <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+        <link rel="shortcut icon" href="/BrickStock/css/favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="../css/favicon.ico" type="image/x-icon"> -->
+    </head>
+    <body>
+        <div class="fond hide" id="panneau_add">
+            <img class="croix" id="fermer" src="/BrickStock/images/croix.svg">
+            <div class="fenetre">
+                <h4>Ajouter un set</h4>
+                <form method="POST">
+                    <input type="hidden" name="form_name" value="add_set">
+                    <span>id du set&nbsp;:</span>
+                    <input required type="text" name="id_set" placeholder="saisissez un id" id="add1">
+                    <separator></separator>
+                    <span>nom anglophon&nbsp;:</span>
+                    <input required type="text" name="nom_anglais" placeholder="saisissez un nom" id="add2">
+                    <separator></separator>
+                    <span>nom francophone&nbsp;:</span>
+                    <input required type="text" name="nom_français" placeholder="saisissez un nom" id="add3">
+                    <separator></separator>
+                    <span>gamme&nbsp;:</span>
+                    <select name="gamme" id="add4">
+                        <option value="0">--sélectionner une gamme--</option>
+                        {liste_gammes_bis}
+                    </select>
+                    <separator></separator>
+                    <span>année&nbsp;:</span>
+                    <input required type="number" min="1932" max="{current_annee}" name="annee" placeholder="2025" id="add5" style="width: 53px;">
+                    <separator></separator>
+                    <span>nombre de pièces&nbsp;:</span>
+                    <input required type="number" min="0" name="nb_pieces" id="add6" placeholder="------" style="width: 60px;">
+                    <separator></separator>
+                    <span>tranche d'âge&nbsp;:</span>
+                    <input required type="text" name="tranche_age" id="add7" placeholder="saisissez une tranche d'âge">
+                    <separator></separator>
+                    <span>lien Amazon&nbsp;:</span>
+                    <input type="text" name="lien_amazon" id="add8" placeholder="saisissez un url">
+                    <separator></separator>
+                    <input type="submit" value="Ajouter" style="cursor: pointer;">
+                </form>
+            </div>
+        </div>
+        <div class="fond" id="panneau_item">
+            <img class="croix" id="fermer_bis" src="/BrickStock/images/croix.svg">
+            <div class="fenetre" style="text-align: left;">
+                <h3 id="item_nom_français"></h3>
+                <a class="item_img" href="" id="item_image_ref_href" target="_blank">
+                    <img class="item_img" src="" id="item_image_ref_src">
+                </a>
+                <div>
+                    <span id="item_id_set">id du set&nbsp;:&nbsp;</span><br/>
+                    <span id="item_nom_anglais">nom anglophone&nbsp;:&nbsp;</span><br/>
+                    <span id="item_annee">année&nbsp;:&nbsp;</span><br/>
+                    <span id="item_gamme">gamme&nbsp;:&nbsp;</span><br/>
+                    <span id="item_nb_pieces">nombre de pièces&nbsp;:&nbsp;</span><br/>
+                    <span id="item_age">tranche d'âge&nbsp;:&nbsp;:</span><br/>
+                    <br/><a href="" id="item_exemplaires">voir les exemplaires</a><br/>
+                    <br/><a href="" id="voir_minifigs">voir les minifigs</a><br/>
+                    <br/><a href="" id="voir_pieces">voir les pièces</a><br/>
+                    <br/><span>Prix&nbsp;: <a id="item_prix" href="">voir les offres</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="/BrickStock/pieces">Pièces</a></li><li>
+                        <a href="/BrickStock/designs">Designs</a></li><li>
+                        <a href="/BrickStock/categories">Categories</a></li><li>
+                        <a href="/BrickStock/couleurs">Couleurs</a></li><li class="main">
+                        <a href="/BrickStock/sets">Sets</a></li><li>
+                        <a href="/BrickStock/minifigures">Minifigures</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="layout">
+                <button id="ajouter" class="ajouter"><img src="/BrickStock/images/bouton_plus_carre.svg"></button>
+                <a style="float: right; margin: 24px 12px 0;" href="/BrickStock/sets/gammes">Voir les gammes</a><br/>
+                <div class="filter_zone">
+                    <h3>Filtres&nbsp;:</h3>
+                    <form method="GET">
+                        <span>Nom&nbsp;:</span><br/>
+                        <input type="text" name="nom" value="{nom}" placeholder="saisissez un nom" id="filter2"><img src="/BrickStock/images/del_filter.svg" class="del_filter hide" id="del2">
+                        <separator></separator>
+                        <span>id_set&nbsp;:</span><br/>
+                        <input type="text" name="id_set" value="{id_set}" placeholder="id design" id="filter1"><img src="/BrickStock/images/del_filter.svg" class="del_filter hide" id="del1">
+                        <separator></separator>
+                        <span>Gamme&nbsp;:</span><br/>
+                        <select name="gamme" value="{gamme}" id="filter3">
+                            <option value="0">--sélectionner une gamme--</option>
+                            {liste_gammes}
+                        </select><img src="/BrickStock/images/del_filter.svg" class="del_filter hide" id="del3">
+                        <separator></separator>
+                        <span>Année&nbsp;:</span><br/>
+                        <select name="annee" id="filter4">
+                            <option value="0">--sélectionner une année--</option>
+                            {liste_annees}
+                        </select><img src="/BrickStock/images/del_filter.svg" class="del_filter hide" id="del4">
+                        <separator></separator>
+                        <input type="submit" value="Rechercher" class="rechercher">
+                    </form>
+                </div><div class="table_zone">
+                    {cases}
+                    <!-- <div class="block_resultat" id="resultat1">
+                        <img class="apercu" src="https://www.lego.com/cdn/product-assets/element.spin.photoreal/6440428/00001.png">
+                        <h4>Tile 1x4</h4>
+                        <span>ID : 6440428 / 2431</span><br/>
+                        <span>couleur : Tan</span>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" name="gestion None">
+            let None = null;
+        </script>
+        <script type="text/javascript" name="gestion filtres">
+            let defaut = {1 : "", 2 : "", 3 : 0, 4 : 0};
+            let indexFilterTon = 0;
+            let indexFilterCategories = 0;
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_filtres.js"></script>
+        <script type="text/javascript" name="gestion filtres - 2/2">
+            addEventListenerForFiltres(4);
+        </script>
+        <script type="text/javascript" name="gestion panneau ajouter">
+            let nAdd = 8;
+            let defautAdd = {1 : "", 2 : "", 3 : "", 4 : 0, 5 : "", 6 : "", 7 : "", 8 : ""};
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_panneau_add.js"></script>
+        <script type="text/javascript" name="data">
+            let resultats = {resultats};
+        </script>
+        <script type="text/javascript" name="gestion boites résultats">
+            let panneauItem = document.getElementById("panneau_item");
+            panneauItem.classList.add("hide");
+            let defaultValues = [];
+
+            function showItem(e) {
+                if (panneauItem.classList.contains("hide")) {
+                    panneauItem.classList.remove("hide");
+                }
+                var i = this.id.substring(8);
+                var data = resultats[i - 1];
+                document.getElementById("item_id_set").innerHTML = 'id du set&nbsp;: ' + data["id_set"];
+                document.getElementById("item_nom_anglais").innerHTML = 'nom anglophone&nbsp;: ' + data["nom_anglais"];
+                document.getElementById("item_nom_français").innerHTML = data["nom_français"];
+                document.getElementById("item_annee").innerHTML = "année&nbsp;: " + data["annee"];
+                document.getElementById("item_gamme").innerHTML = "gamme&nbsp;: " + data["gamme"];
+                document.getElementById("item_nb_pieces").innerHTML = "nombre de pièces&nbsp;: " + data["nb_pieces"];
+                document.getElementById("item_age").innerHTML = "tranche d'âge&nbsp;: " + data["tranche_age"];
+                document.getElementById("item_image_ref_src").src = data["image_ref"];
+                document.getElementById("item_image_ref_href").href = data["image_ref"];
+                document.getElementById("voir_minifigs").href = "http://localhost:1520/BrickStock/sets/minifigs_du_set?id_set=" + data["id_set"];
+                document.getElementById("voir_pieces").href = "http://localhost:1520/BrickStock/sets/pieces_du_set?id_set=" + data["id_set"];
+                document.getElementById("voir_minifigs").innerHTML = "voir les minifigs (" + data["nb_minifig"] + ")";
+                document.getElementById("voir_pieces").innerHTML = "voir les pieces";
+                document.getElementById("item_prix").href = "http://localhost:1520/BrickStock/sets/prix?id_set=" + data["id_set"];
+                document.getElementById("item_exemplaires").href = "http://localhost:1520/BrickStock/sets/exemplaires_du_set?id_set=" + data["id_set"];
+                document.getElementById("item_exemplaires").innerHTML = "voir les exemplaires (" + data["nb_exemplaires"] + ")";
+            }
+
+            function hideItem() {
+                if (!panneauItem.classList.contains("hide")) {
+                    panneauItem.classList.add("hide");
+                }
+            }
+
+            var i = 0;
+            while (document.getElementById("resultat" + (i + 1)) !== null) {
+                i++
+            }
+            for (var j=1; j<=i; j++) {
+                document.getElementById("resultat" + j).addEventListener("click", showItem)
+                if (j % 3 == 0) {
+                    document.getElementById("resultat" + j).classList.add("last");
+                }
+            }
+            document.getElementById("fermer_bis").addEventListener("click", hideItem);
+        </script>
+        {script}
+    </body>
+</html>

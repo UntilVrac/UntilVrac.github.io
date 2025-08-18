@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BrickStock - Couleurs</title>
+        <link rel="stylesheet" type="text/css" href="http://localhost:1520/css/styles.css">
+        <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+        <link rel="shortcut icon" href="http://localhost:1520/css/favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="../css/favicon.ico" type="image/x-icon"> -->
+    </head>
+    <body>
+        <div class="fond hide" id="panneau_add">
+            <img class="croix" id="fermer" src="http://localhost:1520/BrickStock/images/croix.svg">
+            <div class="fenetre">
+                <h4>Ajouter un ton</h4>
+                <form method="POST">
+                    <input type="hidden" name="form_name" value="add_ton">
+                    <span>id du ton&nbsp;:</span>
+                    <input required type="text" name="id_ton" placeholder="saisissez un id" id="add1">
+                    <separator></separator>
+                    <span>nom du ton&nbsp;:</span>
+                    <input type="text" name="nom" placeholder="saisissez un nom" id="add2">
+                    <separator></separator>
+                    <span>couleur d'aperçu&nbsp;:</span>    
+                    <!-- <input required type="color" value="#FFFFFF" name="color_ref" id="add3" style="vertical-align: middle; cursor: url('/BrickStock/images/color-picker-icon.ico');"> -->
+                    <!-- <input required type="color" value="#FFFFFF" name="color_ref" id="add3" style="vertical-align: middle; cursor: cell;"> -->
+                    <input required type="color" value="#FFFFFF" name="rgb_ref" id="add3" style="vertical-align: middle; cursor: pointer;">
+                    <separator></separator>
+                    <input type="submit" value="Ajouter" style="cursor: pointer;">
+                </form>
+            </div>
+        </div>
+        <div class="fond hide" id="panneau_add_bis">
+            <img class="croix" id="fermer_bis" src="http://localhost:1520/BrickStock/images/croix.svg">
+            <div class="fenetre">
+                <h4>Ajouter une couleur</h4>
+                <form method="POST">
+                    <input type="hidden" name="form_name" value="add_couleur">
+                    <input type="hidden" value="" id="id_ton_bis" name="id_ton">
+                    <span>id de la couleur&nbsp;:</span>
+                    <input required type="text" name="id_couleur" placeholder="saisissez un id" id="add_bis1">
+                    <separator></separator>
+                    <span>id Bricklink&nbsp;:</span>
+                    <input type="text" name="id_bricklink" placeholder="saisissez un id" id="add_bis2">
+                    <separator></separator>
+                    <span>id Rebrickable&nbsp;:</span>
+                    <input type="text" name="id_rebrickable" placeholder="saisissez un id" id="add_bis3">
+                    <separator></separator>
+                    <span>nom de la couleur&nbsp;:</span>
+                    <input type="text" name="nom" placeholder="saisissez un nom" id="add_bis4">
+                    <separator></separator>
+                    <span>nom Lego<sup>®</sup>&nbsp;:</span>
+                    <input type="text" name="nom_lego" placeholder="saisissez un nom" id="add_bis5">
+                    <separator></separator>
+                    <span>nom Bricklink&nbsp;:</span>
+                    <input type="text" name="nom_bricklink" placeholder="saisissez un nom" id="add_bis6">
+                    <separator></separator>
+                    <span>nom Rebrickable&nbsp;:</span>
+                    <input type="text" name="nom_rebrickable" placeholder="saisissez un nom" id="add_bis7">
+                    <separator></separator>
+                    <span>transparence&nbsp;:</span><img id="checkTrans" class="checkItem" src="/BrickStock/images/check_desactive.svg">
+                    <input type="hidden" name="est_transparent" value="false" id="inputTrans">
+                    <separator></separator>
+                    <span>image d'aperçu&nbsp;:</span>
+                    <input required type="text" name="image_ref" placeholder="saisissez un url ou un chemin d'accès" id="add_bis8">
+                    <separator></separator>
+                    <input type="submit" value="Ajouter" style="cursor: pointer;">
+                </form>
+            </div>
+        </div>
+        <div class="page">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="/BrickStock/pieces">Pièces</a></li><li>
+                        <a href="/BrickStock/designs">Designs</a></li><li>
+                        <a href="/BrickStock/categories">Categories</a></li><li class="main">
+                        <a href="/BrickStock/couleurs">Couleurs</a></li><li>
+                        <a href="/BrickStock/sets">Sets</a></li><li>
+                        <a href="/BrickStock/minifigures">Minifigures</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="layout" id="divResult">
+                <button id="ajouter" class="ajouter"><img src="/BrickStock/images/bouton_plus_carre.svg"></button>
+                <div class="bouton_ton">
+                    {boutons}
+                </div><br/>
+                <!-- {content} -->
+            </div>
+        </div>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_check_item.js"></script>
+        <script type="text/javascript" name="gestion panneau ajouter">
+            let nAdd = 3;
+            let defautAdd = {1 : "", 2 : "", 3 : "#FFFFFF"};
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_panneau_add.js"></script>
+        <script type="text/javascript" name="gestion panneau add bis">
+            let nAddBis = 8;
+            let defautAddBis = {1 : "", 2 : "", 3 : "", 4 : "", 5 : "", 6 : "", 7 : "", 8 : ""};
+
+            let panneauAddBis = document.getElementById("panneau_add_bis");
+            let fermerBis = document.getElementById("fermer_bis");
+            panneauAddBis.classList.add("hide");
+            let inputIdTon = document.getElementById("id_ton_bis")
+
+            function clearAddBis() {
+                for (var i=1; i<=nAddBis; i++) {
+                    document.getElementById("add_bis" + i).value = defautAddBis[i];
+                }
+            }
+
+            function showAddBis(e) {
+                var idTon = this.id.substring(6);
+                inputIdTon.value = idTon;
+                if (panneauAddBis.classList.contains("hide")) {
+                    panneauAddBis.classList.remove("hide");
+                }
+            }
+
+            function hideAddBis() {
+                clearAddBis();
+                if (!panneauAddBis.classList.contains("hide")) {
+                    panneauAddBis.classList.add("hide");
+                }
+            }
+
+            fermerBis.addEventListener("click", hideAddBis);
+        </script>
+        <script type="text/javascript" name="remplissage du contenu">
+            let True = true;
+            let False = false;
+            let None = null;
+            let listeTons = {listeTons};
+            let listeCouleurs = {listeCouleurs};
+
+            let divResult = document.getElementById("divResult");
+
+            function remplissageTon(ton, t) {
+                var div = document.createElement("div");
+                div.classList.add("div_ton");
+                div.id = "ton" + t;
+                var h3 = document.createElement("h3");
+                h3.id = "h" + t;
+                var aH3 = document.createElement("a");
+                aH3.href = "/BrickStock/pieces?ton=" + ton["id_ton"];
+                aH3.innerHTML = ton["nom_ton"];
+                h3.appendChild(aH3);
+                div.appendChild(h3);
+                var imgAdd = document.createElement("img");
+                imgAdd.id = "addTon" + ton["id_ton"];
+                imgAdd.classList.add("ajouter");
+                imgAdd.src = "/BrickStock/images/bouton_plus_carre.svg";
+                imgAdd.addEventListener("click", showAddBis);
+                div.appendChild(imgAdd);
+                var aRetourTop = document.createElement("a");
+                aRetourTop.href = "#";
+                var imgFleche = document.createElement("img");
+                imgFleche.classList.add("retour_en_haut");
+                imgFleche.href = "/BrickStock/images/fleche_haut.svg";
+                aRetourTop.appendChild(imgFleche);
+                div.appendChild(aRetourTop);
+                var table = document.createElement("table");
+                var thead = document.createElement("thead");
+                thead.innerHTML = '<tr><td class="img">Image&nbsp;:</td><td class="col">Id couleur&nbsp;:</td><td class="col">Id Bricklink&nbsp;:</td><td class="col">Id Rebrickable&nbsp;:</td><td class="col">Nom&nbsp;:</td><td class="col">Nom Lego<sup>®</sup>&nbsp;:</td><td class="col">Nom Bricklink&nbsp;:</td><td class="col">Nom Rebrickable&nbsp;:</td><td class="col">Transparence&nbsp;:</td></tr>';
+                table.appendChild(thead);
+                var tbody = document.createElement("tbody");
+                var couleurs = listeCouleurs[ton["id_ton"]];
+                if (couleurs.length == 0) {
+                    tbody.innerHTML = '<tr class="white"><td colspan="9">aucune couleur pour ce ton</td></tr>';
+                }
+                else {
+                    for (var c=0; c<couleurs.length; c++) {
+                        var col = couleurs[c];
+                        var tr = document.createElement("tr");
+                        tr.classList.add({0 : "white", 1 : "grey"}[c % 2]);
+                        var td1 = document.createElement("td");
+                        td1.classList.add("img");
+                        var a1 = document.createElement("a");
+                        a1.href = col["image_ref"];
+                        a1.target = "_blank";
+                        var imgRef = document.createElement("img");
+                        imgRef.src = col["image_ref"];
+                        a1.appendChild(imgRef);
+                        td1.appendChild(a1);
+                        tr.appendChild(td1);
+                        var td2 = document.createElement("td");
+                        var a2 = document.createElement("a");
+                        a2.href = "/BrickStock/pieces?couleur=" + col["id_couleur"];
+                        a2.innerHTML = col["id_couleur"];
+                        td2.appendChild(a2);
+                        tr.appendChild(td2);
+                        var td3 = document.createElement("td");
+                        td3.innerHTML = col["id_bricklink"];
+                        tr.appendChild(td3);
+                        var td4 = document.createElement("td");
+                        td4.innerHTML = col["id_rebrickable"];
+                        tr.appendChild(td4);
+                        var td5 = document.createElement("td");
+                        var a5 = document.createElement("a");
+                        a5.href = "/BrickStock/pieces?couleur=" + col["id_couleur"];
+                        a5.innerHTML = col["nom_couleur"];
+                        td5.appendChild(a5);
+                        tr.appendChild(td5);
+                        var td6 = document.createElement("td");
+                        td6.innerHTML = col["nom_lego"];
+                        tr.appendChild(td6);
+                        var td7 = document.createElement("td");
+                        td7.innerHTML = col["nom_bricklink"];
+                        tr.appendChild(td7);
+                        var td8 = document.createElement("td");
+                        td8.innerHTML = col["nom_rebrickable"];
+                        tr.appendChild(td8);
+                        var td9 = document.createElement("td");
+                        var a9 = document.createElement("a");
+                        a9.href = "/BrickStock/pieces?opaque=" + !col["est_transparent"] + "&transparent=" + col["est_transparent"];
+                        a9.innerHTML = {True : "Oui", False : "Non"}[col["est_transparent"]];
+                        td9.appendChild(a9);
+                        tr.appendChild(td9);
+                        tbody.appendChild(tr);
+                    }
+                }
+                table.appendChild(tbody);
+                div.appendChild(table);
+                return div;
+            }
+
+            for (var t=0; t<listeTons.length; t++) {
+                var div = remplissageTon(listeTons[t], t + 1);
+                divResult.appendChild(div);
+            }
+            var divEnd = document.createElement("div");
+            divEnd.classList.add("div_ton")
+            divEnd.style = "height: 8px;";
+            divResult.appendChild(divEnd);
+        </script>
+        {script}
+    </body>
+</html>

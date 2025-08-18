@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BrickStock - Minifigures du Set</title>
+        <link rel="stylesheet" type="text/css" href="http://localhost:1520/css/styles.css">
+        <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+        <link rel="shortcut icon" href="http://localhost:1520/css/favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="../css/favicon.ico" type="image/x-icon"> -->
+    </head>
+    <body>
+        <div class="fond" id="panneau_item"></div>
+        <div class="page">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="/BrickStock/pieces">Pièces</a></li><li>
+                        <a href="/BrickStock/designs">Designs</a></li><li>
+                        <a href="/BrickStock/categories">Categories</a></li><li>
+                        <a href="/BrickStock/couleurs">Couleurs</a></li><li class="main">
+                        <a href="/BrickStock/sets">Sets</a></li><li>
+                        <a href="/BrickStock/minifigures">Minifigures</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="layout">
+                <a class="page_precedente" href="{page_precedente}">&lt; <span>Retour</span></a>
+                <div style="text-align: center;">
+                    <h3 style="text-align: center;">{nom_set}</h3>
+                    <a style="display: inline-block; position: relative; vertical-align: top;" href="{image_ref_set}" target="_blank">
+                        <img class="item_img" style="margin-left: 12px; width: 200px;" src="{image_ref_set}">
+                    </a><div class="infos_set">
+                        <span id="item_id_set">id du set&nbsp;: {id_set}</span><br/>
+                        <span>gamme&nbsp;: {gamme_set}</span><br/>
+                        <span id="item_annee">année&nbsp;: {annee_set}</span><br/>
+                        <span id="item_nb_pieces">nombre de pièces&nbsp;: {nb_pieces_set}</span>
+                    </div>
+                </div>
+                <div style="text-align: left; padding: 24px;" id="list_pieces_connues_in_set">
+                    {listePiecesConnues}
+                </div>
+                <div style="text-align: left; padding: 24px 8px; border-top: 2px solid #000000; display: inline-block; width: calc(100% - 16px); margin: 0 8px;" id="list_pieces_connues_in_set">
+                    <h5>Pièces du set inconnues ({nPiecesInconnues})&nbsp;:</h5>
+                    {resultats}
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" name="#id et refresh">
+            if (window.location.href.endsWith("#search_zone")) {
+                document.getElementById("form_search").action = window.location.href;
+            }
+            else {
+                document.getElementById("form_search").action = window.location.href + "#search_zone";
+            }
+
+            document.getElementById("boutonRefresh").href = window.location.href.split("#")[0]; // + "#search_zone";
+        </script>
+        <script type="text/javascript" name="gestion filtres - 1/2">
+            let defaut = {1 : "", 2 : "", 3 : 0, 4 : ""}
+            let indexFilterTon = 0;
+            let indexFilterCategories = 0;
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_filtres.js"></script>
+        <script type="text/javascript" name="gestion filtres - 2/2">
+            addEventListenerForFiltres(4);
+        </script>
+        <script type="text/javascript" name="gestion pièces inconnues">
+            let listePiecesInconnues = {listePiecesInconnues}; document.getElementById("panneau_item");
+
+            function hideItem() {
+                panneauItem.classList.add("hide");
+            }
+
+            function showItem(e) {
+                panneauItem.classList.remove("hide");
+                panneauItem.innerHTML = '<img class="croix" id="fermer" src="/BrickStock/images/croix.svg">' + listePiecesInconnues[this.id.substring(4)];
+                let fermer = document.getElementById("fermer");
+                fermer.addEventListener("click", hideItem);
+            }
+
+            hideItem();
+            for (var i=1; i<={nPiecesInconnues}; i++) {
+                document.getElementById("item" + i).addEventListener("click", showItem);
+            }
+        </script>
+        {script}
+    </body>
+</html>

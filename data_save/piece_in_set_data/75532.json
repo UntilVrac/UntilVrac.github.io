@@ -1,0 +1,2356 @@
+[
+    {
+        "design" : {
+            "id_lego" : [
+                92947
+            ],
+            "id_bricklink" : "92947",
+            "id_rebrickable" : "92947",
+            "nom_rebrickable" : "Brick Round 2 x 2 [Grill]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                98100
+            ],
+            "id_bricklink" : "98100",
+            "id_rebrickable" : "98100",
+            "nom_rebrickable" : "Brick Round 2 x 2 Truncated Cone",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                11610
+            ],
+            "id_bricklink" : "11610",
+            "id_rebrickable" : "11610",
+            "nom_rebrickable" : "Cone 1 x 1 Inverted with Bar at Bottom (Ice Cream Cone)",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                15551,
+                28701,
+                55525,
+                59900,
+                64288
+            ],
+            "id_bricklink" : "4589b",
+            "id_rebrickable" : "59900",
+            "nom_rebrickable" : "Cone 1 x 1 [Top Groove]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                22053,
+                23002,
+                41079,
+                52113,
+                57721,
+                71917,
+                71922,
+                72641
+            ],
+            "id_bricklink" : "78c09",
+            "id_rebrickable" : "78c09",
+            "nom_rebrickable" : "Hose, Ribbed 7mm D. 9L / 7.2cm",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 3
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                93575
+            ],
+            "id_bricklink" : "93575",
+            "id_rebrickable" : "93575",
+            "nom_rebrickable" : "Large Figure Hand, Fist with Axle Hole, 4 Fingers",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                26831
+            ],
+            "id_bricklink" : "26831",
+            "id_rebrickable" : "26831",
+            "nom_rebrickable" : "Large Figure Limb Cover, Armor with Ball Joint Socket and 2 Holes [Plain]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                14533,
+                90640
+            ],
+            "id_bricklink" : "90640",
+            "id_rebrickable" : "90640",
+            "nom_rebrickable" : "Large Figure Limb Cover, Size 4, Armor with Ball Joint Socket",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90639
+            ],
+            "id_bricklink" : "90639",
+            "id_rebrickable" : "90639",
+            "nom_rebrickable" : "Large Figure Limb Cover, Size 5, Armor with Ball Joint Socket",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90609
+            ],
+            "id_bricklink" : "90609",
+            "id_rebrickable" : "90609",
+            "nom_rebrickable" : "Large Figure Skeletal, Limb, 5L with Ball Joint on Axle and Ball Socket",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90616
+            ],
+            "id_bricklink" : "90616",
+            "id_rebrickable" : "90616",
+            "nom_rebrickable" : "Large Figure Skeletal, Limb with Ball Joint, and Ball Socket and Hole",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90607
+            ],
+            "id_bricklink" : "90607",
+            "id_rebrickable" : "90607",
+            "nom_rebrickable" : "Large Figure Skeletal, Limb with Ball Joint on Axle and Ball Socket",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90623
+            ],
+            "id_bricklink" : "90623",
+            "id_rebrickable" : "90623",
+            "nom_rebrickable" : "Large Figure Skeletal, Torso with 9 Ball Joints, and 8 Holes, Large",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                31901
+            ],
+            "id_bricklink" : "24123",
+            "id_rebrickable" : "31901",
+            "nom_rebrickable" : "Large Figure Weapon Gun, Body",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                6553
+            ],
+            "id_bricklink" : "6553",
+            "id_rebrickable" : "6553",
+            "nom_rebrickable" : "Technic Axle 1.5 with Perpendicular Axle Connector (Technic Pole Reverser Handle)",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                3705
+            ],
+            "id_bricklink" : "3705",
+            "id_rebrickable" : "3705",
+            "nom_rebrickable" : "Technic Axle 4",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 3
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                3706
+            ],
+            "id_bricklink" : "3706",
+            "id_rebrickable" : "3706",
+            "nom_rebrickable" : "Technic Axle 6",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 3
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32034,
+                42134
+            ],
+            "id_bricklink" : "32034",
+            "id_rebrickable" : "32034",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Angled #2 - 180°",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32014,
+                42155
+            ],
+            "id_bricklink" : "32014",
+            "id_rebrickable" : "32014",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Angled #6 - 90°",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                42003,
+                42796
+            ],
+            "id_bricklink" : "42003",
+            "id_rebrickable" : "42003",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Perpendicular 3L with 2 Pin Holes",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 3
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                42193,
+                92907
+            ],
+            "id_bricklink" : "92907",
+            "id_rebrickable" : "92907",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Perpendicular Split",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                59443
+            ],
+            "id_bricklink" : "6538c",
+            "id_rebrickable" : "59443",
+            "nom_rebrickable" : "Technic Axle Connector Smooth [with x Hole + Orientation]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 8
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32039
+            ],
+            "id_bricklink" : "32039",
+            "id_rebrickable" : "32039",
+            "nom_rebrickable" : "Technic Axle Connector with Axle Hole",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                18651
+            ],
+            "id_bricklink" : "18651",
+            "id_rebrickable" : "18651",
+            "nom_rebrickable" : "Technic Axle Pin 3L with Friction Ridges Lengthwise and 2L Axle",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 10
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32525,
+                64290
+            ],
+            "id_bricklink" : "32525",
+            "id_rebrickable" : "32525",
+            "nom_rebrickable" : "Technic Beam 1 x 11 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32278,
+                50688,
+                64871
+            ],
+            "id_bricklink" : "32278",
+            "id_rebrickable" : "32278",
+            "nom_rebrickable" : "Technic Beam 1 x 15 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                41677,
+                44862
+            ],
+            "id_bricklink" : "41677",
+            "id_rebrickable" : "41677",
+            "nom_rebrickable" : "Technic Beam 1 x 2 Thin",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 5
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32316,
+                41616
+            ],
+            "id_bricklink" : "32316",
+            "id_rebrickable" : "32316",
+            "nom_rebrickable" : "Technic Beam 1 x 5 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 5
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                11478,
+                44864
+            ],
+            "id_bricklink" : "11478",
+            "id_rebrickable" : "11478",
+            "nom_rebrickable" : "Technic Beam 1 x 5 Thin with Axle Holes on Ends",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                16615,
+                32524
+            ],
+            "id_bricklink" : "32524",
+            "id_rebrickable" : "32524",
+            "nom_rebrickable" : "Technic Beam 1 x 7 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 3
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32526,
+                43886
+            ],
+            "id_bricklink" : "32526",
+            "id_rebrickable" : "32526",
+            "nom_rebrickable" : "Technic Beam 3 x 5 L-Shape Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32187
+            ],
+            "id_bricklink" : "32187",
+            "id_rebrickable" : "32187",
+            "nom_rebrickable" : "Technic Driving Ring Extension, 4 Ridges",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                24116,
+                35396
+            ],
+            "id_bricklink" : "24116",
+            "id_rebrickable" : "24116",
+            "nom_rebrickable" : "Technic Panel Curved and Bent 6 x 3",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 3
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                15100
+            ],
+            "id_bricklink" : "15100",
+            "id_rebrickable" : "15100",
+            "nom_rebrickable" : "Technic Pin Connector Hub with 1 Pin with Friction Ridges Lengthwise",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                10197
+            ],
+            "id_bricklink" : "10197",
+            "id_rebrickable" : "10197",
+            "nom_rebrickable" : "Technic Pin Connector Hub with 2 Perpendicular Axles",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32138
+            ],
+            "id_bricklink" : "32138",
+            "id_rebrickable" : "32138",
+            "nom_rebrickable" : "Technic Pin Double with Axle Hole",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                2780
+            ],
+            "id_bricklink" : "2780",
+            "id_rebrickable" : "2780",
+            "nom_rebrickable" : "Technic Pin with Friction Ridges Lengthwise and Center Slots",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                2780
+            ],
+            "id_bricklink" : "2780",
+            "id_rebrickable" : "2780",
+            "nom_rebrickable" : "Technic Pin with Friction Ridges Lengthwise and Center Slots",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 53
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                100687,
+                112418,
+                2431,
+                35371,
+                75703,
+                91143
+            ],
+            "id_bricklink" : "2431",
+            "id_rebrickable" : "2431",
+            "nom_rebrickable" : "Tile 1 x 4 with Groove",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                35380,
+                35381,
+                39797,
+                98138
+            ],
+            "id_bricklink" : "98138",
+            "id_rebrickable" : "98138",
+            "nom_rebrickable" : "Tile Round 1 x 1",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                35380,
+                35381,
+                39797,
+                98138
+            ],
+            "id_bricklink" : "98138",
+            "id_rebrickable" : "98138",
+            "nom_rebrickable" : "Tile Round 1 x 1",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                18976,
+                65192
+            ],
+            "id_bricklink" : "18976",
+            "id_rebrickable" : "18976",
+            "nom_rebrickable" : "Wheel 18 x 12 with Axle Hole and Stud",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                43093
+            ],
+            "id_bricklink" : "43093",
+            "id_rebrickable" : "43093",
+            "nom_rebrickable" : "Technic Axle Pin with Friction Ridges Lengthwise",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1404
+        },
+        "quantite" : 21
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                4274
+            ],
+            "id_bricklink" : "4274",
+            "id_rebrickable" : "4274",
+            "nom_rebrickable" : "Technic Pin 1/2",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1404
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                4274
+            ],
+            "id_bricklink" : "4274",
+            "id_rebrickable" : "4274",
+            "nom_rebrickable" : "Technic Pin 1/2",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1404
+        },
+        "quantite" : 3
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                6558
+            ],
+            "id_bricklink" : "6558",
+            "id_rebrickable" : "6558",
+            "nom_rebrickable" : "Technic Pin Long with Friction Ridges Lengthwise, 2 Center Slots",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1404
+        },
+        "quantite" : 26
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                48002,
+                65446
+            ],
+            "id_bricklink" : "48002a",
+            "id_rebrickable" : "48002a",
+            "nom_rebrickable" : "Boat, Mast 2 x 2 x 20 with Holes - Side Aligned x shape Axle Hole",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                39223,
+                3941,
+                6116,
+                6143
+            ],
+            "id_bricklink" : "3941",
+            "id_rebrickable" : "3941",
+            "nom_rebrickable" : "Brick Round 2 x 2 with Axle Hole",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                11059,
+                15587,
+                33688,
+                35268,
+                43898,
+                44882,
+                56640
+            ],
+            "id_bricklink" : "43898",
+            "id_rebrickable" : "43898",
+            "nom_rebrickable" : "Dish 3 x 3 Inverted [Radar]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                74261
+            ],
+            "id_bricklink" : "98613",
+            "id_rebrickable" : "74261",
+            "nom_rebrickable" : "Large Figure Skeletal, Joint Extender [High Friction]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90615
+            ],
+            "id_bricklink" : "90615",
+            "id_rebrickable" : "90615",
+            "nom_rebrickable" : "Large Figure Skeletal, Limb with Ball Joint, and Ball Socket and Two Holes",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                15400,
+                72387
+            ],
+            "id_bricklink" : "15301c01",
+            "id_rebrickable" : "15400",
+            "nom_rebrickable" : "Launcher, Brick Special 1 x 4 Spring Shooter with Light Bluish Gray Top",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                6553
+            ],
+            "id_bricklink" : "6553",
+            "id_rebrickable" : "6553",
+            "nom_rebrickable" : "Technic Axle 1.5 with Perpendicular Axle Connector (Technic Pole Reverser Handle)",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 6
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                87083
+            ],
+            "id_bricklink" : "87083",
+            "id_rebrickable" : "87083",
+            "nom_rebrickable" : "Technic Axle 4 with Stop",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                59426
+            ],
+            "id_bricklink" : "32209",
+            "id_rebrickable" : "59426",
+            "nom_rebrickable" : "Technic Axle 5.5 with Stop [Rounded Short End]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32013,
+                42127
+            ],
+            "id_bricklink" : "32013",
+            "id_rebrickable" : "32013",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Angled #1",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 13
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32034,
+                42134
+            ],
+            "id_bricklink" : "32034",
+            "id_rebrickable" : "32034",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Angled #2 - 180°",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                40146,
+                6536
+            ],
+            "id_bricklink" : "6536",
+            "id_rebrickable" : "6536",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Perpendicular",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 6
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                42003,
+                42796
+            ],
+            "id_bricklink" : "42003",
+            "id_rebrickable" : "42003",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Perpendicular 3L with 2 Pin Holes",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32291,
+                42163
+            ],
+            "id_bricklink" : "32291",
+            "id_rebrickable" : "32291",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Perpendicular Double",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                59443
+            ],
+            "id_bricklink" : "6538c",
+            "id_rebrickable" : "59443",
+            "nom_rebrickable" : "Technic Axle Connector Smooth [with x Hole + Orientation]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                11214
+            ],
+            "id_bricklink" : "11214",
+            "id_rebrickable" : "11214",
+            "nom_rebrickable" : "Technic Axle Pin 3L with Friction Ridges Lengthwise and 1L Axle",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 5
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32278,
+                50688,
+                64871
+            ],
+            "id_bricklink" : "32278",
+            "id_rebrickable" : "32278",
+            "nom_rebrickable" : "Technic Beam 1 x 15 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                40147,
+                60483,
+                74695
+            ],
+            "id_bricklink" : "60483",
+            "id_rebrickable" : "60483",
+            "nom_rebrickable" : "Technic Beam 1 x 2 Thick with Pin Hole and Axle Hole",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                41677,
+                44862
+            ],
+            "id_bricklink" : "41677",
+            "id_rebrickable" : "41677",
+            "nom_rebrickable" : "Technic Beam 1 x 2 Thin",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                17141,
+                32523,
+                41482
+            ],
+            "id_bricklink" : "32523",
+            "id_rebrickable" : "32523",
+            "nom_rebrickable" : "Technic Beam 1 x 3 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                98577
+            ],
+            "id_bricklink" : "98577",
+            "id_rebrickable" : "98577",
+            "nom_rebrickable" : "Technic Beam 1 x 3 with Ball Joint in Middle",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32449,
+                63782
+            ],
+            "id_bricklink" : "32449",
+            "id_rebrickable" : "32449",
+            "nom_rebrickable" : "Technic Beam 1 x 4 Thin",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32316,
+                41616
+            ],
+            "id_bricklink" : "32316",
+            "id_rebrickable" : "32316",
+            "nom_rebrickable" : "Technic Beam 1 x 5 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32140,
+                42137
+            ],
+            "id_bricklink" : "32140",
+            "id_rebrickable" : "32140",
+            "nom_rebrickable" : "Technic Beam 2 x 4 L-Shape Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 9
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                22961
+            ],
+            "id_bricklink" : "22961",
+            "id_rebrickable" : "22961",
+            "nom_rebrickable" : "Technic Pin Connector Hub with 1 Axle",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                15100
+            ],
+            "id_bricklink" : "15100",
+            "id_rebrickable" : "15100",
+            "nom_rebrickable" : "Technic Pin Connector Hub with 1 Pin with Friction Ridges Lengthwise",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 12
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                18654,
+                38882
+            ],
+            "id_bricklink" : "18654",
+            "id_rebrickable" : "18654",
+            "nom_rebrickable" : "Technic Pin Connector Round 1L [Beam]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                18654,
+                38882
+            ],
+            "id_bricklink" : "18654",
+            "id_rebrickable" : "18654",
+            "nom_rebrickable" : "Technic Pin Connector Round 1L [Beam]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 7
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                22961
+            ],
+            "id_bricklink" : "22961",
+            "id_rebrickable" : "22961",
+            "nom_rebrickable" : "Technic Pin Connector Hub with 1 Axle",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1702
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                28554,
+                30008,
+                3024,
+                63326
+            ],
+            "id_bricklink" : "3024",
+            "id_rebrickable" : "3024",
+            "nom_rebrickable" : "Plate 1 x 1",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                28554,
+                30008,
+                3024,
+                63326
+            ],
+            "id_bricklink" : "3024",
+            "id_rebrickable" : "3024",
+            "nom_rebrickable" : "Plate 1 x 1",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                18677,
+                28809
+            ],
+            "id_bricklink" : "18677",
+            "id_rebrickable" : "18677",
+            "nom_rebrickable" : "Plate Special 1 x 2 with Pin Hole Underneath",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                4697
+            ],
+            "id_bricklink" : "4697b",
+            "id_rebrickable" : "4697b",
+            "nom_rebrickable" : "Pneumatic T-Piece (T Bar) [New Style]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                4697
+            ],
+            "id_bricklink" : "4697b",
+            "id_rebrickable" : "4697b",
+            "nom_rebrickable" : "Pneumatic T-Piece (T Bar) [New Style]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                4519
+            ],
+            "id_bricklink" : "4519",
+            "id_rebrickable" : "4519",
+            "nom_rebrickable" : "Technic Axle 3",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32073
+            ],
+            "id_bricklink" : "32073",
+            "id_rebrickable" : "32073",
+            "nom_rebrickable" : "Technic Axle 5",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                41678
+            ],
+            "id_bricklink" : "41678",
+            "id_rebrickable" : "41678",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Perpendicular Double Split",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32039
+            ],
+            "id_bricklink" : "32039",
+            "id_rebrickable" : "32039",
+            "nom_rebrickable" : "Technic Axle Connector with Axle Hole",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32017
+            ],
+            "id_bricklink" : "32017",
+            "id_rebrickable" : "32017",
+            "nom_rebrickable" : "Technic Beam 1 x 5 Thin",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                40490,
+                64289
+            ],
+            "id_bricklink" : "40490",
+            "id_rebrickable" : "40490",
+            "nom_rebrickable" : "Technic Beam 1 x 9 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                42798,
+                6590
+            ],
+            "id_bricklink" : "3713",
+            "id_rebrickable" : "3713",
+            "nom_rebrickable" : "Technic Bush",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                42798,
+                6590
+            ],
+            "id_bricklink" : "3713",
+            "id_rebrickable" : "3713",
+            "nom_rebrickable" : "Technic Bush",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32123,
+                42136
+            ],
+            "id_bricklink" : "4265c",
+            "id_rebrickable" : "32123b",
+            "nom_rebrickable" : "Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32123,
+                42136
+            ],
+            "id_bricklink" : "4265c",
+            "id_rebrickable" : "32123b",
+            "nom_rebrickable" : "Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 11
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                22961
+            ],
+            "id_bricklink" : "22961",
+            "id_rebrickable" : "22961",
+            "nom_rebrickable" : "Technic Pin Connector Hub with 1 Axle",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                87082
+            ],
+            "id_bricklink" : "87082",
+            "id_rebrickable" : "87082",
+            "nom_rebrickable" : "Technic Pin Connector Hub with 2 Pins with Friction Ridges Lengthwise [Big Squared Pin Holes]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                3673
+            ],
+            "id_bricklink" : "3673",
+            "id_rebrickable" : "3673",
+            "nom_rebrickable" : "Technic Pin without Friction Ridges Lengthwise",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                3673
+            ],
+            "id_bricklink" : "3673",
+            "id_rebrickable" : "3673",
+            "nom_rebrickable" : "Technic Pin without Friction Ridges Lengthwise",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 5
+    },
+    {
+        "design" : {
+            "id_lego" : [
+            ],
+            "id_bricklink" : "75532stk01",
+            "id_rebrickable" : "31859",
+            "nom_rebrickable" : "Sticker Sheet for Set 75532-1",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "nom_lego" : null,
+            "id_bricklink" : 0,
+            "nom_bricklink" : [
+                "(Not Applicable)"
+            ],
+            "id_rebrickable" : 9999,
+            "nom_rebrickable" : "[No Color/Any Color]",
+            "est_transparent" : [
+                false
+            ],
+            "statut" : "unknown"
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32062
+            ],
+            "id_bricklink" : "32062",
+            "id_rebrickable" : "32062",
+            "nom_rebrickable" : "Technic Axle 2 Notched",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1901
+        },
+        "quantite" : 12
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                3705
+            ],
+            "id_bricklink" : "3705",
+            "id_rebrickable" : "3705",
+            "nom_rebrickable" : "Technic Axle 4",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1901
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                24316
+            ],
+            "id_bricklink" : "24316",
+            "id_rebrickable" : "24316",
+            "nom_rebrickable" : "Technic Axle 3 with Stop",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                15462
+            ],
+            "id_bricklink" : "15462",
+            "id_rebrickable" : "15462",
+            "nom_rebrickable" : "Technic Axle 5 with Stop",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 3
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32034,
+                42134
+            ],
+            "id_bricklink" : "32034",
+            "id_rebrickable" : "32034",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Angled #2 - 180°",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32015,
+                41488
+            ],
+            "id_bricklink" : "32015",
+            "id_rebrickable" : "32015",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Angled #5 - 112.5°",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32184,
+                42142
+            ],
+            "id_bricklink" : "32184",
+            "id_rebrickable" : "32184",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Perpendicular 3L with Centre Pin Hole",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 5
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                42191,
+                63869
+            ],
+            "id_bricklink" : "63869",
+            "id_rebrickable" : "63869",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Perpendicular Triple",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32278,
+                50688,
+                64871
+            ],
+            "id_bricklink" : "32278",
+            "id_rebrickable" : "32278",
+            "nom_rebrickable" : "Technic Beam 1 x 15 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                17141,
+                32523,
+                41482
+            ],
+            "id_bricklink" : "32523",
+            "id_rebrickable" : "32523",
+            "nom_rebrickable" : "Technic Beam 1 x 3 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 9
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32316,
+                41616
+            ],
+            "id_bricklink" : "32316",
+            "id_rebrickable" : "32316",
+            "nom_rebrickable" : "Technic Beam 1 x 5 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                87080
+            ],
+            "id_bricklink" : "87080",
+            "id_rebrickable" : "87080",
+            "nom_rebrickable" : "Technic Panel Fairing #1 Small Smooth Short, Side A",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                11946,
+                43499
+            ],
+            "id_bricklink" : "11946",
+            "id_rebrickable" : "11946",
+            "nom_rebrickable" : "Technic Panel Fairing #21 5L Small Smooth, Side B",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                11947,
+                43500
+            ],
+            "id_bricklink" : "11947",
+            "id_rebrickable" : "11947",
+            "nom_rebrickable" : "Technic Panel Fairing #22 5L Small Smooth, Side A",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                87086
+            ],
+            "id_bricklink" : "87086",
+            "id_rebrickable" : "87086",
+            "nom_rebrickable" : "Technic Panel Fairing #2 Small Smooth Short, Side B",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                64683
+            ],
+            "id_bricklink" : "64683",
+            "id_rebrickable" : "64683",
+            "nom_rebrickable" : "Technic Panel Fairing # 3 Small Smooth Long, Side A",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 5
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                64391
+            ],
+            "id_bricklink" : "64391",
+            "id_rebrickable" : "64391",
+            "nom_rebrickable" : "Technic Panel Fairing # 4 Small Smooth Long, Side B",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 5
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                38879,
+                87079
+            ],
+            "id_bricklink" : "87079",
+            "id_rebrickable" : "87079",
+            "nom_rebrickable" : "Tile 2 x 4 with Groove",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                40995,
+                41751
+            ],
+            "id_bricklink" : "x224",
+            "id_rebrickable" : "41751",
+            "nom_rebrickable" : "Windscreen 8 x 6 x 2 Curved",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1708
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                17141,
+                32523,
+                41482
+            ],
+            "id_bricklink" : "32523",
+            "id_rebrickable" : "32523",
+            "nom_rebrickable" : "Technic Beam 1 x 3 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1701
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32316,
+                41616
+            ],
+            "id_bricklink" : "32316",
+            "id_rebrickable" : "32316",
+            "nom_rebrickable" : "Technic Beam 1 x 5 Thick",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1701
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32002
+            ],
+            "id_bricklink" : "32002",
+            "id_rebrickable" : "32002",
+            "nom_rebrickable" : "Technic Pin 3/4",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1701
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32002
+            ],
+            "id_bricklink" : "32002",
+            "id_rebrickable" : "32002",
+            "nom_rebrickable" : "Technic Pin 3/4",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1701
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                111473,
+                112025,
+                17964,
+                22669,
+                30063,
+                35395,
+                4740,
+                64938,
+                71874
+            ],
+            "id_bricklink" : "4740",
+            "id_rebrickable" : "4740",
+            "nom_rebrickable" : "Dish 2 x 2 Inverted [Radar]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1950
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                15303,
+                29340
+            ],
+            "id_bricklink" : "15303",
+            "id_rebrickable" : "15303",
+            "nom_rebrickable" : "Projectile, Spring Shooter Ammunition 8L Bar",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1950
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                28220
+            ],
+            "id_bricklink" : "28220",
+            "id_rebrickable" : "28220",
+            "nom_rebrickable" : "Large Figure Armor Plate, Small",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90661
+            ],
+            "id_bricklink" : "90661",
+            "id_rebrickable" : "90661",
+            "nom_rebrickable" : "Large Figure Foot, Type 2",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32620
+            ],
+            "id_bricklink" : "bb0788c01pb01",
+            "id_rebrickable" : "32620",
+            "nom_rebrickable" : "Large Figure Head Scout Trooper Helmet",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                10498,
+                90641
+            ],
+            "id_bricklink" : "90641",
+            "id_rebrickable" : "90641",
+            "nom_rebrickable" : "Large Figure Limb Cover, Size 3, Armor with Ball Joint Socket",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90638
+            ],
+            "id_bricklink" : "90638",
+            "id_rebrickable" : "90638",
+            "nom_rebrickable" : "Large Figure Limb Cover, Size 6, Armor with Ball Joint Socket",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                21560
+            ],
+            "id_bricklink" : "21560",
+            "id_rebrickable" : "21560",
+            "nom_rebrickable" : "Large Figure Shoulder Cover, Armor, Round, Smooth [Plain]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 3
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                90652
+            ],
+            "id_bricklink" : "90652",
+            "id_rebrickable" : "90652",
+            "nom_rebrickable" : "Large Figure Torso Cover, Armour with 2 Chest Holes and Ball Joint Socket",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                31494
+            ],
+            "id_bricklink" : "21561pb12",
+            "id_rebrickable" : "21561pr0009",
+            "nom_rebrickable" : "Large Figure Torso Cover with Raised Belt and Scout Trooper Armor Print",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                2654,
+                28558,
+                54196,
+                93791
+            ],
+            "id_bricklink" : "2654",
+            "id_rebrickable" : "2654",
+            "nom_rebrickable" : "Plate Round 2 x 2 with Rounded Bottom [Boat Stud]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                49563,
+                60470
+            ],
+            "id_bricklink" : "60470b",
+            "id_rebrickable" : "60470b",
+            "nom_rebrickable" : "Plate Special 1 x 2 with Clips Horizontal [Open O Clips]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                15068,
+                78565
+            ],
+            "id_bricklink" : "15068",
+            "id_rebrickable" : "15068",
+            "nom_rebrickable" : "Slope Curved 2 x 2 x 2/3",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32013,
+                42127
+            ],
+            "id_bricklink" : "32013",
+            "id_rebrickable" : "32013",
+            "nom_rebrickable" : "Technic Axle and Pin Connector Angled #1",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                32449,
+                63782
+            ],
+            "id_bricklink" : "32449",
+            "id_rebrickable" : "32449",
+            "nom_rebrickable" : "Technic Beam 1 x 4 Thin",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                18654,
+                38882
+            ],
+            "id_bricklink" : "18654",
+            "id_rebrickable" : "18654",
+            "nom_rebrickable" : "Technic Pin Connector Round 1L [Beam]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                18654,
+                38882
+            ],
+            "id_bricklink" : "18654",
+            "id_rebrickable" : "18654",
+            "nom_rebrickable" : "Technic Pin Connector Round 1L [Beam]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                112412,
+                30039,
+                3070,
+                35403,
+                39727,
+                53836
+            ],
+            "id_bricklink" : "3070",
+            "id_rebrickable" : "3070b",
+            "nom_rebrickable" : "Tile 1 x 1 with Groove",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                112412,
+                30039,
+                3070,
+                35403,
+                39727,
+                53836
+            ],
+            "id_bricklink" : "3070",
+            "id_rebrickable" : "3070b",
+            "nom_rebrickable" : "Tile 1 x 1 with Groove",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                4519
+            ],
+            "id_bricklink" : "4519",
+            "id_rebrickable" : "4519",
+            "nom_rebrickable" : "Technic Axle 3",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1601
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                44294
+            ],
+            "id_bricklink" : "44294",
+            "id_rebrickable" : "44294",
+            "nom_rebrickable" : "Technic Axle 7",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1601
+        },
+        "quantite" : 2
+    }
+]

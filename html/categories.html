@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BrickStock - Catégories</title>
+        <link rel="stylesheet" type="text/css" href="http://localhost:1520/css/styles.css">
+        <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+        <link rel="shortcut icon" href="http://localhost:1520/css/favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="../css/favicon.ico" type="image/x-icon"> -->
+    </head>
+    <body>
+        <div class="fond hide" id="panneau_add">
+            <img class="croix" id="fermer" src="http://localhost:1520/BrickStock/images/croix.svg">
+            <div class="fenetre">
+                <h4 id="h4">Ajouter une catégorie</h4>
+                <form method="POST">
+                    <input type="hidden" name="form_name" value="add_categorie">
+                    <input type="hidden" name="categorie_sup" value="" id="categorieSup">
+                    <span>id de la catégorie&nbsp;:</span>
+                    <input type="text" name="id_categorie" placeholder="saisissez un id" id="add1">
+                    <separator></separator>
+                    <span>nom de la catégorie&nbsp;:</span>
+                    <input type="text" name="nom_categorie" placeholder="saisissez un nom" id="add2">
+                    <separator></separator>
+                    <span>image&nbsp;:</span>
+                    <input type="text" name="image_ref" placeholder="saisissez un url ou un chemin d'accès">
+                    <separator></separator>
+                    <input type="submit" value="Ajouter" style="cursor: pointer;">
+                </form>
+            </div>
+        </div>
+        <div class="page">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="/BrickStock/pieces">Pièces</a></li><li>
+                        <a href="/BrickStock/designs">Designs</a></li><li class="main">
+                        <a href="/BrickStock/categories">Categories</a></li><li>
+                        <a href="/BrickStock/couleurs">Couleurs</a></li><li>
+                        <a href="/BrickStock/sets">Sets</a></li><li>
+                        <a href="/BrickStock/minifigures">Minifigures</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="layout" style="padding-bottom: 24px;">
+                <button id="ajouter" class="ajouter"><img src="http://localhost:1520/BrickStock/images/bouton_plus_carre.svg"></button><br/>
+                <ul class="liste_categories" id="ulListeCategories">
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript" name="gestion panneau ajouter">
+            let nAdd = 3;
+            let defautAdd = {1 : "", 2 : "", 3 : ""};
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_panneau_add.js"></script>
+        <script type="text/javascript" name="data">
+            let None = null;
+            let dictCategories = {dictCategories};
+            let categoriesRacines = {categoriesRacines};
+        </script>
+        <script type="text/javascript" name="remplissage résultats">
+            let h4 = document.getElementById("h4");
+            let categorieSup = document.getElementById("categorieSup");
+            let spanCategorieSup = document.getElementById("spanCategorieSup");
+
+            function setInputCatSup(e) {
+                // console.log(this.id);
+                if (this.id == "ajouter") {
+                    h4.innerHTML = "Ajouter une catégorie";
+                    categorieSup.value = "0";
+                }
+                else {
+                    var idCat = this.id.substring(4);
+                    h4.innerHTML = 'Ajouter une sous-catégorie à la catégorie "' + dictCategories[idCat]["nom_categorie"] + '"';
+                    categorieSup.value = idCat;
+                }
+                // console.log(categorieSup.value);
+            }
+
+            let ulListeCategories = document.getElementById("ulListeCategories");
+            ulListeCategories.style = "list-style: none;";
+            let stylePuce = ["disc", 'url("/BrickStock/images/puce_arrow.svg")'];
+
+            function remplireListe(ul, idSousCategories, n) {
+                // var styleData = "list-style: " + stylePuce[n % stylePuce.length] + ";"
+                for (var i=0; i<idSousCategories.length; i++) {
+                    var cat = dictCategories[idSousCategories[i]];
+                    var li = document.createElement("li");
+                    var aImgRef = document.createElement("a");
+                    aImgRef.classList.add("imageRefCategorie");
+                    aImgRef.href = cat["image_ref"];
+                    aImgRef.target = "_blank";
+                    var imgRef = document.createElement("img");
+                    imgRef.src = cat["image_ref"];
+                    aImgRef.appendChild(imgRef);
+                    li.appendChild(aImgRef);
+                    var a = document.createElement("a");
+                    a.href = "/BrickStock/pieces?categorie=" + cat["id_categorie"];
+                    a.style = "vertical-align: middle;"
+                    a.innerHTML = cat["id_categorie"] + " - " + cat["nom_categorie"];
+                    if (n == 1) {
+                        var h3 = document.createElement("h3");
+                        h3.appendChild(a);
+                        li.appendChild(h3);
+                    }
+                    else {
+                        li.appendChild(a);
+                    }
+                    var img = document.createElement("img");
+                    img.id = "add-" + cat["id_categorie"];
+                    img.classList.add("ajouter");
+                    img.src = "/BrickStock/images/bouton_plus_carre.svg";
+                    img.style = "margin-top: 3px;";
+                    img.addEventListener("click", setInputCatSup);
+                    img.addEventListener("click", showAdd);
+                    li.appendChild(img);
+                    var ul2 = document.createElement("ul");
+                    ul2.classList.add("liste_sous_categories");
+                    // ul2.style = styleData;
+                    ul2.style = "list-style: none;"
+                    remplireListe(ul2, dictCategories[cat["id_categorie"]]["liste_sous_categories"], n + 1);
+                    li.appendChild(ul2);
+                    ul.appendChild(li);
+                }
+            }
+
+            remplireListe(ulListeCategories, categoriesRacines, 1);
+            document.getElementById("ajouter").addEventListener("click", setInputCatSup);
+        </script>
+        <!-- <script type="text/javascript" name="gestion panneau ajouter">
+            let panneauAdd = document.getElementById("panneau_add");
+            let fermer = document.getElementById("fermer");
+            let ajouter = document.getElementById("ajouter");
+            panneauAdd.classList.add("hide");
+
+            function clearAdd() {
+                document.getElementById("add1").value = "";
+                document.getElementById("add2").value = "";
+            }
+
+            function showAdd() {
+                if (panneauAdd.classList.contains("hide")) {
+                    panneauAdd.classList.remove("hide");
+                }
+            }
+
+            function hideAdd() {
+                clearAdd()
+                if (!panneauAdd.classList.contains("hide")) {
+                    panneauAdd.classList.add("hide");
+                }
+            }
+
+            ajouter.addEventListener("click", showAdd);
+            fermer.addEventListener("click", hideAdd);
+        </script> -->
+        <!-- <script type="text/javascript" name="gestion panneau ajouter bis">
+            let panneauAddBis = document.getElementById("panneau_add_bis");
+            let fermerBis = document.getElementById("fermer_bis");
+            let listeSousCategories = {liste_sous_categories};
+            panneauAddBis.classList.add("hide");
+            let idCategories = {id_categories};
+
+            function clearAddBis() {
+                document.getElementById("add_bis1").value = "";
+                document.getElementById("add_bis2").value = "";
+                document.getElementById("add_bis3").value = "";
+                document.getElementById("h4").innerHTML = 'Ajouter une sous-catégorie à la catégorie ""';
+            }
+
+            function showAddBis(e) {
+                var i = this.id.substring(4);
+                document.getElementById("add_bis1").value = idCategories[i];
+                document.getElementById("h4").innerHTML = 'Ajouter une sous-catégorie à la catégorie "' + listeSousCategories[idCategories[i]] + '"';
+                if (panneauAddBis.classList.contains("hide")) {
+                    panneauAddBis.classList.remove("hide");
+                }
+            }
+
+            function hideAddBis() {
+                clearAddBis()
+                if (!panneauAddBis.classList.contains("hide")) {
+                    panneauAddBis.classList.add("hide");
+                }
+            }
+
+            i = 0;
+            while (document.getElementById("plus" + (i + 1)) !== null) {
+                i++;
+            }
+            for (var j=1; j<=i; j++) {
+                document.getElementById("plus" + j).addEventListener("click", showAddBis);
+            }
+            fermerBis.addEventListener("click", hideAddBis);
+        </script> -->
+        {script}
+    </body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BrickStock - Minifigures du Set</title>
+        <link rel="stylesheet" type="text/css" href="http://localhost:1520/css/styles.css">
+        <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+        <link rel="shortcut icon" href="http://localhost:1520/css/favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="../css/favicon.ico" type="image/x-icon"> -->
+    </head>
+    <body>
+        <div class="page">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="/BrickStock/pieces">Pièces</a></li><li>
+                        <a href="/BrickStock/designs">Designs</a></li><li>
+                        <a href="/BrickStock/categories">Categories</a></li><li>
+                        <a href="/BrickStock/couleurs">Couleurs</a></li><li class="main">
+                        <a href="/BrickStock/sets">Sets</a></li><li>
+                        <a href="/BrickStock/minifigures">Minifigures</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="layout">
+                <a class="page_precedente" href="{page_precedente}">&lt; <span>Retour</span></a>
+                <div style="text-align: center;">
+                    <h3 style="text-align: center;">{nom_set}</h3>
+                    <a style="display: inline-block; position: relative; vertical-align: top;" href="{image_ref_set}" target="_blank">
+                        <img class="item_img" style="margin-left: 12px; width: 200px;" src="{image_ref_set}">
+                    </a><div class="infos_set">
+                        <span id="item_id_set">id du set&nbsp;: {id_set}</span><br/>
+                        <span>gamme&nbsp;: {gamme_set}</span><br/>
+                        <span id="item_annee">année&nbsp;: {annee_set}</span>
+                    </div>
+                </div>
+                <div style="text-align: left; padding: 24px;" id="list_minifig_in_set">
+                    <!-- <div class="item_minifig">
+                        <img id="bouton_supprimer1" class="supprimer_item" src="http://localhost:1520/BrickStock/images/croix.svg">
+                        <img class="apercu" src="https://img.bricklink.com/ItemImage/MN/0/sw0092.png">
+                        <span>ID&nbsp;: 92</span><br/>
+                        <span>Super Droïde de Combat</span>
+                        <div class="quantity_box" style="margin-top: 12px;">
+                            <button type="button" class="bouton_moins" style="width: 50px;" id="-1">
+                                <svg class="minus" width="14px" height="2px" viewBox="0 0 14 2" aria-hidden="true"><polygon fill="black" points="14 2 0 2 0 -6.03961325e-14 14 -6.03961325e-14"></polygon></svg>
+                            </button><input required type="number" class="valeur" style="width: 56px;" min="0" id="val1" name="quantite" value="3"><button type="button" class="bouton_plus" style="width: 50px;" id="+1">
+                                <svg class="add" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" aria-hidden="true"><polygon fill="#FFFFFF" points="14 8 0 8 0 6 14 6"></polygon><rect fill="#FFFFFF" fill-rule="nonzero" x="6" y="0" width="2" height="14"></rect></svg>
+                            </button>
+                        </div>
+                    </div> -->
+                    {list_minifig_in_set}
+                </div>
+                <form method="POST" style="margin: 0 24px 24px; text-align: center; width: calc(100% - 48px);">
+                    <input type="hidden" name="form_name" value="save_data">
+                    <input type="hidden" name="id_set" value="{id_set}">
+                    <input type="hidden" name="liste_minifigs" id="liste_minifigs_input">
+                    <input type="submit" value="ENREGISTRER" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 140px;">
+                </form>
+                <div style="text-align: left; margin: 0 24px; padding: 24px 0; border-top: 1px solid #404040;" id="search_zone">
+                    <div class="filter_zone">
+                        <a class="bouton_refresh" href="" id="boutonRefresh"></a>
+                        <h3>Filtres&nbsp;:</h3>
+                        <form method="POST" id="form_search" action="http://localhost:1520/BrickStock/{current_url}#search_zone">
+                            <input type="hidden" name="form_name" value="search_minifig">
+                            <input type="hidden" name="liste_minifigs" id="liste_minifigs_input_search">
+                            <span>Nom&nbsp;:</span><br/>
+                            <input type="text" name="nom" value="{nom_search}" placeholder="saisissez un nom" id="filter1"><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del1">
+                            <separator></separator>
+                            <span>id de la minifig&nbsp;:</span><br/>
+                            <input type="text" name="id_minifig" value="{id_minifig_search}" placeholder="saisissez un nom" id="filter2"><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del2">
+                            <separator></separator>
+                            <span>Gamme&nbsp;:</span><br/>
+                            <select name="gamme" value="{gamme_search}" id="filter3">
+                                <option value="0">--sélectionner une gamme--</option>
+                                {liste_gammes}
+                            </select><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del3">
+                            <separator></separator>
+                            <span>Set&nbsp;:</span><br/>
+                            <input type="text" name="id_set" value="{id_set_search}" placeholder="saisissez un id de set" id="filter4"><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del4">
+                            <separator></separator>
+                            <input type="submit" value="Rechercher" class="rechercher">
+                        </form>
+                    </div><div class="table_zone">
+                        {cases}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" name="#id et refresh">
+            if (window.location.href.endsWith("#search_zone")) {
+                document.getElementById("form_search").action = window.location.href;
+            }
+            else {
+                document.getElementById("form_search").action = window.location.href + "#search_zone";
+            }
+
+            document.getElementById("boutonRefresh").href = window.location.href.split("#")[0]; // + "#search_zone";
+        </script>
+        <script type="text/javascript" name="gestion filtres - 1/2">
+            let defaut = {1 : "", 2 : "", 3 : 0, 4 : ""}
+            let indexFilterTon = 0;
+            let indexFilterCategories = 0;
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_filtres.js"></script>
+        <script type="text/javascript" name="gestion filtres - 2/2">
+            addEventListenerForFiltres(4);
+        </script>
+        <script type="text/javascript" name="conversion dict (object) -> string et list.remove">
+            function str(dict) {
+                var chaine = "{";
+                var cles = Object.keys(dict)
+                for (var i=0; i<cles.length; i++) {
+                    if (i > 0) {
+                        chaine = chaine + ", ";
+                    }
+                    chaine = chaine + cles[i] + " : " + dict[cles[i]];
+                }
+                chaine = chaine + "}";
+                return chaine;
+            }
+
+            function indexOf(liste, item) {
+                for (var i=0; i<liste.length; i++) {
+                    if (liste[i] == item) {
+                        return i;
+                    }
+                }
+                return -1;
+            }
+
+            function listRemove(liste, item) {
+                if (liste.includes(item)) {
+                    var i = indexOf(liste, item);
+                    var new_liste = [];
+                    for (var j=0; i<liste.length; j++) {
+                        if (j != i) {
+                            new_liste.push(liste[j]);
+                        }
+                    }
+                    return new_liste;
+                }
+                else {
+                    return liste;
+                }
+            }
+        </script>
+        <script type="text/javascript" name="gestion input liste minifigs">
+            let valueInput = {value_input};
+            let minifigsInput = document.getElementById("liste_minifigs_input");
+            let minifigsInputSearch = document.getElementById("liste_minifigs_input_search");
+            let listeNumItem = [];
+            i = 1;
+            while (document.getElementById("val" + i) !== null) {
+                listeNumItem.push(i);
+                i++
+            }
+            let nextIndex = listeNumItem.length + 1;
+            let nbFig = Object.keys(valueInput).length;
+
+            function alignementMinifigInSet(nbFigInLine=5) {
+                for (var k=0; k<listeNumItem.length; k++) {
+                    var item = document.getElementById("item_minifig" + listeNumItem[k]);
+                    if (item.classList.contains("last") & k % nbFigInLine != (nbFigInLine - 1)) {
+                        item.classList.remove("last");
+                    }
+                    else if (!item.classList.contains("last") & k % nbFigInLine == (nbFigInLine - 1)) {
+                        item.classList.add("last");
+                    }
+                }
+            }
+
+            function setInput() {
+                minifigsInput.value = str(valueInput);
+                minifigsInputSearch.value = minifigsInput.value;
+            }
+
+            setInput();
+        </script>
+        <script type="text/javascript" name="gestion spinbox">
+            function plus(e) {
+                var i = this.id.substring(1);
+                var item = document.getElementById("val" + i)
+                item.value++
+                valueInput[document.getElementById("id_minifig_in_set" + i).innerHTML] = item.value;
+                setInput();
+            }
+
+            function moins(e) {
+                var i = this.id.substring(1);
+                var item = document.getElementById("val" + i)
+                if (item.value > 0) {
+                    item.value--
+                }
+                valueInput[document.getElementById("id_minifig_in_set" + i).innerHTML] = item.value;
+                setInput();
+            }
+
+            function verif(e) {
+                if (this.value != "") {
+                    if (this.value < 0) {
+                        this.value = 0;
+                    }
+                    valueInput[document.getElementById("id_minifig_in_set" + this.id.substring(3)).innerHTML] = this.value;
+                    setInput();
+                }
+            }
+
+            for (var i=0; i<listeNumItem.length; i++) {
+                document.getElementById("+" + listeNumItem[i]).addEventListener("click", plus);
+                document.getElementById("-" + listeNumItem[i]).addEventListener("click", moins);
+                document.getElementById("val" + listeNumItem[i]).addEventListener("input", verif);
+            }
+        </script>
+        <script type="text/javascript" name="data">
+            let resultats = {resultats};
+        </script>
+        <script type="text/javascript" name="alignement resultats">
+            function alignementResultats(nbOnLigne=3) {
+                var n = 1;
+                for (var i=1; i<=resultats.length; i++) {
+                    var item = document.getElementById("resultat" + i);
+                    if (item.classList.contains("last")) {
+                        item.classList.remove("last");
+                    }
+                    if (!item.classList.contains("hide")) {
+                        if (n % nbOnLigne == 0) {
+                            item.classList.add("last");
+                        }
+                        n++
+                    }
+                }
+            }
+        </script>
+        <script type="text/javascript" name="ajout d'une minifig">
+            let zoneMinifigInSet = document.getElementById("list_minifig_in_set");
+
+            function ajouterMinifig(e) {
+                var n = this.id.substring(7);
+                var data = resultats[n - 1];
+                var i = nextIndex;
+                document.getElementById("resultat" + n).classList.add("hide");
+                var divItemMinifig = document.createElement("div");
+                divItemMinifig.classList.add("item_minifig");
+                divItemMinifig.id = "item_minifig" + i;
+                var imgBoutonSupprimer = document.createElement("img");
+                imgBoutonSupprimer.classList.add("supprimer_item");
+                imgBoutonSupprimer.src = "http://localhost:1520/BrickStock/images/croix.svg";
+                imgBoutonSupprimer.id = "bouton_supprimer" + i;
+                divItemMinifig.appendChild(imgBoutonSupprimer);
+                var imgApercu = document.createElement("img");
+                imgApercu.classList.add("apercu");
+                imgApercu.src = data["image_ref"];
+                divItemMinifig.appendChild(imgApercu);
+                var spanId = document.createElement("span");
+                spanId.innerHTML = "ID&nbsp;: " + data["id_minifig"];
+                divItemMinifig.appendChild(spanId);
+                divItemMinifig.innerHTML = divItemMinifig.innerHTML + "<br/>";
+                var spanNom = document.createElement("span");
+                spanNom.innerHTML = data["nom"];
+                divItemMinifig.appendChild(spanNom);
+                var divQuantiteBox = document.createElement("div");
+                divQuantiteBox.classList.add("quantity_box");
+                divQuantiteBox.style = "margin-top: 12px;";
+                var buttonMoins = document.createElement("button");
+                buttonMoins.classList.add("bouton_moins");
+                buttonMoins.id = "-" + i;
+                buttonMoins.type = "button";
+                buttonMoins.style = "width: 50px;";
+                buttonMoins.innerHTML = '<svg class="minus" width="14px" height="2px" viewBox="0 0 14 2" aria-hidden="true"><polygon fill="black" points="14 2 0 2 0 -6.03961325e-14 14 -6.03961325e-14"></polygon></svg>';
+                divQuantiteBox.appendChild(buttonMoins);
+                var inputValeur = document.createElement("input");
+                inputValeur.id = "val" + i;
+                inputValeur.classList.add("valeur");
+                inputValeur.required = "";
+                inputValeur.type = "number";
+                inputValeur.style = "width: 56px;";
+                inputValeur.min = 0;
+                inputValeur.name = "quantite";
+                inputValeur.value = 1;
+                divQuantiteBox.appendChild(inputValeur);
+                var buttonPlus = document.createElement("button");
+                buttonPlus.id = "+" + i;
+                buttonPlus.classList.add("bouton_plus")
+                buttonPlus.type = "button";
+                buttonPlus.style = "width: 50px;";
+                buttonPlus.innerHTML = '<svg class="add" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" aria-hidden="true"><polygon fill="#FFFFFF" points="14 8 0 8 0 6 14 6"></polygon><rect fill="#FFFFFF" fill-rule="nonzero" x="6" y="0" width="2" height="14"></rect></svg>';
+                divQuantiteBox.appendChild(buttonPlus);
+                divItemMinifig.appendChild(divQuantiteBox);
+                var spanIdMinifig = document.createElement("span");
+                spanIdMinifig.id = "id_minifig_in_set" + i;
+                spanIdMinifig.classList.add("hide");
+                spanIdMinifig.innerHTML = data["id_minifig"];
+                divItemMinifig.appendChild(spanIdMinifig);
+                zoneMinifigInSet.appendChild(divItemMinifig);
+                listeNumItem.push(i);
+                valueInput[data["id_minifig"]] = 1;
+                nextIndex++
+                setInput();
+                document.getElementById("bouton_supprimer" + i).addEventListener("click", supprimerMinifig);
+                document.getElementById("-" + i).addEventListener("click", moins);
+                document.getElementById("val" + i).addEventListener("input", verif);
+                document.getElementById("+" + i).addEventListener("click", plus);
+                alignementResultats(3);
+                alignementMinifigInSet(5);
+            }
+            
+            var i = 0;
+            while (document.getElementById("ajouter" + (i + 1)) !== null) {
+                i++
+            }
+            for (var j=1; j<=i; j++) {
+                document.getElementById("ajouter" + j).addEventListener("click", ajouterMinifig);
+            }
+        </script>
+        <script type="text/javascript" name="suppression de minifig">
+            function showResult(idFig) {
+                for (var i=0; i<resultats.length; i++) {
+                    if (resultats[i]["id_minifig"] == idFig) {
+                        document.getElementById("resultat" + (i + 1)).classList.remove("hide");
+                        return;
+                    }
+                }
+            }
+
+            function supprimerMinifig(e) {
+                var i = this.id.substring(16);
+                var idFig = document.getElementById("id_minifig_in_set" + i).innerHTML;
+                listeNumItem = listRemove(listeNumItem, i);
+                delete valueInput[idFig];
+                var item = document.getElementById("item_minifig" + i);
+                item.classList.add("hide");
+                item.innerHTML = "";
+                setInput();
+                showResult(idFig);
+                alignementResultats(3);
+                alignementMinifigInSet(5);
+            }
+
+            for (var i=0; i<listeNumItem.length; i++) {
+                document.getElementById("bouton_supprimer" + listeNumItem[i]).addEventListener("click", supprimerMinifig);
+            }
+        </script>
+        <script type="text/javascript" name="masquage minifig in set">
+            for (var i=1; i<=resultats.length; i++) {
+                if (Object.keys(valueInput).includes(document.getElementById("id_minifig" + i).innerHTML)) {
+                    document.getElementById("resultat" + i).classList.add("hide");
+                }
+            }
+
+            alignementResultats(3);
+        </script>
+        {script}
+    </body>
+</html>

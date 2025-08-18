@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BrickStock - Exemplaire du Set</title>
+        <link rel="stylesheet" type="text/css" href="/BrickStock/css/styles.css">
+        <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+        <link rel="shortcut icon" href="/BrickStock/css/favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="../css/favicon.ico" type="image/x-icon"> -->
+    </head>
+    <body>
+        <div class="fond hide" id="panneau_add">
+            <img class="croix" id="fermer" src="/BrickStock/images/croix.svg">
+            <div class="fenetre">
+                <h4>Ajouter un exemplaire</h4>
+                <form method="POST">
+                    <input type="hidden" name="form_name" value="ajouter_exemplaire">
+                    <input type="hidden" name="id_set" value="{id_set}">
+                    <table class="exemplaire_set price_guide">
+                        <thead>
+                            <tr>
+                                <td>id de l'exemplaire&nbsp;:</td>
+                                <td>id du set&nbsp;:</td>
+                                <td>nom du set&nbsp;:</td>
+                                <td>date d'achat&nbsp;:</td>
+                                <td>statut&nbsp;:</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <td>-</td>
+                            <td>{id_set}</td>
+                            <td>{nom_set}</td>
+                            <td style="padding: 0;">
+                                <input type="text" style="height: 24px; width: calc(100% - 8px);" name="date_achat" id="add1" placeholder="saisissez une date d'achat">
+                            </td>
+                            <td style="padding: 0;">
+                                <select style="height: 30px; width: 100%; background-color: #FFFFFF;" name="statut" id="add2">
+                                    <option value="construit">construit</option>
+                                    <option value="détruit">détruit</option>
+                                </select>
+                            </td>
+                        </tbody>
+                    </table>
+                    <separator></separator>
+                    <input type="submit" value="Ajouter" style="cursor: pointer;">
+                </form>
+            </div>
+        </div>
+        <div class="page">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="/BrickStock/pieces">Pièces</a></li><li>
+                        <a href="/BrickStock/designs">Designs</a></li><li>
+                        <a href="/BrickStock/categories">Categories</a></li><li>
+                        <a href="/BrickStock/couleurs">Couleurs</a></li><li class="main">
+                        <a href="/BrickStock/sets">Sets</a></li><li>
+                        <a href="/BrickStock/minifigures">Minifigures</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="layout">
+                <a class="page_precedente" href="/{page_precedente}">&lt; <span>Retour</span></a>
+                <div style="text-align: center;">
+                    <h3 style="text-align: center;">{nom_set}</h3>
+                    <a style="display: inline-block; position: relative; vertical-align: top;" href="{image_ref_set}" target="_blank">
+                        <img class="item_img" style="margin-left: 12px; width: 200px;" src="{image_ref_set}">
+                    </a><div class="infos_set">
+                        <span id="item_id_set">id du set&nbsp;: {id_set}</span><br/>
+                        <span>gamme&nbsp;: {gamme_set}</span><br/>
+                        <span id="item_annee">année&nbsp;: {annee_set}</span>
+                    </div>
+                </div>
+                <div style="text-align: left; padding: 24px;" id="list_exemplaires">
+                    <button id="ajouter" class="ajouter" style="margin: 0;"><img src="/BrickStock/images/bouton_plus_carre.svg"></button>
+                    <table class="exemplaire_set price_guide">
+                        <thead>
+                            <tr>
+                                <td>id de l'exemplaire&nbsp;:</td>
+                                <td>id du set&nbsp;:</td>
+                                <td>nom du set&nbsp;:</td>
+                                <td>date d'achat&nbsp;:</td>
+                                <td>statut&nbsp;:</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {list_exemplaires}
+                        </tbody>
+                    </table>
+                </div>
+                <form method="POST" style="margin: 0 24px 24px; padding-bottom: 24px; text-align: center; width: calc(100% - 48px);">
+                    <input type="hidden" name="form_name" value="save_data">
+                    <input type="hidden" name="id_set" value="{id_set}">
+                    <input type="hidden" name="list_exemplaires" id="list_exemplaires_input">
+                    <input type="submit" value="ENREGISTRER" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 140px;">
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript" name="gestion panneau ajouter">
+            let nAdd = 2;
+            let defautAdd = {1 : "", 2 : "construit"};
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_panneau_add.js"></script>
+        <script type="text/javascript" name="conversion dict (object) -> string et list.remove">
+            function str(dict) {
+                var chaine = "{";
+                var cles = Object.keys(dict)
+                for (var i=0; i<cles.length; i++) {
+                    if (i > 0) {
+                        chaine = chaine + ", ";
+                    }
+                    chaine = chaine + cles[i] + " : " + dict[cles[i]];
+                }
+                chaine = chaine + "}";
+                return chaine;
+            }
+
+            function indexOf(liste, item) {
+                for (var i=0; i<liste.length; i++) {
+                    if (liste[i] == item) {
+                        return i;
+                    }
+                }
+                return -1;
+            }
+
+            function listRemove(liste, item) {
+                if (liste.includes(item)) {
+                    var i = indexOf(liste, item);
+                    var new_liste = [];
+                    for (var j=0; i<liste.length; j++) {
+                        if (j != i) {
+                            new_liste.push(liste[j]);
+                        }
+                    }
+                    return new_liste;
+                }
+                else {
+                    return liste;
+                }
+            }
+        </script>
+        <script type="text/javascript" name="gestion statut exemplaires">
+            let inputValue = {input_value};
+            let input = document.getElementById("list_exemplaires_input");
+            input.value = str(inputValue);
+
+            function setInputValue(e) {
+                inputValue[this.id] = this.value;
+                input.value = str(inputValue);
+                // console.log(input.value);
+            }
+
+            var listSelects = document.getElementsByClassName("statut");
+            for (var i=0; i<listSelects.length; i++) {
+                listSelects[i].addEventListener("input", setInputValue)
+            }
+        </script>
+        {script}
+    </body>
+</html>

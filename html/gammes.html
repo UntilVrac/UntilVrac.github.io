@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BrickStock - Gammes</title>
+        <link rel="stylesheet" type="text/css" href="http://localhost:1520/css/styles.css">
+        <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+        <link rel="shortcut icon" href="http://localhost:1520/css/favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="../css/favicon.ico" type="image/x-icon"> -->
+    </head>
+    <body>
+        <div class="fond hide" id="panneau_add">
+            <img class="croix" id="fermer" src="http://localhost:1520/BrickStock/images/croix.svg">
+            <div class="fenetre">
+                <h4 id="h4">Ajouter une Gamme</h4>
+                <form method="POST">
+                    <input type="hidden" name="form_name" value="add_gamme">
+                    <span>id de la gamme&nbsp;:</span>
+                    <input type="text" name="id_gamme" placeholder="saisissez un id" id="add1">
+                    <separator></separator>
+                    <span>nom de la gamme&nbsp;:</span>
+                    <input type="text" name="nom_gamme" placeholder="saisissez un nom" id="add2">
+                    <separator></separator>
+                    <input type="submit" value="Ajouter" style="cursor: pointer;">
+                </form>
+            </div>
+        </div>
+        <div class="page">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="/BrickStock/pieces">Pièces</a></li><li>
+                        <a href="/BrickStock/designs">Designs</a></li><li>
+                        <a href="/BrickStock/categories">Categories</a></li><li>
+                        <a href="/BrickStock/couleurs">Couleurs</a></li><li{classSets}>
+                        <a href="/BrickStock/sets">Sets</a></li><li{classMinifigs}>
+                        <a href="/BrickStock/minifigures">Minifigures</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="layout" style="padding-bottom: 24px;">
+                <a class="page_precedente" href="http://localhost:1520/{page_precedente}">&lt; <span>Retour</span></a><br/>
+                <button id="ajouter" class="ajouter" style="margin-bottom: 0;"><img src="http://localhost:1520/BrickStock/images/bouton_plus_carre.svg"></button>
+                <ul class="liste_categories" id="ulListeGammes">
+                    {content_ul}
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript" name="gestion panneau ajouter">
+            let nAdd = 2;
+            let defautAdd = {1 : "", 2 : ""};
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_panneau_add.js"></script>
+        {script}
+    </body>
+</html>

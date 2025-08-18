@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BrickStock - Designs</title>
+        <link rel="stylesheet" type="text/css" href="/BrickStock/css/styles.css">
+        <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+        <link rel="shortcut icon" href="/BrickStock/css/favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="../css/favicon.ico" type="image/x-icon"> -->
+    </head>
+    <body>
+        <div class="fond" id="panneau_add">
+            <img class="croix" id="fermer" src="/BrickStock/images/croix.svg">
+            <div class="fenetre">
+                <h4>Ajouter un design</h4>
+                <form method="POST">
+                    <input type="hidden" name="form_name" value="add_design">
+                    <span>id du design&nbsp;:</span>
+                    <input required type="text" name="id_design" placeholder="saisissez un id" id="add1">
+                    <separator></separator>
+                    <span>id Lego<sup>®</sup>&nbsp;:</span>
+                    <input required type="text" name="id_lego" placeholder="saisissez un id" id="add2">
+                    <separator></separator>
+                    <span>id Bricklink&nbsp;:</span>
+                    <input required type="text" name="id_bricklink" placeholder="saisissez un id" id="add3">
+                    <separator></separator>
+                    <span>nom&nbsp;:</span>
+                    <input required type="text" name="nom" placeholder="saisissez un nom" id="add4">
+                    <separator></separator>
+                    <span>nom Lego<sup>®</sup>&nbsp;:</span>
+                    <input required type="text" name="nom_lego" placeholder="saisissez un nom" id="add5">
+                    <separator></separator>
+                    <span>nom Bricklink&nbsp;:</span>
+                    <input required type="text" name="nom_bricklink" placeholder="saisissez un nom" id="add6">
+                    <separator></separator>
+                    <span>transparent&nbsp;:</span><img id="checkTrans" class="checkItem" src="http://localhost:1520/BrickStock/images/check_desactive.svg">
+                    <input type="hidden" name="transparent" value="" id="inputTrans">
+                    <separator></separator>
+                    <span>catégorie&nbsp;:</span>
+                    <select name="categorie" id="add7">
+                        <option value="0">--sélectionner une catégorie--</option>
+                        {liste_categories_bis}
+                    </select>
+                    <separator></separator>
+                    <span>sous-catégorie&nbsp;:</span>
+                    <select name="sous_categorie" id="add8">
+                    </select>
+                    <separator></separator>
+                    <span>dimensions&nbsp;:</span>
+                    <input required type="text" name="dimensions" placeholder="lxLxh" id="add9">
+                    <separator></separator>
+                    <input type="submit" value="Ajouter" style="cursor: pointer;">
+                </form>
+            </div>
+        </div>
+        <div class="fond" id="panneau_item">
+            <img class="croix" id="fermer_bis" src="/BrickStock/images/croix.svg">
+            <div class="fenetre" style="text-align: left;">
+                <h3 id="item_nom"></h3>
+                <a class="item_img" href="" id="item_image_ref_href" target="_blank">
+                    <img class="item_img" src="" id="item_image_ref_src">
+                </a>
+                <div>
+                    <span id="item_id_design">id du design&nbsp;:&nbsp;</span><br/>
+                    <span id="item_categorie">catégorie&nbsp;:&nbsp;</span><br/>
+                    <span id="item_dimensions">dimensions&nbsp;:&nbsp;</span><br/>
+                    <span id="item_masse">masse&nbsp;:&nbsp;</span><br/>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="/BrickStock/pieces">Pièces</a></li><li class="main">
+                        <a href="/BrickStock/designs">Designs</a></li><li>
+                        <a href="/BrickStock/categories">Categories</a></li><li>
+                        <a href="/BrickStock/couleurs">Couleurs</a></li><li>
+                        <a href="/BrickStock/sets">Sets</a></li><li>
+                        <a href="/BrickStock/minifigures">Minifigures</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="layout">
+                <button id="ajouter" class="ajouter"><img src="http://localhost:1520/BrickStock/images/bouton_plus_carre.svg"></button><br/>
+                <div class="filter_zone">
+                    <h3>Filtres&nbsp;:</h3>
+                    <form method="GET">
+                        <span>Nom&nbsp;:</span><br/>
+                        <input type="text" name="nom" value="{nom}" placeholder="saisissez un nom" id="filter1"><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del1">
+                        <separator></separator>
+                        <span>Dimensions&nbsp;:</span><br/>
+                        <input type="text" name="dimensions" value="{dimensions}" placeholder="lxLxh" id="filter2"><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del2">
+                        <separator></separator>
+                        <span>Catégorie&nbsp;:</span><br/>
+                        <select name="categorie" value="{categorie}" id="filter3">
+                            <option value="0">--sélectionner une catégorie--</option>
+                            {liste_categories}
+                        </select><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del3">
+                        <separator></separator>
+                        <span>Sous-catégorie&nbsp;:</span><br/>
+                        <select name="sous_categorie" value="{sous_categorie}" id="filter4">
+                        </select><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del4">
+                        <separator></separator>
+                        <input type="submit" value="Rechercher" class="rechercher">
+                    </form>
+                </div><div class="table_zone">
+                    {cases}
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_check_item.js"></script>
+        <script type="text/javascript" name="gestion filtres - 1/2">
+            let defaut = {1 : "", 2 : "", 3 : 0, 4 : 0};
+            let indexFilterTon = null;
+            let indexFilterCategories = 3;
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_filtres.js"></script>
+        <script type="text/javascript" name="gestion filtres - 2/2">
+            addEventListenerForFiltres(4);
+        </script>
+        <script type="text/javascript" name="gestion listes déroulantes">
+            let filterCategorie = document.getElementById("filter3");
+            let filterSousCategorie = document.getElementById("filter4");
+            let dictCategories = {liste_sous_categories};
+            let listeCategories = {liste_all_categories};
+            let categorieFilter = "{categorie_filter}";
+
+            let indexFilterSousCategories = 4;
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_listes_deroulantes_categories.js"></script>
+        <script type="text/javascript" name="gestion listes déroulantes bis">
+            let selectCategorie = document.getElementById("add7");
+            let selectSousCategorie = document.getElementById("add8");
+
+            function setSelectCategorie() {
+                selectSousCategorie.innerHTML = '<option value="0">--sélectionner une sous-catégorie--</option>';
+                var ton = selectCategorie.value;
+                var listeOptions = [];
+                if (ton == "0") {
+                    listeOptions = listeCategories;
+                }
+                else {
+                    listeOptions = dictCategories[ton];
+                }
+                for (var i=0; i<listeOptions.length; i++) {
+                    var opt = document.createElement("option");
+                    opt.value = listeOptions[i][0];
+                    opt.appendChild(document.createTextNode(listeOptions[i][1]));
+                    selectSousCategorie.appendChild(opt);
+                }
+            }
+
+            setSelectCategorie();
+            selectCategorie.addEventListener("input", setSelectCategorie);
+        </script>
+        <script type="text/javascript" name="gestion panneau ajouter">
+            let nAdd = 9;
+            let defautAdd = {1 : "", 2 : "", 3 : "", 4 : "", 5 : "", 6 : "", 7 : 0, 8 : 0, 9 : ""};
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_panneau_add.js"></script>
+        <script type="text/javascript" name="data">
+            let resultats = {resultats};
+        </script>
+        <script type="text/javascript" name="gestion boites résultats">
+            let panneauItem = document.getElementById("panneau_item");
+            panneauItem.classList.add("hide");
+
+            function showItem(e) {
+                if (panneauItem.classList.contains("hide")) {
+                    panneauItem.classList.remove("hide");
+                }
+                var i = this.id.substring(8);
+                var data = resultats[i - 1];
+                document.getElementById("item_id_design").innerHTML = 'id du design&nbsp;: <a href="http://localhost:1520/BrickStock/pieces?id_design=' + data["id_design"] + '">' + data["id_design"] + '</a>';
+                document.getElementById("item_categorie").innerHTML = "catégorie&nbsp;: " + data["categorie_span"];
+                document.getElementById("item_dimensions").innerHTML = "dimensions&nbsp;: " + data["dimensions_stud"];
+                document.getElementById("item_masse").innerHTML = "masse&nbsp;: " + data["masse"] + "g";
+                document.getElementById("item_image_ref_href").href = data["image_ref"];
+                document.getElementById("item_image_ref_src").src = data["image_ref"];
+                document.getElementById("item_nom").innerHTML = data["nom"];
+            }
+
+            function hideItem() {
+                if (!panneauItem.classList.contains("hide")) {
+                    panneauItem.classList.add("hide");
+                }
+            }
+
+            var i = 0;
+            while (document.getElementById("resultat" + (i + 1)) !== null) {
+                i++
+            }
+            for (var j=1; j<=i; j++) {
+                document.getElementById("resultat" + j).addEventListener("click", showItem)
+                if (j % 3 == 0) {
+                    document.getElementById("resultat" + j).classList.add("last");
+                }
+            }
+            document.getElementById("fermer_bis").addEventListener("click", hideItem);
+        </script>
+        {script}
+    </body>
+</html>

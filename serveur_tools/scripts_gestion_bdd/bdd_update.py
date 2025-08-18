@@ -1,0 +1,206 @@
+from sys import path
+BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.1"
+path.append(BRICKSTOCK_PATH)
+
+import sqlite3
+from serveur_tools.scripts_gestion_bdd.admin_bdd import *
+from serveur_tools.scripts_gestion_bdd.bdd_verif import *
+import serveur_tools.requetes_api as api
+from serveur_tools.json_tools import save_json, upload_json
+
+def __update_pieces_in_set(connexion:sqlite3.Connection, curseur:sqlite3.Cursor, id_set:int, pieces:dict) -> None :
+    """
+    entrées :
+        connexion (sqlite3.Connect) et curseur (sqlite3.Cursor), la connexion à utiliser
+        id_set (int), id du set
+        pieces (dict), liste des pièces sous la forme d'un dictionnaire {id_piece (int) : quantite (int)}
+
+    met à jour la liste des pièces du set
+    """
+    curseur.execute('''DELETE FROM piece_dans_set WHERE id_set = ?;''', (id_set,))
+    for p in pieces :
+        assert type(p) == int
+        assert type(pieces[p]) == int
+        assert piece_in_database(p)
+        curseur.execute('''INSERT INTO piece_dans_set VALUES (?, ?, ?);''', (id_set, p, pieces[p]))
+    connexion.commit()
+    connexion.close()
+
+def update_pieces_in_set(id_set:int, pieces:dict) -> bool :
+    """
+    entrées :
+        id_set (int), id du set
+        pieces (dict), liste des pièces sous la forme d'un dictionnaire {id_piece (int) : quantite (int)}
+
+    met à jour la liste des pièces du set
+    si MODE_SANS_ECHEC est True, renvoie True si l'ajout a pu être effectué et False sinon
+    sinon renvoie True
+    """
+    connexion = sqlite3.connect(DATABASE_NAME)
+    curseur = connexion.cursor()
+    if MODE_SANS_ECHEC :
+        try :
+            __update_pieces_in_set(connexion, curseur, id_set, pieces)
+        except :
+            connexion.close()
+            return False
+        else :
+            return True
+    else :
+        __update_pieces_in_set(connexion, curseur, id_set, pieces)
+        return True
+
+def __update_minifig_in_set(connexion:sqlite3.Connection, curseur:sqlite3.Cursor, id_set:int, minifigs:dict) -> None :
+    """
+    entrées :
+        connexion (sqlite3.Connect) et curseur (sqlite3.Cursor), la connexion à utiliser
+        id_set (int), id du set
+        minifigs (dict), liste des minifigs sous la forme d'un dictionnaire {id_minifig (str) : quantite (int)}
+
+    met à jour la liste des minifigs du set
+    """
+    curseur.execute('''DELETE FROM minifig_dans_set WHERE id_set = ?;''', (id_set,))
+    for m in minifigs :
+        assert type(m) == str
+        assert type(minifigs[m]) == int
+        assert minifig_in_database(m)
+        curseur.execute('''INSERT INTO minifig_dans_set VALUES (?, ?, ?);''', (id_set, m, minifigs[m]))
+    connexion.commit()
+    connexion.close()
+
+def update_minifig_in_set(id_set:int, minifigs:dict) -> bool :
+    """
+    entrées :
+        id_set (int), id du set
+        minifigs (dict), liste des minifigs sous la forme d'un dictionnaire {id_minifig (str) : quantite (int)}
+
+    met à jour la liste des minifigs du set
+    si MODE_SANS_ECHEC est True, renvoie True si l'ajout a pu être effectué et False sinon
+    sinon renvoie True
+    """
+    connexion = sqlite3.connect(DATABASE_NAME)
+    curseur = connexion.cursor()
+    if MODE_SANS_ECHEC :
+        try :
+            __update_minifig_in_set(connexion, curseur, id_set, minifigs)
+        except :
+            connexion.close()
+            return False
+        else :
+            return True
+    else :
+        __update_minifig_in_set(connexion, curseur, id_set, minifigs)
+        return True
+
+def __update_statut_exemplaires(connexion:sqlite3.Connection, curseur:sqlite3.Cursor, exemplaires:dict) -> bool :
+    """
+    entrées :
+        connexion (sqlite3.Connect) et curseur (sqlite3.Cursor), la connexion à utiliser
+        exemplaires (dict), la liste des exemplaires sous la forme d'une dictionnaire {id de l'exemplaire (int) : statut (construit ou détruit)}
+
+    met à jour les statuts des exemplaires
+    """
+    for e in exemplaires :
+        assert exemplaires[e] in ("construit", "détruit")
+        curseur.execute('''UPDATE Sets SET statut = ? WHERE id_exemplaire = ?;''', (exemplaires[e], e))
+        connexion.commit()
+        connexion.close()
+
+def update_statut_exemplaires(exemplaires:dict) -> bool :
+    """
+    entrées :
+        exemplaires (dict), la liste des exemplaires sous la forme d'une dictionnaire {id de l'exemplaire (int) : statut (construit ou détruit)}
+
+    met à jour les statuts des exemplaires
+    si MODE_SANS_ECHEC est True, renvoie True si l'ajout a pu être effectué et False sinon
+    sinon renvoie True
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    if MODE_SANS_ECHEC :
+        try :
+            __update_statut_exemplaires(connexion, curseur, exemplaires)
+        except :
+            connexion.close()
+            return False
+        else :
+            return True
+    else :
+        __update_statut_exemplaires(connexion, curseur, exemplaires)
+        return True
+
+def __update_moc_piece_qt(connexion:sqlite3.Connection, curseur:sqlite3.Cursor, id_piece:int, quantite:int, disponible:int, endommagee:int) -> None :
+    """
+    entrées :
+        connexion (sqlite3.Connect) et curseur (sqlite3.Cursor), la connexion à utiliser
+        id_piece (int), l'id de la pièce
+        quantite (int), disponible (int), endommagee (int), les nouvelles quantités
+
+    met à jour les quantités de la pièce dans la collection
+    """
+    assert piece_est_dans_moc(id_piece)
+    curseur.execute('''UPDATE Pieces SET quantite = ?, disponible = ?, endommagee = ? WHERE id_piece = ?;''', (quantite, disponible, endommagee, id_piece))
+    connexion.commit()
+    connexion.close()
+
+def update_moc_piece_qt(id_piece:int, quantite:int, disponible:int, endommagee:int) -> bool :
+    """
+    entrées :
+        id_piece (int), l'id de la pièce
+        quantite (int), disponible (int), endommagee (int), les nouvelles quantités
+
+    met à jour les quantités de la pièce dans la collection
+    si MODE_SANS_ECHEC est True, renvoie True si l'ajout a pu être effectué et False sinon
+    sinon renvoie True
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    if MODE_SANS_ECHEC :
+        try :
+            __update_moc_piece_qt(connexion, curseur, id_piece, quantite, disponible, endommagee)
+        except :
+            connexion.close()
+            return False
+        else :
+            return True
+    else :
+        __update_moc_piece_qt(connexion, curseur, id_piece, quantite, disponible, endommagee)
+        return True
+    
+def __update_moc_minifig_qt(connexion:sqlite3.Connection, curseur:sqlite3.Cursor, id_minifig:str, quantite:int) -> None :
+    """
+    entrées :
+        connexion (sqlite3.Connect) et curseur (sqlite3.Cursor), la connexion à utiliser
+        id_piece (int), l'id de la pièce
+        quantite (int) la nouvelle quantité
+
+    met à jour la quantité de la minifig dans la collection
+    """
+    assert minifig_est_dans_moc(id_minifig)
+    curseur.execute('''UPDATE Minifigs SET nb_exemplaires = ? WHERE id_minifig = ?;''', (quantite, id_minifig))
+    connexion.commit()
+    connexion.close()
+    
+def update_moc_minifig_qt(id_minifig:str, quantite:int) -> bool :
+    """
+    entrées :
+        id_piece (int), l'id de la pièce
+        quantite (int) la nouvelle quantité
+
+    met à jour la quantité de la minifig dans la collection
+    si MODE_SANS_ECHEC est True, renvoie True si l'ajout a pu être effectué et False sinon
+    sinon renvoie True
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    if MODE_SANS_ECHEC :
+        try :
+            __update_moc_minifig_qt(connexion, curseur, id_minifig, quantite)
+        except :
+            connexion.close()
+            return False
+        else :
+            return True
+    else :
+        __update_moc_minifig_qt(connexion, curseur, id_minifig, quantite)
+        return True
