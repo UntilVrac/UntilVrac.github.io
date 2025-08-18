@@ -41,7 +41,7 @@ def get_pieces_request(params_get:dict, script:str=None) -> dict :
     liste_tons = ""
     for t in bdd.get_liste_tons() :
         if "ton" in params_get :
-            if params_get["ton"] == str(t[0]) :
+            if params_get["ton"] == str(t["id_ton"]) :
                 liste_tons += f"""<option selected value="{t["id_ton"]}">{t["nom_ton"]}</option>"""
             else :
                 liste_tons += f"""<option value="{t["id_ton"]}">{t["nom_ton"]}</option>"""
