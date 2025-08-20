@@ -185,6 +185,18 @@ ul.liste_sets_with_minifig {
     margin: 0;
     list-style: url("../images/puce_arrow.svg");
 }
+ul.level0 {
+    list-style: disc;
+}
+ul.level1 {
+    list-style: url("/BrickStock/images/puce_arrow.svg");
+}
+ul.level2 {
+    list-style: square;
+}
+ul.level3 {
+    list-style-type: initial;
+}
 
 /* li */
 div.menu ul li {
