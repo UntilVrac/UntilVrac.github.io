@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BrickStock - Rangements</title>
+        <link rel="stylesheet" type="text/css" href="/BrickStock/css/styles.css">
+        <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+        <link rel="shortcut icon" href="/BrickStock/css/favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="../css/favicon.ico" type="image/x-icon"> -->
+    </head>
+    <body>
+        <div class="fond" id="panneau_add">
+            <img class="croix" id="fermer" src="/BrickStock/images/croix.svg">
+            <div class="fenetre">
+                <h4>Ajouter une pièce</h4>
+                <form method="POST">
+                    <input type="hidden" name="form_name" value="add_piece">
+                    <span>id de la pièce&nbsp;:</span>
+                    <input required type="text" name="id_piece" placeholder="saisissez un id" id="add1">
+                    <separator></separator>
+                    <span>id du design&nbsp;:</span>
+                    <input required type="text" name="id_design" placeholder="saisissez un id" id="add2">
+                    <separator></separator>
+                    <span>couleur&nbsp;:</span>
+                    <select name="couleur" id="add3">
+                        <option value="0">--sélectionner une couleur--</option>
+                        {liste_couleur_add}
+                    </select>
+                    <separator></separator>
+                    <span>prix sur le site Lego<sup>®</sup>&nbsp;:</span>
+                    <input type="text" name="prix_site_lego" min="0" placeholder="prix (€)" id="add4">
+                    <separator></separator>
+                    <input type="submit" value="Ajouter" style="cursor: pointer;">
+                </form>
+            </div>
+        </div>
+        <!-- <div class="fond" id="panneau_item">
+            <img class="croix" id="fermer_bis" src="/BrickStock/images/croix.svg">
+            <div class="fenetre" style="text-align: left;">
+                <h3 id="item_nom"></h3>
+                <a class="item_img" href="" id="item_image_ref_href" target="_blank">
+                    <img class="item_img" src="" id="item_image_ref_src">
+                </a>
+                <div>
+                    <span id="item_id_piece">id de la pièce&nbsp;:&nbsp;</span><br/>
+                    <span id="item_id_design">id du design&nbsp;:&nbsp;</span><br/>
+                    <span id="item_couleur">couleur&nbsp;:&nbsp;</span><br/>
+                    <span id="item_categorie">catégorie&nbsp;:&nbsp;</span><br/>
+                    <span id="item_dimensions">dimensions&nbsp;:&nbsp;</span><br/>
+                    <span id="item_masse">masse&nbsp;:&nbsp;</span><br/>
+                    <br/><span>Prix&nbsp;: <a id="item_prix" href="">voir les offres</a></span>
+                    <form class="item_piece" method="POST">
+                        <input type="hidden" name="form_name" value="piece_quantity">
+                        <input type="hidden" name="id_piece" id="id_piece_qt">
+                        <div class="quantity_box">
+                            <label>Quantité&nbsp;:</label>
+                            <button type="button" class="bouton_moins" id="-1">
+                                <svg class="minus" width="14px" height="2px" viewBox="0 0 14 2" aria-hidden="true"><polygon fill="black" points="14 2 0 2 0 -6.03961325e-14 14 -6.03961325e-14"></polygon></svg>
+                            </button><input required type="number" class="valeur" min="0" id="val1" name="quantite"><button type="button" class="bouton_plus" id="+1">
+                                <svg class="add" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" aria-hidden="true"><polygon fill="#FFFFFF" points="14 8 0 8 0 6 14 6"></polygon><rect fill="#FFFFFF" fill-rule="nonzero" x="6" y="0" width="2" height="14"></rect></svg>
+                            </button>
+                        </div>
+                        <div class="quantity_box">
+                            <label>Disponible&nbsp;:</label>
+                            <button type="button" class="bouton_moins" id="-2">
+                                <svg class="minus" width="14px" height="2px" viewBox="0 0 14 2" aria-hidden="true"><polygon fill="black" points="14 2 0 2 0 -6.03961325e-14 14 -6.03961325e-14"></polygon></svg>
+                            </button><input required type="number" class="valeur" min="0" id="val2" name="disponible"><button type="button" class="bouton_plus" id="+2">
+                                <svg class="add" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" aria-hidden="true"><polygon fill="#FFFFFF" points="14 8 0 8 0 6 14 6"></polygon><rect fill="#FFFFFF" fill-rule="nonzero" x="6" y="0" width="2" height="14"></rect></svg>
+                            </button>
+                        </div>
+                        <div class="quantity_box">
+                            <label>Endommagée&nbsp;:</label>
+                            <button type="button" class="bouton_moins" id="-3">
+                                <svg class="minus" width="14px" height="2px" viewBox="0 0 14 2" aria-hidden="true"><polygon fill="#FFFFFF" points="14 2 0 2 0 -6.03961325e-14 14 -6.03961325e-14"></polygon></svg>
+                            </button><input required type="number" class="valeur" min="0" id="val3" name="endommagee"><button type="button" class="bouton_plus" id="+3">
+                                <svg class="add" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" aria-hidden="true"><polygon fill="#FFFFFF" points="14 8 0 8 0 6 14 6"></polygon><rect fill="#FFFFFF" fill-rule="nonzero" x="6" y="0" width="2" height="14"></rect></svg>
+                            </button>
+                        </div>
+                        <div class="bouton_validation_infos_div"><input type="submit" value="ENREGISTRER" class="bouton_validation_infos enregistrer"><a id="reset" class="bouton_validation_infos reinitialiser">RÉINITIALISER</a></div>
+                    </form>
+                </div>
+            </div>
+        </div> -->
+        <div class="page">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="/BrickStock/pieces">Pièces</a></li><li>
+                        <a href="/BrickStock/designs">Designs</a></li><li>
+                        <a href="/BrickStock/categories">Categories</a></li><li>
+                        <a href="/BrickStock/couleurs">Couleurs</a></li><li class="main">
+                        <a href="/BrickStock/rangements">Rangements</a></li><li>
+                        <a href="/BrickStock/sets">Sets</a></li><li>
+                        <a href="/BrickStock/minifigures">Minifigures</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="layout">
+                <button id="ajouter" class="ajouter"><img src="/BrickStock/images/bouton_plus_carre.svg"></button>
+                {content}
+            </div>
+        </div>
+        <script type="text/javascript" name="gestion filtres - 1/2">
+            let defaut = {1 : "", 2 : "0", 3 : 0, 4 : "", 5 : "0", 6 : 0, 7 : ""}
+            let indexFilterTon = 2;
+            let indexFilterCategories = 5;
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_filtres.js"></script>
+        <script type="text/javascript" name="gestion filtres - 2/2">
+            addEventListenerForFiltres(7);
+        </script>
+        <script type="text/javascript" name="gestion listes déroulantes">
+            let filterTon = document.getElementById("filter2");
+            let filterCouleur = document.getElementById("filter3");
+            let dictCouleurs = {liste_couleurs};
+            let listeCouleurs = {liste_all_couleurs};
+            let couleurFilter = "{couleur_filter}";
+
+            let filterCategorie = document.getElementById("filter5");
+            let filterSousCategorie = document.getElementById("filter6");
+            let dictCategories = {liste_sous_categories};
+            let listeCategories = {liste_all_categories};
+            let categorieFilter = "{categorie_filter}";
+
+            let indexFilterCouleurs = 3;
+            let indexFilterSousCategories = 6;
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_listes_deroulantes_couleurs.js"></script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_listes_deroulantes_categories.js"></script>
+        <script type="text/javascript" name="gestion panneau ajouter">
+            let nAdd = 4;
+            let defautAdd = {1 : "", 2 : "", 3 : "0", 4 : ""};
+        </script>
+        <script type="text/javascript" src="/BrickStock/javascript/gestion_panneau_add.js"></script>
+        <script type="text/javascript" name="data">
+            let resultats = {resultats};
+        </script>
+        <script type="text/javascript" name="gestion boites résultats">
+            let panneauItem = document.getElementById("panneau_item");
+            panneauItem.classList.add("hide");
+            let defaultValues = [];
+
+            function showItem(e) {
+                if (panneauItem.classList.contains("hide")) {
+                    panneauItem.classList.remove("hide");
+                }
+                var i = this.id.substring(8);
+                var data = resultats[i - 1];
+                document.getElementById("item_id_piece").innerHTML = 'id de la pièce&nbsp;: ' + data["id_piece"];
+                document.getElementById("item_id_design").innerHTML = 'id du design&nbsp;: <a href="http://localhost:1520/BrickStock/pieces?id_design=' + data["id_design"] + '">' + data["id_design"] + '</a>';
+                document.getElementById("item_couleur").innerHTML = 'couleur&nbsp;: <a href="http://localhost:1520/BrickStock/pieces?couleur=' + data["id_couleur"] + '">' + data["nom_couleur"] + "</a>";
+                // var cat = '<a href="http://localhost:1520/BrickStock/pieces?categorie=' + data["id_categorie"] + '">' + data["categorie"] + "</a>";
+                // if (!(data["id_sous_categorie"] === null | data["id_sous_categorie"] in ["None", "Null", "null", "none", ""])) {
+                //     cat = cat + ' > <a href="http://localhost:1520/BrickStock/pieces?categorie=' + data["id_categorie"] + "&sous_categorie=" + data["id_sous_categorie"] + '">' + data["sous_categorie"] + "</a>";
+                // }
+                document.getElementById("item_categorie").innerHTML = "catégorie&nbsp;: " + data["categorie_span"] // cat;
+                document.getElementById("item_dimensions").innerHTML = "dimensions&nbsp;: " + data["dimensions_stud"];
+                document.getElementById("item_masse").innerHTML = "masse&nbsp;: " + data["masse"] + "g";
+                document.getElementById("item_image_ref_href").href = data["image_ref"];
+                document.getElementById("item_image_ref_src").src = data["image_ref"];
+                document.getElementById("item_nom").innerHTML = data["nom"];
+                defaultValues = [data["quantite"], data["disponible"], data["endommagee"]];
+                console.log(defaultValues);
+                document.getElementById("val1").value = defaultValues[0];
+                document.getElementById("val2").value = defaultValues[1];
+                document.getElementById("val3").value = defaultValues[2];
+                document.getElementById("id_piece_qt").value = data["id_piece"];
+                document.getElementById("item_prix").href = "http://localhost:1520/BrickStock/pieces/prix?id_piece=" + data["id_piece"];
+            }
+
+            function hideItem() {
+                if (!panneauItem.classList.contains("hide")) {
+                    panneauItem.classList.add("hide");
+                }
+            }
+
+            var i = 0;
+            while (document.getElementById("resultat" + (i + 1)) !== null) {
+                i++
+            }
+            for (var j=1; j<=i; j++) {
+                document.getElementById("resultat" + j).addEventListener("click", showItem)
+                if (j % 3 == 0) {
+                    document.getElementById("resultat" + j).classList.add("last");
+                }
+            }
+            document.getElementById("fermer_bis").addEventListener("click", hideItem);
+        </script>
+        <script name="gestion spinbox">
+            let inputQuantite = document.getElementById("val1");
+            let inputDisponible = document.getElementById("val2");
+            let inputEndommagee = document.getElementById("val3");
+
+            function plus(e) {
+                var i = this.id.substring(1);
+                if (i == 1) {
+                    inputQuantite.value++
+                }
+                else if (i == 2) {
+                    inputDisponible.value++
+                    if (inputDisponible.value > inputQuantite.value) {
+                        inputQuantite.value = inputDisponible.value;
+                    }
+                }
+                else if (i == 3) {
+                    inputEndommagee.value++
+                    if (inputEndommagee.value > inputQuantite.value) {
+                        inputQuantite.value = inputEndommagee.value;
+                    }
+                }
+            }
+
+            function moins(e) {
+                var i = this.id.substring(1);
+                if (i == 1 & inputQuantite.value > 0) {
+                    inputQuantite.value--
+                    if (inputQuantite.value < inputDisponible.value) {
+                        inputDisponible.value = inputQuantite.value;
+                    }
+                    if (inputQuantite.value < inputEndommagee.value) {
+                        inputEndommagee.value = inputQuantite.value;
+                    }
+                }
+                else {
+                    item = document.getElementById("val" + i)
+                    if (item.value > 0) {
+                        item.value--
+                    }
+                }
+            }
+
+            function verif(e) {
+                if (this.value != "") {
+                    var i = this.id.substring(3);
+                    if (inputQuantite.value < inputDisponible.value) {
+                        if (i == 1) {
+                            inputDisponible.value = inputQuantite.value;
+                        }
+                        else {
+                            inputQuantite.value = inputDisponible.value;
+                        }
+                    }
+                    if (inputQuantite.value < inputEndommagee.value) {
+                        if (i == 1) {
+                            inputQuantite.value = inputEndommagee.value;
+                        }
+                        else {
+                            inputEndommagee.value = inputQuantite.value;
+
+                        }
+                    }
+                    if (inputQuantite.value < 0) {
+                        inputQuantite.value = 0;
+                    }
+                    if (inputDisponible.value < 0) {
+                        inputDisponible.value = 0;
+                    }
+                    if (inputEndommagee.value < 0) {
+                        inputEndommagee.value = 0;
+                    }
+                }
+            }
+
+            function reset(e) {
+                inputQuantite.value = defaultValues[0];
+                inputDisponible.value = defaultValues[1];
+                inputEndommagee.value = defaultValues[2];
+            }
+
+            for (var i=1; i<=3; i++) {
+                document.getElementById("+" + i).addEventListener("click", plus);
+                document.getElementById("-" + i).addEventListener("click", moins);
+                document.getElementById("val" + i).addEventListener("input", verif);
+            }
+            document.getElementById("reset").addEventListener("click", reset);
+        </script>
+        {script}
+    </body>
+</html>

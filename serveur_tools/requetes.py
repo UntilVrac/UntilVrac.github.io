@@ -221,14 +221,19 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
                 pass
             else :
                 if bdd.rangement_est_compartimente(id_rangement) :
-                    params = get_rangements_for_id_request(params_get["id_rangement"])
+                    params = get_rangements_for_id_request(id_rangement)
                     return render_template("rangements.html", entete, params=params)
                 else :
-                    params = get_rangements_for_id_request(params_get["id_rangement"])
-                    return render_template("rangements.html", entete, params=params)
+                    params = get_rangement_content_request(id_rangement)
+                    return render_template("rangement_content.html", entete, params=params)
         elif "id_piece" in params_get :
-            params = get_rangements_for_piece_request(params_get["id_piece"])
-            return render_template("rangements.html", entete, params=params)
+            try :
+                id_piece = int(params_get["id_piece"])
+            except :
+                pass
+            else :
+                params = get_rangements_for_piece_request(id_piece)
+                return render_template("rangements.html", entete, params=params)
         params = get_rangements_list_request()
         return render_template("rangements.html", entete, params=params)
     elif filename[-1] == "Fin" :

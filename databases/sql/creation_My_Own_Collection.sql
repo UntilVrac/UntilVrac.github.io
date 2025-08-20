@@ -4,3 +4,4 @@ CREATE TABLE IF NOT EXISTS Minifigs(id_minifig INTEGER PRIMARY KEY, nb_exemplair
 
 CREATE TABLE IF NOT EXISTS Rangements_physiques(id_rangement INTEGER PRIMARY KEY AUTOINCREMENT, nom_rangement TEXT NOT NULL, type_rangement TEXT NOT NULL, nb_compartiments INTEGER NOT NULL DEFAULT 1, compartimentation TEXT NOT NULL DEFAULT "1 x 1", rangement_parent INTEGER);
 CREATE TABLE IF NOT EXISTS Rangements_virtuels(id_rangement INTEGER PRIMARY KEY AUTOINCREMENT, rangement_physique INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS rangement_content(id_rangement INTEGER NOT NULL, id_element INTEGER NOT NULL UNIQUE, PRIMARY KEY (id_rangement, id_element));

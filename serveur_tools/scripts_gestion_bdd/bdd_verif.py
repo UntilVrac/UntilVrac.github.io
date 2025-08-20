@@ -192,9 +192,14 @@ def rangement_est_compartimente(id_rangement:int) -> bool :
     """
     connexion = sqlite3.connect(MOC)
     curseur = connexion.cursor()
-    curseur.execute('''SELECT COUNT(*) FROM Rangements_physiques WHERE rangement_parent = ?;''')
+    curseur.execute('''SELECT COUNT(*) FROM Rangements_physiques WHERE rangement_parent = ?;''', (id_rangement,))
     r = []
     for e in curseur :
-        r.append(e)
+        r.append(e[0])
     connexion.close()
-    return len(r) > 0
+    return r[0] > 0
+
+
+
+if __name__ == "__main__" :
+    print(rangement_est_compartimente(1))

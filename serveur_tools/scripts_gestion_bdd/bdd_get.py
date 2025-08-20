@@ -632,6 +632,19 @@ def get_gamme_info(id_gamme:str) -> dict :
     else :
         return {}
 
+def get_element_type(id_element:int) -> str :
+    """
+    id_element (int), id de l'élément
+
+    renvoie "pièce" si l'id correspond à une pièce, "design" si l'id correspond à un design et None si aucun élément ne porte cet id
+    """
+    if piece_in_database(id_element) :
+        return "pièce"
+    elif design_in_database(id_element) :
+        return "design"
+    else :
+        return None
+
 
 
 def get_piece_data_from_moc(id_piece:int) -> dict :
@@ -750,12 +763,29 @@ def get_rangement_path(id_rangement:int) -> list :
                 search = __parcours(e, element)
                 if search == None :
                     path.pop()
-                    # return None
                 else :
                     return path + search
         return None
     
-    return [get_rangements_infos(e) for e in __parcours(get_arbre_rangements(), id_rangement)]
+    path = __parcours(get_arbre_rangements(), id_rangement)
+    if path == None :
+        path = []
+    return [get_rangements_infos(e) for e in path]
+
+def get_rangement_content(id_rangement:int) -> list :
+    """
+    id_rangement (int), id du rangement
+
+    renvoie la liste des éléments contenu dans ce rangement sous la forme d'une liste de tuples (id de l'élément, type de l'élément ("pièce" ou "design"))
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    curseur.execute('''SELECT c.id_element FROM rangement_content as c JOIN Rangements_virtuels as v ON c.id_rangement = v.id_rangement WHERE v.rangement_physique = ?;''', (id_rangement,))
+    r = []
+    for e in curseur :
+        r.append(e[0])
+    connexion.close()
+    return [(e, get_element_type(e)) for e in r]
 
 
 
@@ -764,5 +794,5 @@ if __name__ == "__main__" :
     # print(get_liste_categories_dict())
     # print(get_liste_sous_categories(11, direct=False))
     # print(get_infos_categorie(11))
-    # print(get_arbre_rangements())
-    print(get_rangement_path(8))
+    print(get_arbre_rangements())
+    print(get_rangement_path(1))
