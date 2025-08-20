@@ -25,4 +25,3 @@ def get_rangements_list_request() :
     renvoie les paramètres de modifications pour le rendu de la page web (cas où aucune information n'est donnée en paramètre GET -> renvoie de la liste des rangements)
     """
     arbre_rangements = bdd.get_arbre_rangements()
-    
