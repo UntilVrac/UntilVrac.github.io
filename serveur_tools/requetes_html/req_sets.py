@@ -1,6 +1,6 @@
 from sys import path
 # BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.1"
-BRICKSTOCK_PATH = "/workspaces/UntilVrac.github.io"
+BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.2"
 path.append(BRICKSTOCK_PATH)
 
 from datetime import datetime

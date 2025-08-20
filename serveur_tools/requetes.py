@@ -1,6 +1,6 @@
 from sys import path
 # BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.1"
-BRICKSTOCK_PATH = "/workspaces/UntilVrac.github.io"
+BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.2"
 path.append(BRICKSTOCK_PATH)
 
 import serveur_tools.scripts_gestion_bdd.gestion_bdd as bdd
@@ -17,6 +17,7 @@ from serveur_tools.requetes_html.req_minifig_in_set import *
 from serveur_tools.requetes_html.req_prix import *
 from serveur_tools.requetes_html.req_gammes import *
 from serveur_tools.requetes_html.req_piece_in_set import *
+from serveur_tools.requetes_html.req_rangements import *
 
 
 HISTORIQUE = Pile()
@@ -50,7 +51,7 @@ def get_params(requete:str) -> dict :
     return params
 
 def page_exist(url:str) -> bool :
-    liste_pages = ["BrickStock", "*404", "BrickStock/pieces", "BrickStock/pieces/prix", "BrickStock/designs", "BrickStock/categories", "BrickStock/couleurs", "BrickStock/sets", "BrickStock/sets/exemplaires_du_set", "BrickStock/sets/prix", "BrickStock/minifigures", "BrickStock/minifigures/prix", "BrickStock/sets/minifigs_du_set", "BrickStock/sets/pieces_du_set", "BrickStock/sets/gammes", "BrickStock/minifigures/gammes", "*Fin"]
+    liste_pages = ["BrickStock", "*404", "BrickStock/pieces", "BrickStock/pieces/prix", "BrickStock/designs", "BrickStock/categories", "BrickStock/couleurs", "BrickStock/sets", "BrickStock/sets/exemplaires_du_set", "BrickStock/sets/prix", "BrickStock/minifigures", "BrickStock/minifigures/prix", "BrickStock/sets/minifigs_du_set", "BrickStock/sets/pieces_du_set", "BrickStock/sets/gammes", "BrickStock/minifigures/gammes", "BrickStock/rangements", "*Fin"]
     if len(url) == 0 :
         url = "/"
     if url[-1] == "/" :
@@ -212,6 +213,13 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
     elif filename[-1] == "pieces_du_set" :
         params = get_piece_in_set_request(params_get, HISTORIQUE, script)
         return render_template("gammes.html", entete, params=params)
+    elif filename[-1] == "rangements" :
+        if "id_rangement" in params_get :
+            params = get_rangements_for_id_request(params_get["id_rangement"])
+        elif "id_piece" in params_get :
+            params = get_rangements_for_piece_request(params_get["id_piece"])
+        else :
+            params = get_rangements_list_request()
     elif filename[-1] == "Fin" :
         return render_template("Fin.html", entete)
     assert False

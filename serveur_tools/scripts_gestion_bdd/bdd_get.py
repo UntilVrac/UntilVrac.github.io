@@ -1,6 +1,6 @@
 from sys import path
 # BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.1"
-BRICKSTOCK_PATH = "/workspaces/UntilVrac.github.io"
+BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.2"
 path.append(BRICKSTOCK_PATH)
 
 import sqlite3
@@ -684,6 +684,21 @@ def get_minifig_quantity_from_moc(id_minifig:str) -> int :
     connexion.close()
     assert len(r) == 1
     return r[0]
+
+def get_arbre_rangements(id_racine:int=None) -> dict :
+    """
+    id_racine (int), l'id de la racine de l'arbre à créer
+
+    renvoie l'arbre des rangements physiques de la collection sous la forme de dictionnaires {"id_rangement" : int, "contenu" : list (liste des noeuds enfants)} représentants chacun un noeud (la racine qui est la collection ayant None pour id)
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    curseur.execute('''SELECT id_rangement FROM Rangements_physiques WHERE rangement_parent = ?;''', (id_racine,))
+    r = []
+    for e in curseur :
+        r.append(e[0])
+    connexion.close()
+    return {"id_rangement" : id_racine, "contenu" : [get_arbre_rangements(e) for e in r]}
 
 
 

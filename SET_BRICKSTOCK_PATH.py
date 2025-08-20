@@ -1,7 +1,7 @@
 from os import listdir
 
-# BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.1"
-BRICKSTOCK_PATH = "/workspaces/UntilVrac.github.io"
+BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.2"
+# BRICKSTOCK_PATH = "/workspaces/UntilVrac.github.io"
 
 n = 0
 
