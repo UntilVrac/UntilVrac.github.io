@@ -183,3 +183,18 @@ def minifig_est_dans_moc(id_minifig:str) -> bool :
     connexion.close()
     assert len(r) in (0, 1)
     return len(r) == 1
+
+def rangement_est_compartimente(id_rangement:int) -> bool :
+    """
+    id_rangement (int), id du rangement à tester
+
+    renvoie True si le rangement est compartimenté et False sinon (contient directement des pièces de Lego)
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    curseur.execute('''SELECT COUNT(*) FROM Rangements_physiques WHERE rangement_parent = ?;''')
+    r = []
+    for e in curseur :
+        r.append(e)
+    connexion.close()
+    return len(r) > 0

@@ -693,7 +693,11 @@ def get_arbre_rangements(id_racine:int=None) -> dict :
     """
     connexion = sqlite3.connect(MOC)
     curseur = connexion.cursor()
-    curseur.execute('''SELECT id_rangement FROM Rangements_physiques WHERE rangement_parent = ?;''', (id_racine,))
+    if id_racine == None :
+        curseur.execute('''SELECT id_rangement FROM Rangements_physiques WHERE rangement_parent IS NULL;''')
+    else :
+        curseur.execute('''SELECT id_rangement FROM Rangements_physiques WHERE rangement_parent = ?;''', (id_racine,))
+    # curseur.execute(f'''SELECT id_rangement FROM Rangements_physiques WHERE rangement_parent = {id_racine if id_racine != None else "NULL"};''')
     r = []
     for e in curseur :
         r.append(e[0])
@@ -724,9 +728,41 @@ def get_rangements_infos(id_rangement:int) -> dict :
     else :
         return r[0]
 
+def get_rangement_path(id_rangement:int) -> list :
+    """
+    id_rangement (int), id du rangement
+
+    renvoie la liste des parents du rangement sous la forme d'une liste de dictionnaires {"id_rangement" : int, "nom_rangement" : str, "type_rangement" : str, "nb_compartiments" : int, "compartimentation" : str} si le rangement existe et None sinon
+    """
+
+    def __parcours(arbre:dict, element:int) -> list :
+        """
+        entrées :
+            arbre (dict), l'arbre de rangements à parcourir
+            element (int), l'id à trouver
+        """
+        path = []
+        for e in arbre["contenu"] :
+            path.append(e["id_rangement"])
+            if e["id_rangement"] == element :
+                return path
+            else :
+                search = __parcours(e, element)
+                if search == None :
+                    path.pop()
+                    # return None
+                else :
+                    return path + search
+        return None
+    
+    return [get_rangements_infos(e) for e in __parcours(get_arbre_rangements(), id_rangement)]
+
 
 
 if __name__ == "__main__" :
-    print(get_liste_categories_dict())
-    print(get_liste_sous_categories(11, direct=False))
-    print(get_infos_categorie(11))
+    pass
+    # print(get_liste_categories_dict())
+    # print(get_liste_sous_categories(11, direct=False))
+    # print(get_infos_categorie(11))
+    # print(get_arbre_rangements())
+    print(get_rangement_path(8))
