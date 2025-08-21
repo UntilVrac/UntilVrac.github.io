@@ -88,6 +88,7 @@ def page_exist(url:str) -> bool :
     return False
 
 def rep_post(url:str, params_post:dict) -> bytes :
+    entete = "HTTP/1.1 200 OK\r\nhost: le site local\r\nContent-Type: text/html\r\n\r\n"
     url = decoder_text(url)
     if not page_exist(url.split("?")[0]) :
         return get_file("404")
@@ -118,14 +119,20 @@ def rep_post(url:str, params_post:dict) -> bytes :
     elif filename[-1] == "minifigs_du_set" :
         if params_post["form_name"] == "search_minifig" :
             params = post_minifig_in_set_search_request(url, HISTORIQUE, params_post)
-            print(params)
-            return render_template("minifigs_du_set.html", "HTTP/1.1 200 OK\r\nhost: le site local\r\nContent-Type: text/html\r\n\r\n", params=params)
+            # print(params)
+            return render_template("minifigs_du_set.html", entete, params=params)
         elif params_post["form_name"] == "save_data" :
             rep = post_minifig_in_set_save_request(url, params_post)
             return get_file(rep[0], script=rep[1])
     elif filename[-1] == "gammes" :
         rep = post_gammes_request(url, params_post)
         return get_file(rep[0], script=rep[1], post=True)
+    elif filename[-1] == "rangements" :
+        if params_post["form_name"] == "search_piece" :
+            params = post_rangement_content_request(url, params_post)
+            return render_template("rangement_content.html", entete, params=params)
+        elif params_post["form_name"] == "save_data" :
+            pass
     assert False
 
 def get_file(filename:str, script:any=None, post:bool=False) -> bytes :

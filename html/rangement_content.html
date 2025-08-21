@@ -114,23 +114,27 @@
                     <div class="filter_zone">
                         <a class="bouton_refresh" href="" id="boutonRefresh"></a>
                         <h3>Filtres&nbsp;:</h3>
-                        <form method="POST" id="form_search" action="http://localhost:1520/BrickStock/{current_url}#search_zone">
-                            <input type="hidden" name="form_name" value="search_minifig">
-                            <input type="hidden" name="liste_minifigs" id="liste_minifigs_input_search">
+                        <form method="POST" id="form_search" action="/BrickStock/{current_url}#search_zone">
+                            <input type="hidden" name="form_name" value="search_piece">
+                            <input type="hidden" name="liste_pieces" id="liste_pieces_input_search">
                             <span>Nom&nbsp;:</span><br/>
-                            <input type="text" name="nom" value="{nom_search}" placeholder="saisissez un nom" id="filter1"><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del1">
+                            <input type="text" name="nom" value="{nom_search}" placeholder="saisissez un nom" id="filter1"><img src="/BrickStock/images/del_filter.svg" class="del_filter hide" id="del1">
                             <separator></separator>
-                            <span>id de la minifig&nbsp;:</span><br/>
-                            <input type="text" name="id_minifig" value="{id_minifig_search}" placeholder="saisissez un nom" id="filter2"><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del2">
+                            <span>Design&nbsp;:</span><br/>
+                            <input type="text" name="id_minifig" value="{id_design_search}" placeholder="saisissez un nom" id="filter2"><img src="/BrickStock/images/del_filter.svg" class="del_filter hide" id="del2">
                             <separator></separator>
-                            <span>Gamme&nbsp;:</span><br/>
-                            <select name="gamme" value="{gamme_search}" id="filter3">
-                                <option value="0">--sélectionner une gamme--</option>
-                                {liste_gammes}
-                            </select><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del3">
+                            <span>Dimensions&nbsp;:</span><br/>
+                            <input type="text" name="dimensions" value="{dimensions_search}" placeholder="lxLxh" id="filter3"><img src="/BrickStock/images/del_filter.svg" class="del_filter hide" id="del3">
                             <separator></separator>
-                            <span>Set&nbsp;:</span><br/>
-                            <input type="text" name="id_set" value="{id_set_search}" placeholder="saisissez un id de set" id="filter4"><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del4">
+                            <span>Catégorie&nbsp;:</span><br/>
+                            <select name="categorie" id="filter4">
+                                <option value="0">--sélectionner une catégorie--</option>
+                            </select><img src="/BrickStock/images/del_filter.svg" class="del_filter hide" id="del4">
+                            <separator></separator>
+                            <span>Sous-catégorie&nbsp;:</span><br/>
+                            <select name="sous_categorie" id="filter5">
+                                <option value="0">--sélectionner une sous-catégorie--</option>
+                            </select><img src="/BrickStock/images/del_filter.svg" class="del_filter hide" id="del5">
                             <separator></separator>
                             <input type="submit" value="Rechercher" class="rechercher">
                         </form>
@@ -141,9 +145,9 @@
             </div>
         </div>
         <script type="text/javascript" name="gestion filtres - 1/2">
-            let defaut = {1 : "", 2 : "0", 3 : 0, 4 : "", 5 : "0", 6 : 0, 7 : ""}
-            let indexFilterTon = 2;
-            let indexFilterCategories = 5;
+            let defaut = {1 : "", 2 : "", 3 : "", 4 : 0, 5 : 0};
+            let indexFilterTon = 0;
+            let indexFilterCategories = 4;
         </script>
         <script type="text/javascript" src="/BrickStock/javascript/gestion_filtres.js"></script>
         <script type="text/javascript" name="gestion filtres - 2/2">

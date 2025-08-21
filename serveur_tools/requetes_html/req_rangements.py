@@ -28,9 +28,11 @@ def get_rangements_for_id_request(id_rangement:int) -> dict :
     params = {"{content}" : contenu, "{script}" : ""}
     return params
 
-def get_rangement_content_request(id_rangement:int) -> dict :
+def get_rangement_content_request(id_rangement:int, post:bool=False) -> dict :
     """
-    id_rangement (int), id du rangement
+    entrées :
+        id_rangement (int), id du rangement
+        post (bool) (False par défaut), True si la requête est de type POST et False sinon
 
     renvoie les paramètres de modifications pour le rendu de la page web (cas un id_piece est donné en paramètre GET)
     """
@@ -64,4 +66,19 @@ def get_rangements_list_request() -> dict :
     </li>
 </ul>"""
     params = {"{content}" : contenu, "{script}" : ""}
+    return params
+
+
+
+def post_rangement_content_request(url:str, params_post:dict) -> dict :
+    """
+    entrées :
+        url (str), l'url courante
+        params_post (dict), les paramètres de la requête POST
+
+    renvoie les paramètres de modifications pour le rendu de la page web
+    """
+    params_get = {e.split("=")[0] : e.split("=")[1] for e in url.split("?")[1].split("&")}
+    params_get = {"id_rangement" : params_get["id_rangement"], "nom_search" : params_post["nom"], "id_design_search" : params_post["id_design"], "dimensions_search" : params_post["dimensions"], "categorie_search" : params_post["categorie"], "sous_categorie_search" : params_post["sous_categorie"], "liste_pieces" : params_post["liste_pieces"]}
+    params = get_rangement_content_request(params_get, post=True)
     return params

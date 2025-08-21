@@ -160,9 +160,7 @@ def post_minifig_in_set_search_request(url:str, HISTORIQUE:Pile, params_post:dic
     params_get = {e.split("=")[0] : e.split("=")[1] for e in url.split("?")[1].split("&")}
     params_get = {"id_set" : params_get["id_set"], "nom_search" : params_post["nom"], "id_minifig_search" : params_post["id_minifig"], "gamme_search" : params_post["gamme"], "id_set_search" : params_post["id_set"], "liste_minifigs" : params_post["liste_minifigs"]}
     params = get_minifig_in_set_request(params_get, HISTORIQUE, post=True)
-    post_to_get = ""
-    for p in params_post :
-        post_to_get += f'{p}={params_post[p]}&'
+    # post_to_get = "&".join([f'{p}={params_post[p]}' for p in params_post])
     # params_minifig = get_file("minifigures?" + post_to_get[:-1])[1]
     # id_set = params["{id_set}"]
     return params
