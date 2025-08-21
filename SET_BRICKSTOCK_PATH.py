@@ -1,4 +1,5 @@
 from os import listdir
+import sqlite3
 
 BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.2"
 # BRICKSTOCK_PATH = "/workspaces/UntilVrac.github.io"
@@ -27,6 +28,13 @@ def set_brickstock_path(current_path:str) -> None :
                     n += 1
             elif "." not in f :
                 set_brickstock_path(path)
+    # connexion = sqlite3.connect(BRICKSTOCK_PATH + "/databases/My Own Collection.db")
+    # curseur = connexion.cursor()
+    # curseur.execute('''SELECT id_rangement, rangement_physique FROM Rangements_virtuels;''')
+    # r = []
+    # for e in curseur :
+    #     r.append(e)
+    # connexion.close()
 
 if __name__ == "__main__" :
     set_brickstock_path(BRICKSTOCK_PATH)

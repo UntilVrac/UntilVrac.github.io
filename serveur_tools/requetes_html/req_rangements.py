@@ -70,6 +70,61 @@ def get_rangement_content_request(id_rangement:int, params_get:dict=None) -> dic
 </div>"""
         i += 1
     params["{content}"] = content
+    params_search = {}
+    infos_search = ("nom", "id_design", "dimensions", "categorie", "sous_categorie")
+    for p in infos_search :
+        if p + "_search" in params_get :
+            if p in ("categorie", "sous_categorie") :
+                try :
+                    if params_get[p + "_search"] != "0" :
+                        params_search[p] = int(params_get[p + "_search"])
+                except :
+                    pass
+            elif params_get[p + "_search"] != "" :
+                params_search[p] = params_get[p + "_search"]
+    resultats_search = bdd.search_piece(params_search)
+    cases = ""
+    i = 1
+    liste_pieces = [e[0] for e in liste_content if e[1] == "pièce"]
+    for r in resultats_search :
+        if r["id_piece"] not in liste_pieces :
+            cases += f"""<div class="block_resultat" id="resultat{i}">
+    <img class="apercu" src="{r["image_ref"]}">
+    <h4>{r["nom"]}</h4>
+    <span>id pièce&nbsp;: {r["id_piece"]}</span><br/>
+    <span>id design&nbsp;: {r["id_design"]}</span>
+    <input type="submit" value="AJOUTER LA PIÈCE" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 162px; margin-top: 8px;" id="ajouter_piece_{i}">
+    <input type="submit" value="AJOUTER LE DESIGN" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 174px; margin-top: 8px;" id="ajouter_design{i}">
+</div>"""
+            i += 1
+    params["{cases}"] = cases
+    for p in infos_search[:3] :
+        p = p + "_search"
+        if p in params_get :
+            params["{" + p + "}"] = params_get[p]
+        else :
+            params["{" + p + "}"] = ""
+    cat, sous_cat = 0, 0
+    if "categorie" in params_search :
+        cat = params_search["categorie"]
+    if "sous_categorie" in params_search :
+        sous_cat = params_search["sous_categorie"]
+    liste_cat = ""
+    for c in bdd.get_liste_categories_racines() :
+        if c == cat :
+            select = " selected"
+        else :
+            select = ""
+        liste_cat += f"""<option{select} value="{c}">{bdd.get_infos_categorie(c)["nom_categorie"]}</option>"""
+    if cat != 0 :
+        liste_sous_cat = ""
+        for c in bdd.get_liste_sous_categories(cat) :
+            if c == sous_cat :
+                select = " selected"
+            else :
+                select = ""
+            liste_sous_cat += f"""<option{select} value="{c}">{bdd.get_infos_categorie(c)["nom_categorie"]}</option>"""
+    params["{liste_cat}"], params["{liste_sous_cat}"] = liste_cat, liste_sous_cat
     return params
 
 def get_rangements_for_piece_request(id_piece:int) -> dict :
