@@ -97,7 +97,47 @@
             </div>
             <div class="layout">
                 <button id="ajouter" class="ajouter"><img src="/BrickStock/images/bouton_plus_carre.svg"></button>
-                {content}
+                <div style="text-align: center;">
+                    <h3 style="text-align: center;">{path_rangement}</h3>
+                    <a style="display: inline-block; position: relative; vertical-align: top;" href="{qr_code_href}" target="_blank">
+                        <img class="item_img" style="margin-left: 12px; width: 200px;" src="{qr_code_href}">
+                    </a>
+                    <div class="infos_set">
+                        <span>identifiant du rangement&nbsp;: {id_rangement}</span><br/>
+                        <span>type de rangement&nbsp;: {type_rangement}</span>
+                    </div>
+                </div>
+                <div style="text-align: left; padding: 24px;">
+                    {content}
+                </div>
+                <div style="text-align: left; margin: 0 24px; padding: 24px 0; border-top: 1px solid #404040;">
+                    <div class="filter_zone">
+                        <a class="bouton_refresh" href="" id="boutonRefresh"></a>
+                        <h3>Filtres&nbsp;:</h3>
+                        <form method="POST" id="form_search" action="http://localhost:1520/BrickStock/{current_url}#search_zone">
+                            <input type="hidden" name="form_name" value="search_minifig">
+                            <input type="hidden" name="liste_minifigs" id="liste_minifigs_input_search">
+                            <span>Nom&nbsp;:</span><br/>
+                            <input type="text" name="nom" value="{nom_search}" placeholder="saisissez un nom" id="filter1"><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del1">
+                            <separator></separator>
+                            <span>id de la minifig&nbsp;:</span><br/>
+                            <input type="text" name="id_minifig" value="{id_minifig_search}" placeholder="saisissez un nom" id="filter2"><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del2">
+                            <separator></separator>
+                            <span>Gamme&nbsp;:</span><br/>
+                            <select name="gamme" value="{gamme_search}" id="filter3">
+                                <option value="0">--sélectionner une gamme--</option>
+                                {liste_gammes}
+                            </select><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del3">
+                            <separator></separator>
+                            <span>Set&nbsp;:</span><br/>
+                            <input type="text" name="id_set" value="{id_set_search}" placeholder="saisissez un id de set" id="filter4"><img src="http://localhost:1520/BrickStock/images/del_filter.svg" class="del_filter hide" id="del4">
+                            <separator></separator>
+                            <input type="submit" value="Rechercher" class="rechercher">
+                        </form>
+                    </div><div class="table_zone">
+                        {cases}
+                    </div>
+                </div>
             </div>
         </div>
         <script type="text/javascript" name="gestion filtres - 1/2">
