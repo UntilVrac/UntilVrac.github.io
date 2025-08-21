@@ -548,6 +548,14 @@ a.imageRefCategorie img {
     margin-top: -15%;
     margin-left: -15%;
 }
+img.type_element {
+    width: 24px;
+    /* height: 24px; */
+    float: left;
+    margin: 0 -25px -25px 0;
+    border: 0.5px solid #000000;
+    border-radius: 8px;
+}
 
 
 /* svg */

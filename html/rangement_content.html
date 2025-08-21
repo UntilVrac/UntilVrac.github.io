@@ -96,11 +96,12 @@
                 </ul>
             </div>
             <div class="layout">
-                <button id="ajouter" class="ajouter"><img src="/BrickStock/images/bouton_plus_carre.svg"></button>
+                <!-- <button id="ajouter" class="ajouter"><img src="/BrickStock/images/bouton_plus_carre.svg"></button> -->
                 <div style="text-align: center;">
                     <h3 style="text-align: center;">{path_rangement}</h3>
-                    <a style="display: inline-block; position: relative; vertical-align: top;" href="{qr_code_href}" target="_blank">
-                        <img class="item_img" style="margin-left: 12px; width: 200px;" src="{qr_code_href}">
+                    <a style="display: inline-block; position: relative; vertical-align: top; color: inherit; text-decoration: none;" href="{qr_code_href}" target="_blank">
+                        <img class="item_img" style="border: none; width: 50px;" src="{qr_code_href}">
+                        <br/><span>{id_qr-code}</span>
                     </a>
                     <div class="infos_set">
                         <span>identifiant du rangement&nbsp;: {id_rangement}</span><br/>

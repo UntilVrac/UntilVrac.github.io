@@ -23,6 +23,14 @@ from serveur_tools.requetes_html.req_rangements import *
 HISTORIQUE = Pile()
 
 def render_template(file_path:str, entete, params:dict=None) -> bin :
+    """
+    entrées :
+        file_path (str), le chemin du fichier html à ouvrir
+        entete (str), l'en-tête de la réponse
+        params (dict), les paramètres à appliquer pour le rendu de la page
+
+    renvoie la page web encodée en utf-8 après remplacement dans son contenu des clées du dictionnaires params par leurs valeurs
+    """
     with open("html/" + file_path, "r") as file :
         content = file.read()
     if params != None :
@@ -31,12 +39,27 @@ def render_template(file_path:str, entete, params:dict=None) -> bin :
     return (entete + content).encode()
 
 def is_GET(requete:str) -> bool :
+    """
+    requete (str), la requête à traiter
+
+    renvoie True si la requête est de type GET et False sinon
+    """
     return requete[0:3] == "GET"
 
 def is_POST(requete:str) -> bool :
+    """
+    requete (str), la requête à traiter
+
+    renvoie True si la requête est de type POST et False sinon
+    """
     return requete[0:4] == "POST"
 
 def get_url(requete:str) -> list :
+    """
+    requete (str), la requête à traiter
+
+    renvoie l'url de la requête
+    """
     u = requete[requete.index("/") + 1:requete.index(" HTTP")]
     if "?" in u :
         return u.split("?")[0] + "?" + u.split("?")[1]
@@ -44,6 +67,11 @@ def get_url(requete:str) -> list :
         return u
 
 def get_params(requete:str) -> dict :
+    """
+    requete (str), la requête POST
+
+    renvoie les paramètres POST sous forme de dictionnaire
+    """
     arguments = [arg.split("=") for arg in requete.split("\n")[-1].split("&")]
     params = {}
     for args in arguments :
@@ -51,7 +79,7 @@ def get_params(requete:str) -> dict :
     return params
 
 def page_exist(url:str) -> bool :
-    liste_pages = ["BrickStock", "*404", "BrickStock/pieces", "BrickStock/pieces/prix", "BrickStock/designs", "BrickStock/categories", "BrickStock/couleurs", "BrickStock/sets", "BrickStock/sets/exemplaires_du_set", "BrickStock/sets/prix", "BrickStock/minifigures", "BrickStock/minifigures/prix", "BrickStock/sets/minifigs_du_set", "BrickStock/sets/pieces_du_set", "BrickStock/sets/gammes", "BrickStock/minifigures/gammes", "BrickStock/rangements", "*Fin"]
+    liste_pages = ["BrickStock", "*404", "BrickStock/pieces", "BrickStock/pieces/prix", "BrickStock/designs", "BrickStock/categories", "BrickStock/couleurs", "BrickStock/sets", "BrickStock/sets/exemplaires_du_set", "BrickStock/sets/prix", "BrickStock/minifigures", "BrickStock/minifigures/prix", "BrickStock/sets/minifigs_du_set", "BrickStock/sets/pieces_du_set", "BrickStock/sets/gammes", "BrickStock/minifigures/gammes", "BrickStock/rangements", "BrickStock/rangements/QR-Codes", "*Fin"]
     if len(url) == 0 :
         url = "/"
     if url[-1] == "/" :
@@ -157,9 +185,12 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
     for ext, content_type in content_types.items() :
         if filename[-len(ext):] == ext :
             entete = f"HTTP/1.1 200 OK\r\nHost: le site local\r\nContent-Type: {content_type}\r\n\r\n"
+            if filename[0] == "/" :
+                filename = filename[1:]
             if filename.startswith("BrickStock/") :
                 filename = filename[11:]
             try :
+                print("file :", filename)
                 with open(filename, "rb") as file :
                     encoded_content = entete.encode() + file.read()
                 return encoded_content
@@ -243,6 +274,13 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
                 return render_template("rangements.html", entete, params=params)
         params = get_rangements_list_request()
         return render_template("rangements.html", entete, params=params)
+    elif filename[-1] == "QR-Codes" :
+        try :
+            id_rangement = int(params_get["id_rangement"])
+        except :
+            return get_file("/BrickStock/404")
+        else :
+            return get_file(f"""/BrickStock/images/QR-Codes_rangements/{bdd.get_id_qr_code_rangement(id_rangement)}.png""")
     elif filename[-1] == "Fin" :
         return render_template("Fin.html", entete)
     assert False

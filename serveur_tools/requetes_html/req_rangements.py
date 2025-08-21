@@ -28,22 +28,48 @@ def get_rangements_for_id_request(id_rangement:int) -> dict :
     params = {"{content}" : contenu, "{script}" : ""}
     return params
 
-def get_rangement_content_request(id_rangement:int, post:bool=False) -> dict :
+def get_rangement_content_request(id_rangement:int, params_get:dict=None) -> dict :
     """
     entrées :
         id_rangement (int), id du rangement
-        post (bool) (False par défaut), True si la requête est de type POST et False sinon
+        params_get (dict) ({} par défaut), les paramètres GET
 
     renvoie les paramètres de modifications pour le rendu de la page web (cas un id_piece est donné en paramètre GET)
     """
-    params = {}
-    liste_content = bdd.get_rangement_content(id_rangement)
+    if params_get == None :
+        params_get = {}
+    infos_rangement = bdd.get_rangements_infos(id_rangement)
+    path = bdd.get_rangement_path(id_rangement)
+    # path.append(infos_rangement)
+    params = {"{path_rangement}" : f"""<span>{" > ".join([f'''<a href="/BrickStock/rangements?id_rangement={e["id_rangement"]}">{e["nom_rangement"]}</a>''' for e in path])}</span>""", "{id_rangement}" : id_rangement, "{type_rangement}" : infos_rangement["type_rangement"], "{qr_code_href}" : f"""/BrickStock/rangements/QR-Codes?id_rangement={id_rangement}""", "{id_qr-code}" : bdd.get_id_qr_code_rangement(id_rangement), "{script}" : ""}
+    try :
+        liste_content = [(int(e.split(" : ")[0]), e.split(" : ")[1]) for e in params_get["liste_pieces"].split(", ")]
+    except :
+        liste_content = bdd.get_rangement_content(id_rangement)
     content = ""
+    i = 1
     for e in liste_content :
         if e[1] == "pièce" :
-            content += f""""""
+            piece_infos = bdd.get_piece_info(e[0])
+            content += f"""<div class="item_minifig">
+    <img id="bouton_supprimer{i}" class="supprimer_item" src="/BrickStock/images/croix.svg">
+    <img class="type_element" src="{bdd.get_couleur_data(piece_infos["id_couleur"])["image_ref"]}">
+    <img class="apercu" src="{piece_infos["image_ref"]}">
+    <span>id pièce&nbsp;: {piece_infos["id_piece"]}</span>
+    <span>id design&nbsp;: {piece_infos["id_design"]}</span><br/>
+    <span style="font-weight: bold;">{piece_infos["nom"]}</span>
+</div>"""
         else :
-            pass
+            design_infos = bdd.get_design_info(e[0])
+            content += f"""<div class="item_minifig">
+    <img id="bouton_supprimer{i}" class="supprimer_item" src="/BrickStock/images/croix.svg">
+    <img class="type_element" src="/BrickStock/images/palette.png">
+    <img class="apercu" src="{design_infos["image_ref"]}">
+    <span>id design&nbsp;: {design_infos["id_design"]}</span><br/>
+    <span style="font-weight: bold;">{design_infos["nom"]}</span>
+</div>"""
+        i += 1
+    params["{content}"] = content
     return params
 
 def get_rangements_for_piece_request(id_piece:int) -> dict :
@@ -80,5 +106,5 @@ def post_rangement_content_request(url:str, params_post:dict) -> dict :
     """
     params_get = {e.split("=")[0] : e.split("=")[1] for e in url.split("?")[1].split("&")}
     params_get = {"id_rangement" : params_get["id_rangement"], "nom_search" : params_post["nom"], "id_design_search" : params_post["id_design"], "dimensions_search" : params_post["dimensions"], "categorie_search" : params_post["categorie"], "sous_categorie_search" : params_post["sous_categorie"], "liste_pieces" : params_post["liste_pieces"]}
-    params = get_rangement_content_request(params_get, post=True)
+    params = get_rangement_content_request(params_get)
     return params

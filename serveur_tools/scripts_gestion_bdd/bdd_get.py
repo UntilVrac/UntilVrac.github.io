@@ -787,6 +787,24 @@ def get_rangement_content(id_rangement:int) -> list :
     connexion.close()
     return [(e, get_element_type(e)) for e in r]
 
+def get_id_qr_code_rangement(id_rangement:int) -> int :
+    """
+    id_rangement (int), id du rangement physique
+
+    renvoie l'id du rangement virtuel correspondant s'il existe et None sinon
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    curseur.execute('''SELECT id_rangement FROM Rangements_virtuels WHERE rangement_physique = ?;''', (id_rangement,))
+    r = []
+    for e in curseur :
+        r.append(e[0])
+    connexion.close()
+    if len(r) == 0 :
+        return None
+    else :
+        return r[0]
+
 
 
 if __name__ == "__main__" :
@@ -794,5 +812,5 @@ if __name__ == "__main__" :
     # print(get_liste_categories_dict())
     # print(get_liste_sous_categories(11, direct=False))
     # print(get_infos_categorie(11))
-    print(get_arbre_rangements())
+    # print(get_arbre_rangements())
     print(get_rangement_path(1))
