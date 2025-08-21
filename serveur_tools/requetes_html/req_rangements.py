@@ -116,8 +116,8 @@ def get_rangement_content_request(id_rangement:int, params_get:dict=None) -> dic
         else :
             select = ""
         liste_cat += f"""<option{select} value="{c}">{bdd.get_infos_categorie(c)["nom_categorie"]}</option>"""
+    liste_sous_cat = ""
     if cat != 0 :
-        liste_sous_cat = ""
         for c in bdd.get_liste_sous_categories(cat) :
             if c == sous_cat :
                 select = " selected"
