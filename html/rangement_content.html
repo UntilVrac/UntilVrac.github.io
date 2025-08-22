@@ -113,8 +113,8 @@
                 </div>
                 <form method="POST" style="margin: 0 24px 24px; text-align: center; width: calc(100% - 48px);">
                     <input type="hidden" name="form_name" value="save_data">
-                    <input type="hidden" name="id_set" value="{id_set}">
-                    <input type="hidden" name="liste_minifigs" id="liste_minifigs_input">
+                    <input type="hidden" name="id_rangement" value="{id_rangement}">
+                    <input type="hidden" name="liste_pieces" id="liste_pieces_input">
                     <input type="submit" value="ENREGISTRER" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 140px;">
                 </form>
                 <div style="text-align: left; margin: 0 24px; padding: 24px 0; border-top: 1px solid #404040;" id="search_zone">
@@ -146,12 +146,13 @@
                             <separator></separator>
                             <input type="submit" value="Rechercher" class="rechercher">
                         </form>
-                    </div><div class="table_zone">
+                    </div><div class="table_zone" style="padding: 0; width: calc(100% - 289px - 48px + 24px);">
                         {cases}
                     </div>
                 </div>
             </div>
         </div>
+        {script}
         <script type="text/javascript" name="gestion filtres - 1/2">
             let defaut = {1 : "", 2 : "", 3 : "", 4 : 0, 5 : 0};
             let indexFilterTon = 0;
@@ -179,57 +180,76 @@
         <script type="text/javascript" name="data">
             let resultats = {resultats};
         </script>
-        <script type="text/javascript" name="gestion boites résultats">
-            let panneauItem = document.getElementById("panneau_item");
-            panneauItem.classList.add("hide");
-            let defaultValues = [];
-
-            function showItem(e) {
-                if (panneauItem.classList.contains("hide")) {
-                    panneauItem.classList.remove("hide");
+        <script type="text/javascript" name="conversion dict (object) -> string et list.remove">
+            function str(dict) {
+                var chaine = "{";
+                var cles = Object.keys(dict)
+                for (var i=0; i<cles.length; i++) {
+                    if (i > 0) {
+                        chaine = chaine + ", ";
+                    }
+                    chaine = chaine + cles[i] + " : " + dict[cles[i]];
                 }
-                var i = this.id.substring(8);
-                var data = resultats[i - 1];
-                document.getElementById("item_id_piece").innerHTML = 'id de la pièce&nbsp;: ' + data["id_piece"];
-                document.getElementById("item_id_design").innerHTML = 'id du design&nbsp;: <a href="http://localhost:1520/BrickStock/pieces?id_design=' + data["id_design"] + '">' + data["id_design"] + '</a>';
-                document.getElementById("item_couleur").innerHTML = 'couleur&nbsp;: <a href="http://localhost:1520/BrickStock/pieces?couleur=' + data["id_couleur"] + '">' + data["nom_couleur"] + "</a>";
-                // var cat = '<a href="http://localhost:1520/BrickStock/pieces?categorie=' + data["id_categorie"] + '">' + data["categorie"] + "</a>";
-                // if (!(data["id_sous_categorie"] === null | data["id_sous_categorie"] in ["None", "Null", "null", "none", ""])) {
-                //     cat = cat + ' > <a href="http://localhost:1520/BrickStock/pieces?categorie=' + data["id_categorie"] + "&sous_categorie=" + data["id_sous_categorie"] + '">' + data["sous_categorie"] + "</a>";
-                // }
-                document.getElementById("item_categorie").innerHTML = "catégorie&nbsp;: " + data["categorie_span"] // cat;
-                document.getElementById("item_dimensions").innerHTML = "dimensions&nbsp;: " + data["dimensions_stud"];
-                document.getElementById("item_masse").innerHTML = "masse&nbsp;: " + data["masse"] + "g";
-                document.getElementById("item_image_ref_href").href = data["image_ref"];
-                document.getElementById("item_image_ref_src").src = data["image_ref"];
-                document.getElementById("item_nom").innerHTML = data["nom"];
-                defaultValues = [data["quantite"], data["disponible"], data["endommagee"]];
-                console.log(defaultValues);
-                document.getElementById("val1").value = defaultValues[0];
-                document.getElementById("val2").value = defaultValues[1];
-                document.getElementById("val3").value = defaultValues[2];
-                document.getElementById("id_piece_qt").value = data["id_piece"];
-                document.getElementById("item_prix").href = "http://localhost:1520/BrickStock/pieces/prix?id_piece=" + data["id_piece"];
+                chaine = chaine + "}";
+                return chaine;
             }
 
-            function hideItem() {
-                if (!panneauItem.classList.contains("hide")) {
-                    panneauItem.classList.add("hide");
+            function indexOf(liste, item) {
+                for (var i=0; i<liste.length; i++) {
+                    if (liste[i] == item) {
+                        return i;
+                    }
                 }
+                return -1;
             }
 
-            var i = 0;
-            while (document.getElementById("resultat" + (i + 1)) !== null) {
+            function listRemove(liste, item) {
+                if (liste.includes(item)) {
+                    var i = indexOf(liste, item);
+                    var new_liste = [];
+                    for (var j=0; i<liste.length; j++) {
+                        if (j != i) {
+                            new_liste.push(liste[j]);
+                        }
+                    }
+                    return new_liste;
+                }
+                else {
+                    return liste;
+                }
+            }
+        </script>
+        <script type="text/javascript" name="gestion input liste pieces">
+            let valueInput = {value_input};
+            let piecesInput = document.getElementById("liste_pieces_input");
+            let piecesInputSearch = document.getElementById("liste_pieces_input_search");
+            let listeNumItem = [];
+            i = 1;
+            while (document.getElementById("val" + i) !== null) {
+                listeNumItem.push(i);
                 i++
             }
-            for (var j=1; j<=i; j++) {
-                document.getElementById("resultat" + j).addEventListener("click", showItem)
-                if (j % 3 == 0) {
-                    document.getElementById("resultat" + j).classList.add("last");
+            let nextIndex = listeNumItem.length + 1;
+            let nbPiece = Object.keys(valueInput).length;
+
+            function alignementMinifigInSet(nbPieceInLine=5) {
+                for (var k=0; k<listeNumItem.length; k++) {
+                    var item = document.getElementById("item_minifig" + listeNumItem[k]);
+                    if (item.classList.contains("last") & k % nbPieceInLine != (nbPieceInLine - 1)) {
+                        item.classList.remove("last");
+                    }
+                    else if (!item.classList.contains("last") & k % nbPieceInLine == (nbPieceInLine - 1)) {
+                        item.classList.add("last");
+                    }
                 }
             }
-            document.getElementById("fermer_bis").addEventListener("click", hideItem);
+
+            function setInput() {
+                piecesInput.value = str(valueInput);
+                piecesInputSearch.value = piecesInput.value;
+            }
+
+            setInput();
         </script>
-        {script}
     </body>
 </html>

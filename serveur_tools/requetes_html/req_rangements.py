@@ -44,8 +44,10 @@ def get_rangement_content_request(id_rangement:int, params_get:dict=None) -> dic
     params = {"{path_rangement}" : f"""<span>{" > ".join([f'''<a href="/BrickStock/rangements?id_rangement={e["id_rangement"]}">{e["nom_rangement"]}</a>''' for e in path])}</span>""", "{id_rangement}" : id_rangement, "{type_rangement}" : infos_rangement["type_rangement"], "{qr_code_href}" : f"""/BrickStock/rangements/QR-Codes?id_rangement={id_rangement}""", "{id_qr-code}" : bdd.get_id_qr_code_rangement(id_rangement), "{script}" : ""}
     try :
         liste_content = [(int(e.split(" : ")[0]), e.split(" : ")[1]) for e in params_get["liste_pieces"].split(", ")]
+        params["{value_input}"] = params_get["liste_pieces"]
     except :
         liste_content = bdd.get_rangement_content(id_rangement)
+        params["{value_input}"] = {e[0] : e[1] for e in liste_content}
     content = ""
     i = 1
     for e in liste_content :
