@@ -108,21 +108,27 @@
                         <span>type de rangement&nbsp;: {type_rangement}</span>
                     </div>
                 </div>
-                <div style="text-align: left; padding: 24px;">
+                <div style="text-align: left; padding: 24px;" id="list_piece_in_rangement">
                     {content}
                 </div>
-                <div style="text-align: left; margin: 0 24px; padding: 24px 0; border-top: 1px solid #404040;">
+                <form method="POST" style="margin: 0 24px 24px; text-align: center; width: calc(100% - 48px);">
+                    <input type="hidden" name="form_name" value="save_data">
+                    <input type="hidden" name="id_set" value="{id_set}">
+                    <input type="hidden" name="liste_minifigs" id="liste_minifigs_input">
+                    <input type="submit" value="ENREGISTRER" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 140px;">
+                </form>
+                <div style="text-align: left; margin: 0 24px; padding: 24px 0; border-top: 1px solid #404040;" id="search_zone">
                     <div class="filter_zone">
                         <a class="bouton_refresh" href="" id="boutonRefresh"></a>
                         <h3>Filtres&nbsp;:</h3>
-                        <form method="POST" id="form_search" action="/BrickStock/{current_url}#search_zone">
+                        <form method="POST" id="form_search" action="/BrickStock/rangements?id_rangement={id_rangement}#search_zone">
                             <input type="hidden" name="form_name" value="search_piece">
                             <input type="hidden" name="liste_pieces" id="liste_pieces_input_search">
                             <span>Nom&nbsp;:</span><br/>
                             <input type="text" name="nom" value="{nom_search}" placeholder="saisissez un nom" id="filter1"><img src="/BrickStock/images/del_filter.svg" class="del_filter hide" id="del1">
                             <separator></separator>
                             <span>Design&nbsp;:</span><br/>
-                            <input type="text" name="id_minifig" value="{id_design_search}" placeholder="saisissez un nom" id="filter2"><img src="/BrickStock/images/del_filter.svg" class="del_filter hide" id="del2">
+                            <input type="text" name="id_design" value="{id_design_search}" placeholder="saisissez un nom" id="filter2"><img src="/BrickStock/images/del_filter.svg" class="del_filter hide" id="del2">
                             <separator></separator>
                             <span>Dimensions&nbsp;:</span><br/>
                             <input type="text" name="dimensions" value="{dimensions_search}" placeholder="lxLxh" id="filter3"><img src="/BrickStock/images/del_filter.svg" class="del_filter hide" id="del3">
@@ -136,7 +142,6 @@
                             <span>Sous-catégorie&nbsp;:</span><br/>
                             <select name="sous_categorie" id="filter5">
                                 <option value="0">--sélectionner une sous-catégorie--</option>
-                                {liste_sous_cat}
                             </select><img src="/BrickStock/images/del_filter.svg" class="del_filter hide" id="del5">
                             <separator></separator>
                             <input type="submit" value="Rechercher" class="rechercher">
@@ -154,25 +159,17 @@
         </script>
         <script type="text/javascript" src="/BrickStock/javascript/gestion_filtres.js"></script>
         <script type="text/javascript" name="gestion filtres - 2/2">
-            addEventListenerForFiltres(7);
+            addEventListenerForFiltres(5);
         </script>
         <script type="text/javascript" name="gestion listes déroulantes">
-            let filterTon = document.getElementById("filter2");
-            let filterCouleur = document.getElementById("filter3");
-            let dictCouleurs = {liste_couleurs};
-            let listeCouleurs = {liste_all_couleurs};
-            let couleurFilter = "{couleur_filter}";
-
-            let filterCategorie = document.getElementById("filter5");
-            let filterSousCategorie = document.getElementById("filter6");
+            let filterCategorie = document.getElementById("filter4");
+            let filterSousCategorie = document.getElementById("filter5");
             let dictCategories = {liste_sous_categories};
             let listeCategories = {liste_all_categories};
             let categorieFilter = "{categorie_filter}";
 
-            let indexFilterCouleurs = 3;
-            let indexFilterSousCategories = 6;
+            let indexFilterSousCategories = 5;
         </script>
-        <script type="text/javascript" src="/BrickStock/javascript/gestion_listes_deroulantes_couleurs.js"></script>
         <script type="text/javascript" src="/BrickStock/javascript/gestion_listes_deroulantes_categories.js"></script>
         <script type="text/javascript" name="gestion panneau ajouter">
             let nAdd = 4;
@@ -232,94 +229,6 @@
                 }
             }
             document.getElementById("fermer_bis").addEventListener("click", hideItem);
-        </script>
-        <script name="gestion spinbox">
-            let inputQuantite = document.getElementById("val1");
-            let inputDisponible = document.getElementById("val2");
-            let inputEndommagee = document.getElementById("val3");
-
-            function plus(e) {
-                var i = this.id.substring(1);
-                if (i == 1) {
-                    inputQuantite.value++
-                }
-                else if (i == 2) {
-                    inputDisponible.value++
-                    if (inputDisponible.value > inputQuantite.value) {
-                        inputQuantite.value = inputDisponible.value;
-                    }
-                }
-                else if (i == 3) {
-                    inputEndommagee.value++
-                    if (inputEndommagee.value > inputQuantite.value) {
-                        inputQuantite.value = inputEndommagee.value;
-                    }
-                }
-            }
-
-            function moins(e) {
-                var i = this.id.substring(1);
-                if (i == 1 & inputQuantite.value > 0) {
-                    inputQuantite.value--
-                    if (inputQuantite.value < inputDisponible.value) {
-                        inputDisponible.value = inputQuantite.value;
-                    }
-                    if (inputQuantite.value < inputEndommagee.value) {
-                        inputEndommagee.value = inputQuantite.value;
-                    }
-                }
-                else {
-                    item = document.getElementById("val" + i)
-                    if (item.value > 0) {
-                        item.value--
-                    }
-                }
-            }
-
-            function verif(e) {
-                if (this.value != "") {
-                    var i = this.id.substring(3);
-                    if (inputQuantite.value < inputDisponible.value) {
-                        if (i == 1) {
-                            inputDisponible.value = inputQuantite.value;
-                        }
-                        else {
-                            inputQuantite.value = inputDisponible.value;
-                        }
-                    }
-                    if (inputQuantite.value < inputEndommagee.value) {
-                        if (i == 1) {
-                            inputQuantite.value = inputEndommagee.value;
-                        }
-                        else {
-                            inputEndommagee.value = inputQuantite.value;
-
-                        }
-                    }
-                    if (inputQuantite.value < 0) {
-                        inputQuantite.value = 0;
-                    }
-                    if (inputDisponible.value < 0) {
-                        inputDisponible.value = 0;
-                    }
-                    if (inputEndommagee.value < 0) {
-                        inputEndommagee.value = 0;
-                    }
-                }
-            }
-
-            function reset(e) {
-                inputQuantite.value = defaultValues[0];
-                inputDisponible.value = defaultValues[1];
-                inputEndommagee.value = defaultValues[2];
-            }
-
-            for (var i=1; i<=3; i++) {
-                document.getElementById("+" + i).addEventListener("click", plus);
-                document.getElementById("-" + i).addEventListener("click", moins);
-                document.getElementById("val" + i).addEventListener("input", verif);
-            }
-            document.getElementById("reset").addEventListener("click", reset);
         </script>
         {script}
     </body>

@@ -124,7 +124,17 @@ def get_rangement_content_request(id_rangement:int, params_get:dict=None) -> dic
             else :
                 select = ""
             liste_sous_cat += f"""<option{select} value="{c}">{bdd.get_infos_categorie(c)["nom_categorie"]}</option>"""
-    params["{liste_cat}"], params["{liste_sous_cat}"] = liste_cat, liste_sous_cat
+    params["{liste_cat}"] = liste_cat
+    liste_categorie_dict = [bdd.get_infos_categorie(id) for id in bdd.get_liste_categories_racines()]
+    params["{liste_sous_categories}"] = {c["id_categorie"] : [[sc, bdd.get_infos_categorie(sc)["nom_categorie"]] for sc in bdd.get_liste_sous_categories(c["id_categorie"], direct=False)] for c in liste_categorie_dict}
+    liste = [params["{liste_sous_categories}"][k] for k in params["{liste_sous_categories}"]]
+    params["{liste_all_categories}"] = []
+    for e in liste :
+        params["{liste_all_categories}"] += e
+    if "sous_categorie_search" in params_get :
+        params["{categorie_filter}"] = params_get["sous_categorie_search"]
+    else :
+        params["{categorie_filter}"] = "0"
     return params
 
 def get_rangements_for_piece_request(id_piece:int) -> dict :
@@ -161,5 +171,5 @@ def post_rangement_content_request(url:str, params_post:dict) -> dict :
     """
     params_get = {e.split("=")[0] : e.split("=")[1] for e in url.split("?")[1].split("&")}
     params_get = {"id_rangement" : params_get["id_rangement"], "nom_search" : params_post["nom"], "id_design_search" : params_post["id_design"], "dimensions_search" : params_post["dimensions"], "categorie_search" : params_post["categorie"], "sous_categorie_search" : params_post["sous_categorie"], "liste_pieces" : params_post["liste_pieces"]}
-    params = get_rangement_content_request(params_get)
+    params = get_rangement_content_request(int(params_get["id_rangement"]), params_get=params_get)
     return params

@@ -14,6 +14,7 @@ function setFilterCategorie() {
         opt.appendChild(document.createTextNode(listeOptions[i][1]));
         filterSousCategorie.appendChild(opt);
     }
+    filterSousCategorie.value = 0;
 }
 
 setFilterCategorie();

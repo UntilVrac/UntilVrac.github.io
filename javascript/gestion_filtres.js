@@ -27,8 +27,8 @@ function hide_cross(e) {
         setFilterCouleur();
     }
     else if (i == indexFilterCategories) {
-        document.getElementById("filter" + indexFilterSousCategories).value = 0;
-        var del = document.getElementById("del" + indexFilterSousCategories);
+        document.getElementById("filter" + (indexFilterCategories + 1)).value = 0;
+        var del = document.getElementById("del" + (indexFilterCategories + 1));
         del.classList.remove("show");
         del.classList.add("hide");
         setFilterCategorie();
