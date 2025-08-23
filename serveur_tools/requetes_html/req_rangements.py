@@ -186,3 +186,35 @@ def post_rangement_content_request(url:str, params_post:dict) -> dict :
     params_get = {"id_rangement" : params_get["id_rangement"], "nom_search" : params_post["nom"], "id_design_search" : params_post["id_design"], "dimensions_search" : params_post["dimensions"], "categorie_search" : params_post["categorie"], "sous_categorie_search" : params_post["sous_categorie"], "liste_pieces" : params_post["liste_pieces"]}
     params = get_rangement_content_request(int(params_get["id_rangement"]), params_get=params_get)
     return params
+
+def post_rangement_save_request(params_post:dict) -> str :
+    """
+    params_post (dict), les paramètres de la requête POST
+
+    renvoie le script à utiliser pour la réponse à la requête POST après avoir fait les modifications de la base de données nécéssaires
+    """
+    if params_post["liste_minifigs"] in ("{}", "{  }") :
+        liste_elements = []
+    else :
+        try :
+            liste_elements = []
+            for e in params_post["liste_minifigs"][1:-1].split(", ") :
+                k, v = e.split(" : ")
+                k = int(k)
+                assert v in ("pièce", "design")
+                if v == "pièce" :
+                    assert bdd.piece_in_database(k)
+                else :
+                    assert bdd.design_in_database(k)
+                liste_elements.append(k)
+        except :
+            return """alert('erreur : les éléments sélectionnés ne sont pas répertoriés ou le type d'élément est invalide (le type d'élément doit être "pièce" ou "design")');"""
+    try :
+        id_rangement = int(params_post["id_rangement"])
+    except :
+        return """alert("erreur : id de rangement invalide");"""
+    response = bdd.update_rangement_content(id_rangement, liste_elements)
+    if response :
+        return """alert("les informations ont bien été enregistré");"""
+    else :
+        return """alert("erreur : les informations n'ont pas été enregistré");"""

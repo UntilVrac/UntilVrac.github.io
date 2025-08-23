@@ -160,7 +160,7 @@ def rep_post(url:str, params_post:dict) -> bytes :
             params = post_rangement_content_request(url, params_post)
             return render_template("rangement_content.html", entete, params=params)
         elif params_post["form_name"] == "save_data" :
-            pass
+            rep = post_rangement_save_request(url, params_post)
     assert False
 
 def get_file(filename:str, script:any=None, post:bool=False) -> bytes :

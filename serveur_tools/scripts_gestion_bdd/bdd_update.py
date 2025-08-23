@@ -205,3 +205,50 @@ def update_moc_minifig_qt(id_minifig:str, quantite:int) -> bool :
     else :
         __update_moc_minifig_qt(connexion, curseur, id_minifig, quantite)
         return True
+    
+def __update_rangement_content(connexion:sqlite3.Connection, curseur:sqlite3.Cursor, id_rangement:int, liste_elements:list) -> None :
+    """
+    entrées :
+        connexion (sqlite3.Connect) et curseur (sqlite3.Cursor), la connexion à utiliser
+        id_rangement (int), l'id du rangement physique
+        liste_elements (list), la liste des id des éléments (pièce ou design) contenu dans le rangement
+
+    met à jour le contenu du rangement
+    si MODE_SANS_ECHEC est True, renvoie True si l'ajout a pu être effectué et False sinon
+    sinon ranvoie True
+    """
+    curseur.execute('''SELECT id_rangement FROM Rangements_virtuels WHERE id_rangement_physique = ?;''', (id_rangement,))
+    r = []
+    for e in curseur :
+        r.append(e)
+    assert len(r) == 1
+    id_rangement_virtuel = r[0]
+    curseur.execute('''DELETE FROM rangement_content WHERE id_rangement = ?;''', (id_rangement_virtuel,))
+    for id in liste_elements :
+        curseur.execute('''INSERT INTO rangement_content (id_rangement, id_element) VALUES (?, ?);''', (id_rangement_virtuel, id))
+    connexion.commit()
+    connexion.close()
+
+def update_rangement_content(id_rangement:int, liste_elements:list) -> bool :
+    """
+    entrées :
+        id_rangement (int), l'id du rangement physique
+        liste_elements (list), la liste des id des éléments (pièce ou design) contenu dans le rangement
+
+    met à jour le contenu du rangement
+    si MODE_SANS_ECHEC est True, renvoie True si l'ajout a pu être effectué et False sinon
+    sinon ranvoie True
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    if MODE_SANS_ECHEC :
+        try :
+            __update_rangement_content(connexion, curseur, id_rangement, liste_elements)
+        except :
+            connexion.close()
+            return False
+        else :
+            return True
+    else :
+        __update_rangement_content(connexion, curseur, id_rangement, liste_elements)
+        return True

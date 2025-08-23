@@ -218,9 +218,11 @@
                 var span1 = document.createElement("span");
                 span1.innerHTML = "id pièce&nbsp;: " + data["id_piece"];
                 divElement.appendChild(span1);
+                divElement.appendChild(document.createElement("br"));
                 var span2 = document.createElement("span");
                 span2.innerHTML = "id design&nbsp;: " + data["id_design"];
-                divElement.append(span2);
+                divElement.appendChild(span2);
+                divElement.appendChild(document.createElement("br"));
                 var span3 = document.createElement("span");
                 span3.style = "font-weight: bold;";
                 span3.innerHTML = data["nom"];
@@ -238,9 +240,10 @@
                 var i = nextIndex;
                 var r = 1;
                 while (document.getElementById("resultat" + r) !== null) {
-                    if (document.getElementById("id_design" + r) == data["id_design"]) {
+                    if (document.getElementById("id_design" + r).value == data["id_design"]) {
                         document.getElementById("resultat" + r).classList.add("hide");
                     }
+                    r++;
                 }
                 var divElement = document.createElement("div");
                 divElement.classList.add("item_minifig");
@@ -271,7 +274,8 @@
                 divElement.appendChild(imgApercu);
                 var span2 = document.createElement("span");
                 span2.innerHTML = "id design&nbsp;: " + data["id_design"];
-                divElement.append(span2);
+                divElement.appendChild(span2);
+                divElement.appendChild(document.createElement("br"));
                 var span3 = document.createElement("span");
                 span3.style = "font-weight: bold;";
                 span3.innerHTML = data["nom"];

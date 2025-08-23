@@ -165,14 +165,11 @@ def post_minifig_in_set_search_request(url:str, HISTORIQUE:Pile, params_post:dic
     # id_set = params["{id_set}"]
     return params
 
-def post_minifig_in_set_save_request(url:str, params_post:dict) -> tuple :
+def post_minifig_in_set_save_request(params_post:dict) -> str :
     """
-    entrées :
-        url (str), l'url courante
-        params_post (dict), les paramètres de la requête POST
-        get_file (fonction), la fonction get_file
+    params_post (dict), les paramètres de la requête POST
 
-    renvoie le tuple (url de reponse, script) à utiliser pour la réponse à la requête POST après avoir fait les modifications de la base de données nécéssaires
+    renvoie le script à utiliser pour la réponse à la requête POST après avoir fait les modifications de la base de données nécéssaires
     """
     if params_post["liste_minifigs"] in ("{}", "{  }") :
         liste_minifigs = {}
@@ -184,9 +181,9 @@ def post_minifig_in_set_save_request(url:str, params_post:dict) -> tuple :
             assert bdd.minifig_in_database(k)
             assert liste_minifigs[k] > 0
     except :
-        return (url, """alert("erreur : les minifigs sélectionnées ne sont pas répertoriées ou les quantités saisies ne sont pas valides (quantités négatives ou n'étant pas des nombres)");""")
+        return """alert("erreur : les minifigs sélectionnées ne sont pas répertoriées ou les quantités saisies ne sont pas valides (quantités négatives ou n'étant pas des nombres)");"""
     response = bdd.update_minifig_in_set(params_post["id_set"], liste_minifigs)
     if response :
-        return (url, "alert('les informations ont bien été enregistré');")
+        return """alert("les informations ont bien été enregistré");"""
     else :
-        return (url, """alert("erreur : les informations n'ont pas été enregistré");""")
+        return """alert("erreur : les informations n'ont pas été enregistré");"""

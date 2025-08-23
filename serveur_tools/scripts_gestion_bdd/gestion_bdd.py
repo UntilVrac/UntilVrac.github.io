@@ -8,6 +8,7 @@ from serveur_tools.scripts_gestion_bdd.bdd_verif import *
 from serveur_tools.scripts_gestion_bdd.bdd_get import *
 from serveur_tools.scripts_gestion_bdd.bdd_count import *
 from serveur_tools.scripts_gestion_bdd.bdd_insert import *
+from serveur_tools.scripts_gestion_bdd.bdd_update import *
 
 
 
