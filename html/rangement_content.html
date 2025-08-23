@@ -207,7 +207,7 @@
                 imgBoutonSupprimer.id = "bouton_supprimer" + i;
                 imgBoutonSupprimer.addEventListener("click", supprimerElement);
                 divElement.appendChild(imgBoutonSupprimer);
-                var imgType = document.getElementById("img");
+                var imgType = document.createElement("img");
                 imgType.classList.add("type_element");
                 imgType.src = data["couleur_data"]["image_ref"];
                 divElement.appendChild(imgType);
@@ -230,14 +230,12 @@
                 valueInput[data["id_piece"]] = "pièce";
                 nextIndex++;
                 setInput();
-                // alignementResultats(3);
-                // alignementMinifigInSet(5);
             }
 
             function ajouterDesign(e) {
                 var n = this.id.substring(14);
                 var data = resultats[n - 1];
-                var i = nextIndex; // ????????????????????????????????????????
+                var i = nextIndex;
                 var r = 1;
                 while (document.getElementById("resultat" + r) !== null) {
                     if (document.getElementById("id_design" + r) == data["id_design"]) {
@@ -263,7 +261,7 @@
                 imgBoutonSupprimer.id = "bouton_supprimer" + i;
                 imgBoutonSupprimer.addEventListener("click", supprimerElement);
                 divElement.appendChild(imgBoutonSupprimer);
-                var imgType = document.getElementById("img");
+                var imgType = document.createElement("img");
                 imgType.classList.add("type_element");
                 imgType.src = "/BrickStock/images/palette.png";
                 divElement.appendChild(imgType);
@@ -283,8 +281,6 @@
                 valueInput[data["id_design"]] = "design";
                 nextIndex++;
                 setInput();
-                // alignementResultats(3);
-                // alignementMinifigInSet(5);
             }
             
             var i = 0;
@@ -299,9 +295,16 @@
         <script type="text/javascript" name="suppression de minifig">
             function showResult(idElement) {
                 for (var i=0; i<resultats.length; i++) {
-                    if (resultats[i]["id_minifig"] == idFig) {
-                        document.getElementById("resultat" + (i + 1)).classList.remove("hide");
-                        return;
+                    if (valueInput[idElement] == "pièce") {
+                        if (resultats[i]["id_piece"] == idElement) {
+                            document.getElementById("resultat" + (i + 1)).classList.remove("hide");
+                            return;
+                        }
+                    }
+                    else {
+                        if (resultats[i]["id_design"] == idElement) {
+                            document.getElementById("resultat" + (i + 1)).classList.remove("hide");
+                        }
                     }
                 }
             }
@@ -309,14 +312,14 @@
             function supprimerElement(e) {
                 var i = this.id.substring(16);
                 var typeElement = document.getElementById("type_element" + i).innerHTML;
-                var idElement = document.getElementById("id_element" + i).innerHTML;
+                var idElement = document.getElementById("id_element" + i).value;
                 listeNumItem = listRemove(listeNumItem, i);
+                showResult(idElement);
                 delete valueInput[idElement];
                 var item = document.getElementById("element" + i);
                 item.classList.add("hide");
                 item.innerHTML = "";
                 setInput();
-                showResult(idElement);
             }
 
             for (var i=0; i<listeNumItem.length; i++) {
