@@ -217,10 +217,10 @@ def __update_rangement_content(connexion:sqlite3.Connection, curseur:sqlite3.Cur
     si MODE_SANS_ECHEC est True, renvoie True si l'ajout a pu être effectué et False sinon
     sinon ranvoie True
     """
-    curseur.execute('''SELECT id_rangement FROM Rangements_virtuels WHERE id_rangement_physique = ?;''', (id_rangement,))
+    curseur.execute('''SELECT id_rangement FROM Rangements_virtuels WHERE rangement_physique = ?;''', (id_rangement,))
     r = []
     for e in curseur :
-        r.append(e)
+        r.append(e[0])
     assert len(r) == 1
     id_rangement_virtuel = r[0]
     curseur.execute('''DELETE FROM rangement_content WHERE id_rangement = ?;''', (id_rangement_virtuel,))

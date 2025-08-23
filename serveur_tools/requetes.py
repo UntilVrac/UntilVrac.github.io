@@ -150,8 +150,8 @@ def rep_post(url:str, params_post:dict) -> bytes :
             # print(params)
             return render_template("minifigs_du_set.html", entete, params=params)
         elif params_post["form_name"] == "save_data" :
-            rep = post_minifig_in_set_save_request(url, params_post)
-            return get_file(rep[0], script=rep[1])
+            rep = post_minifig_in_set_save_request(params_post)
+            return get_file(url, script=rep[1])
     elif filename[-1] == "gammes" :
         rep = post_gammes_request(url, params_post)
         return get_file(rep[0], script=rep[1], post=True)
@@ -160,7 +160,8 @@ def rep_post(url:str, params_post:dict) -> bytes :
             params = post_rangement_content_request(url, params_post)
             return render_template("rangement_content.html", entete, params=params)
         elif params_post["form_name"] == "save_data" :
-            rep = post_rangement_save_request(url, params_post)
+            rep = post_rangement_save_request(params_post)
+        return get_file(url, script=rep)
     assert False
 
 def get_file(filename:str, script:any=None, post:bool=False) -> bytes :

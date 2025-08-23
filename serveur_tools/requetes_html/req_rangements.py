@@ -193,12 +193,12 @@ def post_rangement_save_request(params_post:dict) -> str :
 
     renvoie le script à utiliser pour la réponse à la requête POST après avoir fait les modifications de la base de données nécéssaires
     """
-    if params_post["liste_minifigs"] in ("{}", "{  }") :
+    if params_post["liste_pieces"] in ("{}", "{  }") :
         liste_elements = []
     else :
-        try :
+        # try :
             liste_elements = []
-            for e in params_post["liste_minifigs"][1:-1].split(", ") :
+            for e in params_post["liste_pieces"][1:-1].split(", ") :
                 k, v = e.split(" : ")
                 k = int(k)
                 assert v in ("pièce", "design")
@@ -207,8 +207,8 @@ def post_rangement_save_request(params_post:dict) -> str :
                 else :
                     assert bdd.design_in_database(k)
                 liste_elements.append(k)
-        except :
-            return """alert('erreur : les éléments sélectionnés ne sont pas répertoriés ou le type d'élément est invalide (le type d'élément doit être "pièce" ou "design")');"""
+        # except :
+        #     return """alert('erreur : les éléments sélectionnés ne sont pas répertoriés ou le type d'élément est invalide (le type d'élément doit être "pièce" ou "design")');"""
     try :
         id_rangement = int(params_post["id_rangement"])
     except :
