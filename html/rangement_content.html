@@ -148,24 +148,12 @@
             let piecesInputSearch = document.getElementById("liste_pieces_input_search");
             let listeNumItem = [];
             i = 1;
-            while (document.getElementById("val" + i) !== null) {
+            while (document.getElementById("element" + i) !== null) {
                 listeNumItem.push(i);
-                i++
+                i++;
             }
             let nextIndex = listeNumItem.length + 1;
             let nbPiece = Object.keys(valueInput).length;
-
-            // function alignementMinifigInSet(nbPieceInLine=5) {
-            //     for (var k=0; k<listeNumItem.length; k++) {
-            //         var item = document.getElementById("item_minifig" + listeNumItem[k]);
-            //         if (item.classList.contains("last") & k % nbPieceInLine != (nbPieceInLine - 1)) {
-            //             item.classList.remove("last");
-            //         }
-            //         else if (!item.classList.contains("last") & k % nbPieceInLine == (nbPieceInLine - 1)) {
-            //             item.classList.add("last");
-            //         }
-            //     }
-            // }
 
             function setInput() {
                 piecesInput.value = str(valueInput);
@@ -174,7 +162,7 @@
 
             setInput();
         </script>
-        <script type="text/javascript" name="alignement resultats">
+        <!-- <script type="text/javascript" name="alignement resultats">
             function alignementResultats(nbOnLigne=3) {
                 var n = 1;
                 for (var i=1; i<=resultats.length; i++) {
@@ -190,86 +178,116 @@
                     }
                 }
             }
-        </script>
+        </script> -->
         <script type="text/javascript" name="ajout d'une minifig">
-            let zoneMinifigInSet = document.getElementById("list_minifig_in_set");
+            let zoneElementInRangement = document.getElementById("list_piece_in_rangement");
 
-            function ajouterMinifig(e) {
-                var n = this.id.substring(7);
+            function ajouterPiece(e) {
+                var n = this.id.substring(14);
                 var data = resultats[n - 1];
-                var i = nextIndex;
+                var i = nextIndex; // ????????????????????????????????????????
                 document.getElementById("resultat" + n).classList.add("hide");
-                var divItemMinifig = document.createElement("div");
-                divItemMinifig.classList.add("item_minifig");
-                divItemMinifig.id = "item_minifig" + i;
+                var divElement = document.createElement("div");
+                divElement.classList.add("item_minifig");
+                divElement.id = "element" + i;
+                var inputType = document.createElement("input");
+                inputType.type = "hidden";
+                inputType.id = "type_element" + i;
+                inputType.value = "piece";
+                divElement.appendChild(inputType);
+                var inputId = document.createElement("input");
+                inputId.type = "hidden";
+                inputId.id = "id_element" + i;
+                inputId.value = data["id_piece"];
+                divElement.appendChild(inputId);
                 var imgBoutonSupprimer = document.createElement("img");
                 imgBoutonSupprimer.classList.add("supprimer_item");
-                imgBoutonSupprimer.src = "http://localhost:1520/BrickStock/images/croix.svg";
+                imgBoutonSupprimer.src = "/BrickStock/images/croix.svg";
                 imgBoutonSupprimer.id = "bouton_supprimer" + i;
-                divItemMinifig.appendChild(imgBoutonSupprimer);
+                imgBoutonSupprimer.addEventListener("click", supprimerElement);
+                divElement.appendChild(imgBoutonSupprimer);
+                var imgType = document.getElementById("img");
+                imgType.classList.add("type_element");
+                imgType.src = data["couleur_data"]["image_ref"];
+                divElement.appendChild(imgType);
                 var imgApercu = document.createElement("img");
                 imgApercu.classList.add("apercu");
                 imgApercu.src = data["image_ref"];
-                divItemMinifig.appendChild(imgApercu);
-                var spanId = document.createElement("span");
-                spanId.innerHTML = "ID&nbsp;: " + data["id_minifig"];
-                divItemMinifig.appendChild(spanId);
-                divItemMinifig.innerHTML = divItemMinifig.innerHTML + "<br/>";
-                var spanNom = document.createElement("span");
-                spanNom.innerHTML = data["nom"];
-                divItemMinifig.appendChild(spanNom);
-                var divQuantiteBox = document.createElement("div");
-                divQuantiteBox.classList.add("quantity_box");
-                divQuantiteBox.style = "margin-top: 12px;";
-                var buttonMoins = document.createElement("button");
-                buttonMoins.classList.add("bouton_moins");
-                buttonMoins.id = "-" + i;
-                buttonMoins.type = "button";
-                buttonMoins.style = "width: 50px;";
-                buttonMoins.innerHTML = '<svg class="minus" width="14px" height="2px" viewBox="0 0 14 2" aria-hidden="true"><polygon fill="black" points="14 2 0 2 0 -6.03961325e-14 14 -6.03961325e-14"></polygon></svg>';
-                divQuantiteBox.appendChild(buttonMoins);
-                var inputValeur = document.createElement("input");
-                inputValeur.id = "val" + i;
-                inputValeur.classList.add("valeur");
-                inputValeur.required = "";
-                inputValeur.type = "number";
-                inputValeur.style = "width: 56px;";
-                inputValeur.min = 0;
-                inputValeur.name = "quantite";
-                inputValeur.value = 1;
-                divQuantiteBox.appendChild(inputValeur);
-                var buttonPlus = document.createElement("button");
-                buttonPlus.id = "+" + i;
-                buttonPlus.classList.add("bouton_plus")
-                buttonPlus.type = "button";
-                buttonPlus.style = "width: 50px;";
-                buttonPlus.innerHTML = '<svg class="add" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" aria-hidden="true"><polygon fill="#FFFFFF" points="14 8 0 8 0 6 14 6"></polygon><rect fill="#FFFFFF" fill-rule="nonzero" x="6" y="0" width="2" height="14"></rect></svg>';
-                divQuantiteBox.appendChild(buttonPlus);
-                divItemMinifig.appendChild(divQuantiteBox);
-                var spanIdMinifig = document.createElement("span");
-                spanIdMinifig.id = "id_minifig_in_set" + i;
-                spanIdMinifig.classList.add("hide");
-                spanIdMinifig.innerHTML = data["id_minifig"];
-                divItemMinifig.appendChild(spanIdMinifig);
-                zoneMinifigInSet.appendChild(divItemMinifig);
+                divElement.appendChild(imgApercu);
+                var span1 = document.createElement("span");
+                span1.innerHTML = "id pièce&nbsp;: " + data["id_piece"];
+                divElement.appendChild(span1);
+                var span2 = document.createElement("span");
+                span2.innerHTML = "id design&nbsp;: " + data["id_design"];
+                divElement.append(span2);
+                var span3 = document.createElement("span");
+                span3.style = "font-weight: bold;";
+                span3.innerHTML = data["nom"];
+                divElement.appendChild(span3);
+                zoneElementInRangement.appendChild(divElement);
                 listeNumItem.push(i);
-                valueInput[data["id_minifig"]] = 1;
-                nextIndex++
+                valueInput[data["id_piece"]] = "pièce";
+                nextIndex++;
                 setInput();
-                document.getElementById("bouton_supprimer" + i).addEventListener("click", supprimerMinifig);
-                document.getElementById("-" + i).addEventListener("click", moins);
-                document.getElementById("val" + i).addEventListener("input", verif);
-                document.getElementById("+" + i).addEventListener("click", plus);
-                alignementResultats(3);
-                alignementMinifigInSet(5);
+                // alignementResultats(3);
+                // alignementMinifigInSet(5);
+            }
+
+            function ajouterDesign(e) {
+                var n = this.id.substring(14);
+                var data = resultats[n - 1];
+                var i = nextIndex; // ????????????????????????????????????????
+                document.getElementById("resultat" + n).classList.add("hide");
+                var divElement = document.createElement("div");
+                divElement.classList.add("item_minifig");
+                divElement.id = "element" + i;
+                var inputType = document.createElement("input");
+                inputType.type = "hidden";
+                inputType.id = "type_element" + i;
+                inputType.value = "design";
+                divElement.appendChild(inputType);
+                var inputId = document.createElement("input");
+                inputId.type = "hidden";
+                inputId.id = "id_element" + i;
+                inputId.value = data["id_design"];
+                divElement.appendChild(inputId);
+                var imgBoutonSupprimer = document.createElement("img");
+                imgBoutonSupprimer.classList.add("supprimer_item");
+                imgBoutonSupprimer.src = "/BrickStock/images/croix.svg";
+                imgBoutonSupprimer.id = "bouton_supprimer" + i;
+                imgBoutonSupprimer.addEventListener("click", supprimerElement);
+                divElement.appendChild(imgBoutonSupprimer);
+                var imgType = document.getElementById("img");
+                imgType.classList.add("type_element");
+                imgType.src = "/BrickStock/images/palette.png";
+                divElement.appendChild(imgType);
+                var imgApercu = document.createElement("img");
+                imgApercu.classList.add("apercu");
+                imgApercu.src = data["design_data"]["image_ref"];
+                divElement.appendChild(imgApercu);
+                var span2 = document.createElement("span");
+                span2.innerHTML = "id design&nbsp;: " + data["id_design"];
+                divElement.append(span2);
+                var span3 = document.createElement("span");
+                span3.style = "font-weight: bold;";
+                span3.innerHTML = data["nom"];
+                divElement.appendChild(span3);
+                zoneElementInRangement.appendChild(divElement);
+                listeNumItem.push(i);
+                valueInput[data["id_design"]] = "design";
+                nextIndex++;
+                setInput();
+                // alignementResultats(3);
+                // alignementMinifigInSet(5);
             }
             
             var i = 0;
-            while (document.getElementById("ajouter" + (i + 1)) !== null) {
+            while (document.getElementById("resultat" + (i + 1)) !== null) {
                 i++
             }
             for (var j=1; j<=i; j++) {
-                document.getElementById("ajouter" + j).addEventListener("click", ajouterMinifig);
+                document.getElementById("ajouter_piece_" + j).addEventListener("click", ajouterPiece);
+                document.getElementById("ajouter_design" + j).addEventListener("click", ajouterDesign);
             }
         </script>
         <script type="text/javascript" name="suppression de minifig">

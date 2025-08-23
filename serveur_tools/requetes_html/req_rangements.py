@@ -53,7 +53,9 @@ def get_rangement_content_request(id_rangement:int, params_get:dict=None) -> dic
     for e in liste_content :
         if e[1] == "pièce" :
             piece_infos = bdd.get_piece_info(e[0])
-            content += f"""<div class="item_minifig">
+            content += f"""<div class="item_minifig" id="element{i}">
+    <input type="hidden" id="type_element{i}" value="piece">
+    <input type="hidden" id="id_element{i}" value="{piece_infos["id_piece"]}">
     <img id="bouton_supprimer{i}" class="supprimer_item" src="/BrickStock/images/croix.svg">
     <img class="type_element" src="{bdd.get_couleur_data(piece_infos["id_couleur"])["image_ref"]}">
     <img class="apercu" src="{piece_infos["image_ref"]}">
@@ -63,7 +65,9 @@ def get_rangement_content_request(id_rangement:int, params_get:dict=None) -> dic
 </div>"""
         else :
             design_infos = bdd.get_design_info(e[0])
-            content += f"""<div class="item_minifig">
+            content += f"""<div class="item_minifig" id="element{i}">
+    <input type="hidden" id="type_element{i}" value="design">
+    <input type="hidden" id="id_element{i}" value="{design_infos["id_design"]}">
     <img id="bouton_supprimer{i}" class="supprimer_item" src="/BrickStock/images/croix.svg">
     <img class="type_element" src="/BrickStock/images/palette.png">
     <img class="apercu" src="{design_infos["image_ref"]}">
@@ -88,19 +92,25 @@ def get_rangement_content_request(id_rangement:int, params_get:dict=None) -> dic
     cases = ""
     i = 1
     liste_pieces = [e[0] for e in liste_content if e[1] == "pièce"]
-#     for r in resultats_search :
-#         if r["id_piece"] not in liste_pieces :
-#             cases += f"""<div class="block_resultat" id="resultat{i}">
-#     <img class="apercu" src="{r["image_ref"]}">
-#     <h4>{r["nom"]}</h4>
-#     <span>id pièce&nbsp;: {r["id_piece"]}</span><br/>
-#     <span>id design&nbsp;: {r["id_design"]}</span>
-#     <input type="submit" value="AJOUTER LA PIÈCE" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 162px; margin-top: 8px;" id="ajouter_piece_{i}">
-#     <input type="submit" value="AJOUTER LE DESIGN" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 174px; margin-top: 8px;" id="ajouter_design{i}">
-# </div>"""
-#             i += 1
-#     params["{cases}"] = cases
+    for r in resultats_search :
+        if r["id_piece"] not in liste_pieces :
+            cases += f"""<div class="block_resultat" id="resultat{i}">
+    <input type="hidden" value="{r["id_piece"]}" id="id_piece{i}">
+    <input type="hidden" value="{r["id_design"]}" id="id_design{i}">
+    <img class="apercu" src="{r["image_ref"]}">
+    <h4>{r["nom"]}</h4>
+    <span>id pièce&nbsp;: {r["id_piece"]}</span><br/>
+    <span>id design&nbsp;: {r["id_design"]}</span>
+    <input type="submit" value="AJOUTER LA PIÈCE" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 162px; margin-top: 8px;" id="ajouter_piece_{i}">
+    <input type="submit" value="AJOUTER LE DESIGN" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 174px; margin-top: 8px;" id="ajouter_design{i}">
+</div>"""
+            i += 1
+    params["{cases}"] = cases
+    for e in resultats_search :
+        e["design_data"] = bdd.get_design_info(e["id_design"])
+        e["couleur_data"] = bdd.get_couleur_data(e["id_couleur"])
     params["{resultats}"] = resultats_search
+    # params["{resultats}"] = resultats_search
     for p in infos_search[:3] :
         p = p + "_search"
         if p in params_get :
