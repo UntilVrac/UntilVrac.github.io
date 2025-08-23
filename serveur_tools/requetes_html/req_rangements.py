@@ -88,18 +88,19 @@ def get_rangement_content_request(id_rangement:int, params_get:dict=None) -> dic
     cases = ""
     i = 1
     liste_pieces = [e[0] for e in liste_content if e[1] == "pièce"]
-    for r in resultats_search :
-        if r["id_piece"] not in liste_pieces :
-            cases += f"""<div class="block_resultat" id="resultat{i}">
-    <img class="apercu" src="{r["image_ref"]}">
-    <h4>{r["nom"]}</h4>
-    <span>id pièce&nbsp;: {r["id_piece"]}</span><br/>
-    <span>id design&nbsp;: {r["id_design"]}</span>
-    <input type="submit" value="AJOUTER LA PIÈCE" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 162px; margin-top: 8px;" id="ajouter_piece_{i}">
-    <input type="submit" value="AJOUTER LE DESIGN" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 174px; margin-top: 8px;" id="ajouter_design{i}">
-</div>"""
-            i += 1
-    params["{cases}"] = cases
+#     for r in resultats_search :
+#         if r["id_piece"] not in liste_pieces :
+#             cases += f"""<div class="block_resultat" id="resultat{i}">
+#     <img class="apercu" src="{r["image_ref"]}">
+#     <h4>{r["nom"]}</h4>
+#     <span>id pièce&nbsp;: {r["id_piece"]}</span><br/>
+#     <span>id design&nbsp;: {r["id_design"]}</span>
+#     <input type="submit" value="AJOUTER LA PIÈCE" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 162px; margin-top: 8px;" id="ajouter_piece_{i}">
+#     <input type="submit" value="AJOUTER LE DESIGN" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 174px; margin-top: 8px;" id="ajouter_design{i}">
+# </div>"""
+#             i += 1
+#     params["{cases}"] = cases
+    params["{resultats}"] = resultats_search
     for p in infos_search[:3] :
         p = p + "_search"
         if p in params_get :
