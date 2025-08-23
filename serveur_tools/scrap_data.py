@@ -105,6 +105,7 @@ def get_prix_piece(id_piece:int) -> tuple :
 
     renvoie le tuple (prix le plus bas, prix moyen, prix le plus haut), pour bricklink
     """
+    # print(id_piece)
     connexion = sqlite3.connect(DATABASE_NAME)
     curseur = connexion.cursor()
     curseur.execute('''SELECT d.id_bricklink, c.id_couleur_bricklink FROM Design as d JOIN Couleurs as c JOIN Piece as p ON d.id_design = p.id_design AND p.id_couleur = c.id_couleur WHERE p.id_piece = ?;''', (id_piece,))
@@ -118,6 +119,7 @@ def get_prix_piece(id_piece:int) -> tuple :
     # url = f"https://www.bricklink.com/v2/catalog/catalogitem.page?P={id_design}&C={id_couleur}#T=C&C={id_couleur}"
     # url = f"https://www.bricklink.com/ajax/clone/catalogifs.ajax?itemid=299&color=1&ss=FR&cond=N&reg=-1&ca=2&iconly=0"
     url = f"https://www.bricklink.com/catalogPG.asp?itemType=P&itemNo={id_design}&colorID={id_couleur}&v=P&priceGroup=Y&prDec=2"
+    # print(url)
     prix = scrap_price_guide(url)
     p_min, p_moy, p_max = round(prix[0] * TAUX, 2), round(prix[1] * TAUX, 2), round(prix[2] * TAUX, 2)
     # print(p_min, p_moy, p_max)

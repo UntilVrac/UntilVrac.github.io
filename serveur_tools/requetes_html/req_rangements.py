@@ -91,10 +91,10 @@ def get_rangement_content_request(id_rangement:int, params_get:dict=None) -> dic
     resultats_search = bdd.search_piece(params_search)
     cases = ""
     i = 1
-    liste_pieces = [e[0] for e in liste_content if e[1] == "pièce"]
+    # liste_pieces = [e[0] for e in liste_content if e[1] == "pièce"]
     for r in resultats_search :
-        if r["id_piece"] not in liste_pieces :
-            cases += f"""<div class="block_resultat" id="resultat{i}">
+        # if r["id_piece"] not in liste_pieces :
+        cases += f"""<div class="block_resultat" id="resultat{i}">
     <input type="hidden" value="{r["id_piece"]}" id="id_piece{i}">
     <input type="hidden" value="{r["id_design"]}" id="id_design{i}">
     <img class="apercu" src="{r["image_ref"]}">
@@ -104,7 +104,7 @@ def get_rangement_content_request(id_rangement:int, params_get:dict=None) -> dic
     <input type="submit" value="AJOUTER LA PIÈCE" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 162px; margin-top: 8px;" id="ajouter_piece_{i}">
     <input type="submit" value="AJOUTER LE DESIGN" class="bouton_validation_infos enregistrer" style="border-radius: 4px; width: 174px; margin-top: 8px;" id="ajouter_design{i}">
 </div>"""
-            i += 1
+        i += 1
     params["{cases}"] = cases
     for e in resultats_search :
         e["design_data"] = bdd.get_design_info(e["id_design"])

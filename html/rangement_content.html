@@ -101,6 +101,7 @@
         </script>
         <script type="text/javascript" src="/BrickStock/javascript/gestion_listes_deroulantes_categories.js"></script>
         <script type="text/javascript" name="data">
+            let False = false;
             let resultats = {resultats};
         </script>
         <script type="text/javascript" name="conversion dict (object) -> string et list.remove">
@@ -237,7 +238,12 @@
                 var n = this.id.substring(14);
                 var data = resultats[n - 1];
                 var i = nextIndex; // ????????????????????????????????????????
-                document.getElementById("resultat" + n).classList.add("hide");
+                var r = 1;
+                while (document.getElementById("resultat" + r) !== null) {
+                    if (document.getElementById("id_design" + r) == data["id_design"]) {
+                        document.getElementById("resultat" + r).classList.add("hide");
+                    }
+                }
                 var divElement = document.createElement("div");
                 divElement.classList.add("item_minifig");
                 divElement.id = "element" + i;
@@ -291,7 +297,7 @@
             }
         </script>
         <script type="text/javascript" name="suppression de minifig">
-            function showResult(idFig) {
+            function showResult(idElement) {
                 for (var i=0; i<resultats.length; i++) {
                     if (resultats[i]["id_minifig"] == idFig) {
                         document.getElementById("resultat" + (i + 1)).classList.remove("hide");
@@ -300,32 +306,29 @@
                 }
             }
 
-            function supprimerMinifig(e) {
+            function supprimerElement(e) {
                 var i = this.id.substring(16);
-                var idFig = document.getElementById("id_minifig_in_set" + i).innerHTML;
+                var typeElement = document.getElementById("type_element" + i).innerHTML;
+                var idElement = document.getElementById("id_element" + i).innerHTML;
                 listeNumItem = listRemove(listeNumItem, i);
-                delete valueInput[idFig];
-                var item = document.getElementById("item_minifig" + i);
+                delete valueInput[idElement];
+                var item = document.getElementById("element" + i);
                 item.classList.add("hide");
                 item.innerHTML = "";
                 setInput();
-                showResult(idFig);
-                alignementResultats(3);
-                alignementMinifigInSet(5);
+                showResult(idElement);
             }
 
             for (var i=0; i<listeNumItem.length; i++) {
-                document.getElementById("bouton_supprimer" + listeNumItem[i]).addEventListener("click", supprimerMinifig);
+                document.getElementById("bouton_supprimer" + listeNumItem[i]).addEventListener("click", supprimerElement);
             }
         </script>
         <script type="text/javascript" name="masquage minifig in set">
             for (var i=1; i<=resultats.length; i++) {
-                if (Object.keys(valueInput).includes(document.getElementById("id_minifig" + i).innerHTML)) {
+                if (Object.keys(valueInput).includes(document.getElementById("id_piece" + i).value) | Object.keys(valueInput).includes(document.getElementById("id_design" + i).value)) {
                     document.getElementById("resultat" + i).classList.add("hide");
                 }
             }
-
-            alignementResultats(3);
         </script>
     </body>
 </html>

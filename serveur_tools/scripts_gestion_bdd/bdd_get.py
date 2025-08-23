@@ -399,8 +399,9 @@ def get_piece_info(id_piece:int) -> dict :
     """
     id_piece (int), id de la pièce
 
-    renvoie le dictionnaire {id_piece : int, id_lego : int, id_design : int, nom : str, id_categorie : int, nom_categorie : str, dimensions : str, masse : float, id_couleur : int, couleur : str, image_ref : str, prix_site_lego : float, prix_mur_pick_a_brick : float, prix_legoland : float, prix_bricklink : tuple (prix min, prix moy, prix max), quantite : int, disponible : int, endommagee : int, categorie_span : str} correspondant
+    renvoie le dictionnaire {id_piece : int, id_lego : int, id_design : int, nom : str, id_categorie : int, nom_categorie : str, dimensions : str, masse : float, id_couleur : int, couleur : str, image_ref : str, quantite : int, disponible : int, endommagee : int, categorie_span : str} correspondant
     """
+    # prix_site_lego : float, prix_mur_pick_a_brick : float, prix_legoland : float, prix_bricklink : tuple (prix min, prix moy, prix max), 
     connexion = sqlite3.connect(DATABASE_NAME)
     curseur = connexion.cursor()
     curseur.execute('''SELECT p.id_piece, p.id_design, d.nom, cat.id_categorie, cat.nom, d.dimensions_stud, d.dimensions_cm, d.masse, col.id_couleur, col.nom, p.image_ref, p.prix_site_lego, d.quantite_mur_pick_a_brick
@@ -421,12 +422,12 @@ WHERE p.id_piece = ?;''', (id_piece,))
             "id_couleur" : e[8], 
             "nom_couleur" : e[9], 
             "image_ref" : e[10], 
-            "prix_site_lego" : e[11]
+            # "prix_site_lego" : e[11]
         }
         # dict_item["prix_site_lego"] = scrap.get_prix_piece_site_lego(dict_item["id_lego"])
-        dict_item["prix_mur_pick_a_brick"] = round(PRIX_PICK_A_BRICK / e[12], 2)
-        dict_item["prix_legoland"] = round(PRIX_LEGOLAND * dict_item["masse"] / 100, 2)
-        dict_item["prix_bricklink"] = scrap.get_prix_piece(dict_item["id_piece"])
+        # dict_item["prix_mur_pick_a_brick"] = round(PRIX_PICK_A_BRICK / e[12], 2)
+        # dict_item["prix_legoland"] = round(PRIX_LEGOLAND * dict_item["masse"] / 100, 2)
+        # dict_item["prix_bricklink"] = scrap.get_prix_piece(dict_item["id_piece"])
         if piece_est_dans_moc(dict_item["id_piece"]) :
             moc_data = get_piece_data_from_moc(dict_item["id_piece"])
             dict_item["quantite"], dict_item["disponible"], dict_item["endommagee"] = moc_data["quantite"], moc_data["disponible"], moc_data["endommagee"]
