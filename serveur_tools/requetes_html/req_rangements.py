@@ -174,6 +174,14 @@ def get_rangements_list_request() -> dict :
 
 
 
+def post_add_rangement(params_post:dict) -> str :
+    """
+    params_post (dict), les paramètres de la requête POST
+
+    renvoie le script à utiliser pour la réponse à la requête POST après avoir fait les modifications de la base de données nécéssaires
+    """
+    bdd.ajouter_rangement_physique()
+
 def post_rangement_content_request(url:str, params_post:dict) -> dict :
     """
     entrées :

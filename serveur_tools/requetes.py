@@ -156,7 +156,9 @@ def rep_post(url:str, params_post:dict) -> bytes :
         rep = post_gammes_request(url, params_post)
         return get_file(rep[0], script=rep[1], post=True)
     elif filename[-1] == "rangements" :
-        if params_post["form_name"] == "search_piece" :
+        if params_post["form_name"] == "add_rangement" :
+            rep = post_add_rangement(params_post)
+        elif params_post["form_name"] == "search_piece" :
             params = post_rangement_content_request(url, params_post)
             return render_template("rangement_content.html", entete, params=params)
         elif params_post["form_name"] == "save_data" :
@@ -214,6 +216,8 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
             url = url[:-1]
     params_get = {decoder_text(k) : decoder_text(params_get[k]) for k in params_get}
     filename = url.split("/")
+    if len(filename) == 0 :
+        filename.append("BrickStock")
     while len(filename) < 2 :
         filename = [None] + filename
     entete = "HTTP/1.1 200 OK\r\nhost: le site local\r\nContent-Type: text/html\r\n\r\n"

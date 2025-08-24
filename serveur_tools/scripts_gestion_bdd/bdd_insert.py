@@ -516,3 +516,48 @@ def ajouter_exemplaire(id_set:int, date_achat:str, statut:str) -> bool :
     else :
         __ajouter_exemplaire(connexion, curseur, id_set, date_achat, statut)
         return True
+    
+def __ajouter_rangement(connexion:sqlite3.Connection, curseur:sqlite3.Cursor, nom_rangement:str, type_rangement:str, nb_compartiments:int, compartimentation:str, rangement_parent:int) -> None :
+    """
+    entrées :
+        connexion (sqlite3.Connect) et curseur (sqlite3.Cursor), la connexion à utiliser
+        nom_rangement (str), type_rangement (str), nb_compartiments (int), compartimentation (str) et rangement_parent (int), les infos du rangement
+
+    ajoute le rangement
+    """
+    curseur.execute('''SELECT id_rangement FROM Rangements_physiques;''')
+    r = []
+    for e in curseur :
+        r.append(e[0])
+    curseur.execute('''INSERT INTO Rangements_physiques (nom_rangement, type_rangement, nb_compartiments, compartimentation, rangement_parent) VALUES (?, ?, ?, ?, ?);''', (nom_rangement, type_rangement, nb_compartiments, compartimentation, rangement_parent))
+    curseur.execute('''SELECT id_rangement FROM Rangements_physiques;''')
+    for e in curseur :
+        if e[0] not in r :
+            id_rangement_physique = e[0]
+            break
+    curseur.execute('''INSERT INTO Rangements_virtuels (rangement_physique) VALUES (?);''', (id_rangement_physique,))
+    connexion.commit()
+    connexion.close()
+    
+def ajouter_rangement(nom_rangement:str, type_rangement:str, nb_compartiments:int, compartimentation:str, rangement_parent:int) -> bool :
+    """
+    entrées :
+        nom_rangement (str), type_rangement (str), nb_compartiments (int), compartimentation (str) et rangement_parent (int), les infos du rangement
+
+    ajoute le rangement
+    si MODE_SANS_ECHEC est True, renvoie True si l'ajout a pu être effectué et False sinon
+    sinon renvoie True
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    if MODE_SANS_ECHEC :
+        try :
+            __ajouter_rangement(connexion, curseur, nom_rangement, type_rangement, nb_compartiments, compartimentation, rangement_parent)
+        except :
+            connexion.close()
+            return False
+        else :
+            return True
+    else :
+        __ajouter_rangement(connexion, curseur, nom_rangement, type_rangement, nb_compartiments, compartimentation, rangement_parent)
+        return True

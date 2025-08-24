@@ -12,75 +12,26 @@
         <div class="fond" id="panneau_add">
             <img class="croix" id="fermer" src="/BrickStock/images/croix.svg">
             <div class="fenetre">
-                <h4>Ajouter une pièce</h4>
+                <h4>Ajouter un rangement</h4>
                 <form method="POST">
-                    <input type="hidden" name="form_name" value="add_piece">
-                    <span>id de la pièce&nbsp;:</span>
-                    <input required type="text" name="id_piece" placeholder="saisissez un id" id="add1">
+                    <input type="hidden" name="form_name" value="add_rangement">
+                    <input type="hidden" name="id_rangement_parent" value="{id_rangement}">
+                    <span>nom&nbsp;:</span>
+                    <input required type="text" name="nom" placeholder="saisissez un nom" id="add1">
                     <separator></separator>
-                    <span>id du design&nbsp;:</span>
-                    <input required type="text" name="id_design" placeholder="saisissez un id" id="add2">
+                    <span>type de rangement&nbsp;:</span>
+                    <input required type="text" name="type_rangement" placeholder="saisissez un type de rangement" id="add2">
                     <separator></separator>
-                    <span>couleur&nbsp;:</span>
-                    <select name="couleur" id="add3">
-                        <option value="0">--sélectionner une couleur--</option>
-                        {liste_couleur_add}
-                    </select>
+                    <span>nombre de compartiment&nbsp;:</span>
+                    <input required type="number" min="1" value="1" id="add3">
                     <separator></separator>
-                    <span>prix sur le site Lego<sup>®</sup>&nbsp;:</span>
-                    <input type="text" name="prix_site_lego" min="0" placeholder="prix (€)" id="add4">
+                    <span>compartimentation&nbsp;:</span>
+                    <input type="text" name="compartimentation" placeholder="1 x 1, 1 x 4, 3 x 5, ..." id="add4">
                     <separator></separator>
                     <input type="submit" value="Ajouter" style="cursor: pointer;">
                 </form>
             </div>
         </div>
-        <!-- <div class="fond" id="panneau_item">
-            <img class="croix" id="fermer_bis" src="/BrickStock/images/croix.svg">
-            <div class="fenetre" style="text-align: left;">
-                <h3 id="item_nom"></h3>
-                <a class="item_img" href="" id="item_image_ref_href" target="_blank">
-                    <img class="item_img" src="" id="item_image_ref_src">
-                </a>
-                <div>
-                    <span id="item_id_piece">id de la pièce&nbsp;:&nbsp;</span><br/>
-                    <span id="item_id_design">id du design&nbsp;:&nbsp;</span><br/>
-                    <span id="item_couleur">couleur&nbsp;:&nbsp;</span><br/>
-                    <span id="item_categorie">catégorie&nbsp;:&nbsp;</span><br/>
-                    <span id="item_dimensions">dimensions&nbsp;:&nbsp;</span><br/>
-                    <span id="item_masse">masse&nbsp;:&nbsp;</span><br/>
-                    <br/><span>Prix&nbsp;: <a id="item_prix" href="">voir les offres</a></span>
-                    <form class="item_piece" method="POST">
-                        <input type="hidden" name="form_name" value="piece_quantity">
-                        <input type="hidden" name="id_piece" id="id_piece_qt">
-                        <div class="quantity_box">
-                            <label>Quantité&nbsp;:</label>
-                            <button type="button" class="bouton_moins" id="-1">
-                                <svg class="minus" width="14px" height="2px" viewBox="0 0 14 2" aria-hidden="true"><polygon fill="black" points="14 2 0 2 0 -6.03961325e-14 14 -6.03961325e-14"></polygon></svg>
-                            </button><input required type="number" class="valeur" min="0" id="val1" name="quantite"><button type="button" class="bouton_plus" id="+1">
-                                <svg class="add" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" aria-hidden="true"><polygon fill="#FFFFFF" points="14 8 0 8 0 6 14 6"></polygon><rect fill="#FFFFFF" fill-rule="nonzero" x="6" y="0" width="2" height="14"></rect></svg>
-                            </button>
-                        </div>
-                        <div class="quantity_box">
-                            <label>Disponible&nbsp;:</label>
-                            <button type="button" class="bouton_moins" id="-2">
-                                <svg class="minus" width="14px" height="2px" viewBox="0 0 14 2" aria-hidden="true"><polygon fill="black" points="14 2 0 2 0 -6.03961325e-14 14 -6.03961325e-14"></polygon></svg>
-                            </button><input required type="number" class="valeur" min="0" id="val2" name="disponible"><button type="button" class="bouton_plus" id="+2">
-                                <svg class="add" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" aria-hidden="true"><polygon fill="#FFFFFF" points="14 8 0 8 0 6 14 6"></polygon><rect fill="#FFFFFF" fill-rule="nonzero" x="6" y="0" width="2" height="14"></rect></svg>
-                            </button>
-                        </div>
-                        <div class="quantity_box">
-                            <label>Endommagée&nbsp;:</label>
-                            <button type="button" class="bouton_moins" id="-3">
-                                <svg class="minus" width="14px" height="2px" viewBox="0 0 14 2" aria-hidden="true"><polygon fill="#FFFFFF" points="14 2 0 2 0 -6.03961325e-14 14 -6.03961325e-14"></polygon></svg>
-                            </button><input required type="number" class="valeur" min="0" id="val3" name="endommagee"><button type="button" class="bouton_plus" id="+3">
-                                <svg class="add" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" aria-hidden="true"><polygon fill="#FFFFFF" points="14 8 0 8 0 6 14 6"></polygon><rect fill="#FFFFFF" fill-rule="nonzero" x="6" y="0" width="2" height="14"></rect></svg>
-                            </button>
-                        </div>
-                        <div class="bouton_validation_infos_div"><input type="submit" value="ENREGISTRER" class="bouton_validation_infos enregistrer"><a id="reset" class="bouton_validation_infos reinitialiser">RÉINITIALISER</a></div>
-                    </form>
-                </div>
-            </div>
-        </div> -->
         <div class="page">
             <div class="menu">
                 <ul>
@@ -129,7 +80,7 @@
         <script type="text/javascript" src="/BrickStock/javascript/gestion_listes_deroulantes_categories.js"></script>
         <script type="text/javascript" name="gestion panneau ajouter">
             let nAdd = 4;
-            let defautAdd = {1 : "", 2 : "", 3 : "0", 4 : ""};
+            let defautAdd = {1 : "", 2 : "", 3 : 0, 4 : ""};
         </script>
         <script type="text/javascript" src="/BrickStock/javascript/gestion_panneau_add.js"></script>
         <script type="text/javascript" name="data">
