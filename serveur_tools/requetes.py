@@ -79,7 +79,7 @@ def get_params(requete:str) -> dict :
     return params
 
 def page_exist(url:str) -> bool :
-    liste_pages = ["BrickStock", "*404", "BrickStock/pieces", "BrickStock/pieces/prix", "BrickStock/designs", "BrickStock/categories", "BrickStock/couleurs", "BrickStock/sets", "BrickStock/sets/exemplaires_du_set", "BrickStock/sets/prix", "BrickStock/minifigures", "BrickStock/minifigures/prix", "BrickStock/sets/minifigs_du_set", "BrickStock/sets/pieces_du_set", "BrickStock/sets/gammes", "BrickStock/minifigures/gammes", "BrickStock/rangements", "BrickStock/rangements/QR-Codes", "*Fin"]
+    liste_pages = ["BrickStock", "*404", "BrickStock/pieces", "BrickStock/pieces/prix", "BrickStock/designs", "BrickStock/categories", "BrickStock/couleurs", "BrickStock/sets", "BrickStock/sets/exemplaires_du_set", "BrickStock/sets/prix", "BrickStock/minifigures", "BrickStock/minifigures/prix", "BrickStock/sets/minifigs_du_set", "BrickStock/sets/pieces_du_set", "BrickStock/sets/gammes", "BrickStock/minifigures/gammes", "BrickStock/rangements", "BrickStock/rangements/QR-Codes", "BrickStock/rangements/print_qr-codes", "*Fin"]
     if len(url) == 0 :
         url = "/"
     if url[-1] == "/" :
@@ -286,6 +286,8 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
             return get_file("/BrickStock/404")
         else :
             return get_file(f"""/BrickStock/images/QR-Codes_rangements/{bdd.get_id_qr_code_rangement(id_rangement)}.png""")
+    elif filename[-1] == "print_qr-codes" :
+        params = {}
     elif filename[-1] == "Fin" :
         return render_template("Fin.html", entete)
     assert False

@@ -47,8 +47,33 @@
                 </ul>
             </div>
             <div class="layout">
-                <button id="ajouter" class="ajouter"><img src="/BrickStock/images/bouton_plus_carre.svg"></button>
-                {content}
+                <h2>Paramètres de la page&nbsp;:</h2>
+                <form type="GET">
+                    <div>
+                        <span>Format de page standard&nbsp;:</span>
+                        <select name="dimensions_page">
+                            <option value="">--sélectionner un format de page</option>
+                        </select>
+                        <select name="format_page">
+                            <option value="portrait">portrait</option>
+                            <option value="paysage">paysage</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>Format de page personnalisé&nbsp;</span>
+                        <span>Largeur&nbsp;:</span><span>&Hauteur&nbsp;:</span>
+                        <input type="text" placeholder="21, 29.7, 10.5 ..." name="page_width"><input type="text" placeholder="21, 29.7, 10.5 ..." name="page_height">
+                    </div>
+                    <div>
+                        <span>Largeur des QR-Codes (cm)&nbsp;:</span>
+                        <input type="text" placeholder="2.5, 3.2, 4.5 ..." name="qrcode_width">
+                    </div>
+                    <div>
+                        <span>Nombre de QR-Codes par ligne&nbsp;:</span>
+                        <input type="number" min="1" name="nb_qrcode">
+                    </div><br/>
+                    <input type="submit" value="Télécharger">
+                </form>
             </div>
         </div>
         <script type="text/javascript" name="gestion panneau ajouter">

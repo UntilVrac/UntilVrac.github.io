@@ -169,10 +169,8 @@ def get_rangements_list_request() -> dict :
         <a href="/BrickStock/rangements?id_rangement={e["id_rangement"]}">{bdd.get_rangements_infos(e["id_rangement"])["nom_rangement"]}</a>
     </li>
 </ul>"""
-    params = {"{content}" : contenu, "{script}" : ""}
+    params = {"{content}" : contenu, "{script}" : "", "{id_rangement}" : 0}
     return params
-
-
 
 def post_add_rangement(params_post:dict) -> str :
     """
@@ -180,7 +178,11 @@ def post_add_rangement(params_post:dict) -> str :
 
     renvoie le script à utiliser pour la réponse à la requête POST après avoir fait les modifications de la base de données nécéssaires
     """
-    bdd.ajouter_rangement_physique()
+    response = bdd.ajouter_rangement(params_post["nom"], params_post["type_rangement"], int(params_post["nb_compartiments"]), params_post["compartimentation"], int(params_post["id_rangement_parent"]))
+    if response :
+        return """alert("les informations ont bien été enregistré");"""
+    else :
+        return """alert("erreur : les informations n'ont pas été enregistré");"""
 
 def post_rangement_content_request(url:str, params_post:dict) -> dict :
     """
@@ -204,7 +206,7 @@ def post_rangement_save_request(params_post:dict) -> str :
     if params_post["liste_pieces"] in ("{}", "{  }") :
         liste_elements = []
     else :
-        # try :
+        try :
             liste_elements = []
             for e in params_post["liste_pieces"][1:-1].split(", ") :
                 k, v = e.split(" : ")
@@ -215,8 +217,8 @@ def post_rangement_save_request(params_post:dict) -> str :
                 else :
                     assert bdd.design_in_database(k)
                 liste_elements.append(k)
-        # except :
-        #     return """alert('erreur : les éléments sélectionnés ne sont pas répertoriés ou le type d'élément est invalide (le type d'élément doit être "pièce" ou "design")');"""
+        except :
+            return """alert('erreur : les éléments sélectionnés ne sont pas répertoriés ou le type d'élément est invalide (le type d'élément doit être "pièce" ou "design")');"""
     try :
         id_rangement = int(params_post["id_rangement"])
     except :
