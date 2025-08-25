@@ -14,6 +14,13 @@
             td.col2 {
                 text-align: left;
             }
+            tr.border td {
+                border-top: 1px solid #929292;
+                padding-top: 20px;
+            }
+            tr.sub_border td {
+                padding-bottom: 20px;
+            }
         </style>
     </head>
     <body>
@@ -34,7 +41,7 @@
             <div class="layout">
                 <h2 style="padding: 20px;">Paramètres de la page&nbsp;:</h2>
                 <form type="GET" style="padding: 0 20px 20px">
-                    <table>
+                    <table style="border-collapse: collapse;">
                         <tbody>
                             <tr>
                                 <td class="col1">
@@ -75,7 +82,7 @@
                                     </table>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="sub_border">
                                 <td class="col1">
                                     <span>Orientation&nbsp;:</span>
                                 </td>
@@ -84,7 +91,7 @@
                                     <input type="hidden" name="orientation_page" value="portrait" id="input_orientation_page">
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="border">
                                 <td class="col1">
                                     <span>Largeur des QR-Codes (cm)&nbsp;:</span>
                                 </td>
@@ -93,18 +100,23 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="col1" style="vertical-align: top;">
+                                <td class="col1">
                                     <span>Nombre de QR-Codes par ligne*&nbsp;:</span><br/>
-                                    <i style="font-size: 10px; width: auto; display: inline-block;">*ce nombre est suceptible d'être adapté en fonction de la taille des qr-codes</i>
                                 </td>
                                 <td class="col2">
                                     <input type="number" min="1" name="nb_qrcode" placeholder="auto">
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="sub_border">
+                                <td class="col1">
+                                    <i style="font-size: 10px; width: auto; max-width: 236px; display: inline-block;">*ce nombre est suceptible d'être adapté en fonction de la taille des qr-codes</i>
+                                </td>
+                                <td class="col2"></td>
+                            </tr>
+                            <tr class="border">
                                 <td class="col1"></td>
-                                <td class="col2">
-                                    <input type="submit" value="Télécharger">
+                                <td class="col1">
+                                    <input style="cursor: pointer;" type="submit" value="Télécharger">
                                 </td>
                             </tr>
                         </tbody>
@@ -184,11 +196,10 @@
 
             let boutonPortrait = document.getElementById("bouton_portrait");
             let boutonPaysage = document.getElementById("bouton_paysage");
-            let inputOrientation = document.getElementById("");
+            let inputOrientationPage = document.getElementById("input_orientation_page");
 
             boutonPortrait.src = imgSrc["portrait"][true];
             boutonPaysage.src = imgSrc["paysage"][false];
-            inputOrientationPage = document.getElementById("input_orientation_page");
 
             function setImgSrc(e) {
                 boutonPortrait.src = imgSrc["portrait"][false];
