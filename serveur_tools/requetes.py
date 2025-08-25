@@ -18,6 +18,7 @@ from serveur_tools.requetes_html.req_prix import *
 from serveur_tools.requetes_html.req_gammes import *
 from serveur_tools.requetes_html.req_piece_in_set import *
 from serveur_tools.requetes_html.req_rangements import *
+from serveur_tools.qr_code import FORMATS_STANDARDS
 
 
 HISTORIQUE = Pile()
@@ -287,7 +288,8 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
         else :
             return get_file(f"""/BrickStock/images/QR-Codes_rangements/{bdd.get_id_qr_code_rangement(id_rangement)}.png""")
     elif filename[-1] == "print_qr-codes" :
-        params = {}
+        params = {"{FORMATS_STANDARDS}" : {k : list(FORMATS_STANDARDS[k]) for k in FORMATS_STANDARDS}, "{script}" : ""}
+        return render_template("print_qr-codes.html", entete, params=params)
     elif filename[-1] == "Fin" :
         return render_template("Fin.html", entete)
     assert False

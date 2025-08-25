@@ -7,31 +7,16 @@
         <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
         <link rel="shortcut icon" href="/BrickStock/css/favicon.ico" type="image/x-icon">
         <!-- <link rel="shortcut icon" href="../css/favicon.ico" type="image/x-icon"> -->
+        <style type="text/css">
+            td.col1 {
+                text-align: right;
+            }
+            td.col2 {
+                text-align: left;
+            }
+        </style>
     </head>
     <body>
-        <div class="fond" id="panneau_add">
-            <img class="croix" id="fermer" src="/BrickStock/images/croix.svg">
-            <div class="fenetre">
-                <h4>Ajouter un rangement</h4>
-                <form method="POST">
-                    <input type="hidden" name="form_name" value="add_rangement">
-                    <input type="hidden" name="id_rangement_parent" value="{id_rangement}">
-                    <span>nom&nbsp;:</span>
-                    <input required type="text" name="nom" placeholder="saisissez un nom" id="add1">
-                    <separator></separator>
-                    <span>type de rangement&nbsp;:</span>
-                    <input required type="text" name="type_rangement" placeholder="saisissez un type de rangement" id="add2">
-                    <separator></separator>
-                    <span>nombre de compartiment&nbsp;:</span>
-                    <input required type="number" min="1" name="nb_compartiments" value="1" id="add3">
-                    <separator></separator>
-                    <span>compartimentation&nbsp;:</span>
-                    <input type="text" name="compartimentation" placeholder="1 x 1, 1 x 4, 3 x 5, ..." id="add4">
-                    <separator></separator>
-                    <input type="submit" value="Ajouter" style="cursor: pointer;">
-                </form>
-            </div>
-        </div>
         <div class="page">
             <div class="menu">
                 <ul>
@@ -47,40 +32,174 @@
                 </ul>
             </div>
             <div class="layout">
-                <h2>Paramètres de la page&nbsp;:</h2>
-                <form type="GET">
-                    <div>
-                        <span>Format de page standard&nbsp;:</span>
-                        <select name="dimensions_page">
-                            <option value="">--sélectionner un format de page</option>
-                        </select>
-                        <select name="format_page">
-                            <option value="portrait">portrait</option>
-                            <option value="paysage">paysage</option>
-                        </select>
-                    </div>
-                    <div>
-                        <span>Format de page personnalisé&nbsp;</span>
-                        <span>Largeur&nbsp;:</span><span>&Hauteur&nbsp;:</span>
-                        <input type="text" placeholder="21, 29.7, 10.5 ..." name="page_width"><input type="text" placeholder="21, 29.7, 10.5 ..." name="page_height">
-                    </div>
-                    <div>
-                        <span>Largeur des QR-Codes (cm)&nbsp;:</span>
-                        <input type="text" placeholder="2.5, 3.2, 4.5 ..." name="qrcode_width">
-                    </div>
-                    <div>
-                        <span>Nombre de QR-Codes par ligne&nbsp;:</span>
-                        <input type="number" min="1" name="nb_qrcode">
-                    </div><br/>
-                    <input type="submit" value="Télécharger">
+                <h2 style="padding: 20px;">Paramètres de la page&nbsp;:</h2>
+                <form type="GET" style="padding: 0 20px 20px">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="col1">
+                                    <span>Taille du papier&nbsp;:</span>
+                                </td>
+                                <td class="col2">
+                                    <select name="dimensions_page" id="dimensions_page"></select><span id="tailles_standards" style="font-size: 12px; vertical-align: middle;"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col1">
+                                    <span>OU</span>
+                                </td>
+                                <td class="col2"></td>
+                            </tr>
+                            <tr>
+                                <td class="col1" style="vertical-align: top;">
+                                    <span style="padding-top: 2.5px; display: inline-block;">Format de page personnalisé&nbsp;:</span>
+                                </td>
+                                <td class="col2" style="vertical-align: top;">
+                                    <table style="text-align: center;">
+                                        <tbody>
+                                            <tr>
+                                                <td>Largeur (mm)&nbsp;:</td>
+                                                <td>&nbsp;&nbsp;x&nbsp;&nbsp;</td>
+                                                <td>Hauteur (mm)&nbsp;:</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="text" placeholder="210, 297, 105 ..." id="width" name="page_width" style="width: 96px; text-align: center;">
+                                                </td>
+                                                <td>&nbsp;&nbsp;x&nbsp;&nbsp;</td>
+                                                <td>
+                                                    <input type="text" placeholder="210, 297, 105 ..." id="height" name="page_height" style="width: 96px; text-align: center;">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col1">
+                                    <span>Orientation&nbsp;:</span>
+                                </td>
+                                <td class="col2">
+                                    <img style="width: 50px; margin-right: 6.25px; cursor: pointer;" id="bouton_portrait"><img style="width: 50px; margin-left: 6.25px; cursor: pointer" id="bouton_paysage">
+                                    <input type="hidden" name="orientation_page" value="portrait" id="input_orientation_page">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col1">
+                                    <span>Largeur des QR-Codes (cm)&nbsp;:</span>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="25, 32, 45 ..." name="qrcode_width" id="qrcode_width">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col1" style="vertical-align: top;">
+                                    <span>Nombre de QR-Codes par ligne*&nbsp;:</span><br/>
+                                    <i style="font-size: 10px; width: auto; display: inline-block;">*ce nombre est suceptible d'être adapté en fonction de la taille des qr-codes</i>
+                                </td>
+                                <td class="col2">
+                                    <input type="number" min="1" name="nb_qrcode" placeholder="auto">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col1"></td>
+                                <td class="col2">
+                                    <input type="submit" value="Télécharger">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </form>
             </div>
         </div>
-        <script type="text/javascript" name="gestion panneau ajouter">
-            let nAdd = 4;
-            let defautAdd = {1 : "", 2 : "", 3 : 0, 4 : ""};
+        <script type="text/javascript" name="remplissage des formats de papier">
+            let formatStandards = {FORMATS_STANDARDS};
+            let selectDimensionsPage = document.getElementById("dimensions_page");
+            var listeKeys = Object.keys(formatStandards);
+
+            for (var i=0; i<listeKeys.length; i++) {
+                var option = document.createElement("option");
+                option.value = listeKeys[i];
+                option.innerHTML = listeKeys[i];
+                selectDimensionsPage.appendChild(option);
+            }
+            selectDimensionsPage.value = "A4";
+
+            let taillesStandards = document.getElementById("tailles_standards");
+
+            function setTaille() {
+                var val = formatStandards.value;
+                if (!listeKeys.includes(val)) {
+                    formatStandards.value = "A4";
+                    setTaille();
+                    return
+                }
+                taillesStandards.innerHTML = " " + formatStandards[val][0] + " par " + formatStandards[val][1] + " mm";
+            }
+
+            setTaille();
+            selectDimensionsPage.addEventListener("input", setTaille);
+
+            let width = document.getElementById("width");
+            let height = document.getElementById("height");
+            let w = 210;
+            let h = 297;
+            let qr = 40;
+            let floatCar = "0123456789.";
+
+            function verifInput(e) {
+                var val = this.value;
+                val = val.replace(",", ".");
+                for (var i=0; i<val.length; i++) {
+                    if (!floatCar.includes(val[i])) {
+                        if (this.id == "width") {
+                            this.value = w;
+                        }
+                        else if (this.id == "height") {
+                            this.value = h;
+                        }
+                        else {
+                            this.value = qr;
+                        }
+                        return;
+                    }
+                }
+                if (this.id == "width") {
+                    w = val;
+                }
+                else if (this.id == "height") {
+                    h = val;
+                }
+                else {
+                    qr = val;
+                }
+            }
+
+            width.addEventListener("input", verifInput);
+            height.addEventListener("input", verifInput);
+            document.getElementById("qrcode_width").addEventListener("input", verifInput);
         </script>
-        <script type="text/javascript" src="/BrickStock/javascript/gestion_panneau_add.js"></script>
+        <script type="text/javascript" name="gestion des boutons d'orientation de la page">
+            let imgSrc = {"portrait" : {true : "/BrickStock/images/format_portrait_selected.png", false : "/BrickStock/images/format_portrait.png"}, "paysage" : {true : "/BrickStock/images/format_paysage_selected.png", false : "/BrickStock/images/format_paysage.png"}};
+
+            let boutonPortrait = document.getElementById("bouton_portrait");
+            let boutonPaysage = document.getElementById("bouton_paysage");
+            let inputOrientation = document.getElementById("");
+
+            boutonPortrait.src = imgSrc["portrait"][true];
+            boutonPaysage.src = imgSrc["paysage"][false];
+            inputOrientationPage = document.getElementById("input_orientation_page");
+
+            function setImgSrc(e) {
+                boutonPortrait.src = imgSrc["portrait"][false];
+                boutonPaysage.src = imgSrc["paysage"][false];
+                this.src = imgSrc[this.id.substring(7)][true];
+                inputOrientationPage.value = this.id.substring(7);
+            }
+
+            boutonPortrait.addEventListener("click", setImgSrc);
+            boutonPaysage.addEventListener("click", setImgSrc);
+        </script>
         {script}
     </body>
 </html>
