@@ -787,24 +787,19 @@ def get_rangement_content(id_rangement:int) -> list :
         r.append(e[0])
     connexion.close()
     return [(e, get_element_type(e)) for e in r]
-
-def get_id_qr_code_rangement(id_rangement:int) -> int :
+    
+def get_liste_id_rangements_for_qr_code_print() -> list :
     """
-    id_rangement (int), id du rangement physique
-
-    renvoie l'id du rangement virtuel correspondant s'il existe et None sinon
+    renvoie la liste des id des rangements physique contenant directement des Lego (sans compartimentation)
     """
     connexion = sqlite3.connect(MOC)
     curseur = connexion.cursor()
-    curseur.execute('''SELECT id_rangement FROM Rangements_virtuels WHERE rangement_physique = ?;''', (id_rangement,))
+    curseur.execute('''SELECT id_rangement FROM Rangements_physiques;''')
     r = []
     for e in curseur :
         r.append(e[0])
     connexion.close()
-    if len(r) == 0 :
-        return None
-    else :
-        return r[0]
+    return [e for e in r if not rangement_est_compartimente(e)]
 
 
 

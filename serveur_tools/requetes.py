@@ -18,7 +18,7 @@ from serveur_tools.requetes_html.req_prix import *
 from serveur_tools.requetes_html.req_gammes import *
 from serveur_tools.requetes_html.req_piece_in_set import *
 from serveur_tools.requetes_html.req_rangements import *
-from serveur_tools.qr_code import FORMATS_STANDARDS
+from serveur_tools.qr_code import FORMATS_STANDARDS, MARGES, generate_qr_codes_sheet
 
 
 HISTORIQUE = Pile()
@@ -165,6 +165,44 @@ def rep_post(url:str, params_post:dict) -> bytes :
         elif params_post["form_name"] == "save_data" :
             rep = post_rangement_save_request(params_post)
         return get_file(url, script=rep)
+    elif filename[-1] == "print_qr-codes" :
+        if params_post["dimensions_page"] in FORMATS_STANDARDS :
+            width, height = FORMATS_STANDARDS[params_post["dimensions_page"]]
+            marges = MARGES[params_post["dimensions_page"]]
+        else :
+            width, height = FORMATS_STANDARDS["A4"]
+            marges = None
+        if params_post["page_width"] != "" :
+            try :
+                width = abs(float(params_post["page_width"]))
+            except :
+                pass
+        if params_post["page_height"] != "" :
+            try :
+                height = abs(float(params_post["page_height"]))
+            except :
+                pass
+        width, height = min((width, height)), max((width, height))
+        if marges == None :
+            marges = (int(round(width / 21))), int(round(2 * width / 21))
+        if params_post["orientation_page"] == "paysage" :
+            width, height = height, width
+            marges = (marges[1], marges[0])
+        if params_post["qrcode_size"] == "" :
+            qrcode_size = None
+        else :
+            try :
+                qrcode_size = abs(float(params_post["qrcode_size"]))
+            except :
+                qrcode_size = None
+        if params_post["nb_qrcode_par_ligne"] == "" :
+            nb_qrcode_par_ligne = None
+        else :
+            try :
+                nb_qrcode_par_ligne = abs(int(params_post["nb_qrcode_par_ligne"]))
+            except :
+                nb_qrcode_par_ligne = None
+        path = generate_qr_codes_sheet((width, height), marges, nb_qrcode_par_ligne, qrcode_size)
     assert False
 
 def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
@@ -288,8 +326,7 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
         else :
             return get_file(f"""/BrickStock/images/QR-Codes_rangements/{bdd.get_id_qr_code_rangement(id_rangement)}.png""")
     elif filename[-1] == "print_qr-codes" :
-        params = {"{FORMATS_STANDARDS}" : {k : list(FORMATS_STANDARDS[k]) for k in FORMATS_STANDARDS}, "{script}" : ""}
-        return render_template("print_qr-codes.html", entete, params=params)
+        return render_template("print_qr-codes.html", entete, params={"{FORMATS_STANDARDS}" : {k : list(int(FORMATS_STANDARDS[k][0]), int(FORMATS_STANDARDS[k][1])) for k in FORMATS_STANDARDS}, "{script}" : ""})
     elif filename[-1] == "Fin" :
         return render_template("Fin.html", entete)
     assert False

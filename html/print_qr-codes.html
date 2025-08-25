@@ -40,7 +40,7 @@
             </div>
             <div class="layout">
                 <h2 style="padding: 20px;">Paramètres de la page&nbsp;:</h2>
-                <form type="GET" style="padding: 0 20px 20px">
+                <form type="POST" style="padding: 0 20px 20px">
                     <table style="border-collapse: collapse;">
                         <tbody>
                             <tr>
@@ -96,7 +96,7 @@
                                     <span>Largeur des QR-Codes (cm)&nbsp;:</span>
                                 </td>
                                 <td>
-                                    <input type="text" placeholder="25, 32, 45 ..." name="qrcode_width" id="qrcode_width">
+                                    <input type="text" placeholder="25, 32, 45 ..." name="qrcode_size" id="qrcode_width">
                                 </td>
                             </tr>
                             <tr>
@@ -104,7 +104,7 @@
                                     <span>Nombre de QR-Codes par ligne*&nbsp;:</span><br/>
                                 </td>
                                 <td class="col2">
-                                    <input type="number" min="1" name="nb_qrcode" placeholder="auto">
+                                    <input type="number" min="1" name="nb_qrcode_par_ligne" placeholder="auto">
                                 </td>
                             </tr>
                             <tr class="sub_border">
