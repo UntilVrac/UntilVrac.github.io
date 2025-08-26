@@ -795,10 +795,12 @@ def get_liste_id_rangements_for_qr_code_print() -> list :
     connexion = sqlite3.connect(MOC)
     curseur = connexion.cursor()
     curseur.execute('''SELECT id_rangement FROM Rangements_physiques;''')
+    # curseur.execute('''SELECT id_rangement FROM Rangements_physiques WHERE nb_compartiments = 1;''')
     r = []
     for e in curseur :
         r.append(e[0])
     connexion.close()
+    # return r
     return [e for e in r if not rangement_est_compartimente(e)]
 
 
@@ -809,4 +811,4 @@ if __name__ == "__main__" :
     # print(get_liste_sous_categories(11, direct=False))
     # print(get_infos_categorie(11))
     # print(get_arbre_rangements())
-    print(get_rangement_path(1))
+    # print(get_rangement_path(1))

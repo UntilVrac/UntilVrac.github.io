@@ -3,6 +3,7 @@ BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.2"
 path.append(BRICKSTOCK_PATH)
 
 import serveur_tools.scripts_gestion_bdd.gestion_bdd as bdd
+from serveur_tools.qr_code import FORMATS_STANDARDS
 
 
 
@@ -171,6 +172,12 @@ def get_rangements_list_request() -> dict :
 </ul>"""
     params = {"{content}" : contenu, "{script}" : "", "{id_rangement}" : 0}
     return params
+
+def get_print_qrcodes_request() -> dict :
+    """
+    renvoie les paramètres de modifications pour le rendu de la page web (cas où aucune information n'est donnée en paramètre GET -> renvoie de la liste des rangements)
+    """
+    return {"{FORMATS_STANDARDS}" : {k : [int(FORMATS_STANDARDS[k][0]), int(FORMATS_STANDARDS[k][1])] for k in FORMATS_STANDARDS}, "{script}" : ""}
 
 def post_add_rangement(params_post:dict) -> str :
     """

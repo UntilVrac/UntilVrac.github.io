@@ -6,7 +6,7 @@ BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.2"
 BRICKSTOCK_SITE_HREF = "http://localhost:1520"
 path.append(BRICKSTOCK_PATH)
 
-import scripts_gestion_bdd.gestion_bdd as bdd
+import serveur_tools.scripts_gestion_bdd.gestion_bdd as bdd
 
 FORMATS_STANDARDS = {
     "3,5 x 5" : (89, 127), 
@@ -88,7 +88,7 @@ def create_qr_code(id_rangement:int, barcode_type:str="QRCode") -> bool :
         print(f"erreur {response.status_code} : le QR-Code n'a pu être créé")
         return False
     
-def generate_qr_codes_sheet(page_size:tuple, marges:tuple, nb_qrcode_par_ligne:int, qrcode_size:float) -> str :
+def generate_qr_codes_sheet(page_size:tuple, marges:tuple, nb_qrcode_par_ligne:int=None, qrcode_size:float=None) -> str :
     """
     entrées :
         page_size (tuple), les dimensions de la page en millimètre sous la forme (largeur (int ou float), hauteur, (int ou float))
@@ -116,17 +116,36 @@ def generate_qr_codes_sheet(page_size:tuple, marges:tuple, nb_qrcode_par_ligne:i
     assert type(nb_qrcode_par_ligne) == int or nb_qrcode_par_ligne == None
     assert type(qrcode_size) in (int, float) or qrcode_size == None
     w, h = page_size[0] - 2 * marges[0], page_size[1] - 2 * marges[1]
-    if qrcode_size != None and nb_qrcode_par_ligne != None :
-        if w < nb_qrcode_par_ligne * qrcode_size * 1.4 :
-            qrcode_size = w / (nb_qrcode_par_ligne * 1.4)
-    m = qrcode_size / 5
-    case_w, case_h = qrcode_size + 2 * m, qrcode_size + 3 * m
+    if qrcode_size == None :
+        if nb_qrcode_par_ligne == None :
+            qrcode_size = 20
+            m = qrcode_size / 5
+            case_w, case_h = qrcode_size + 2 * m, qrcode_size + 3 * m
+            nb_qrcode_par_ligne = w // case_w
+        else :
+            case_w = (w / nb_qrcode_par_ligne)
+            qrcode_size = case_w * 5 / 6
+            m = case_w / 6
+            case_h = qrcode_size + 3 * m
+    elif nb_qrcode_par_ligne == None :
+        m = qrcode_size / 5
+        case_w, case_h = qrcode_size + 2 * m, qrcode_size + 3 * m
+        nb_qrcode_par_ligne = w // case_w
+    else :
+        m = qrcode_size / 5
+        case_w, case_h = qrcode_size + 2 * m, qrcode_size + 3 * m
+    if w < nb_qrcode_par_ligne * qrcode_size * 1.4 :
+        qrcode_size = w / (nb_qrcode_par_ligne * 1.4)
+        m = qrcode_size / 5
+        case_w, case_h = qrcode_size + 2 * m, qrcode_size + 3 * m
     nb_lignes_par_page = h // case_h
     nb_qrcode_par_page = nb_qrcode_par_ligne * nb_lignes_par_page
     liste_qrcodes_ids = bdd.get_liste_id_rangements_for_qr_code_print()
+    # print(liste_qrcodes_ids)
     # nb_pages = len(liste_qrcodes_ids) / nb_qrcode_par_page
     # nb_pages = int(nb_pages) + {True : 0, False : 1}[int(nb_pages) == nb_pages]
     pdf = fpdf.FPDF(format=page_size)
+    pdf.set_font("Arial", size=10)
     x, y = 0, 0
     i = 0
     for id in liste_qrcodes_ids :
@@ -138,9 +157,15 @@ def generate_qr_codes_sheet(page_size:tuple, marges:tuple, nb_qrcode_par_ligne:i
             x, y = 0, 0
         pdf.image(f"{BRICKSTOCK_PATH}/images/QR-Codes_rangements/{id}.png", x * case_w + marges[1] + m, y * case_h + marges[0] + m, qrcode_size, qrcode_size)
         pdf.x, pdf.y = x * case_w + marges[1] + m, y * case_h + marges[1] + m + qrcode_size
-        pdf.cell(qrcode_size, m, str(id), align="center")
+        # pdf.cell(qrcode_size, m, str(id), border=False, align="center", fill=False, center=True)
+        pdf.cell(qrcode_size, m, str(id), border=False, align="center", fill=False)
         x += 1
         i += 1
-    path = f"{BRICKSTOCK_PATH}/data_save/qr-codes_to_print.pdf"
-    pdf.output(path)
-    return path
+    path = "/data_save/qr-codes_to_print.pdf"
+    pdf.output(BRICKSTOCK_PATH + path)
+    return BRICKSTOCK_SITE_HREF + path
+
+
+
+if __name__ == "__main__" :
+    print(generate_qr_codes_sheet((210, 297), (20, 10)))

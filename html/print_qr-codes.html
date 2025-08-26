@@ -40,7 +40,7 @@
             </div>
             <div class="layout">
                 <h2 style="padding: 20px;">Paramètres de la page&nbsp;:</h2>
-                <form type="POST" style="padding: 0 20px 20px">
+                <form method="POST" style="padding: 0 20px 20px">
                     <table style="border-collapse: collapse;">
                         <tbody>
                             <tr>
@@ -96,7 +96,7 @@
                                     <span>Largeur des QR-Codes (cm)&nbsp;:</span>
                                 </td>
                                 <td>
-                                    <input type="text" placeholder="25, 32, 45 ..." name="qrcode_size" id="qrcode_width">
+                                    <input type="text" placeholder="25, 32, 45 ..." name="qrcode_size" id="qrcode_size">
                                 </td>
                             </tr>
                             <tr>
@@ -104,7 +104,7 @@
                                     <span>Nombre de QR-Codes par ligne*&nbsp;:</span><br/>
                                 </td>
                                 <td class="col2">
-                                    <input type="number" min="1" name="nb_qrcode_par_ligne" placeholder="auto">
+                                    <input type="number" min="1" name="nb_qrcode_par_ligne" placeholder="auto" id="nb_qrcode_par_ligne">
                                 </td>
                             </tr>
                             <tr class="sub_border">
@@ -115,8 +115,8 @@
                             </tr>
                             <tr class="border">
                                 <td class="col1"></td>
-                                <td class="col1">
-                                    <input style="cursor: pointer;" type="submit" value="Télécharger">
+                                <td class="col1" id="zone_telechargement">
+                                    <input style="cursor: pointer;" type="submit" value="Générer">
                                 </td>
                             </tr>
                         </tbody>
@@ -189,7 +189,7 @@
 
             width.addEventListener("input", verifInput);
             height.addEventListener("input", verifInput);
-            document.getElementById("qrcode_width").addEventListener("input", verifInput);
+            document.getElementById("qrcode_size").addEventListener("input", verifInput);
         </script>
         <script type="text/javascript" name="gestion des boutons d'orientation de la page">
             let imgSrc = {"portrait" : {true : "/BrickStock/images/format_portrait_selected.png", false : "/BrickStock/images/format_portrait.png"}, "paysage" : {true : "/BrickStock/images/format_paysage_selected.png", false : "/BrickStock/images/format_paysage.png"}};

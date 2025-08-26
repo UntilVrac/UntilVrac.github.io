@@ -197,9 +197,10 @@ def rangement_est_compartimente(id_rangement:int) -> bool :
     r = []
     for e in curseur :
         r.append(e[0])
+    assert len(r) == 1
     connexion.close()
     # return r[0] > 0
-    return r[0] == 1
+    return r[0] > 1
 
 
 

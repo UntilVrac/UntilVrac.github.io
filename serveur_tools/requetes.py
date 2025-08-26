@@ -203,6 +203,24 @@ def rep_post(url:str, params_post:dict) -> bytes :
             except :
                 nb_qrcode_par_ligne = None
         path = generate_qr_codes_sheet((width, height), marges, nb_qrcode_par_ligne, qrcode_size)
+        params = get_print_qrcodes_request()
+        if params_post["orientation_page"] == "portrait" :
+            script_orientation = ""
+        else :
+            script_orientation = """document.getElementById("bouton_portrait").src = "/BrickStock/images/format_portrait.png";
+document.getElementById("bouton_paysage").src = "/BrickStock/images/format_paysage_selected.png";"""
+        params["{script}"] = f"""<script type="text/javascript">
+    var zone = document.getElementById("zone_telechargement");
+    zone.innerHTML = '<a class="bouton_telecharger" href="{path}" target="_blank">Télécharger</a>' + zone.innerHTML;
+    document.getElementById("dimensions_page").value = "{params_post['dimensions_page']}";
+    document.getElementById("width").value = "{params_post['page_width']};
+    document.getElementById("height").value = "{params_post['page_height']};
+    {script_orientation}
+    document.getElementById("input_orientation_page").value = "{params_post['orientation_page']}";
+    document.getElementById("qrcode_size").value = "{params_post['qrcode_size']}";
+    document.getElementById("nb_qrcode_par_ligne").value = "{params_post['nb_qrcode_par_ligne']}";
+</script>"""
+        return render_template("print_qr-codes.html", entete, params=params)
     assert False
 
 def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
@@ -326,7 +344,7 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
         else :
             return get_file(f"""/BrickStock/images/QR-Codes_rangements/{bdd.get_id_qr_code_rangement(id_rangement)}.png""")
     elif filename[-1] == "print_qr-codes" :
-        return render_template("print_qr-codes.html", entete, params={"{FORMATS_STANDARDS}" : {k : list(int(FORMATS_STANDARDS[k][0]), int(FORMATS_STANDARDS[k][1])) for k in FORMATS_STANDARDS}, "{script}" : ""})
+        return render_template("print_qr-codes.html", entete, params=get_print_qrcodes_request())
     elif filename[-1] == "Fin" :
         return render_template("Fin.html", entete)
     assert False
