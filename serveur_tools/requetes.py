@@ -342,7 +342,7 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
         except :
             return get_file("/BrickStock/404")
         else :
-            return get_file(f"""/BrickStock/images/QR-Codes_rangements/{bdd.get_id_qr_code_rangement(id_rangement)}.png""")
+            return get_file(f"""/BrickStock/images/QR-Codes_rangements/{id_rangement}.png""")
     elif filename[-1] == "print_qr-codes" :
         return render_template("print_qr-codes.html", entete, params=get_print_qrcodes_request())
     elif filename[-1] == "Fin" :

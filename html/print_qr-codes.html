@@ -10,6 +10,7 @@
         <style type="text/css">
             td.col1 {
                 text-align: right;
+                padding-right: 5px;
             }
             td.col2 {
                 text-align: left;
@@ -38,90 +39,91 @@
                     </li>
                 </ul>
             </div>
-            <div class="layout">
-                <h2 style="padding: 20px;">Paramètres de la page&nbsp;:</h2>
-                <form method="POST" style="padding: 0 20px 20px">
-                    <table style="border-collapse: collapse;">
-                        <tbody>
-                            <tr>
-                                <td class="col1">
-                                    <span>Taille du papier&nbsp;:</span>
-                                </td>
-                                <td class="col2">
-                                    <select name="dimensions_page" id="dimensions_page"></select><span id="tailles_standards" style="font-size: 12px; vertical-align: middle;"></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col1">
-                                    <span>OU</span>
-                                </td>
-                                <td class="col2"></td>
-                            </tr>
-                            <tr>
-                                <td class="col1" style="vertical-align: top;">
-                                    <span style="padding-top: 2.5px; display: inline-block;">Format de page personnalisé&nbsp;:</span>
-                                </td>
-                                <td class="col2" style="vertical-align: top;">
-                                    <table style="text-align: center;">
-                                        <tbody>
-                                            <tr>
-                                                <td>Largeur (mm)&nbsp;:</td>
-                                                <td>&nbsp;&nbsp;x&nbsp;&nbsp;</td>
-                                                <td>Hauteur (mm)&nbsp;:</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="text" placeholder="210, 297, 105 ..." id="width" name="page_width" style="width: 96px; text-align: center;">
-                                                </td>
-                                                <td>&nbsp;&nbsp;x&nbsp;&nbsp;</td>
-                                                <td>
-                                                    <input type="text" placeholder="210, 297, 105 ..." id="height" name="page_height" style="width: 96px; text-align: center;">
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr class="sub_border">
-                                <td class="col1">
-                                    <span>Orientation&nbsp;:</span>
-                                </td>
-                                <td class="col2">
-                                    <img style="width: 50px; margin-right: 6.25px; cursor: pointer;" id="bouton_portrait"><img style="width: 50px; margin-left: 6.25px; cursor: pointer" id="bouton_paysage">
-                                    <input type="hidden" name="orientation_page" value="portrait" id="input_orientation_page">
-                                </td>
-                            </tr>
-                            <tr class="border">
-                                <td class="col1">
-                                    <span>Largeur des QR-Codes (cm)&nbsp;:</span>
-                                </td>
-                                <td>
-                                    <input type="text" placeholder="25, 32, 45 ..." name="qrcode_size" id="qrcode_size">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col1">
-                                    <span>Nombre de QR-Codes par ligne*&nbsp;:</span><br/>
-                                </td>
-                                <td class="col2">
-                                    <input type="number" min="1" name="nb_qrcode_par_ligne" placeholder="auto" id="nb_qrcode_par_ligne">
-                                </td>
-                            </tr>
-                            <tr class="sub_border">
-                                <td class="col1">
-                                    <i style="font-size: 10px; width: auto; max-width: 236px; display: inline-block;">*ce nombre est suceptible d'être adapté en fonction de la taille des qr-codes</i>
-                                </td>
-                                <td class="col2"></td>
-                            </tr>
-                            <tr class="border">
-                                <td class="col1"></td>
-                                <td class="col1" id="zone_telechargement">
-                                    <input style="cursor: pointer;" type="submit" value="Générer">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </form>
+            <div class="layout" style="text-align: center;">
+                <div style="width: auto; text-align: left; display: inline-block;">
+                    <h2 style="padding: 20px;">Paramètres de la page&nbsp;:</h2>
+                    <form method="POST" style="padding: 0 20px 20px">
+                        <table style="border-collapse: collapse;">
+                            <tbody>
+                                <tr>
+                                    <td class="col1">
+                                        <span>Taille du papier&nbsp;:</span>
+                                    </td>
+                                    <td class="col2">
+                                        <select name="dimensions_page" id="dimensions_page"></select><span id="tailles_standards" style="font-size: 12px; vertical-align: middle;"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;" colspan="2">
+                                        <span>OU</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col1" style="vertical-align: top;">
+                                        <span style="padding-top: 2.5px; display: inline-block;">Format de page personnalisé&nbsp;:</span>
+                                    </td>
+                                    <td class="col2" style="vertical-align: top;">
+                                        <table style="text-align: center;">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Largeur (mm)&nbsp;:</td>
+                                                    <td>&nbsp;&nbsp;x&nbsp;&nbsp;</td>
+                                                    <td>Hauteur (mm)&nbsp;:</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" placeholder="210, 297, 105 ..." id="width" name="page_width" style="width: 96px; text-align: center;">
+                                                    </td>
+                                                    <td>&nbsp;&nbsp;x&nbsp;&nbsp;</td>
+                                                    <td>
+                                                        <input type="text" placeholder="210, 297, 105 ..." id="height" name="page_height" style="width: 96px; text-align: center;">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr class="sub_border">
+                                    <td class="col1">
+                                        <span>Orientation&nbsp;:</span>
+                                    </td>
+                                    <td class="col2">
+                                        <img style="width: 50px; margin-right: 6.25px; cursor: pointer;" id="bouton_portrait"><img style="width: 50px; margin-left: 6.25px; cursor: pointer" id="bouton_paysage">
+                                        <input type="hidden" name="orientation_page" value="portrait" id="input_orientation_page">
+                                    </td>
+                                </tr>
+                                <tr class="border">
+                                    <td class="col1">
+                                        <span>Largeur des QR-Codes (cm)&nbsp;:</span>
+                                    </td>
+                                    <td>
+                                        <input type="text" placeholder="25, 32, 45 ..." name="qrcode_size" id="qrcode_size">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col1">
+                                        <span>Nombre de QR-Codes par ligne*&nbsp;:</span><br/>
+                                    </td>
+                                    <td class="col2">
+                                        <input type="number" min="1" name="nb_qrcode_par_ligne" placeholder="auto" id="nb_qrcode_par_ligne">
+                                    </td>
+                                </tr>
+                                <tr class="sub_border">
+                                    <td colspan="2">
+                                        <i style="font-size: 10px; width: auto; display: inline-block;">*ce nombre est suceptible d'être adapté en fonction de la taille des qr-codes</i>
+                                        <!-- <i style="font-size: 10px; width: auto; max-width: 236px; display: inline-block;">*ce nombre est suceptible d'être adapté en fonction de la taille des qr-codes</i> -->
+                                    </td>
+                                </tr>
+                                <tr class="border">
+                                    <td class="col1"></td>
+                                    <td class="col1" id="zone_telechargement">
+                                        <input style="cursor: pointer;" type="submit" value="Générer">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
             </div>
         </div>
         <script type="text/javascript" name="remplissage des formats de papier">

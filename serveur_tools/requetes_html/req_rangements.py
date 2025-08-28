@@ -42,7 +42,7 @@ def get_rangement_content_request(id_rangement:int, params_get:dict=None) -> dic
     infos_rangement = bdd.get_rangements_infos(id_rangement)
     path = bdd.get_rangement_path(id_rangement)
     # path.append(infos_rangement)
-    params = {"{path_rangement}" : f"""<span>{" > ".join([f'''<a href="/BrickStock/rangements?id_rangement={e["id_rangement"]}">{e["nom_rangement"]}</a>''' for e in path])}</span>""", "{id_rangement}" : id_rangement, "{type_rangement}" : infos_rangement["type_rangement"], "{qr_code_href}" : f"""/BrickStock/rangements/QR-Codes?id_rangement={id_rangement}""", "{id_qr-code}" : bdd.get_id_qr_code_rangement(id_rangement), "{script}" : ""}
+    params = {"{path_rangement}" : f"""<span>{" > ".join([f'''<a href="/BrickStock/rangements?id_rangement={e["id_rangement"]}">{e["nom_rangement"]}</a>''' for e in path])}</span>""", "{id_rangement}" : id_rangement, "{type_rangement}" : infos_rangement["type_rangement"], "{qr_code_href}" : f"""/BrickStock/rangements/QR-Codes?id_rangement={id_rangement}""", "{id_qr-code}" : id_rangement, "{script}" : ""}
     try :
         liste_content = [(int(e.split(" : ")[0]), e.split(" : ")[1]) for e in params_get["liste_pieces"].split(", ")]
         params["{value_input}"] = params_get["liste_pieces"]
@@ -165,12 +165,10 @@ def get_rangements_list_request() -> dict :
     arbre_rangements = bdd.get_arbre_rangements()
     contenu = ""
     for e in arbre_rangements["contenu"] :
-        contenu += f"""<ul class="level level0">
-    <li>
+        contenu += f"""<li>
         <a href="/BrickStock/rangements?id_rangement={e["id_rangement"]}">{bdd.get_rangements_infos(e["id_rangement"])["nom_rangement"]}</a>
-    </li>
-</ul>"""
-    params = {"{content}" : contenu, "{script}" : "", "{id_rangement}" : 0}
+    </li>"""
+    params = {"{content}" : f"""<ul class="level level0">{contenu}</ul>""", "{script}" : "", "{id_rangement}" : 0}
     return params
 
 def get_print_qrcodes_request() -> dict :
