@@ -1,5 +1,4 @@
 from sys import path
-# BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.1"
 BRICKSTOCK_PATH = "/Users/alexis/Desktop/LEGO/BrickStock/BrickStock 2.2"
 path.append(BRICKSTOCK_PATH)
 
@@ -80,7 +79,7 @@ def get_params(requete:str) -> dict :
     return params
 
 def page_exist(url:str) -> bool :
-    liste_pages = ["BrickStock", "*404", "BrickStock/pieces", "BrickStock/pieces/prix", "BrickStock/designs", "BrickStock/categories", "BrickStock/couleurs", "BrickStock/sets", "BrickStock/sets/exemplaires_du_set", "BrickStock/sets/prix", "BrickStock/minifigures", "BrickStock/minifigures/prix", "BrickStock/sets/minifigs_du_set", "BrickStock/sets/pieces_du_set", "BrickStock/sets/gammes", "BrickStock/minifigures/gammes", "BrickStock/rangements", "BrickStock/rangements/QR-Codes", "BrickStock/rangements/print_qr-codes", "*Fin"]
+    liste_pages = ["BrickStock", "*404", "BrickStock/pieces", "BrickStock/pieces/prix", "BrickStock/designs", "BrickStock/categories", "BrickStock/couleurs", "BrickStock/sets", "BrickStock/sets/exemplaires_du_set", "BrickStock/sets/prix", "BrickStock/minifigures", "BrickStock/minifigures/prix", "BrickStock/sets/minifigs_du_set", "BrickStock/sets/pieces_du_set", "BrickStock/sets/gammes", "BrickStock/minifigures/gammes", "BrickStock/rangements", "BrickStock/rangements/QR-Codes", "BrickStock/rangements/print_qr-codes", "BrickStock/rangements/console", "*Fin"]
     if len(url) == 0 :
         url = "/"
     if url[-1] == "/" :
@@ -343,6 +342,10 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
             return get_file("/BrickStock/404")
         else :
             return get_file(f"""/BrickStock/images/QR-Codes_rangements/{id_rangement}.png""")
+    # elif filename[-1] == "switch_contents" :
+    #     return render_template("rangements_switch_contents.html", entete, params={"{title}" : "", "{content}" : "", "{script}" : ""})
+    elif filename[-1] == "console" :
+        return render_template("console_rangements.html", entete, params={"{script}" : ""})
     elif filename[-1] == "print_qr-codes" :
         return render_template("print_qr-codes.html", entete, params=get_print_qrcodes_request())
     elif filename[-1] == "Fin" :
