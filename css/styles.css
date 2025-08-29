@@ -331,6 +331,16 @@ ul.level a {
 ul.level a:hover {
     text-decoration: underline;
 }
+a.bouton_print {
+    display: inline-block;
+    float: right;
+    width: 24px;
+    height: 24px;
+    margin: 24px 12px 24px 4px;
+    border-radius: 50%;
+    border: 1px solid #2D2D2D;
+    text-align: center;
+}
 
 
 
@@ -558,6 +568,10 @@ img.type_element {
     margin: 0 -25px -25px 0;
     border: 0.5px solid #000000;
     border-radius: 8px;
+}
+a.bouton_print img {
+    width: 16px;
+    vertical-align: middle;
 }
 
 
