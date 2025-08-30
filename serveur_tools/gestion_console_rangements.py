@@ -21,6 +21,70 @@ rangement_courant = None
 
 
 
+def split_str_command(command_str:str) -> dict :
+    """
+    command_str (str), la commande à traiter
+
+    renvoie le dictionnaire {paramètre : valeur} correspondant
+    """
+    if len(command_str.split(" ")) == 1 :
+        return {}
+    params_init = {}
+    k = 1
+    command_params = command_str.split(" ")[1:]
+    print(command_params)
+    i = 0
+    while i < len(command_params) :
+        if command_params[i].startswith("-") :
+            if i + 1 >= len(command_params) :
+                key, val = command_params[i], ""
+            else :
+                key, val = command_params[i], command_params[i + 1]
+            i += 1
+        else :
+            key, val = k, command_params[i]
+            k += 1
+        if val[0] in ("'", '"') and val[-1] != val[0] :
+            i += 1
+            continuer = True
+            while continuer :
+                print(val)
+                val += " " + command_params[i]
+                if command_params[i][-1] == val[0] :
+                    continuer = False
+                i += 1
+            # print(val)
+            val = val[1:-1]
+        params_init[key] = val
+        i += 1
+    # params = {}
+    print(params_init)
+    return params_init
+    # for k in params_init :
+    #     val = params_init[k]
+    #     assert type(val) == str
+    #     if val.lower() == "true" :
+    #         val = True
+    #     elif val.lower() == "false" :
+    #         val = False
+    #     else :
+    #         try :
+    #             val2 = val.replace(",", ".")
+    #             if "." in val :
+    #                 val2 = float(val)
+    #             else :
+    #                 val2 = int(val)
+    #         except :
+    #             assert val[0] in ("'", '"')
+    #             assert val[-1] == val[0]
+    #             val = val[1:-1]
+    #         else :
+    #             val = val2
+    #     params[k] = val
+    # return params
+
+
+
 # commandes :
 def command_add_script(command_str:str) -> list :
     """
@@ -29,7 +93,9 @@ def command_add_script(command_str:str) -> list :
     exécute la commande
     renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
     """
-    cmd = command_str.split(" ")
+    # cmd = command_str.split(" ")
+    cmd = split_str_command(command_str)
+    cmd = [cmd[k] for k in cmd]
     if len(cmd) == 1 :
         return [f"""<span style="color: {COULEURS["cyan"]["hexa"]};">0 elements added</span>"""]
     liste_ids = cmd[1:]
@@ -55,9 +121,11 @@ def command_cr_script(command_str:str) -> list :
     exécute la commande
     renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
     """
-    cmd = command_str.split(" ")
+    # cmd = command_str.split(" ")
+    cmd = split_str_command(command_str)
+    cmd = [cmd[k] for k in cmd]
     if len(cmd) != 1 :
-        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid syntax ; cr command take one argument : path</span>"""]
+        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid syntax ; cr command takes one argument : path</span>"""]
     path = cmd[1].split("/")
     try :
         if path[0] == "" :
@@ -102,7 +170,9 @@ def command_del_script(command_str:str) -> list :
     exécute la commande
     renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
     """
-    cmd = command_str.split(" ")
+    # cmd = command_str.split(" ")
+    cmd = split_str_command(command_str)
+    cmd = [cmd[k] for k in cmd]
     if len(cmd) == 1 :
         return [f"""<span style="color: {COULEURS["cyan"]["hexa"]};">0 elements removed</span>"""]
     liste_ids = cmd[1:]
@@ -123,9 +193,11 @@ def command_find_script(command_str:str) -> list :
     exécute la commande
     renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
     """
-    cmd = command_str.split(" ")
+    # cmd = command_str.split(" ")
+    cmd = split_str_command(command_str)
+    cmd = [cmd[k] for k in cmd]
     if len(cmd) != 1 :
-        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid syntax ; find command take one argument : id_element</span>"""]
+        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid syntax ; find command takes one argument : id_element</span>"""]
     try :
         id_rangement = bdd.get_rangement_for_element(int(cmd[1]))
     except :
@@ -183,3 +255,50 @@ def command_ls_script(command_str:str) -> list :
         {t_content}
     </tbody>
 </table>"""]
+
+def command_mkran_script(command_str:str) -> list :
+    """
+    command_str (str), la commande find à exécuter
+
+    exécute la commande
+    renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
+    """
+    if not bdd.rangement_est_compartimente(rangement_courant) :
+        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : the current storage is not compartmentalized"""]
+    elif bdd.count_compartiments_in_rangement(rangement_courant) == bdd.get_rangements_infos(rangement_courant)["nb_compartiment"] :
+        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : there are no compartment available in the current storage</span>"""]
+    # cmd = command_str.split(" ")
+    cmd = split_str_command(command_str)
+    if not(1 in cmd and 2 in cmd) :
+        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : mkran command takes at least two arguments : storage_name and storage_type</span>"""]
+    for k in cmd :
+        if k not in (1, 2, "-n", "-c") :
+            return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : mkran command takes at most four arguments : storage_name and storage_type (required) and compartments_number (preceded by '-n') and compartmentalization (preceded by '-c')</span>"""]
+    nb_compartiments, compartimentation = 1, "1 x 1"
+    if "-n" in cmd :
+        try :
+            nb_compartiments = int(cmd["-n"])
+            assert nb_compartiments >= 1
+        except :
+            return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid value for '-n' argument</span>"""]
+    if "-c" in cmd :
+        compartimentation = cmd["-c"]
+    bdd.ajouter_rangement(cmd[1], cmd[2], nb_compartiments, compartimentation, rangement_courant)
+    return [f"""<span style="color: {COULEURS["cyan"]["hexa"]};">storage created</span>"""]
+
+def command_mv_script(command_str:str) -> list :
+    """
+    command_str (str), la commande find à exécuter
+
+    exécute la commande
+    renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
+    """
+    cmd = split_str_command(command_str)
+    cmd = [cmd[k] for k in cmd]
+
+
+
+
+if __name__ == "__main__" :
+    pass
+    # print(split_str_command("mkran 'Boite 1' 'petite boite' -n 2 -c '1 x 2'"))

@@ -61,3 +61,18 @@ def count_exemplaires_in_moc(id_set:int) -> int :
     connexion.close()
     assert len(r) == 1
     return r[0]
+
+def count_compartiments_in_rangement(id_rangement:int) -> int :
+    """
+    id_rangement (int), l'id du rangement
+
+    renvoie le nombre de rangements dont il est le parent
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    curseur.execute('''SELECT COUNT(*) FROM Rangements_physiques WHERE rangement_parent = ?;''', (id_rangement,))
+    r = []
+    for e in curseur :
+        r.append(e[0])
+    connexion.close()
+    return r[0]
