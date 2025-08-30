@@ -258,7 +258,7 @@ def command_ls_script(command_str:str) -> list :
 
 def command_mkran_script(command_str:str) -> list :
     """
-    command_str (str), la commande find à exécuter
+    command_str (str), la commande mkran à exécuter
 
     exécute la commande
     renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
@@ -288,13 +288,85 @@ def command_mkran_script(command_str:str) -> list :
 
 def command_mv_script(command_str:str) -> list :
     """
-    command_str (str), la commande find à exécuter
+    command_str (str), la commande mv à exécuter
 
     exécute la commande
     renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
     """
     cmd = split_str_command(command_str)
     cmd = [cmd[k] for k in cmd]
+    current = rangement_courant
+    for e in cmd :
+        if e not in (1, 2, "-c") :
+            return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : mv command doesn't take '{e}' argument</span>"""]
+    if 1 not in cmd :
+        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : mv command takes at least one argument : new_path</span>"""]
+    if 2 in cmd :
+        path1, path2 = cmd[1], cmd[2]
+    else :
+        path1, path2 = "/".join([""] + [e["id_rangement"] for e in bdd.get_rangement_path(current)]), cmd[1]
+    rep1 = command_cr_script(f"cr {path1}")
+    if rep1 != [] :
+        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid origin path</span>"""]
+    rangement_courant = current
+    rep2 = command_cr_script(f"cr {path2}")
+    rangement_courant = current
+    id1, id2 = int(path1.split("/")[-1]), int(path2.split("/")[-1])
+    if rep2 != [] :
+        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid destination path</span>"""]
+    if "-c" in cmd :
+        if bdd.rangement_est_compartimente(id2) :
+            return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : destination path corresponds to a compartmentalized storage</span>"""]
+        for id in bdd.get_rangement_content(id1) :
+            pass
+        rep1 = bdd.update_rangement_content(id2, [e[0] for e in bdd.get_rangement_content(id1)])
+        if not rep1 :
+            return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : move couldn't be performed</span>"""]
+        bdd.update_rangement_content(id1, [])
+        return [f"""<span style="color: {COULEURS["cyan"]["hexa"]};">storage content moved</span>"""]
+    else :
+        if not bdd.rangement_est_compartimente(id2) :
+            return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : destination path doesn't correspond to a compartmentalized storage</span>"""]
+        bdd.change_parent_rangement(id1, id2)
+        return [f"""<span style="color: {COULEURS["cyan"]["hexa"]};">storage moved</span>"""]
+    
+def command_pwd_script(command_str:str) -> list :
+    """
+    command_str (str), la commande mv à exécuter
+
+    exécute la commande
+    renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
+    """
+    if rangement_courant in (0, None) :
+        return [f"""<span style="color: {COULEURS["cyan"]["hexa"]};">/</span>"""]
+    else :
+        path = "/".join([e["id_rangement"] for e in bdd.get_rangement_path(rangement_courant)])
+        return [f"""<span style="color: {COULEURS["cyan"]["hexa"]};">{path}</span>"""]
+
+def command_rmran_script(command_str:str) -> list :
+    """
+    command_str (str), la commande clear à exécuter
+
+    exécute la commande
+    renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
+    """
+    if command_str.startswith("rmran ") :
+        cmd = split_str_command(command_str)
+        if 1 not in cmd :
+            return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : rmran command take one argument : storage_path</span>"""]
+        else :
+            current = rangement_courant
+            rep = command_cr_script(f"cr {cmd[1]}")
+            rangement_courant = current
+            if rep == [] :
+                return [f"""<span style="color: {COULEURS["bleu"]["hexa"]};">Do you want really remove the storage whose id is '{cmd[1]}' ? Y/N</span>"""]
+            else :
+                return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid path</span>"""]
+    elif command_str.startswith("Y ") :
+        cmd = split_str_command(command_str)
+        return [f"""<span style="color: {COULEURS["vert"]["hexa"]};">The storage has been deleted.</span>"""]
+    else :
+        return [f"""<span style="color: {COULEURS["rose"]["hexa"]};">The deletion has been canceled.</span>"""]
 
 
 

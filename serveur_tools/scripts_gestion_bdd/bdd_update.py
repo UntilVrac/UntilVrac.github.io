@@ -266,3 +266,25 @@ def supprimer_element_du_rangement(id_rangement:int, id_element:int) -> None :
     curseur.execute('''DELETE FROM rangement_content WHERE id_rangement = ? AND id_element = ?;''', (id_rangement, id_element))
     connexion.commit()
     connexion.close()
+
+def change_parent_rangement(id_rangement:int, id_parent:int) -> None :
+    """
+    entrées :
+        id_rangement (int), l'id du rangement
+        id_parent (int), l'id du nouveau parent
+    """
+    assert rangement_est_compartimente(id_parent)
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    curseur.execute('''UPDATE Rangements_physiques SET rangement_parent = ? WHERE id_rangement = ?;''', (id_parent, id_rangement))
+    connexion.commit()
+    connexion.close()
+
+def supprimer_rangement(id_rangement:int) -> None :
+    """
+    id_rangement (int), l'id du rangement à supprimer
+
+    supprime le rangement
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
