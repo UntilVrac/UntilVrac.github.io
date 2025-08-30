@@ -803,6 +803,45 @@ def get_liste_id_rangements_for_qr_code_print() -> list :
     # return r
     return [e for e in r if not rangement_est_compartimente(e)]
 
+def get_rangement_parent(id_rangement:int) -> int :
+    """
+    id_rangement (int), l'id du rangement dont on veut connaitre le parent
+
+    renvoie l'id du rangement parent (0 s'il s'agit de la Collection) (si l'id_rangement existe) et None sinon
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    curseur.execute('''SELECT rangement_parent FROM Rangements_physiques WHERE id_rangement = ?;''', (id_rangement,))
+    r = []
+    for e in curseur :
+        r.append(e[0])
+    connexion.close()
+    assert len(r) <= 1
+    if len(r) == 0 :
+        return None
+    elif r[0] == None :
+        return 0
+    else :
+        return r[0]
+    
+def get_rangement_for_element(element_id:int) -> int :
+    """
+    element_id (int), l'id de l'élément
+    
+    renvoie l'id du rangement qui contient cet élément s'il existe et None sinon
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    curseur.execute('''SELECT id_rangement FROM rangement_content WHERE id_element = ?;''', (element_id,))
+    r = []
+    for e in curseur :
+        r.append(e[0])
+    connexion.close()
+    if len(r) == 0 :
+        return None
+    else :
+        return r[0]
+
 
 
 if __name__ == "__main__" :

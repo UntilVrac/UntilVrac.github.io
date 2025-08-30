@@ -236,7 +236,7 @@ def update_rangement_content(id_rangement:int, liste_elements:list) -> bool :
         liste_elements (list), la liste des id des éléments (pièce ou design) contenu dans le rangement
 
     met à jour le contenu du rangement
-    si MODE_SANS_ECHEC est True, renvoie True si l'ajout a pu être effectué et False sinon
+    si MODE_SANS_ECHEC est True, renvoie True si la mise à jour a pu être effectuée et False sinon
     sinon ranvoie True
     """
     connexion = sqlite3.connect(MOC)
@@ -252,3 +252,17 @@ def update_rangement_content(id_rangement:int, liste_elements:list) -> bool :
     else :
         __update_rangement_content(connexion, curseur, id_rangement, liste_elements)
         return True
+    
+def supprimer_element_du_rangement(id_rangement:int, id_element:int) -> None :
+    """
+    entrées :
+        id_rangement (int), l'id du rangement
+        liste_elements (list), l'id de l'élément à supprimer
+    
+    supprime l'élément du rangement
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    curseur.execute('''DELETE FROM rangement_content WHERE id_rangement = ? AND id_element = ?;''', (id_rangement, id_element))
+    connexion.commit()
+    connexion.close()

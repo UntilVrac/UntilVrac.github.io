@@ -561,3 +561,40 @@ def ajouter_rangement(nom_rangement:str, type_rangement:str, nb_compartiments:in
     else :
         __ajouter_rangement(connexion, curseur, nom_rangement, type_rangement, nb_compartiments, compartimentation, rangement_parent)
         return True
+    
+def __ajouter_element_au_rangement(connexion:sqlite3.Connection, curseur:sqlite3.Cursor, id_rangement:int, id_element:int) -> None :
+    """
+    entrées :
+        connexion (sqlite3.Connect) et curseur (sqlite3.Cursor), la connexion à utiliser
+        id_rangement (int), id du rangement (int)
+        id_element (int), l'id de l'élément (pièce ou design) à ajouter
+
+    ajoute l'élément (pièce ou design) au rangement
+    """
+    curseur.execute('''INSERT INTO rangement_content (id_rangement, id_element) VALUES (?, ?);''', (id_rangement, id_element))
+    connexion.commit()
+    connexion.close()
+
+def ajouter_element_au_rangement(id_rangement:int, id_element:int) -> bool :
+    """
+    entrées :
+        id_rangement (int), id du rangement (int)
+        id_element (int), l'id de l'élément (pièce ou design) à ajouter
+
+    ajoute l'élément (pièce ou design) au rangement
+    si MODE_SANS_ECHEC est True, renvoie True si l'ajout a pu être effectué et False sinon
+    sinon renvoie True
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    if MODE_SANS_ECHEC :
+        try :
+            __ajouter_element_au_rangement(connexion, curseur, id_rangement, id_element)
+        except :
+            connexion.close()
+            return False
+        else :
+            return True
+    else :
+        __ajouter_element_au_rangement(connexion, curseur, id_rangement, id_element)
+        return True

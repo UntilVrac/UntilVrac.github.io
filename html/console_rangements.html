@@ -35,9 +35,17 @@
                 /* margin: 0; */
             }
 
-            div.console {
+            div.console_content {
                 width: calc(100% - 8px - 24px);
-                padding: 4px;
+                padding: 2px;
+                background-color: #1F1F1F;
+                color: #CBCBCB;
+                margin: 12px;
+                margin-bottom: 0;
+            }
+            div.console_input {
+                width: calc(100% - 8px - 24px);
+                padding: 2px;
                 margin: 12px;
                 margin-top: 0;
                 background-color: #1F1F1F;
@@ -51,6 +59,7 @@
                 width: calc(100% - 8px - 24px);
                 margin: 12px;
                 margin-bottom: 0;
+                border: none;
             }
 
             input.console {
@@ -62,9 +71,12 @@
                 width: calc(100% - 39.9px);
                 height: 20px;
                 display: inline-block;
+                font-size: 16px;
             }
             input.console:focus {
-                border: none;
+                outline: none;     /* enlève la bordure de focus */
+                box-shadow: none;  /* enlève l’ombre bleue (Chrome/Safari) */
+                border: none;      /* si tu ne veux pas de bordure non plus */
             }
         </style>
     </head>
@@ -96,15 +108,18 @@
                         <li>Les guillemets peuvent être simples ('…') ou doubles ("…"). Utiliser les mêmes guillemets à l'ouverture et à la fermeture. Si l'un des types de guillemets est utilisé dans la chaine de caractères, utiliser l'autre pour la délimiter.</li>
                         <li>Les paramètres marqués d'une "*" sont facultatif (ils sont généralement précédés d'un indicateur de la forme "-" + une lettre).</li>
                     </ul>
-                    <p>
+                    <!-- <p>
                         Syntaxe des commandes utilisée ci-dessous : <cmd>nom_de_la_commande {paramètre obligatoire 1}</cmd>
-                    </p>
-                    <i>Les mots {entre crochets} correspondent à des paramètres à saisir par l'utilisateur</i>
+                    </p> -->
+                    <!-- <i>Les mots {entre crochets} correspondent à des paramètres à saisir par l'utilisateur</i> -->
                     <p>
-                        • <cmd>add</cmd>&nbsp;: ajout d'un élément (pièce ou design) dans le rangement courant. Paramètre&nbsp;:
+                        • <cmd>add</cmd>&nbsp;: ajout d'un élément (pièce ou design) dans le rangement courant. Paramètre(s)&nbsp;:
                         <ul class="parametres">
                             <li>
                                 <cmd>id_element</cmd>&nbsp;: l'id de l'élément à ajouter.
+                            </li>
+                            <li>
+                                Il est possible de préciser plusieurs id_element. Dans ce cas les éléments correspondant à chaque id seront ajouté au rangement courant.
                             </li>
                         </ul>
                     </p>
@@ -126,14 +141,26 @@
                     </p>
                     <p>
                         • <cmd>del</cmd> (<span class="underline">del</span>ete)&nbsp;: suppression d'un élément (pièce ou design) contenu dans le rangement. Paramètre&nbsp;:
-                        <ul>
+                        <ul class="parametres">
                             <li>
                                 <cmd>id_element</cmd>&nbsp;: l'id de l'élément à supprimer.
+                            </li>
+                            <li>
+                                Il est possible de préciser plusieurs id_element. Dans ce cas les éléments correspondant à chaque id seront supprimé du rangement courant.
                             </li>
                         </ul>
                     </p>
                     <p>
-                        • <cmd>ls</cmd> (<span class="underline">l</span>i<span class="underline">s</span>t)&nbsp;: affichage du contenu du rangement courant sous la forme d'un tableau à deux colonnes (id de l'élément, type de l'élément).
+                        • <cmd>find</cmd>&nbsp;: recherche du rangement contenant un élément. Paramètre&nbsp;:
+                        <ul class="parametres">
+                            <li>
+                                <cmd>id_element</cmd>&nbsp;: l'id de l'élément à chercher
+                            </li>
+                            <li>Renvoie le chemin du rangement contenant cet élément. Si aucun rangement ne contient cet élément, renvoie "null".</li>
+                        </ul>
+                    </p>
+                    <p>
+                        • <cmd>ls</cmd> (<span class="underline">l</span>i<span class="underline">s</span>t)&nbsp;: affichage du contenu du rangement courant sous la forme d'un tableau à deux colonnes (id de l'élément, type de l'élément) pour un rangement contenant des pièces ou (id du rangement, nom) pour un rangement compartimenté.
                     </p>
                     <p>
                         • <cmd>mkran</cmd> (<span class="underline">m</span>a<span class="underline">k</span>e <span class="underline">ran</span>gement)&nbsp;: création d'un rangement. Paramètres&nbsp;:
@@ -186,9 +213,11 @@
                     </p>
                 </div>
                 <form method="POST">
-                    <textarea id="console_content" class="console" name="console_content" disabled>{contenu_console}</textarea>
-                    <!-- <div id="console_content" class="console">{contenu_console}</div> -->
-                    <div class="console">
+                    <textarea id="console_content" class="hide" name="console_content" disabled rows="auto">{contenu_console}
+                    </textarea>
+                    <div id="console_content" class="console_content">{contenu_console}
+                    </div>
+                    <div class="console_input">
                         >>>&nbsp;<input name="command" id="console_command" class="console">
                     </div>
                 </form>

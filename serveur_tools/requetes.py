@@ -164,6 +164,8 @@ def rep_post(url:str, params_post:dict) -> bytes :
         elif params_post["form_name"] == "save_data" :
             rep = post_rangement_save_request(params_post)
         return get_file(url, script=rep)
+    elif filename[-1] == "console" :
+        pass
     elif filename[-1] == "print_qr-codes" :
         if params_post["dimensions_page"] in FORMATS_STANDARDS :
             width, height = FORMATS_STANDARDS[params_post["dimensions_page"]]
