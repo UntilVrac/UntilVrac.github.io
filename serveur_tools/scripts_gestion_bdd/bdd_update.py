@@ -288,3 +288,12 @@ def supprimer_rangement(id_rangement:int) -> None :
     """
     connexion = sqlite3.connect(MOC)
     curseur = connexion.cursor()
+    curseur.execute('''SELECT id_rangement FROM Rangements_physiques WHERE rangement_parent = ?;''', (id_rangement,))
+    r = []
+    for e in curseur :
+        r.append(e[0])
+    for e in r :
+        supprimer_rangement(e)
+    curseur.execute('''DELETE FROM contenu_rangement WHERE id_rangement = ?;''', (id_rangement,))
+    curseur.execute('''DELETE FROM Rangements_virtuels WHERE rangement_physiques = ?;''', (id_rangement,))
+    curseur.execute('''DELETE FROM Rangements_physiques WHERE id_rangement = ?;''', (id_rangement,))

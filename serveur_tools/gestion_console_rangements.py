@@ -113,6 +113,21 @@ def command_add_script(command_str:str) -> list :
                 response.append(f"""<span style="color: {COULEURS["jaune"]["hexa"]};">id '{id}' prior in a storage</span>""")
     response.append(f"""<span style="color: {COULEURS["cyan"]["hexa"]};">{n}/{len(liste_ids)} elements added</span>""")
     return response
+    
+def command_clear_script(command_str:str) -> list :
+    """
+    command_str (str), la commande clear à exécuter
+
+    exécute la commande
+    renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
+    """
+    if command_str == "clear" :
+        return [f"""<span style="color: {COULEURS["bleu"]["hexa"]};">Do you want really clear the current storage's content ? Y/N</span>"""]
+    elif command_str == "y" :
+        bdd.update_rangement_content(rangement_courant, [])
+        return [f"""<span style="color: {COULEURS["vert"]["hexa"]};">The current storage's content has been deleted.</span>"""]
+    else :
+        return [f"""<span style="color: {COULEURS["rose"]["hexa"]};">The deletion has been canceled.</span>"""]
 
 def command_cr_script(command_str:str) -> list :
     """
@@ -147,21 +162,6 @@ def command_cr_script(command_str:str) -> list :
     else :
         rangement_courant = position
         return []
-    
-def command_clear_script(command_str:str) -> list :
-    """
-    command_str (str), la commande clear à exécuter
-
-    exécute la commande
-    renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
-    """
-    if command_str == "clear" :
-        return [f"""<span style="color: {COULEURS["bleu"]["hexa"]};">Do you want really clear the current storage's content ? Y/N</span>"""]
-    elif command_str == "y" :
-        bdd.update_rangement_content(rangement_courant, [])
-        return [f"""<span style="color: {COULEURS["vert"]["hexa"]};">The current storage's content has been deleted.</span>"""]
-    else :
-        return [f"""<span style="color: {COULEURS["rose"]["hexa"]};">The deletion has been canceled.</span>"""]
 
 def command_del_script(command_str:str) -> list :
     """
@@ -330,9 +330,9 @@ def command_mv_script(command_str:str) -> list :
         bdd.change_parent_rangement(id1, id2)
         return [f"""<span style="color: {COULEURS["cyan"]["hexa"]};">storage moved</span>"""]
     
-def command_pwd_script(command_str:str) -> list :
+def command_pwr_script(command_str:str) -> list :
     """
-    command_str (str), la commande mv à exécuter
+    command_str (str), la commande pwr à exécuter
 
     exécute la commande
     renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
@@ -345,32 +345,111 @@ def command_pwd_script(command_str:str) -> list :
 
 def command_rmran_script(command_str:str) -> list :
     """
-    command_str (str), la commande clear à exécuter
+    command_str (str), la commande rmran à exécuter
 
     exécute la commande
     renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
     """
+
+    def nb_enfants(id_rangement:int) -> int :
+        """
+        id_rangement (int), l'id du rangement
+
+        renvoie le nombre total de sous-rangements qu'il contient
+        """
+        arbre = bdd.get_arbre_rangements(id_rangement)
+        n = 0
+        for e in arbre["contenu"] :
+            n += 1
+            n += nb_enfants(e["id_rangement"])
+        return n
+
     if command_str.startswith("rmran ") :
         cmd = split_str_command(command_str)
         if 1 not in cmd :
             return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : rmran command take one argument : storage_path</span>"""]
         else :
             current = rangement_courant
-            rep = command_cr_script(f"cr {cmd[1]}")
-            rangement_courant = current
-            if rep == [] :
-                return [f"""<span style="color: {COULEURS["bleu"]["hexa"]};">Do you want really remove the storage whose id is '{cmd[1]}' ? Y/N</span>"""]
-            else :
-                return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid path</span>"""]
+            try :
+                rep = command_cr_script(f"cr {cmd[1]}")
+                rangement_courant = current
+                if rep == [] :
+                    nb = nb_enfants(int(cmd[1].split("/")[-1]))
+                    return [f"""<span style="color: {COULEURS["bleu"]["hexa"]};">Do you want really remove the storage whose id is '{cmd[1]}' ? This operation will result the deletion of {str(nb) + " other storage" if nb <= 1 else str(nb) + " other storages"}. Y/N</span>"""]
+                else :
+                    return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid path</span>"""]
+            except :
+                rangement_courant = current
+                return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid argument value</span>"""]
     elif command_str.startswith("Y ") :
         cmd = split_str_command(command_str)
+        bdd.supprimer_rangement(int(cmd[1]))
         return [f"""<span style="color: {COULEURS["vert"]["hexa"]};">The storage has been deleted.</span>"""]
     else :
         return [f"""<span style="color: {COULEURS["rose"]["hexa"]};">The deletion has been canceled.</span>"""]
+    
+def command_tree_script(command_str:str) -> list :
+    """
+    command_str (str), la commande tree à exécuter
 
+    exécute la commande
+    renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
+    """
+
+    def parcours(id_rangement:int) -> list :
+        """
+        id_rangement (int), l'id du rangement racine du parcours
+
+        renvoie le résultat du parcours sous forme d'une liste de ligne à afficher en console
+        """
+        response = []
+        arbre = bdd.get_arbre_rangements(id_rangement)
+        print(arbre)
+        response.append(f"""{arbre["id_rangement"]} - {arbre["nom_rangement"]}""")
+        for id in arbre["contenu"] :
+            for e in parcours(id["id_rangement"]) :
+                response.append("    " + e)
+        return response
+    
+    return [f"""<span style="color: {COULEURS["cyan"]["hexa"]};">{e}</span>""" for e in parcours(rangement_courant)]
+
+
+
+COMMANDS_FUNCTIONS = {
+    "add" : command_add_script, 
+    "clear" : command_clear_script, 
+    "cr" : command_cr_script, 
+    "del" : command_del_script, 
+    "find" : command_find_script, 
+    "ls" : command_ls_script, 
+    "mkran" : command_mkran_script, 
+    "mv" : command_mv_script, 
+    "pwr" : command_pwr_script, 
+    "rmran" : command_rmran_script, 
+    "tree" : command_tree_script
+}
+
+def execute_command(command_str:str) -> list :
+    """
+    command_str (str), la commande clear à exécuter
+
+    exécute la commande
+    renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
+    """
+    if command_str.replace(" ", "") == "" :
+        return [f"""<span style="color: {COULEURS["blanc"]["hexa"]};">{command_str}</span>"""]
+    cmd_name = command_str.split(" ")
+    if cmd_name in COMMANDS_FUNCTIONS :
+        return [f"""<span style="color: {COULEURS["blanc"]["hexa"]};">{command_str}</span>"""] + COMMANDS_FUNCTIONS[cmd_name]
+    else :
+        return [f"""<span style="color: {COULEURS["blanc"]["hexa"]};">{command_str}</span>""", f"""<span style="color: {COULEURS["rouge"]["hexa"]};">{cmd_name} : command not found</span>"""]
 
 
 
 if __name__ == "__main__" :
     pass
     # print(split_str_command("mkran 'Boite 1' 'petite boite' -n 2 -c '1 x 2'"))
+    # print(command_rmran_script(""))
+    # a = command_tree_script("")
+    # for e in a :
+    #     print(e)

@@ -124,6 +124,12 @@
                         </ul>
                     </p>
                     <p>
+                        • <cmd>clear</cmd>&nbsp;: suppression de la totalité du contenu du rangement courant.
+                        <ul class="parametres">
+                            <li>Demande de confirmation.</li>
+                        </ul>
+                    </p>
+                    <p>
                         • <cmd>cr</cmd> (<span class="underline">c</span>hange <span class="underline">r</span>angement)&nbsp;: déplacement au sein de l'arborescence des rangements.
                         Paramètre&nbsp;:
                         <ul class="parametres">
@@ -131,12 +137,6 @@
                                 <cmd>chemin</cmd>&nbsp;: chemin à emprunter sous la forme d'une chaine d'<cmd>id de rangements</cmd> séparés par des <cmd>/</cmd>. Pour remonter vers un rangement supérieur, utiliser <cmd>../</cmd>. Un chemin débutant par un <cmd>/</cmd> sont des chemins absolus (qui partent donc de la racine "Collection") alors que les autres sont des chemins relatifs (qui partent du rangement courant).
                             </li>
                             <li>Exemples&nbsp;: <cmd>cr /1/3/14</cmd> (depuis la racine, descend dans le rangement 14 situé dans le n°3 lui-même situé dans le n°1)&nbsp;; <cmd>cr ../13</cmd> (depuis n'importe quel rangement situé dans le rangement 3, se déplace vers le rangement n°13)&nbsp;; <cmd>cr 3/14</cmd> (depuis le rangement contenant le n°3, descend dans le rangement 14 situé dans le n°3)…</li>
-                        </ul>
-                    </p>
-                    <p>
-                        • <cmd>clear</cmd>&nbsp;: suppression de la totalité du contenu du rangement courant.
-                        <ul class="parametres">
-                            <li>Demande de confirmation.</li>
                         </ul>
                     </p>
                     <p>
@@ -206,6 +206,7 @@
                                 <cmd>chemin_rangement</cmd>&nbsp;: le chemin du rangement à supprimer.
                             </li>
                             <li>Une confirmation est demandée.</li>
+                            <li>Tous les rangements contenus dans ce rangement et leur contenu seront supprimés.</li>
                         </ul>
                     </p>
                     <p>

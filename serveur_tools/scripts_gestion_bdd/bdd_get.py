@@ -699,31 +699,14 @@ def get_minifig_quantity_from_moc(id_minifig:str) -> int :
     assert len(r) == 1
     return r[0]
 
-def get_arbre_rangements(id_racine:int=None) -> dict :
-    """
-    id_racine (int), l'id de la racine de l'arbre à créer
-
-    renvoie l'arbre des rangements physiques de la collection sous la forme de dictionnaires {"id_rangement" : int, "nom_rangement" : str, "contenu" : list (liste des noeuds enfants)} représentants chacun un noeud (la racine qui est la collection ayant None pour id)
-    """
-    connexion = sqlite3.connect(MOC)
-    curseur = connexion.cursor()
-    if id_racine == None :
-        curseur.execute('''SELECT id_rangement FROM Rangements_physiques WHERE rangement_parent IS NULL;''')
-    else :
-        curseur.execute('''SELECT id_rangement FROM Rangements_physiques WHERE rangement_parent = ?;''', (id_racine,))
-    # curseur.execute(f'''SELECT id_rangement FROM Rangements_physiques WHERE rangement_parent = {id_racine if id_racine != None else "NULL"};''')
-    r = []
-    for e in curseur :
-        r.append(e[0])
-    connexion.close()
-    return {"id_rangement" : id_racine, "contenu" : [get_arbre_rangements(e) for e in r]}
-
 def get_rangements_infos(id_rangement:int) -> dict :
     """
     id_rangement (int), id du rangement
 
     renvoie les infos du rangement sous la forme d'un dictionnaire {"id_rangement" : int, "nom_rangement" : str, "type_rangement" : str, "nb_compartiments" : int, "compartimentation" : str} si le rangement existe et None sinon
     """
+    if id_rangement == None :
+        return {"id_rangement" : 0, "nom_rangement" : "Collection", "type_rangement" : None, "nb_compartiments" : float("inf"), "compartimentation" : "inf x inf"}
     connexion = sqlite3.connect(MOC)
     curseur = connexion.cursor()
     curseur.execute('''SELECT nom_rangement, type_rangement, nb_compartiments, compartimentation FROM Rangements_physiques WHERE id_rangement = ?;''', (id_rangement,))
@@ -741,6 +724,25 @@ def get_rangements_infos(id_rangement:int) -> dict :
         return None
     else :
         return r[0]
+    
+def get_arbre_rangements(id_racine:int=None) -> dict :
+    """
+    id_racine (int), l'id de la racine de l'arbre à créer
+
+    renvoie l'arbre des rangements physiques de la collection sous la forme de dictionnaires {"id_rangement" : int, "nom_rangement" : str, "contenu" : list (liste des noeuds enfants)} représentants chacun un noeud (la racine qui est la collection ayant None pour id)
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    if id_racine == None :
+        curseur.execute('''SELECT id_rangement FROM Rangements_physiques WHERE rangement_parent IS NULL;''')
+    else :
+        curseur.execute('''SELECT id_rangement FROM Rangements_physiques WHERE rangement_parent = ?;''', (id_racine,))
+    # curseur.execute(f'''SELECT id_rangement FROM Rangements_physiques WHERE rangement_parent = {id_racine if id_racine != None else "NULL"};''')
+    r = []
+    for e in curseur :
+        r.append(e[0])
+    connexion.close()
+    return {"id_rangement" : id_racine, "nom_rangement" : get_rangements_infos(id_racine)["nom_rangement"], "contenu" : [get_arbre_rangements(e) for e in r]}
 
 def get_rangement_path(id_rangement:int) -> list :
     """
