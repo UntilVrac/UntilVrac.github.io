@@ -190,6 +190,8 @@ def rangement_est_compartimente(id_rangement:int) -> bool :
 
     renvoie True si le rangement est compartimenté et False sinon (contient directement des pièces de Lego)
     """
+    if id_rangement in (0, None) :
+        return True
     connexion = sqlite3.connect(MOC)
     curseur = connexion.cursor()
     # curseur.execute('''SELECT COUNT(*) FROM Rangements_physiques WHERE rangement_parent = ?;''', (id_rangement,))

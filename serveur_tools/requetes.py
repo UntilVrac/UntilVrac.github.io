@@ -18,6 +18,7 @@ from serveur_tools.requetes_html.req_gammes import *
 from serveur_tools.requetes_html.req_piece_in_set import *
 from serveur_tools.requetes_html.req_rangements import *
 from serveur_tools.qr_code import FORMATS_STANDARDS, MARGES, generate_qr_codes_sheet
+from serveur_tools.gestion_console_rangements import execute_command, HISTORIQUE_COMMANDES
 
 
 HISTORIQUE = Pile()
@@ -165,7 +166,11 @@ def rep_post(url:str, params_post:dict) -> bytes :
             rep = post_rangement_save_request(params_post)
         return get_file(url, script=rep)
     elif filename[-1] == "console" :
-        pass
+        contenu_console, command = decoder_text(params_post["console_content"]), decoder_text(params_post["command"])
+        # print(contenu_console)
+        contenu_console += "".join(execute_command(command))
+        print(contenu_console)
+        return render_template("console_rangements.html", entete, params={"{script}" : "", "{contenu_console}" : contenu_console, "{historique}" : HISTORIQUE_COMMANDES})
     elif filename[-1] == "print_qr-codes" :
         if params_post["dimensions_page"] in FORMATS_STANDARDS :
             width, height = FORMATS_STANDARDS[params_post["dimensions_page"]]
@@ -347,7 +352,7 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
     # elif filename[-1] == "switch_contents" :
     #     return render_template("rangements_switch_contents.html", entete, params={"{title}" : "", "{content}" : "", "{script}" : ""})
     elif filename[-1] == "console" :
-        return render_template("console_rangements.html", entete, params={"{script}" : ""})
+        return render_template("console_rangements.html", entete, params={"{script}" : "", "{contenu_console}" : "console reset", "{historique}" : HISTORIQUE_COMMANDES})
     elif filename[-1] == "print_qr-codes" :
         return render_template("print_qr-codes.html", entete, params=get_print_qrcodes_request())
     elif filename[-1] == "Fin" :

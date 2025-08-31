@@ -28,6 +28,9 @@
             span.underline {
                 text-decoration: underline;
             }
+            div.console_content span {
+                display: block;
+            }
 
             ul.parametres {
                 list-style: "- ";
@@ -77,6 +80,15 @@
                 outline: none;     /* enlève la bordure de focus */
                 box-shadow: none;  /* enlève l’ombre bleue (Chrome/Safari) */
                 border: none;      /* si tu ne veux pas de bordure non plus */
+            }
+
+            table.response_ls {
+                color: #4DC6AD;
+                border-collapse: collapse;
+            }
+
+            table.response_ls td {
+                padding-right: 8px;
             }
         </style>
     </head>
@@ -214,8 +226,9 @@
                     </p>
                 </div>
                 <form method="POST">
-                    <textarea id="console_content" class="hide" name="console_content" disabled rows="auto">{contenu_console}
+                    <textarea class="hide" name="console_content" rows="auto">{contenu_console}
                     </textarea>
+                    <!-- <input type="hidden" name="console_content" value="{contenu_console}"> -->
                     <div id="console_content" class="console_content">{contenu_console}
                     </div>
                     <div class="console_input">
@@ -233,6 +246,31 @@
                 }
                 else {
                     divHelp.classList.add("hide");
+                }
+            });
+        </script>
+        <script type="text/javascript">
+            let HISTORIQUE = {historique};
+            let inputConsole = document.getElementById("console_command");
+
+            HISTORIQUE.push("");
+            let iMax = HISTORIQUE.length - 1;
+            var index = iMax;
+
+            inputConsole.addEventListener("keydown", function () {
+                if (event.key === "ArrowUp") {
+                    // console.log("top");
+                    if (index > 0) {
+                        index -= 1;
+                    }
+                    inputConsole.value = HISTORIQUE[index];
+                }
+                else if (event.key === "ArrowDown") {
+                    // console.log("bottom");
+                    if (index < iMax) {
+                        index ++;
+                    }
+                    inputConsole.value = HISTORIQUE[index];
                 }
             });
         </script>

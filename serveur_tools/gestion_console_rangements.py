@@ -217,7 +217,7 @@ def command_ls_script(command_str:str) -> list :
     """
     if bdd.rangement_est_compartimente(rangement_courant) :
         t_content = ""
-        for e in bdd.get_arbre_rangements(rangement_courant) :
+        for e in bdd.get_arbre_rangements(rangement_courant)["contenu"] :
             t_content += f"""<tr>
     <td>{e["id_rangement"]}</td>
     <td>{e["nom_rangement"]}</td>
@@ -428,6 +428,9 @@ COMMANDS_FUNCTIONS = {
     "rmran" : command_rmran_script, 
     "tree" : command_tree_script
 }
+COMMANDS_WITH_CONFIRMATION = ["clear", "rmran"]
+
+HISTORIQUE_COMMANDES = []
 
 def execute_command(command_str:str) -> list :
     """
@@ -437,12 +440,25 @@ def execute_command(command_str:str) -> list :
     renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
     """
     if command_str.replace(" ", "") == "" :
-        return [f"""<span style="color: {COULEURS["blanc"]["hexa"]};">{command_str}</span>"""]
-    cmd_name = command_str.split(" ")
-    if cmd_name in COMMANDS_FUNCTIONS :
-        return [f"""<span style="color: {COULEURS["blanc"]["hexa"]};">{command_str}</span>"""] + COMMANDS_FUNCTIONS[cmd_name]
+        return [f"""<span style="color: {COULEURS["blanc"]["hexa"]};">>>> {command_str}</span>"""]
+    if command_str.upper in ("Y", "N") :
+        last_command = HISTORIQUE_COMMANDES[-1]
+        cmd_name = last_command.split(" ")[0].upper()
+        if cmd_name in COMMANDS_WITH_CONFIRMATION :
+            if len(last_command.split(" ")) > 1 :
+                cmd = cmd_name + " " + " ".join(last_command.split(" ")[1:])
+            else :
+                cmd = cmd_name
+            return [f"""<span style="color: {COULEURS["blanc"]["hexa"]};">>>> {command_str}</span>"""] + COMMANDS_FUNCTIONS[cmd_name](cmd)
+        else :
+            return [f"""<span style="color: {COULEURS["blanc"]["hexa"]};">>>> {command_str}</span>""", f"""<span style="color: {COULEURS["rouge"]["hexa"]};">{cmd_name} : command not found</span>"""]
     else :
-        return [f"""<span style="color: {COULEURS["blanc"]["hexa"]};">{command_str}</span>""", f"""<span style="color: {COULEURS["rouge"]["hexa"]};">{cmd_name} : command not found</span>"""]
+        HISTORIQUE_COMMANDES.append(command_str)
+    cmd_name = command_str.split(" ")[0]
+    if cmd_name in COMMANDS_FUNCTIONS :
+        return [f"""<span style="color: {COULEURS["blanc"]["hexa"]};">>>> {command_str}</span>"""] + COMMANDS_FUNCTIONS[cmd_name](command_str)
+    else :
+        return [f"""<span style="color: {COULEURS["blanc"]["hexa"]};">>>> {command_str}</span>""", f"""<span style="color: {COULEURS["rouge"]["hexa"]};">{cmd_name} : command not found</span>"""]
 
 
 
