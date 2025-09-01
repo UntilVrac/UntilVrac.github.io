@@ -294,8 +294,11 @@ def supprimer_rangement(id_rangement:int) -> None :
     r = []
     for e in curseur :
         r.append(e[0])
+    # print(r)
     for e in r :
         supprimer_rangement(e)
-    curseur.execute('''DELETE FROM contenu_rangement WHERE id_rangement = ?;''', (id_rangement,))
-    curseur.execute('''DELETE FROM Rangements_virtuels WHERE rangement_physiques = ?;''', (id_rangement,))
+    curseur.execute('''DELETE FROM rangement_content WHERE id_rangement = ?;''', (id_rangement,))
+    curseur.execute('''DELETE FROM Rangements_virtuels WHERE rangement_physique = ?;''', (id_rangement,))
     curseur.execute('''DELETE FROM Rangements_physiques WHERE id_rangement = ?;''', (id_rangement,))
+    connexion.commit()
+    connexion.close()

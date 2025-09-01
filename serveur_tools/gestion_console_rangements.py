@@ -44,18 +44,19 @@ def split_str_command(command_str:str) -> dict :
         else :
             key, val = k, command_params[i]
             k += 1
-        if val[0] in ("'", '"') and val[-1] != val[0] :
-            i += 1
-            continuer = True
-            while continuer :
-                val += " " + command_params[i]
-                if command_params[i][-1] == val[0] :
-                    continuer = False
+        if val != "" :
+            if val[0] in ("'", '"') and val[-1] != val[0] :
                 i += 1
-            # print(val)
-            val = val[1:-1]
-        else :
-            i += 1
+                continuer = True
+                while continuer :
+                    val += " " + command_params[i]
+                    if command_params[i][-1] == val[0] :
+                        continuer = False
+                    i += 1
+                # print(val)
+                val = val[1:-1]
+            else :
+                i += 1
         params_init[key] = val
     # params = {}
     # print(params_init)
@@ -83,6 +84,23 @@ def split_str_command(command_str:str) -> dict :
     #     params[k] = val
     # return params
 
+def __check_rangement_content(id_rangement:int) -> bool :
+    """
+    id_rangement (int), l'id du rangement à vérifier
+
+    supprime les doublons où les pièces du rangement dont le design est également dans le rangement
+    renvoie True si la vérification a pu être effectuée et False sinon
+    """
+    r_content_init = bdd.get_rangement_content(id_rangement)
+    # print(r_content_init)
+    r_content_new = [e[0] for e in r_content_init if e[1] == "design" or (bdd.get_piece_info(e[0])["id_design"], "design") not in r_content_init]
+    r_content = []
+    # print(r_content_new)
+    for e in r_content_new :
+        if e not in r_content :
+            r_content.append(e)
+    # print(r_content)
+    return bdd.update_rangement_content(id_rangement, r_content)
 
 
 # commandes :
@@ -116,6 +134,7 @@ def command_add_script(command_str:str) -> list :
                 n += 1
             else :
                 response.append(f"""<span style="color: {COULEURS["jaune"]["hexa"]};">id '{id}' prior in a storage</span>""")
+    __check_rangement_content(rangement_courant)
     response.append(f"""<span style="color: {COULEURS["cyan"]["hexa"]};">{n}/{len(liste_ids)} element{"" if n <= 1 else "s"} added</span>""")
     return response
     
@@ -153,6 +172,8 @@ def command_cs_script(command_str:str) -> list :
     # cmd = [cmd[k] for k in cmd]
     if len(cmd) != 1 :
         return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid syntax ; cs command takes one argument : path</span>"""]
+    elif cmd[1] == "." :
+        return []
     path = cmd[1].split("/")
     if path[-1] == "" :
         path = path[:-1]
@@ -368,30 +389,44 @@ def command_mv_script(command_str:str) -> list :
     for e in cmd :
         if e not in (1, 2, "-c") :
             return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : mv command doesn't take '{e}' argument</span>"""]
-    if 1 not in cmd :
-        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : mv command takes at least one argument : new_path</span>"""]
-    if 2 in cmd :
-        path1, path2 = cmd[1], cmd[2]
-    else :
-        path1, path2 = "/".join([""] + [e["id_rangement"] for e in bdd.get_rangement_path(current)]), cmd[1]
-    rep1 = command_cs_script(f"cr {path1}")
+    if 1 not in cmd or 2 not in cmd :
+        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : mv command takes at least two arguments : curent_path and new_path</span>"""]
+    path1, path2 = cmd[1], cmd[2]
+    rep1 = command_cs_script(f"cs {path1}")
     if rep1 != [] :
         return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid origin path</span>"""]
     rangement_courant = current
-    rep2 = command_cs_script(f"cr {path2}")
+    rep2 = command_cs_script(f"cs {path2}")
     rangement_courant = current
-    id1, id2 = int(path1.split("/")[-1]), int(path2.split("/")[-1])
+    if path1 == "." :
+        id1 = rangement_courant
+    else :
+        id1 = int(path1.split("/")[-1])
+    if path2 == "." :
+        id2 = rangement_courant
+    else :
+        id2 = int(path2.split("/")[-1])
     if rep2 != [] :
         return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid destination path</span>"""]
     if "-c" in cmd :
         if bdd.rangement_est_compartimente(id2) :
             return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : destination path corresponds to a compartmentalized storage</span>"""]
-        for id in bdd.get_rangement_content(id1) :
-            pass
-        rep1 = bdd.update_rangement_content(id2, [e[0] for e in bdd.get_rangement_content(id1)])
-        if not rep1 :
-            return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : move couldn't be performed</span>"""]
+        c1, c2 = [e[0] for e in bdd.get_rangement_content(id1)], [e[0] for e in bdd.get_rangement_content(id2)]
+        r_content = c1
+        for id in [e[0] for e in bdd.get_rangement_content(id2)] :
+            if id not in r_content :
+                r_content.append(id)
+        # print(r_content)
         bdd.update_rangement_content(id1, [])
+        rep1 = bdd.update_rangement_content(id2, r_content)
+        rep2 = __check_rangement_content(id2)
+        # print(rep1, rep2)
+        if not (rep1 and rep2) :
+            bdd.update_rangement_content(id1, [])
+            bdd.update_rangement_content(id2, [])
+            rep3 = bdd.update_rangement_content(id1, c1)
+            rep4 = bdd.update_rangement_content(id2, c2)
+            return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : move couldn't be performed</span>"""]
         return [f"""<span style="color: {COULEURS["cyan"]["hexa"]};">storage content moved</span>"""]
     else :
         if not bdd.rangement_est_compartimente(id2) :
@@ -433,14 +468,16 @@ def command_rmran_script(command_str:str) -> list :
             n += nb_enfants(e["id_rangement"])
         return n
 
+    global rangement_courant
     if command_str.startswith("rmran ") :
         cmd = split_str_command(command_str)
         if 1 not in cmd :
-            return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : rmran command take one argument : storage_path</span>"""]
+            return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : rmran command takes one argument : storage_path</span>"""]
         else :
             current = rangement_courant
             try :
-                rep = command_cr_script(f"cr {cmd[1]}")
+                rep = command_cs_script(f"cs {cmd[1]}")
+                print(rep)
                 rangement_courant = current
                 if rep == [] :
                     nb = nb_enfants(int(cmd[1].split("/")[-1]))
@@ -452,7 +489,10 @@ def command_rmran_script(command_str:str) -> list :
                 return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid argument value</span>"""]
     elif command_str.startswith("Y ") :
         cmd = split_str_command(command_str)
-        bdd.supprimer_rangement(int(cmd[1]))
+        current = rangement_courant
+        command_cs_script(f"cs {cmd[1]}")
+        bdd.supprimer_rangement(rangement_courant)
+        rangement_courant = current
         return [f"""<span style="color: {COULEURS["vert"]["hexa"]};">The storage has been deleted.</span>"""]
     else :
         return [f"""<span style="color: {COULEURS["rose"]["hexa"]};">The deletion has been canceled.</span>"""]
@@ -485,17 +525,17 @@ def command_tree_script(command_str:str) -> list :
 
 
 COMMANDS_FUNCTIONS = {
-    "add" : command_add_script, # validé 1/2
+    "add" : command_add_script, # validé
     "clear" : command_clear_script, # validé
     "cs" : command_cs_script, # validé
     "del" : command_del_script, # validé
     "find" : command_find_script, # validé
     "ls" : command_ls_script, # validé
     "mkran" : command_mkran_script, # validé
-    "mv" : command_mv_script, 
+    "mv" : command_mv_script, # validé
     "pws" : command_pws_script, # validé
-    "rmran" : command_rmran_script, 
-    "tree" : command_tree_script
+    "rmran" : command_rmran_script, # validé
+    "tree" : command_tree_script # validé
 }
 COMMANDS_WITH_CONFIRMATION = ["clear", "rmran"]
 
@@ -510,14 +550,14 @@ def execute_command(command_str:str) -> list :
     """
     if command_str.replace(" ", "") == "" :
         return [f"""<span style="color: {COULEURS["blanc"]["hexa"]};">>>> {command_str}</span>"""]
-    print(command_str)
+    # print(command_str)
     if command_str.upper() in ("Y", "N") :
         command_str = command_str.upper()
-        print(True)
+        # print(True)
         last_command = HISTORIQUE_COMMANDES[-1]
         cmd_name = last_command.split(" ")[0]
         if cmd_name in COMMANDS_WITH_CONFIRMATION :
-            print(None)
+            # print(None)
             if len(last_command.split(" ")) > 1 :
                 cmd = command_str + " " + " ".join(last_command.split(" ")[1:])
             else :
@@ -544,15 +584,10 @@ if __name__ == "__main__" :
     # for e in a :
     #     print(e)
 
-    rangement_courant = 73
+    rangement_courant = 1
 
     cmd = """
-mc ../../74
-mv ../../72 -c
-"""
-
-    """
-add 3005 300501
+tree
 """
 
     def write(rep:list) -> None :
