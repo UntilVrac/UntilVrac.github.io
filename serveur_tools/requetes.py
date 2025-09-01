@@ -168,7 +168,13 @@ def rep_post(url:str, params_post:dict) -> bytes :
     elif filename[-1] == "console" :
         contenu_console, command = decoder_text(params_post["console_content"]), decoder_text(params_post["command"])
         # print(contenu_console)
-        contenu_console += "".join(execute_command(command))
+        command_bis = command
+        while command_bis[-1] == " " and len(command_bis) > 1 :
+            command_bis = command_bis[:-1]
+        if command_bis == "cc" :
+            contenu_console = '<span style="color: #7F7F7F">console reset<span><span style="color: #7F7F7F">>>> pws<span>' + execute_command("pws")[-1]
+        else :
+            contenu_console += "".join(execute_command(command))
         # print(contenu_console)
         return render_template("console_rangements.html", entete, params={"{script}" : "", "{contenu_console}" : contenu_console, "{historique}" : HISTORIQUE_COMMANDES})
     elif filename[-1] == "print_qr-codes" :

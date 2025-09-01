@@ -517,7 +517,7 @@ def command_tree_script(command_str:str) -> list :
         response.append(f"""{arbre["id_rangement"]} - {arbre["nom_rangement"]}""")
         for id in arbre["contenu"] :
             for e in parcours(id["id_rangement"]) :
-                response.append("    " + e)
+                response.append("&nbsp;&nbsp;&nbsp;&nbsp;" + e)
         return response
     
     return [f"""<span style="color: {COULEURS["cyan"]["hexa"]};">{e}</span>""" for e in parcours(rangement_courant)]
@@ -526,6 +526,7 @@ def command_tree_script(command_str:str) -> list :
 
 COMMANDS_FUNCTIONS = {
     "add" : command_add_script, # validé
+    "cc" : lambda e : [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : cc command takes no argument</span>"""], # validé
     "clear" : command_clear_script, # validé
     "cs" : command_cs_script, # validé
     "del" : command_del_script, # validé
