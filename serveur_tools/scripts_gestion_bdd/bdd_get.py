@@ -785,7 +785,8 @@ def get_rangement_content(id_rangement:int) -> list :
     """
     connexion = sqlite3.connect(MOC)
     curseur = connexion.cursor()
-    curseur.execute('''SELECT c.id_element FROM rangement_content as c JOIN Rangements_virtuels as v ON c.id_rangement = v.id_rangement WHERE v.rangement_physique = ?;''', (id_rangement,))
+    # curseur.execute('''SELECT c.id_element FROM rangement_content as c JOIN Rangements_virtuels as v ON c.id_rangement = v.id_rangement WHERE v.rangement_physique = ?;''', (id_rangement,))
+    curseur.execute('''SELECT id_element FROM rangement_content WHERE id_rangement = ?;''', (id_rangement,))
     r = []
     for e in curseur :
         r.append(e[0])

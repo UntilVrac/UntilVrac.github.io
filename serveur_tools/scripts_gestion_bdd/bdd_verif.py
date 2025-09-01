@@ -204,6 +204,23 @@ def rangement_est_compartimente(id_rangement:int) -> bool :
     # return r[0] > 0
     return r[0] > 1
 
+def element_in_rangement(id_rangement:int, id_element:int) -> bool :
+    """
+    entrées :
+        id_rangement (int), l'id du rangement
+        id_element (int), l'id de l'élément
+
+    renvoie True si l'élement est dans le rangement et False sinon
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    curseur.execute('''SELECT id_rangement, id_element FROM rangement_content WHERE id_rangement = ? AND id_element = ?;''', (id_rangement, id_element))
+    r = []
+    for e in curseur :
+        r.append(e)
+    connexion.close()
+    return len(r) > 0
+
 
 
 if __name__ == "__main__" :

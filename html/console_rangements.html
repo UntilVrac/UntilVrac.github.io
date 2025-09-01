@@ -187,7 +187,7 @@
                                 <cmd>-n nb_compartiments</cmd>* (par défaut 1)&nbsp;: le nombre de compartiments (minimum 1) contenus dans le rangement&nbsp;;
                             </li>
                             <li>
-                                <cmd>-c 'compartimentation'</cmd>* (par défaut "1 x 1")&nbsp;: la compartimentation entre guillemets.
+                                <cmd>-c 'compartimentation'</cmd>* (par défaut "1 x nb_compartiments")&nbsp;: la compartimentation entre guillemets sous la forme <cmd>-c '{a} x {b}'</cmd> ou <cmd>-c '{a} x {b} x {c}'</cmd> (les valeurs entre crochets devant être des entiers supérieurs à 0).
                             </li>
                             <li>Le nouveau rangement sera créé dans le rangement courant.</li>
                             <li>Exemples&nbsp;: <cmd>mkran 'Boite 1' 'petite boite' -n 2 -c '1 x 2'</cmd>&nbsp;; <cmd>mkran 'Boite 2' 'petite boite' -c '1 x 1'</cmd>&nbsp;; <cmd>mkran 'Boite 3' 'petite boite'</cmd>.</li>
