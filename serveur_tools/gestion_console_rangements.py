@@ -496,7 +496,53 @@ def command_rmran_script(command_str:str) -> list :
         return [f"""<span style="color: {COULEURS["vert"]["hexa"]};">The storage has been deleted.</span>"""]
     else :
         return [f"""<span style="color: {COULEURS["rose"]["hexa"]};">The deletion has been canceled.</span>"""]
-    
+
+def command_rn_script(command_str:str) -> list :
+    """
+    command_str (str), la commande rmran à exécuter
+
+    exécute la commande
+    renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
+    """
+    cmd = split_str_command(command_str)
+    for e in cmd :
+        if e not in ("-na", "-t", "-nb", "-c") :
+            return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : rn command takes at most four arguments : new_name (preceded by '-na') and new_type (preceded by '-t') and compartments_number (preceded by '-nb') and compartimentalization (preceded by '-c')</span>"""]
+    old_infos = bdd.get_rangements_infos(rangement_courant)
+    new_na, new_t, new_nb, new_c = old_infos["nom_rangement"], old_infos["type_rangement"], old_infos["nb_compartiments"], old_infos["compartimentation"]
+    response = []
+    if "-na" in cmd :
+        new_na = cmd["-na"]
+    if "-t" in cmd :
+        new_t = cmd["-t"]
+    if "-nb" in cmd :
+        try :
+            new_nb = int(cmd["-nb"])
+            assert new_nb >= 1
+        except :
+            return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid "-nb" argument's value</span>"""]
+    if "-c" in cmd :
+        try :
+            new_c = cmd["-c"].lower()
+            c = 1
+            for e in new_c.split(" x ") :
+                e = int(e)
+                assert e >= 1
+                c *= e
+        except :
+            return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid "-c" argument's value</span>"""]
+        else :
+            if c != new_nb :
+                if "-nb" in cmd :
+                    new_c = f"1 x {new_nb}"
+                    response.append(f"""<span style="color: {COULEURS["jaune"]["hexa"]};">'-c' argument's value has been replaced by '{new_c}' to correspond with the '-nb' argument value</span>""")
+                else :
+                    new_nb = c
+                    response.append(f"""<span style="color: {COULEURS["jaune"]["hexa"]};">compartments_number's value has been replaced by '{new_nb}' to correspond with the '-c' argument value</span>""")
+    bdd.update_rangement_data(rangement_courant, new_na, new_t, new_nb, new_c)
+    response.append([f"""<span style="color: {COULEURS["cyan"]["hexa"]};">operation completed</span>"""])
+    return response
+ 
 def command_tree_script(command_str:str) -> list :
     """
     command_str (str), la commande tree à exécuter
@@ -536,6 +582,7 @@ COMMANDS_FUNCTIONS = {
     "mv" : command_mv_script, # validé
     "pws" : command_pws_script, # validé
     "rmran" : command_rmran_script, # validé
+    "rn" : command_rn_script, 
     "tree" : command_tree_script # validé
 }
 COMMANDS_WITH_CONFIRMATION = ["clear", "rmran"]

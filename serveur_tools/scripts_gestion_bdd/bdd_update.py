@@ -302,3 +302,17 @@ def supprimer_rangement(id_rangement:int) -> None :
     curseur.execute('''DELETE FROM Rangements_physiques WHERE id_rangement = ?;''', (id_rangement,))
     connexion.commit()
     connexion.close()
+
+def update_rangement_data(id_rangement:int, nom_rangement:str, type_rangement:str, nb_compartiments:int, compartimentation:str) -> None :
+    """
+    entrées :
+        id_rangement (int), l'id du rangement
+        nom_rangement (str), nb_compartiments (int) et compartimentation (str), les nouvelles valeurs
+
+    met à jour les valeurs
+    """
+    connexion = sqlite3.connect(MOC)
+    curseur = connexion.cursor()
+    curseur.execute('''UPDATE Rangements_physiques SET nom_rangement = ? AND type_rangement = ? AND nb_compartiments = ? AND compartimentation = ? WHERE id_rangement = ?;''', (nom_rangement, type_rangement, nb_compartiments, compartimentation, id_rangement))
+    connexion.commit()
+    connexion.close()
