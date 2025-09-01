@@ -136,6 +136,9 @@
                         </ul>
                     </p>
                     <p>
+                        • <cmd>cat</cmd> (con<span class="underline">cat</span>enate)&nbsp;: renvoie les paramètres du rangement courant sous la forme <cmd style="color: #9CDCFF">{id_rangement} - {nom_rangement} ({type_rangement}) - {n} compartments</cmd> pour un rangement compartimenté ou <cmd style="color: #9CDCFF">{id_rangement} - {nom_rangement} ({type_rangement}) - not compartmentalized</cmd> pour un rangement non-compartimenté.
+                    </p>
+                    <p>
                         • <cmd>cc</cmd> (<span class="underline">c</span>lear <span class="underline">c</span>onsole)&nbsp;: effacement du contenu de la console (rangement courant conservé).
                     </p>
                     <p>
@@ -222,6 +225,24 @@
                             </li>
                             <li>Une confirmation est demandée.</li>
                             <li>Tous les rangements contenus dans ce rangement et leur contenu seront supprimés.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        • <cmd>rn</cmd> (<span class="underline">r</span>e<span class="underline">n</span>ame)&nbsp;: rennomage et modifications des paramètres du rangement courant. Paramètres&nbsp;:
+                        <ul class="parametres">
+                            <li>
+                                <cmd>-na nouveau_nom</cmd>*&nbsp;: le nouveau nom du rangement
+                            </li>
+                            <li>
+                                <cmd>-t nouveau_type</cmd>*&nbsp;: le nouveau type de rangement
+                            </li>
+                            <li>
+                                <cmd>-nb nouveau_nb_compartiments</cmd>*&nbsp;: le nouveau nombre de compartiments
+                            </li>
+                            <li>
+                                <cmd>-c nouvelle_compartimentation</cmd>*&nbsp;: la nouvelle compartimentation
+                            </li>
+                            <li>Les paramètres non fournis ne seront pas modifiés (sauf mise en correspondance du nombre de compartiments et de la compartimentation).</li>
                         </ul>
                     </p>
                     <p>

@@ -137,7 +137,21 @@ def command_add_script(command_str:str) -> list :
     __check_rangement_content(rangement_courant)
     response.append(f"""<span style="color: {COULEURS["cyan"]["hexa"]};">{n}/{len(liste_ids)} element{"" if n <= 1 else "s"} added</span>""")
     return response
-    
+
+def command_cat_script(command_str:str) -> list :
+    """
+    command_str (str), la commande cat à exécuter
+
+    exécute la commande
+    renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
+    """
+    cmd = split_str_command(command_str)
+    cmd = [cmd[k] for k in cmd]
+    if len(cmd) != 0 :
+        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : cat command takes no arguments</span>"""]
+    infos = bdd.get_rangements_infos(rangement_courant)
+    return [f"""<span style="color: {COULEURS["cyan"]["hexa"]};">{infos["id_rangement"]} - {infos["nom_rangement"]} ({infos["type_rangement"]}) - {str(infos["nb_compartiments"]) + " compartiments" if infos["nb_compartiments"] > 1 else "not compartmentalized"}</span>"""]
+
 def command_clear_script(command_str:str) -> list :
     """
     command_str (str), la commande clear à exécuter
@@ -499,7 +513,7 @@ def command_rmran_script(command_str:str) -> list :
 
 def command_rn_script(command_str:str) -> list :
     """
-    command_str (str), la commande rmran à exécuter
+    command_str (str), la commande rn à exécuter
 
     exécute la commande
     renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
@@ -572,6 +586,7 @@ def command_tree_script(command_str:str) -> list :
 
 COMMANDS_FUNCTIONS = {
     "add" : command_add_script, # validé
+    "cat" : command_cat_script, 
     "cc" : lambda e : [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : cc command takes no argument</span>"""], # validé
     "clear" : command_clear_script, # validé
     "cs" : command_cs_script, # validé
@@ -582,7 +597,7 @@ COMMANDS_FUNCTIONS = {
     "mv" : command_mv_script, # validé
     "pws" : command_pws_script, # validé
     "rmran" : command_rmran_script, # validé
-    "rn" : command_rn_script, 
+    "rn" : command_rn_script, # validé
     "tree" : command_tree_script # validé
 }
 COMMANDS_WITH_CONFIRMATION = ["clear", "rmran"]
