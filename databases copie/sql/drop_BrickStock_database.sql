@@ -1,0 +1,10 @@
+DROP TABLE Tons;
+DROP TABLE Couleurs;
+DROP TABLE Categories;
+DROP TABLE Sous_Categories;
+DROP TABLE Design;
+DROP TABLE Piece;
+DROP TABLE Sets;
+DROP TABLE Minfigures;
+DROP TABLE piece_dans_set;
+DROP TABLE minifig_dans_set;

@@ -1,0 +1,75 @@
+id_couleur,id_couleur_bricklink,id_couleur_rebrickable,nom,nom_Lego,nom_Bricklink,nom_Rebrickable,ton,est_transparent,image_ref
+1000,1,15,White,White,White,White,10,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/300501/00001.png
+1001,159,1000,White Glow,White Glow,Glow in Dark White,Glow in Dark White,10,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6339147/00001.png
+1050,12,47,Trans. Clear,Transparent,Trans-Clear,Trans-Clear,10,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6220959/00001.png
+1051,228,1055,Transparent with Opalescence,Transparent with Opalescence,Satin Trans-Clear,Opal Trans-Clear,10,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6363601/00001.png
+1101,85,72,Dark Stone Grey,Dark Stone Grey,Dark Bluish Gray,Dark Bluish Gray,11,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4211098/00001.png
+1102,86,71,Medium Stone Grey,Medium Stone Grey,Light Bluish Gray,Light Bluish Gray,11,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4211389/00001.png
+1103,77,1103,Titanium Metallic,Titanium Metallic,Pearl Dark Gray,Pearl Titanium,11,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6038201/00001.png
+1200,11,0,Black,Black,Black,Black,12,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/300526/00001.png
+1250,251,1095,Trans. Black,Transparent Black,Trans-Black,Trans-Black,12,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6470140/00001.png
+1301,154,31,Lavender,Lavender,Lavender,Lavender,13,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6097053/00001.png
+1302,157,30,Medium Lavender,Medium Lavender,Medium Lavender,Medium Lavender,13,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4651903/00001.png
+1303,89,85,Medium Lilac,Medium Lilac,Dark Purple,Dark Purple,13,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6084028/00001.png
+1351,51,52,Trans. Bright Bluish Violet,Transparent Bright Bluish Violet,Trans-Purple,Trans-Purple,13,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6240210/00001.png
+1352,102,129,Trans. Bright Blue/Violet with Glitter,Transparent Bright Bluish Violet with Glitter,Glitter Trans-Purple,Glitter Trans-Purple,13,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6253761/00001.png
+1401,41,323,Aqua,Aqua,Light Aqua,Light Aqua,14,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6236576/00001.png
+1402,156,322,Medium Azur,Medium Azur,Medium Azure,Medium Azure,14,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4619652/00001.png
+1403,63,272,Earth Blue,Earth Blue,Dark Blue,Dark Blue,14,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4255413/00001.png
+1404,7,1,Bright Blue,Bright Blue,Blue,Blue,14,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/300523/00001.png
+1405,39,3,Bright Bluish Green,Bright Bluish Green,Dark Turquoise,Dark Turquoise,14,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6213776/00001.png
+1406,153,321,Dark Azur,Dark Azur,Dark Azure,Dark Azure,14,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6225538/00001.png
+1407,105,212,Light Royal Blue,Light Royal Blue,Bright Light Blue,Bright Light Blue,14,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6285271/00001.png
+1408,42,73,Medium Blue,Medium Blue,Medium Blue,Medium Blue,14,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4179830/00001.png
+1409,55,379,Sand Blue,Sand Blue,Sand Blue,Sand Blue,14,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4620077/00001.png
+1451,14,33,Trans. Blue,Transparent Blue,Trans-Dark Blue,Trans-Dark Blue,14,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6494117/00001.png
+1452,232,1061,Trans. Blue with Opalescence,Transparent Blue with Opalescence,Satin Trans-Dark Blue,Opal Trans-Dark Blue,14,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6337455/00001.png
+1453,15,41,Trans. Light Blue,Transparent Light Blue,Trans-Light Blue,Trans-Light Blue,14,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6240551/00001.png
+1454,223,1053,Trans. Light Blue with Opalescence,Transparent Light Blue with Opalescence,Satin Trans-Light Blue,Opal Trans-Light Blue,14,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6514272/00001.png
+1455,162,1003,Trans. Light Blue with Glitter,Transparent Light Blue with Glitter,Glitter Trans-Light Blue,Glitter Trans-Light Blue,14,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6507903/00001.png
+1501,36,10,Bright Green,Bright Green,Bright Green,Bright Green,15,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6452907/00001.png
+1502,34,27,Bright Yellowish Green,Bright Yellowish Green,Lime,Lime,15,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4220634/00001.png
+1503,6,2,Dark Green,Dark Green,Green,Green,15,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/300528/00001.png
+1504,155,326,Olive Green,Olive Green,Olive Green,Olive Green,15,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6058242/00001.png
+1505,48,378,Sand Green,Sand Green,Sand Green,Sand Green,15,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4521948/00001.png
+1506,158,158,Spring Yellowish Green,Spring Yellowish Green,Yellowish Green,Yellowish Green,15,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6104578/00001.png
+1507,80,288,Earth Green,Earth Green,Dark Green,Dark Green,15,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4521915/00001.png
+1550,20,34,Trans. Green,Transparent Green,Trans-Green,Trans-Green,15,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6514266/00001.png
+1551,108,35,Trans. Bright Green,Transparent Bright Green,Trans-Bright Green,Trans-Bright Green,15,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6514269/00001.png
+1552,233,1060,Trans. Bright Green with Opalescence,Transparent Bright Green with Opalescence,Satin Trans-Bright Green,Opal Trans-Bright Green,15,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6514203/00001.png
+1601,3,14,Bright Yellow,Bright Yellow,Yellow,Yellow,16,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/300524/00001.png
+1602,110,191,Flame Yellowish Orange,Flame Yellowish Orange,Bright Light Orange,Bright Light Orange,16,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6061685/00001.png
+1603,103,226,Cool Yellow,Cool Yellow,Bright Light Yellow,Bright Light Yellow,16,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6022084/00001.png
+1604,236,1062,Vibrant Yellow,Vibrant Yellow,Neon Yellow,Vibrant Yellow,16,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6427904/00001.png
+1650,19,46,Trans. Yellow,Transparent Yellow,Trans-Yellow,Trans-Yellow,16,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6277483/00001.png
+1651,170,1139,Trans. Yellow with Opalescence,Transparent Yellow with Opalescence,Satin Trans-Yellow,Opal Trans-Yellow,16,True,https://img.bricklink.com/ItemImage/PN/170/3062.png
+1652,16,42,Trans. Fluore Green,Transparent Fluore Green,Trans-Neon Green,Trans-Neon Green,16,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6238675/00001.png
+1701,2,19,Tan,Brick Yellow,Tan,Tan,17,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4113915/00001.png
+1702,120,308,Dark Brown,Dark Brown,Dark Brown,Dark Brown,17,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6226437/00001.png
+1703,68,484,Dark Orange,Dark Orange,Dark Orange,Dark Orange,17,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6254484/00001.png
+1704,90,78,Light Nougat,Light Nougat,Light Nougat,Light Nougat,17,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6369191/00001.png
+1705,240,1088,Medium Brown,Medium Brown,Medium Brown,Medium Brown,17,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6464002/00001.png
+1706,150,84,Medium Nougat,Medium Nougat,Medium Nougat,Medium Nougat,17,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6057986/00001.png
+1707,28,92,Nougat,Nougat,Nougat,Nougat,17,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6330369/00001.png
+1708,88,70,Reddish Brown,Reddish Brown,Reddish Brown,Reddish Brown,17,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4211242/00001.png
+1709,69,28,Dark Tan,Sand Yellow,Dark Tan,Dark Tan,17,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6001824/00001.png
+1750,13,40,Trans. Brown,Transparent Brown,Trans-Brown,Trans-Brown,17,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6244909/00001.png
+1801,4,25,Bright Orange,Bright Orange,Orange,Orange,18,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4173805/00001.png
+1802,167,1136,Reddish Orange,Reddish Orange,Reddish Orange,Reddish Orange,18,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6469084/00001.png
+1803,220,1050,Vibrant Coral,Vibrant Coral,Coral,Coral,18,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6422915/00001.png
+1804,241,1089,Warm Tan,Warm Tan,Medium Tan,Warm Tan,18,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6512264/00001.png
+1851,98,182,Trans. Bright Orange,Transparent Bright Orange,Trans-Orange,Trans-Orange,18,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6240550/00001.png
+1901,5,4,Bright Red,Bright Red,Red,Red,19,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/300521/00001.png
+1902,59,320,Dark Red,New Dark Red,Dark Red,Dark Red,19,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4541376/00001.png
+1950,17,36,Trans. Red,Transparent Red,Trans-Red,Trans-Red,19,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6238673/00001.png
+2001,47,5,Dark Pink,Bright Purple,Dark Pink,Dark Pink,20,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/4492224/00001.png
+2002,71,26,Bright Reddish Violet,Bright Reddish Violet,Magenta,Magenta,20,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6022035/00001.png
+2003,104,29,Bright Pink,Light Purple,Bright Pink,Bright Pink,20,False,https://www.lego.com/cdn/product-assets/element.spin.default/4286050/00001.png
+2051,50,45,Trans. Medium Reddish Violet,Transparent Medium Reddish Violet,Trans-Dark Pink,Trans-Dark Pink,20,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6240553/00001.png
+2052,224,1054,Trans. Medium Violet with Opalescence,Transparent Medium Violet with Opalescence,Satin Trans-Dark Pink,Opal Trans-Dark Pink,20,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6473803/00001.png
+2053,230,1059,Trans. Bright Violet with Opalescence,Transparent Bright Violet with Opalescence,Satin Trans-Purple,Opal Trans-Purple,20,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6464814/00001.png
+2054,100,114,Trans. Reddish Violet with Glitter,Transparent Reddish Violet with Glitter,Glitter Trans-Dark Pink,Glitter Trans-Dark Pink,20,True,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6240549/00001.png
+2101,65,82,Gold Ink,Gold Ink,Metallic Gold,Metallic Gold,21,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6538102/00001.png
+2102,115,297,Warm Gold,Warm Gold,Pearl Gold,Pearl Gold,21,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6501289/00001.png
+2103,67,80,Silver Ink,Silver Ink,Metallic Silver,Metallic Silver,21,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6410057/00001.png
+2104,95,179,Silver Metallic,Silver Metallic,Flat Silver,Flat Silver,21,False,https://www.lego.com/cdn/product-assets/element.spin.photoreal/6121350/00001.png

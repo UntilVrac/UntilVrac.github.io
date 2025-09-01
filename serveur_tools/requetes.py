@@ -169,7 +169,7 @@ def rep_post(url:str, params_post:dict) -> bytes :
         contenu_console, command = decoder_text(params_post["console_content"]), decoder_text(params_post["command"])
         # print(contenu_console)
         contenu_console += "".join(execute_command(command))
-        print(contenu_console)
+        # print(contenu_console)
         return render_template("console_rangements.html", entete, params={"{script}" : "", "{contenu_console}" : contenu_console, "{historique}" : HISTORIQUE_COMMANDES})
     elif filename[-1] == "print_qr-codes" :
         if params_post["dimensions_page"] in FORMATS_STANDARDS :

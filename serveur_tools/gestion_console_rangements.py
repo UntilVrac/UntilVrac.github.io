@@ -32,7 +32,7 @@ def split_str_command(command_str:str) -> dict :
     params_init = {}
     k = 1
     command_params = command_str.split(" ")[1:]
-    print(command_params)
+    # print(command_params)
     i = 0
     while i < len(command_params) :
         if command_params[i].startswith("-") :
@@ -48,7 +48,6 @@ def split_str_command(command_str:str) -> dict :
             i += 1
             continuer = True
             while continuer :
-                print(val)
                 val += " " + command_params[i]
                 if command_params[i][-1] == val[0] :
                     continuer = False
@@ -58,7 +57,7 @@ def split_str_command(command_str:str) -> dict :
         params_init[key] = val
         i += 1
     # params = {}
-    print(params_init)
+    # print(params_init)
     return params_init
     # for k in params_init :
     #     val = params_init[k]
@@ -93,12 +92,15 @@ def command_add_script(command_str:str) -> list :
     exécute la commande
     renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
     """
-    # cmd = command_str.split(" ")
+    if bdd.rangement_est_compartimente(rangement_courant) :
+        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : the current storage is compartimentalized</span>"""]
+    # print(command_str)
     cmd = split_str_command(command_str)
     cmd = [cmd[k] for k in cmd]
-    if len(cmd) == 1 :
+    if len(cmd) == 0 :
         return [f"""<span style="color: {COULEURS["cyan"]["hexa"]};">0 elements added</span>"""]
     liste_ids = cmd[1:]
+    print(liste_ids)
     n = 0
     response = []
     for id in liste_ids :
@@ -129,19 +131,23 @@ def command_clear_script(command_str:str) -> list :
     else :
         return [f"""<span style="color: {COULEURS["rose"]["hexa"]};">The deletion has been canceled.</span>"""]
 
-def command_cr_script(command_str:str) -> list :
+def command_cs_script(command_str:str) -> list :
     """
-    command_str (str), la commande cr à exécuter
+    command_str (str), la commande cs à exécuter
 
     exécute la commande
     renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
     """
+    global rangement_courant
     # cmd = command_str.split(" ")
     cmd = split_str_command(command_str)
-    cmd = [cmd[k] for k in cmd]
+    # cmd = [cmd[k] for k in cmd]
     if len(cmd) != 1 :
-        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid syntax ; cr command takes one argument : path</span>"""]
+        return [f"""<span style="color: {COULEURS["rouge"]["hexa"]};">ERROR : invalid syntax ; cs command takes one argument : path</span>"""]
     path = cmd[1].split("/")
+    if path[-1] == "" :
+        path = path[:-1]
+    # print(path)
     try :
         if path[0] == "" :
             position = None
@@ -149,10 +155,18 @@ def command_cr_script(command_str:str) -> list :
         else :
             position = rangement_courant
             i = 0
-            while path[i] == ".." :
-                position = bdd.get_rangement_parent(position)
-                assert position != None
-                i += 1
+            continuer = True
+            while continuer :
+            # while path[i] == ".." :
+                if i < len(path) :
+                    if path[i] == ".." :
+                        position = bdd.get_rangement_parent(position)
+                        assert position != None
+                        i += 1
+                    else :
+                        continuer = False
+                else :
+                    continuer = False
         for e in path[i:] :
             id = int(e)
             assert id in (i["id_rangement"] for i in bdd.get_arbre_rangements(position)["contenu"])
@@ -330,9 +344,9 @@ def command_mv_script(command_str:str) -> list :
         bdd.change_parent_rangement(id1, id2)
         return [f"""<span style="color: {COULEURS["cyan"]["hexa"]};">storage moved</span>"""]
     
-def command_pwr_script(command_str:str) -> list :
+def command_pws_script(command_str:str) -> list :
     """
-    command_str (str), la commande pwr à exécuter
+    command_str (str), la commande pws à exécuter
 
     exécute la commande
     renvoie le résultat de la commande sous forme d'une liste de ligne à afficher en console
@@ -404,7 +418,7 @@ def command_tree_script(command_str:str) -> list :
         """
         response = []
         arbre = bdd.get_arbre_rangements(id_rangement)
-        print(arbre)
+        # print(arbre)
         response.append(f"""{arbre["id_rangement"]} - {arbre["nom_rangement"]}""")
         for id in arbre["contenu"] :
             for e in parcours(id["id_rangement"]) :
@@ -418,13 +432,13 @@ def command_tree_script(command_str:str) -> list :
 COMMANDS_FUNCTIONS = {
     "add" : command_add_script, 
     "clear" : command_clear_script, 
-    "cr" : command_cr_script, 
+    "cs" : command_cs_script, 
     "del" : command_del_script, 
     "find" : command_find_script, 
     "ls" : command_ls_script, 
     "mkran" : command_mkran_script, 
     "mv" : command_mv_script, 
-    "pwr" : command_pwr_script, 
+    "pws" : command_pws_script, 
     "rmran" : command_rmran_script, 
     "tree" : command_tree_script
 }
@@ -469,3 +483,17 @@ if __name__ == "__main__" :
     # a = command_tree_script("")
     # for e in a :
     #     print(e)
+
+    rangement_courant = 2
+
+    cmd = """
+add 
+"""
+
+    def write(rep:list) -> None :
+        for e in rep :
+            print(e)
+
+    for e in cmd.split("\n") :
+        if e != "" :
+            write(execute_command(e))

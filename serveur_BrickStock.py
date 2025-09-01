@@ -42,7 +42,7 @@ while True :
                 answer_bin = requetes.get_file("Fin")
             connexion.send(answer_bin)
         elif requetes.is_POST(requete_str) :
-            print(requete_str)
+            # print(requete_str)
             answer_bin = requetes.rep_post(url, requetes.get_params(requete_str))
             connexion.send(answer_bin)
     # fermeture de la requête

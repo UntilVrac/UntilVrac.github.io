@@ -705,7 +705,7 @@ def get_rangements_infos(id_rangement:int) -> dict :
 
     renvoie les infos du rangement sous la forme d'un dictionnaire {"id_rangement" : int, "nom_rangement" : str, "type_rangement" : str, "nb_compartiments" : int, "compartimentation" : str} si le rangement existe et None sinon
     """
-    if id_rangement == None :
+    if id_rangement in (None, 0) :
         return {"id_rangement" : 0, "nom_rangement" : "Collection", "type_rangement" : None, "nb_compartiments" : float("inf"), "compartimentation" : "inf x inf"}
     connexion = sqlite3.connect(MOC)
     curseur = connexion.cursor()
@@ -731,6 +731,8 @@ def get_arbre_rangements(id_racine:int=None) -> dict :
 
     renvoie l'arbre des rangements physiques de la collection sous la forme de dictionnaires {"id_rangement" : int, "nom_rangement" : str, "contenu" : list (liste des noeuds enfants)} représentants chacun un noeud (la racine qui est la collection ayant None pour id)
     """
+    if id_racine == 0 :
+        id_racine = None
     connexion = sqlite3.connect(MOC)
     curseur = connexion.cursor()
     if id_racine == None :
