@@ -455,7 +455,7 @@ def __ajouter_gamme(connexion:sqlite3.Connection, curseur:sqlite3.Cursor, id_gam
     """
     assert gamme_in_database(id_gamme_parente)
     assert not gamme_in_database(id_gamme)
-    curseur.execute('''INSERT INTO Gammes (id_gamme, nom_gamme) VALUES (?, ?);''', (id_gamme, nom_gamme))
+    curseur.execute('''INSERT INTO Gammes (id_gamme, nom_gamme) VALUES (?, ?, ?);''', (id_gamme, nom_gamme, id_gamme_parente))
     connexion.commit()
     connexion.close()
 

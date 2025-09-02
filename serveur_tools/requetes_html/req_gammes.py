@@ -40,6 +40,8 @@ def get_gammes_request(origine:str, HISTORIQUE:Pile, script:str=None) -> dict :
             HISTORIQUE.empiler(temp.depiler())
         assert temp.est_vide()
     params["{page_precedente}"] = page_precedente
+    classes_values = {"sets" : (' class="main"', ""), "minifigures" : ("", ' class="main"')}
+    params["{classSets}"], params["{classMinifigs}"] = classes_values[page_precedente.split("?")[0].split("/")[-1]]
 
     def __render_ul(liste_gammes:dict, n:int=0) -> str :
         """
