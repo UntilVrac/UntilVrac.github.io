@@ -63,11 +63,11 @@ def post_minifigs_request(url:str, params_post:dict) -> tuple :
     """
     if params_post["form_name"] == "add_minifig" :
         minifig_data = {}
-        for p in ("id_minifigure", "nom", "gamme") :
+        for p in ("id_minifigure", "id_rebrickable", "nom", "gamme") :
             assert p in params_post
-            f = {"id_minifigure" : str, "nom" : str, "gamme" : str}[p]  #, "image_ref" : str
+            f = {"id_minifigure" : str, "id_rebrickable" : str, "nom" : str, "gamme" : str}[p]  #, "image_ref" : str
             minifig_data[p] = f(params_post[p])
-        response = bdd.ajouter_minifig(minifig_data["id_minifigure"], minifig_data["nom"], minifig_data["gamme"])
+        response = bdd.ajouter_minifig(minifig_data["id_minifigure"], minifig_data["id_rebrickable"], minifig_data["nom"], minifig_data["gamme"])
         if response :
             return (url, """window.location.href = window.location.href.split('#')[0];
 alert('les informations ont bien été enregistré');""")
