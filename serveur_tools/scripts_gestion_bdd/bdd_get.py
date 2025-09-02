@@ -272,7 +272,7 @@ def get_liste_sets_for_minifig(id_minifig:str) -> list :
     connexion.close()
     return r
 
-def get_liste_gammes() -> list :
+def get_liste_gammes_list() -> list :
     """
     renvoie la liste des gammes sous la forme d'une liste de tuples (id_gamme, nom_gamme)
     """
@@ -283,6 +283,27 @@ def get_liste_gammes() -> list :
     for e in curseur :
         r.append(e)
     connexion.close()
+    return r
+
+def get_liste_gammes_dict(racine:str=None) -> list :
+    """
+    racine (str), l'id de la gamme racine (None par défaut)
+
+    renvoie la liste des gammes sous la forme d'une de dictionnaire {"id_gamme" : str, "nom_gamme" : str, "sous_gammes" : list} ou chaque dictionnaire correspond à une gamme ou sous-gamme
+    """
+    connexion = sqlite3.connect(DATABASE_NAME)
+    curseur = connexion.cursor()
+    r = []
+    if racine == None :
+        curseur.execute('''SELECT id_gamme, nom_gamme FROM Gammes WHERE id_gamme_parente is NULL;''')
+    else :
+        curseur.execute('''SELECT id_gamme, nom_gamme FROM Gammes WHERE id_gamme_parente = ?;''', (racine,))
+    for e in curseur :
+        r.append({"id_gamme" : e[0], "nom_gamme" : e[0]})
+    # print(r)
+    connexion.close()
+    for e in r :
+        e["sous_gammes"] = get_liste_gammes_dict(e["id_gamme"])
     return r
 
 def get_liste_annees_for_set() -> list :
@@ -856,3 +877,4 @@ if __name__ == "__main__" :
     # print(get_infos_categorie(11))
     # print(get_arbre_rangements())
     # print(get_rangement_path(1))
+    print(get_liste_gammes_dict())

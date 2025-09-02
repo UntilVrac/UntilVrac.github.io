@@ -16,11 +16,16 @@
                 <form method="POST">
                     <input type="hidden" name="form_name" value="add_gamme">
                     <span>id de la gamme&nbsp;:</span>
-                    <input type="text" name="id_gamme" placeholder="saisissez un id" id="add1">
+                    <input required type="text" name="id_gamme" placeholder="saisissez un id" id="add1">
                     <separator></separator>
                     <span>nom de la gamme&nbsp;:</span>
-                    <input type="text" name="nom_gamme" placeholder="saisissez un nom" id="add2">
+                    <input required type="text" name="nom_gamme" placeholder="saisissez un nom" id="add2">
                     <separator></separator>
+                    <span>gamme parente&nbsp;:</span>
+                    <select name="id_gamme_parente">
+                        <option value="">∅</option>
+                        {liste_gammes_options}
+                    </select>
                     <input type="submit" value="Ajouter" style="cursor: pointer;">
                 </form>
             </div>

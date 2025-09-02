@@ -48,7 +48,7 @@ def get_minifigs_request(params_get:dict, script:str=None) -> dict :
     params["{cases}"] = cases
     params["{resultats}"] = search_result
     liste_gammes = ""
-    for g in bdd.get_liste_gammes() :
+    for g in bdd.get_liste_gammes_list() :
         liste_gammes += f"""<option value="{g[0]}">{g[1]}</option>"""
     params["{liste_gammes}"] = liste_gammes
     return params

@@ -325,6 +325,9 @@ def get_file(filename:str, script:any=None, post:bool=False) -> bytes :
     elif filename[-1] == "pieces_du_set" :
         params = get_piece_in_set_request(params_get, HISTORIQUE, script)
         return render_template("gammes.html", entete, params=params)
+    elif filename[-1] == "gammes" :
+        params = get_gammes_request(filename[-2], HISTORIQUE, script)
+        return render_template("gammes.html", entete, params)
     elif filename[-1] == "rangements" :
         if "id_rangement" in params_get :
             try :

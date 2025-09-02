@@ -445,23 +445,24 @@ def ajouter_minifig(id_minifig:int, id_rebrickable:str, nom:str, id_gamme:str) -
         __ajouter_minifig(connexion, curseur, id_minifig, id_rebrickable, nom, id_gamme)
         return True
 
-def __ajouter_gamme(connexion:sqlite3.Connection, curseur:sqlite3.Cursor, id_gamme:str, nom_gamme:str) -> None :
+def __ajouter_gamme(connexion:sqlite3.Connection, curseur:sqlite3.Cursor, id_gamme:str, nom_gamme:str, id_gamme_parente:str) -> None :
     """
     entrées :
         connexion (sqlite3.Connect) et curseur (sqlite3.Cursor), la connexion à utiliser
-        id_gamme (str) et nom_gamme (str), les infos de la gamme
+        id_gamme (str), nom_gamme (str) et id_gamme_parente(str), les infos de la gamme
 
     ajoute la gamme à la base de données
     """
+    assert gamme_in_database(id_gamme_parente)
     assert not gamme_in_database(id_gamme)
     curseur.execute('''INSERT INTO Gammes (id_gamme, nom_gamme) VALUES (?, ?);''', (id_gamme, nom_gamme))
     connexion.commit()
     connexion.close()
 
-def ajouter_gamme(id_gamme:str, nom_gamme:str) -> bool :
+def ajouter_gamme(id_gamme:str, nom_gamme:str, id_gamme_parente:str=None) -> bool :
     """
     entrées :
-        id_gamme (str) et nom_gamme (str), les infos de la gamme
+        id_gamme (str), nom_gamme (str) et id_gamme_parente (str), les infos de la gamme
 
     ajoute la gamme à la base de données
     si MODE_SANS_ECHEC est True, renvoie True si l'ajout a pu être effectué et False sinon
@@ -471,14 +472,14 @@ def ajouter_gamme(id_gamme:str, nom_gamme:str) -> bool :
     curseur = connexion.cursor()
     if MODE_SANS_ECHEC :
         try :
-            __ajouter_gamme(id_gamme, nom_gamme)
+            __ajouter_gamme(connexion, curseur, id_gamme, nom_gamme, id_gamme_parente)
         except :
             connexion.close()
             return False
         else :
             return True
     else :
-        __ajouter_gamme(id_gamme, nom_gamme)
+        __ajouter_gamme(connexion, curseur, id_gamme, nom_gamme, id_gamme_parente)
         return True
 
 
