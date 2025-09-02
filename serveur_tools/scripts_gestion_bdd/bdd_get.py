@@ -362,6 +362,8 @@ def get_set_data(id_set:int) -> dict :
             "lien_amazon" : e[9]
         }
         r.append(item)
+    if len(r) != 1 :
+        print(id_set, len(r))
     assert len(r) == 1
     return r[0]
 

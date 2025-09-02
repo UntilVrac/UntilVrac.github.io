@@ -5,6 +5,7 @@ path.append(BRICKSTOCK_PATH)
 
 import requests
 from serveur_tools.scrap_data import en_tete
+from serveur_tools.scripts_gestion_bdd.admin_bdd import MODE_SANS_ECHEC
 
 
 
@@ -306,7 +307,11 @@ def get_part_infos(part_num:str) -> dict :
         infos["id_rebrickable"], infos["nom_rebrickable"] = part_num, rep_json["name"]
         return infos
     print(response.status_code)
-    return None
+    if MODE_SANS_ECHEC :
+        return None
+    else :
+        print(part_num)
+        assert False
 
 def get_color_infos(color_id:int) -> dict :
     """
