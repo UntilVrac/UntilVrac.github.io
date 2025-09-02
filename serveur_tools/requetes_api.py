@@ -132,7 +132,7 @@ def get_image_ref_design(id_bricklink:str, id_rebrickable:str, dict_couleurs:dic
         """
         couleur_data = data_couleurs[c]
         url1 = f"https://rebrickable.com/api/v3/lego/parts/{id_rebrickable}/colors/{couleur_data["id_rebrickable"]}/?key={JETON}"
-        print(url1)
+        # print(url1)
         rep1 = requests.get(url1)
         if rep1.status_code == 200 :
             liste_elements = rep1.json()["elements"]
@@ -144,7 +144,7 @@ def get_image_ref_design(id_bricklink:str, id_rebrickable:str, dict_couleurs:dic
                     return url2
                 
         url3 = f"https://img.bricklink.com/ItemImage/PN/{couleur_data["id_bricklink"]}/{id_bricklink}.png"
-        print(url3)
+        # print(url3)
         rep3 = requests.get(url3, headers=en_tete)
         if rep3.status_code == 200 :
             return url3
@@ -213,11 +213,15 @@ def get_image_ref_minifig(id_minifig:str, id_rebrickable:str) -> str :
     en cas d'échec total, renvoie None
     """
     url1 = f"https://img.bricklink.com/ItemImage/MN/0/{id_minifig}.png"
-    rep1 = requests.get(url1)
+    # print(url1)
+    rep1 = requests.get(url1, headers=en_tete)
+    # print(rep1.status_code)
     if rep1.status_code == 200 :
         return url1
     url2 = f"https://rebrickable.com/api/v3/lego/minifigs/{id_rebrickable}/?key={JETON}"
+    # print(url2)
     rep2 = requests.get(url2)
+    print(rep2.status_code)
     if rep2.status_code == 200 :
         return rep2.json()["set_img_url"]
     return None
@@ -341,3 +345,4 @@ if __name__ == "__main__" :
     # print(get_image_ref_design("3005", "3005"))
     # print(get_image_ref_design("3005", "3005", True))
     # print(get_liste_parts_in_set(75345))
+    print(get_image_ref_minifig("sw1431", "fig-016594"))

@@ -144,7 +144,7 @@ def rep_post(url:str, params_post:dict) -> bytes :
         return get_file(rep[0], script=rep[1], post=True)
     elif filename[-1] == "minifigures" :
         rep = post_minifigs_request(url, params_post)
-        return get_file(rep[0], script=rep[1], post=True)
+        return get_file(rep[0], script=rep[1], post=False)
     elif filename[-1] == "minifigs_du_set" :
         if params_post["form_name"] == "search_minifig" :
             params = post_minifig_in_set_search_request(url, HISTORIQUE, params_post)
