@@ -450,6 +450,7 @@ input.enregistrer:hover {
 /* select */
 select {
     cursor: pointer;
+    max-width: calc(100% - 14px);
 }
 
 

@@ -51,7 +51,7 @@ def get_sets_request(params_get:dict, script:str=None) -> dict :
     liste_gammes_bis = ""
     for g in bdd.get_liste_gammes_list() :
         if "gamme" in params_get :
-            if params_get["gamme"] == g :
+            if params_get["gamme"] == g[0] :
                 liste_gammes += f"""<option selected value="{g[0]}">{g[1]}</option>"""
             else :
                 liste_gammes += f"""<option value="{g[0]}">{g[1]}</option>"""
