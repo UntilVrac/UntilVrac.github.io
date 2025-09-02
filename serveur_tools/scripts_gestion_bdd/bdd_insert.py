@@ -253,7 +253,7 @@ def ajouter_couleur(id_couleur:int, id_couleur_bricklink:int, id_couleur_rebrick
         __ajouter_couleur(connexion, curseur, id_couleur, id_couleur_bricklink, id_couleur_rebrickable, nom, nom_lego, nom_bricklink, nom_rebrickable, id_ton, est_transparent, image_ref)
         return True
 
-def __auto_insert_pieces_du_set(id_set, i, l) -> list :
+def __auto_insert_pieces_du_set(id_set) -> list :
     """
     id_set (int), id du set
 

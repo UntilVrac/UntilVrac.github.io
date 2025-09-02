@@ -49,7 +49,7 @@ def get_sets_request(params_get:dict, script:str=None) -> dict :
     params["{resultats}"] = search_result
     liste_gammes = ""
     liste_gammes_bis = ""
-    for g in bdd.get_liste_gammes() :
+    for g in bdd.get_liste_gammes_list() :
         if "gamme" in params_get :
             if params_get["gamme"] == g :
                 liste_gammes += f"""<option selected value="{g[0]}">{g[1]}</option>"""
@@ -83,11 +83,11 @@ def post_sets_request(url:str, params_post:dict) -> tuple :
     """
     assert params_post["form_name"] == "add_set"
     set_data = {}
-    for p in ("id_set", "nom_anglais", "nom_français", "gamme", "annee", "nb_pieces", "tranche_age") :
+    for p in ("id_set", "nom_anglais", "nom_français", "gamme", "annee", "nb_pieces", "tranche_age", "lien_amazon") :
         assert p in params_post
-        f = {"id_set" : int, "nom_anglais" : str, "nom_français" : str, "gamme" : str, "annee" : int, "nb_pieces" : int, "tranche_age" : lambda e : f"{e}+" if (not e.endswith("+") and "-" not in e) else e}[p]
+        f = {"id_set" : int, "nom_anglais" : str, "nom_français" : str, "gamme" : str, "annee" : int, "nb_pieces" : int, "tranche_age" : str, "lien_amazon" : str}[p]
         set_data[p] = f(params_post[p])
-    response = bdd.ajouter_set(set_data["id_set"], set_data["nom_anglais"], set_data["nom_français"], set_data["gamme"], set_data["annee"], set_data["nb_pieces"], set_data["tranche_age"])
+    response = bdd.ajouter_set(set_data["id_set"], set_data["nom_anglais"], set_data["nom_français"], set_data["gamme"], set_data["annee"], set_data["nb_pieces"], set_data["tranche_age"], set_data["lien_amazon"])
     if response :
         return (url, """alert("les informations ont bien été enregistré");""")
     else :
