@@ -455,7 +455,7 @@ def __ajouter_gamme(connexion:sqlite3.Connection, curseur:sqlite3.Cursor, id_gam
     """
     assert gamme_in_database(id_gamme_parente)
     assert not gamme_in_database(id_gamme)
-    curseur.execute('''INSERT INTO Gammes (id_gamme, nom_gamme) VALUES (?, ?, ?);''', (id_gamme, nom_gamme, id_gamme_parente))
+    curseur.execute('''INSERT INTO Gammes (id_gamme, nom_gamme, id_gamme_parente) VALUES (?, ?, ?);''', (id_gamme, nom_gamme, id_gamme_parente))
     connexion.commit()
     connexion.close()
 
@@ -468,6 +468,7 @@ def ajouter_gamme(id_gamme:str, nom_gamme:str, id_gamme_parente:str=None) -> boo
     si MODE_SANS_ECHEC est True, renvoie True si l'ajout a pu être effectué et False sinon
     sinon renvoie True
     """
+    print(id_gamme_parente)
     connexion = sqlite3.connect(DATABASE_NAME)
     curseur = connexion.cursor()
     if MODE_SANS_ECHEC :

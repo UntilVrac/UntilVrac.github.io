@@ -299,7 +299,7 @@ def get_liste_gammes_dict(racine:str=None) -> list :
     else :
         curseur.execute('''SELECT id_gamme, nom_gamme FROM Gammes WHERE id_gamme_parente = ?;''', (racine,))
     for e in curseur :
-        r.append({"id_gamme" : e[0], "nom_gamme" : e[0]})
+        r.append({"id_gamme" : e[0], "nom_gamme" : e[1]})
     # print(r)
     connexion.close()
     for e in r :
