@@ -330,8 +330,12 @@ def __auto_insert_pieces_du_set(id_set) -> list :
     connexion = sqlite3.connect(DATABASE_NAME)
     curseur = connexion.cursor()
     r = []
+    t = 1
+    if len(liste_part) < 100 :
+        t = len(liste_part) / 100
+    # t = len(liste_part) / 100
     for part in tqdm(liste_part) :    # part : tuple (part_num rebrickable, color_id rebrickable, quantité)
-        sleep(1)
+        sleep(t)
         id_piece = __find_piece_id_by_rebrickable_infos(part[0], part[1])
         # print(part)
         if id_piece == None :
