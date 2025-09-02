@@ -306,6 +306,24 @@ def get_liste_gammes_dict(racine:str=None) -> list :
         e["sous_gammes"] = get_liste_gammes_dict(e["id_gamme"])
     return r
 
+def get_liste_sous_gammes(id_gamme:str) -> tuple :
+    """
+    id_gamme (str), l'id de la gamme
+
+    renvoie la liste des id de ses sous-gammes sous la forme d'un tuple
+    """
+    connexion = sqlite3.connect(DATABASE_NAME)
+    curseur = connexion.cursor()
+    curseur.execute('''SELECT id_gamme FROM Gammes WHERE id_gamme_parente = ?;''', (id_gamme,))
+    r = []
+    for e in curseur :
+        r.append(e[0])
+    connexion.close()
+    r = tuple(r)
+    for e in r :
+        r += get_liste_sous_gammes(e)
+    return r
+
 def get_liste_annees_for_set() -> list :
     """
     renvoie la liste des années (int) des sets sans doublons et triée dans l'ordre décroissant
@@ -877,4 +895,5 @@ if __name__ == "__main__" :
     # print(get_infos_categorie(11))
     # print(get_arbre_rangements())
     # print(get_rangement_path(1))
-    print(get_liste_gammes_dict())
+    # print(get_liste_gammes_dict())
+    print(get_liste_sous_gammes("sw"))

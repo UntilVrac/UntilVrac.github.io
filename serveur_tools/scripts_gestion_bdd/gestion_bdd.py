@@ -172,7 +172,8 @@ def search_set(params:dict) -> list :
         """
         requete_sql = requete_init
         i = 0
-        for p in params :
+        # for p in params :
+        for p in {p : params[p] for p in params if p != "gamme"} :
             assert p in list_params
             if i == 0 :
                 requete_sql += " WHERE "
@@ -186,11 +187,12 @@ def search_set(params:dict) -> list :
                 if len(nom) > 1 :
                     for mot in nom[1:] :
                         requete_sql += f'AND (nom_anglais LIKE "%{mot}%" OR nom_français LIKE "%{mot}%")'
-            elif p == "gamme" :
-                requete_sql += f'gamme = "{params[p]}"'
+            # elif p == "gamme" :
+            #     requete_sql += f'gamme = "{params[p]}"'
             else :
                 requete_sql += f'annee = {params[p]}'
         requete_sql += " ORDER BY annee DESC;"
+        print(requete_sql)
         curseur.execute(requete_sql)
     
     def __get_results(curseur:sqlite3.Cursor) -> list :
@@ -213,6 +215,9 @@ def search_set(params:dict) -> list :
         __search_set()
     r = __get_results(curseur)
     connexion.close()
+    if "gamme" in params :
+        sous_gammes = get_liste_sous_gammes(params["gamme"]) + (params["gamme"],)
+        r = [e for e in r if e["id_gamme"] in sous_gammes]
     return r
 
 def search_minifig(params:dict) -> list :
