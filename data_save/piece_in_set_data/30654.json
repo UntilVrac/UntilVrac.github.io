@@ -1,0 +1,640 @@
+[
+    {
+        "design" : {
+            "id_lego" : [
+                17715,
+                19385,
+                37078,
+                87994
+            ],
+            "id_bricklink" : "87994",
+            "id_rebrickable" : "87994",
+            "nom_rebrickable" : "Bar 3L",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                17715,
+                19385,
+                37078,
+                87994
+            ],
+            "id_bricklink" : "87994",
+            "id_rebrickable" : "87994",
+            "nom_rebrickable" : "Bar 3L",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                61332
+            ],
+            "id_bricklink" : "2780",
+            "id_rebrickable" : "61332",
+            "nom_rebrickable" : "Technic Pin with Friction Ridges Lengthwise with No Center Slots",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                61332
+            ],
+            "id_bricklink" : "2780",
+            "id_rebrickable" : "61332",
+            "nom_rebrickable" : "Technic Pin with Friction Ridges Lengthwise with No Center Slots",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1200
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                18745,
+                90540
+            ],
+            "id_bricklink" : "90540",
+            "id_rebrickable" : "90540",
+            "nom_rebrickable" : "Bar 3L with Handle, Stop Ring and Side Stops (Minifig Ski Pole)",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                18745,
+                90540
+            ],
+            "id_bricklink" : "90540",
+            "id_rebrickable" : "90540",
+            "nom_rebrickable" : "Bar 3L with Handle, Stop Ring and Side Stops (Minifig Ski Pole)",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                14417
+            ],
+            "id_bricklink" : "14417",
+            "id_rebrickable" : "14417",
+            "nom_rebrickable" : "Plate Special 1 x 2 with 5.9mm Centre Side Towball",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1101
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                3710
+            ],
+            "id_bricklink" : "3710",
+            "id_rebrickable" : "3710",
+            "nom_rebrickable" : "Plate 1 x 4",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1902
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                15561,
+                2412,
+                30244,
+                35248,
+                51815,
+                71957,
+                72582,
+                78812
+            ],
+            "id_bricklink" : "2412b",
+            "id_rebrickable" : "2412b",
+            "nom_rebrickable" : "Tile Special 1 x 2 Grille with Bottom Groove",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1902
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                18860,
+                30068,
+                3062,
+                35390
+            ],
+            "id_bricklink" : "3062",
+            "id_rebrickable" : "3062b",
+            "nom_rebrickable" : "Brick Round 1 x 1 Open Stud",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                14418
+            ],
+            "id_bricklink" : "14418",
+            "id_rebrickable" : "14418",
+            "nom_rebrickable" : "Plate Special 1 x 2 5.9mm Towball Socket",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                99206
+            ],
+            "id_bricklink" : "99206",
+            "id_rebrickable" : "99206",
+            "nom_rebrickable" : "Plate Special 2 x 2 x 2/3 with Two Studs On Side and Two Raised",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                24201
+            ],
+            "id_bricklink" : "24201",
+            "id_rebrickable" : "24201",
+            "nom_rebrickable" : "Slope Curved 2 x 1 Inverted",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                11477,
+                17134,
+                3593,
+                67128
+            ],
+            "id_bricklink" : "11477",
+            "id_rebrickable" : "11477",
+            "nom_rebrickable" : "Slope Curved 2 x 1 No Studs [1/2 Bow]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                113468,
+                15556,
+                64567,
+                86132
+            ],
+            "id_bricklink" : "64567",
+            "id_rebrickable" : "64567",
+            "nom_rebrickable" : "Weapon Lightsaber Hilt with Bottom Ring",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                113468,
+                15556,
+                64567,
+                86132
+            ],
+            "id_bricklink" : "64567",
+            "id_rebrickable" : "64567",
+            "nom_rebrickable" : "Weapon Lightsaber Hilt with Bottom Ring",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1102
+        },
+        "quantite" : 8
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                15570,
+                30057,
+                34823,
+                39799,
+                44325,
+                51809,
+                6141
+            ],
+            "id_bricklink" : "4073",
+            "id_rebrickable" : "6141",
+            "nom_rebrickable" : "Plate Round 1 x 1 with Solid Stud",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 2103
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                15570,
+                30057,
+                34823,
+                39799,
+                44325,
+                51809,
+                6141
+            ],
+            "id_bricklink" : "4073",
+            "id_rebrickable" : "6141",
+            "nom_rebrickable" : "Plate Round 1 x 1 with Solid Stud",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 2103
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                112415,
+                13954,
+                67117,
+                95349,
+                96910,
+                99563
+            ],
+            "id_bricklink" : "99563",
+            "id_rebrickable" : "99563",
+            "nom_rebrickable" : "Tile Special 1 x 2 with Sloped Walls AKA Money / Gold Bar [Ingot]",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1103
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                18862,
+                33847,
+                35338,
+                50746,
+                54200,
+                63290
+            ],
+            "id_bricklink" : "54200",
+            "id_rebrickable" : "54200",
+            "nom_rebrickable" : "Slope 30° 1 x 1 x 2/3 (Cheese Slope)",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1750
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                18862,
+                33847,
+                35338,
+                50746,
+                54200,
+                63290
+            ],
+            "id_bricklink" : "54200",
+            "id_rebrickable" : "54200",
+            "nom_rebrickable" : "Slope 30° 1 x 1 x 2/3 (Cheese Slope)",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1750
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                112412,
+                30039,
+                3070,
+                35403,
+                39727,
+                53836
+            ],
+            "id_bricklink" : "3070",
+            "id_rebrickable" : "3070b",
+            "nom_rebrickable" : "Tile 1 x 1 with Groove",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1750
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                112412,
+                30039,
+                3070,
+                35403,
+                39727,
+                53836
+            ],
+            "id_bricklink" : "3070",
+            "id_rebrickable" : "3070b",
+            "nom_rebrickable" : "Tile 1 x 1 with Groove",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1750
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                28554,
+                30008,
+                3024,
+                63326
+            ],
+            "id_bricklink" : "3024",
+            "id_rebrickable" : "3024",
+            "nom_rebrickable" : "Plate 1 x 1",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                28554,
+                30008,
+                3024,
+                63326
+            ],
+            "id_bricklink" : "3024",
+            "id_rebrickable" : "3024",
+            "nom_rebrickable" : "Plate 1 x 1",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                28653,
+                3023,
+                6225
+            ],
+            "id_bricklink" : "3023",
+            "id_rebrickable" : "3023",
+            "nom_rebrickable" : "Plate 1 x 2",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                3710
+            ],
+            "id_bricklink" : "3710",
+            "id_rebrickable" : "3710",
+            "nom_rebrickable" : "Plate 1 x 4",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 10
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                3022,
+                94148
+            ],
+            "id_bricklink" : "3022",
+            "id_rebrickable" : "3022",
+            "nom_rebrickable" : "Plate 2 x 2",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                15573,
+                78823
+            ],
+            "id_bricklink" : "15573",
+            "id_rebrickable" : "15573",
+            "nom_rebrickable" : "Plate Special 1 x 2 with 1 Stud with Groove and Inside Stud Holder (Jumper)",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                11476,
+                65458
+            ],
+            "id_bricklink" : "11476",
+            "id_rebrickable" : "11476",
+            "nom_rebrickable" : "Plate Special 1 x 2 with Clip Horizontal on Side",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                11458
+            ],
+            "id_bricklink" : "11458",
+            "id_rebrickable" : "11458",
+            "nom_rebrickable" : "Plate Special 1 x 2 with Pin Hole on Top",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 8
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                3176
+            ],
+            "id_bricklink" : "3176",
+            "id_rebrickable" : "3176",
+            "nom_rebrickable" : "Plate Special 3 x 2 with Rounded End, Hole",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 1
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                15068,
+                78565
+            ],
+            "id_bricklink" : "15068",
+            "id_rebrickable" : "15068",
+            "nom_rebrickable" : "Slope Curved 2 x 2 x 2/3",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 4
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                41770,
+                63333
+            ],
+            "id_bricklink" : "41770",
+            "id_rebrickable" : "41770",
+            "nom_rebrickable" : "Wedge Plate 4 x 2 Left",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 2
+    },
+    {
+        "design" : {
+            "id_lego" : [
+                41769,
+                63330
+            ],
+            "id_bricklink" : "41769",
+            "id_rebrickable" : "41769",
+            "nom_rebrickable" : "Wedge Plate 4 x 2 Right",
+            "statut" : "unknown"
+        },
+        "couleur" : {
+            "statut" : "find",
+            "id_couleur" : 1000
+        },
+        "quantite" : 2
+    }
+]
