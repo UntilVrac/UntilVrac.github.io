@@ -127,15 +127,29 @@ def post_sets_request(params_post:dict) -> tuple :
             if set_data["id_set"] not in [e["id_set"] for e in queue] :
                 queue.append(set_data)
                 json.save_json(queue, filename)
-                return """alert("le set a bien été ajouté à la file d'attente");"""
+                return """document.getElementById("panneau_add").classList.remove("hide");
+document.getElementById("fn1").classList.add("hide");
+document.getElementById("fn2").classList.remove("hide");
+alert("le set a bien été ajouté à la file d'attente");"""
             else :
-                return """alert("erreur : un set portant le même id est déjà présent dans la file d'attente);"""
+                return """document.getElementById("panneau_add").classList.remove("hide");
+document.getElementById("fn1").classList.add("hide");
+document.getElementById("fn2").classList.remove("hide");
+alert("erreur : un set portant le même id est déjà présent dans la file d'attente");"""
     elif params_post["form_name"] == "rm_from_queue" :
         if params_post["id_set"] == "all" :
             json.save_json([], filename)
+            return """document.getElementById("panneau_add").classList.remove("hide");
+document.getElementById("fn1").classList.add("hide");
+document.getElementById("fn2").classList.remove("hide");
+alert("la file d'attente a bien été vidée");"""
         else :
             id_set = int(params_post["id_set"])
             json.save_json([e for e in json.upload_json(filename) if e["id_set"] != id_set], filename)
+            return """document.getElementById("panneau_add").classList.remove("hide");
+document.getElementById("fn1").classList.add("hide");
+document.getElementById("fn2").classList.remove("hide");
+alert("Le set a bien été supprimé de la file d'attente");"""
     else :
         # maintenant = datetime.now()
         # global INDEX_SAVE
