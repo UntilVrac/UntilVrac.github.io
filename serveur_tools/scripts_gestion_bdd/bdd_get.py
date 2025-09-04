@@ -279,7 +279,7 @@ def get_liste_gammes_list() -> list :
     connexion = sqlite3.connect(DATABASE_NAME)
     curseur = connexion.cursor()
     r = []
-    curseur.execute('''SELECT id_gamme, nom_gamme FROM Gammes ORDER nom_gamme;''')
+    curseur.execute('''SELECT id_gamme, nom_gamme FROM Gammes ORDER BY nom_gamme;''')
     for e in curseur :
         r.append(e)
     connexion.close()
@@ -295,9 +295,9 @@ def get_liste_gammes_dict(racine:str=None) -> list :
     curseur = connexion.cursor()
     r = []
     if racine == None :
-        curseur.execute('''SELECT id_gamme, nom_gamme FROM Gammes WHERE id_gamme_parente is NULL ORDER nom_gamme;''')
+        curseur.execute('''SELECT id_gamme, nom_gamme FROM Gammes WHERE id_gamme_parente is NULL ORDER BY nom_gamme;''')
     else :
-        curseur.execute('''SELECT id_gamme, nom_gamme FROM Gammes WHERE id_gamme_parente = ? ORDER nom_gamme;''', (racine,))
+        curseur.execute('''SELECT id_gamme, nom_gamme FROM Gammes WHERE id_gamme_parente = ? ORDER BY nom_gamme;''', (racine,))
     for e in curseur :
         r.append({"id_gamme" : e[0], "nom_gamme" : e[1]})
     # print(r)
@@ -314,7 +314,7 @@ def get_liste_sous_gammes(id_gamme:str) -> tuple :
     """
     connexion = sqlite3.connect(DATABASE_NAME)
     curseur = connexion.cursor()
-    curseur.execute('''SELECT id_gamme FROM Gammes WHERE id_gamme_parente = ? ORDER nom_gamme;''', (id_gamme,))
+    curseur.execute('''SELECT id_gamme FROM Gammes WHERE id_gamme_parente = ? ORDER BY nom_gamme;''', (id_gamme,))
     r = []
     for e in curseur :
         r.append(e[0])

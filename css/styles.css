@@ -390,11 +390,11 @@ button.bouton_plus {
 
 
 /* separator */
-div.filter_zone form separator {
+div.filter_zone separator {
     display: block;
     height: 5px;
 }
-div.fenetre form separator {
+div.fenetre separator {
     display: block;
     height: 10px;
 }

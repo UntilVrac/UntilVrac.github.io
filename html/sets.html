@@ -7,13 +7,22 @@
         <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
         <link rel="shortcut icon" href="/BrickStock/css/favicon.ico" type="image/x-icon">
         <!-- <link rel="shortcut icon" href="../css/favicon.ico" type="image/x-icon"> -->
+        <style type="text/css">
+            table.add_buttons {
+                display: inline-block;
+                border-collapse: collapse;
+            }
+            table.add_buttons td {
+                width: 164px;
+            }
+        </style>
     </head>
     <body>
         <div class="fond hide" id="panneau_add">
             <img class="croix" id="fermer" src="/BrickStock/images/croix.svg">
-            <div class="fenetre">
+            <div class="fenetre" id="fn1">
                 <h4>Ajouter un set</h4>
-                <form method="POST">
+                <form method="POST" id="add_set">
                     <input type="hidden" name="form_name" value="add_set">
                     <span>id du set&nbsp;:</span>
                     <input required type="text" name="id_set" placeholder="saisissez un id" id="add1">
@@ -41,9 +50,43 @@
                     <separator></separator>
                     <span>lien Amazon&nbsp;:</span>
                     <input type="text" name="lien_amazon" id="add8" placeholder="saisissez un url">
-                    <separator></separator>
-                    <input type="submit" value="Ajouter" style="cursor: pointer;">
                 </form>
+                <form method="POST" style="display: inline-block;" id="add_to_queue">
+                    <input required type="hidden" name="form_name" value="add_to_queue">
+                    <input required type="hidden" name="id_set" id="add1bis">
+                    <input required type="hidden" name="nom_anglais"id="add2bis">
+                    <input required type="hidden" name="nom_français" id="add3bis">
+                    <input required type="hidden" name="gamme" id="add4bis">
+                    <input required type="hidden" min="1932" max="{current_annee}" name="annee" id="add5bis">
+                    <input required type="hidden" min="0" name="nb_pieces" id="add6bis">
+                    <input required type="hidden" name="tranche_age" id="add7bis">
+                    <input type="hidden" name="lien_amazon" id="add8bis">
+                </form>
+                <separator></separator>
+                <table class="add_buttons">
+                    <tr>
+                        <td>
+                            <input type="submit" value="Ajouter" style="cursor: pointer; vertical-align: middle;" form="add_set">
+                        </td>
+                        <td>
+                            <input type="submit" value="Ajouter à la file d'attente" style="cursor: pointer; background-color: #0000FF; color: #FFFFFF; vertical-align: middle;" form="add_to_queue">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="button" id="fn1">Voir la file d'attente</button>
+                        </td>
+                    </tr>
+                </table>
+                <!-- <form method="POST">
+                    <input required type="hidden" name="form_name" value="render_queue">
+                    <input type="submit" value="Exécuter la file d'attente" style="cursor: pointer;">
+                </form> -->
+            </div>
+            <div class="fenetre hide" id="fn2">
+                <h4>File d'attente&nbsp;:</h4>
+                <table class="file_attente"></table>
             </div>
         </div>
         <div class="fond" id="panneau_item">
@@ -133,6 +176,26 @@
         <script type="text/javascript" name="gestion panneau ajouter">
             let nAdd = 8;
             let defautAdd = {1 : "", 2 : "", 3 : "", 4 : 0, 5 : "", 6 : "", 7 : "", 8 : ""};
+
+            for (var i=1; i<=8; i++) {
+                document.getElementById("add" + i).addEventListener("input", function () {
+                    document.getElementById(this.id + "bis").value = this.value;
+                });
+            }
+
+            let fn1 = document.getElementById("fn1");
+            let fn2 = document.getElementById("fn2");
+            let b1 = document.getElementById("b1");
+            let b2 = document.getElementById("b2");
+            
+            b1.addEventListener("click", function () {
+                fn1.classList.add("hide");
+                fn2.classList.remove("hide");
+            });
+            b2.addEventListener("click", function () {
+                fn1.classList.remove("hide");
+                fn2.classList.add("hide");
+            });
         </script>
         <script type="text/javascript" src="/BrickStock/javascript/gestion_panneau_add.js"></script>
         <script type="text/javascript" name="data">
