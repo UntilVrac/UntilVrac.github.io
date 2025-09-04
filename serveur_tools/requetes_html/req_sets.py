@@ -11,6 +11,7 @@ import serveur_tools.json_tools as json
 
 
 INDEX_SAVE = 1
+filename = "data_save/sets_queue.json"
 
 
 
@@ -77,17 +78,38 @@ def get_sets_request(params_get:dict, script:str=None) -> dict :
             liste_annees += f"""<option value="{a}">{a}</option>"""
     params["{liste_annees}"] = liste_annees
     params["{current_annee}"] = datetime.now().year
+    queue_content = ""
+    liste_queue = json.upload_json(filename)
+    for s in liste_queue :
+        queue_content += f"""<tr>
+    <td class="col1">{s["id_set"]}</td>
+    <td class="col2">{s["nom_anglais"]}</td>
+    <td class="col3">{s["nom_français"]}</td>
+    <td class="col4">{bdd.get_gamme_info(s["gamme"])["nom_gamme"]}</td>
+    <td class="col5">{s["annee"]}</td>
+    <td class="col6">{s["nb_pieces"]} pièces</td>
+    <td class="col7">{s["tranche_age"]}</td>
+    <td class="col8">{f'''<a href="{s["lien_amazon"]}">https://www.amazon.fr/<i>...</i></a>''' if s["lien_amazon"] != "" else "-"}</td>
+    <td class="col9">
+        <form method="POST">
+            <input type="hidden" name="form_name" value="rm_from_queue">
+            <input type="hidden" name="id_set" value="{s["id_set"]}">
+            <button type="submit" class="delete_from_queue">
+                <img src="/BrickStock/images/corbeil.svg">
+            </button>
+        </form>
+</tr>"""
+    params["{queue_content}"] = queue_content if queue_content != "" else """<tr>
+    <td colspan="9">la file d'attente est vide</td>
+</tr>"""
     return params
 
-def post_sets_request(url:str, params_post:dict) -> tuple :
+def post_sets_request(params_post:dict) -> tuple :
     """
-    entrées :
-        url (str), l'url courante
-        params_post (dict), les paramètres de la requête POST
+    params_post (dict), les paramètres de la requête POST
 
     renvoie le tuple (url de reponse, script) à utiliser pour la réponse à la requête POST après avoir fait les modifications de la base de données nécéssaires
     """
-    filename = "data_save/sets_queue.json"
     if params_post["form_name"] in ("add_set", "add_to_queue") :
         set_data = {}
         for p in ("id_set", "nom_anglais", "nom_français", "gamme", "annee", "nb_pieces", "tranche_age", "lien_amazon") :
@@ -97,24 +119,34 @@ def post_sets_request(url:str, params_post:dict) -> tuple :
         if params_post["form_name"] == "add_set" :
             response = bdd.ajouter_set(set_data["id_set"], set_data["nom_anglais"], set_data["nom_français"], set_data["gamme"], set_data["annee"], set_data["nb_pieces"], set_data["tranche_age"], set_data["lien_amazon"])
             if response :
-                return (url, """alert("les informations ont bien été enregistré");""")
+                return """alert("les informations ont bien été enregistré");"""
             else :
-                return (url, """alert("erreur : les informations n'ont pas été enregistré");""")
+                return """alert("erreur : les informations n'ont pas été enregistré");"""
         else :
             queue = json.upload_json(filename)
-            queue.append(set_data)
-            json.save_json(queue, filename)
+            if set_data["id_set"] not in [e["id_set"] for e in queue] :
+                queue.append(set_data)
+                json.save_json(queue, filename)
+                return """alert("le set a bien été ajouté à la file d'attente");"""
+            else :
+                return """alert("erreur : un set portant le même id est déjà présent dans la file d'attente);"""
+    elif params_post["form_name"] == "rm_from_queue" :
+        if params_post["id_set"] == "all" :
+            json.save_json([], filename)
+        else :
+            id_set = int(params_post["id_set"])
+            json.save_json([e for e in json.upload_json(filename) if e["id_set"] != id_set], filename)
     else :
-        maintenant = datetime.now()
-        global INDEX_SAVE
-        filename2 = f"data_save/sets_queue_save-{INDEX_SAVE}-{maintenant.day}/{maintenant.month}/{maintenant.year} à {maintenant.hour}:{maintenant.minute}:{maintenant.second}.json"
-        INDEX_SAVE += 1
-        assert params_post["form_name"] == "render_queue"
-        f1 = open(filename, "r")
-        f2 = open(filename2, "w")
-        f2.write(f1.read())
-        f1.close()
-        f2.close()
+        # maintenant = datetime.now()
+        # global INDEX_SAVE
+        # filename2 = f"data_save/sets_queue_save-{INDEX_SAVE}-{maintenant.day}/{maintenant.month}/{maintenant.year} à {maintenant.hour}:{maintenant.minute}:{maintenant.second}.json"
+        # INDEX_SAVE += 1
+        # assert params_post["form_name"] == "render_queue"
+        # f1 = open(filename, "r")
+        # f2 = open(filename2, "w")
+        # f2.write(f1.read())
+        # f1.close()
+        # f2.close()
         liste = json.upload_json(filename)
         i, l = 0, len(liste)
         for set_data in liste :
@@ -130,4 +162,5 @@ def post_sets_request(url:str, params_post:dict) -> tuple :
             print(i, l)
         assert i == l
         json.save_json([], filename)
-        remove(filename2)
+        # remove(filename2)
+        return """alert('les informations ont bien été enregistré');"""

@@ -15,12 +15,86 @@
             table.add_buttons td {
                 width: 164px;
             }
+
+            button.delete_from_queue {
+                display: inline-block;
+                border: none;
+                background: none;
+                opacity: 0.5;
+            }
+            button.delete_from_queue:hover {
+                opacity: 1;
+            }
+
+            button.delete_from_queue img {
+                width: 12px;
+            }
+
+            div.hide {
+                display: none;
+            }
+            
+            table.file_attente {
+                border-collapse: collapse;
+                display: inline-block;
+                text-align: center;
+            }
+            table.file_attente tbody tr {
+                border-top: 2px solid #E9E9ED;
+            }
+
+            table.file_attente thead tr td {
+                max-height: 20px;
+            }
+            table.file_attente td {
+                /* border-left: 2px solid #E9E9ED; */
+                /* border-right: 2px solid #E9E9ED; */
+                padding: 2px 5px;
+            }
+            table.file_attente td.col1 {
+                /* max-width: 64px; */
+                width: 58px;
+            }
+            table.file_attente td.col2 {
+                /* max-width: 100px; */
+                width: 108px;
+            }
+            table.file_attente td.col3 {
+                /* max-width: 100px; */
+                width: 108px;
+            }
+            table.file_attente td.col4 {
+                /* max-width: 100px; */
+                /* width: calc(100% - 64px - 100px * 4 - 56px - 185px - 20px); */
+                /* width: calc(100% - 58px - 108px * 2 - 54px - 92px - 100px 185px - 12px); */
+                width: calc(100% - 58px - 108px * 2 - 54px - 92px - 100px 185px - 12px - 10px * 8);
+            }
+            table.file_attente td.col5 {
+                /* max-width: 56px; */
+                width: 54px;
+            }
+            table.file_attente td.col6 {
+                /* max-width: 100px; */
+                width: 92px;
+            }
+            table.file_attente td.col7 {
+                /* max-width: 100px; */
+                width: 100px;
+            }
+            table.file_attente td.col8 {
+                /* max-width: 185px; */
+                width: 185px;
+            }
+            table.file_attente td.col9 {
+                /* max-width: 20px; */
+                width: 12px;
+            }
         </style>
     </head>
     <body>
         <div class="fond hide" id="panneau_add">
             <img class="croix" id="fermer" src="/BrickStock/images/croix.svg">
-            <div class="fenetre" id="fn1">
+            <div class="fenetre hide" id="fn1">
                 <h4>Ajouter un set</h4>
                 <form method="POST" id="add_set">
                     <input type="hidden" name="form_name" value="add_set">
@@ -75,18 +149,47 @@
                     <tr>
                         <td></td>
                         <td>
-                            <button type="button" id="fn1">Voir la file d'attente</button>
+                            <button type="button" id="b1">Voir la file d'attente</button>
                         </td>
                     </tr>
                 </table>
-                <!-- <form method="POST">
-                    <input required type="hidden" name="form_name" value="render_queue">
-                    <input type="submit" value="Exécuter la file d'attente" style="cursor: pointer;">
-                </form> -->
+                <button class="delete_from_queue">
+                    <img src="/BrickStock/images/corbeil.svg">
+                </button>
             </div>
-            <div class="fenetre hide" id="fn2">
-                <h4>File d'attente&nbsp;:</h4>
-                <table class="file_attente"></table>
+            <div class="fenetre" id="fn2" style="text-align: left;">
+                <h4 style="text-align: center;">File d'attente&nbsp;:</h4>
+                <button type="button" id="b2" style="display: inline-block; margin-bottom: 12px;">Retour</button><br/>
+                <table class="file_attente">
+                    <thead>
+                        <tr>
+                            <td class="col1">id du set</td>
+                            <td class="col2">nom anglophone</td>
+                            <td class="col3">nom francophone</td>
+                            <td class="col4">gamme</td>
+                            <td class="col5">année</td>
+                            <td class="col6">nombre de pièces</td>
+                            <td class="col7">tranche d'âge</td>
+                            <td class="col8">lien Amazon</td>
+                            <td class="col9">
+                                <form method="POST">
+                                    <input type="hidden" name="form_name" value="rm_from_queue">
+                                    <input type="hidden" name="id_set" value="all">
+                                    <button class="delete_from_queue" type="submit">
+                                        <img src="/BrickStock/images/corbeil.svg">
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {queue_content}
+                    </tbody>
+                </table>
+                <form method="POST">
+                    <input required type="hidden" name="form_name" value="render_queue">
+                    <input type="submit" value="Exécuter la file d'attente" style="cursor: pointer; background-color: #3CE300;">
+                </form>
             </div>
         </div>
         <div class="fond" id="panneau_item">

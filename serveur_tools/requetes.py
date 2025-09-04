@@ -137,8 +137,8 @@ def rep_post(url:str, params_post:dict) -> bytes :
         rep = post_couleurs_request(url, params_post)
         return get_file(rep[0], script=rep[1], post=True)
     elif filename[-1] == "sets" :
-        rep = post_sets_request(url, params_post)
-        return get_file(rep[0], script=rep[1], post=True)
+        rep = post_sets_request(params_post)
+        return get_file(url, script=rep, post=True)
     elif filename[-1] == "exemplaires_du_set" :
         rep = post_exemplaires_request(url, params_post)
         return get_file(rep[0], script=rep[1], post=True)

@@ -659,18 +659,18 @@ def get_gamme_info(id_gamme:str) -> dict :
     """
     id_gamme (str), id de la gamme
 
-    renvoie le dictionnaire {id_gamme : str, nom_gamme : str} correspondant
+    renvoie le dictionnaire {id_gamme : str, nom_gamme : str, id_gamme_parente : str (ou None)} correspondant
     """
     connexion = sqlite3.connect(DATABASE_NAME)
     curseur = connexion.cursor()
-    curseur.execute('''SELECT nom_gamme FROM Gammes WHERE id_gamme = ?;''', (id_gamme,))
+    curseur.execute('''SELECT nom_gamme, id_gamme_parente FROM Gammes WHERE id_gamme = ?;''', (id_gamme,))
     r = []
     for e in curseur :
-        r.append(e[0])
+        r.append(e)
     connexion.close()
     assert len(r) <= 1
     if len(r) == 1 :
-        return {"id_gamme" : id_gamme, "nom_gamme" : r[0]}
+        return {"id_gamme" : id_gamme, "nom_gamme" : r[0][0], "id_gamme_parente" : r[0][1]}
     else :
         return {}
 

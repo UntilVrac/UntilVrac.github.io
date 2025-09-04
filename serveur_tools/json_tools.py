@@ -89,11 +89,12 @@ def convert_str_to_json(data:str) -> any :
                 list_ensembles[-1].append(l)
         for e in list_ensembles :
             e = "\n".join(e)
-            if e[-1] == "\n" :
-                e = e[:-1]
-            if e[-1] == "," :
-                e = e[:-1]
-            obj.append(convert_str_to_json(e))
+            if e != "" :
+                if e[-1] == "\n" :
+                    e = e[:-1]
+                if e[-1] == "," :
+                    e = e[:-1]
+                obj.append(convert_str_to_json(e))
         return obj
     elif data[0] == "{" :
         assert data[-1] == "}"
@@ -113,13 +114,14 @@ def convert_str_to_json(data:str) -> any :
                 list_ensembles[-1].append(l)
         for e in list_ensembles :
             e = "\n".join(e)
-            if e[-1] == "\n" :
-                e = e[:-1]
-            if e[-1] == "," :
-                e = e[:-1]
-            i = e.index(":")
-            key, val = e[:i - 1], e[i + 2:]
-            obj[convert_str_to_json(key)] = convert_str_to_json(val)
+            if e != "" :
+                if e[-1] == "\n" :
+                    e = e[:-1]
+                if e[-1] == "," :
+                    e = e[:-1]
+                i = e.index(":")
+                key, val = e[:i - 1], e[i + 2:]
+                obj[convert_str_to_json(key)] = convert_str_to_json(val)
         return obj
     else :
         if data[0] == '"' :
@@ -185,4 +187,6 @@ if __name__ == "__main__" :
     # print(a == c)
     # print()
     # print(c)
-    print(convert_json_to_str({"1" : [], "2" : ["lknln", 55], "R" : 4}))
+    # print(convert_json_to_str({"1" : [], "2" : ["lknln", 55], "R" : 4}))
+    save_json([], "data_save/test.json")
+    print(upload_json("data_save/test.json"))
