@@ -306,11 +306,12 @@ def get_part_infos(part_num:str) -> dict :
             infos["id_bricklink"] = None
         infos["id_rebrickable"], infos["nom_rebrickable"] = part_num, rep_json["name"]
         return infos
-    print(response.status_code)
+    print("status_code : ", response.status_code)
     if MODE_SANS_ECHEC :
         return None
     else :
-        print(part_num)
+        print("part_num :", part_num)
+        print("url :", url)
         assert False
 
 def get_color_infos(color_id:int) -> dict :
