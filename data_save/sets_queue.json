@@ -1420,14 +1420,144 @@
         "lien_amazon" : "https://www.amazon.fr/Lego-75180-L%C3%89vasion-des-Rathtar/dp/B06VV6Z43K/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RGNS8N8EBJRU&dib=eyJ2IjoiMSJ9.yE-_DmSZs2dR5zCxG8Iq5nBLBemKt466qXeS_4GRHTjoFSEUrbWQYRuy5t1g_Wct2cpGyyp3QQ76xtwqZEEOc-Q7F4CXYK3YZJE9i6H0vocw_iXxU8JIP8WUvOdwTN_PR1SYtv4HTGelPd6cBI3yNzuORvhiD7gxhbbsnbt7tkcfoJqVt1eeIG6sX2Hpa1zAb3Ay_wB6j-2Iyl0wt-nnaettm1sgiOOF4xtlOR5uWVrFGWl2lEag_QVEgsPgGIPsdcrPGPTObLcQn8rgKnprK_sXExjBUUhd9BzyGb6SEZU.-0Hw5RI2lBiqjdjZinr-pi3Qo-v08MINWbKzBsja9AY&dib_tag=se&keywords=lego+star+wars+75180&qid=1757411425&sprefix=lego+star+wars+75180%2Caps%2C100&sr=8-1"
     },
     {
-        "id_set" : ,
-        "nom_anglais" : "",
-        "nom_français" : "",
-        "gamme" : "sw",
+        "id_set" : 75185,
+        "nom_anglais" : "Tracker I",
+        "nom_français" : "Le Tracker I",
+        "gamme" : "sw-as",
         "annee" : 2017,
-        "nb_pieces" : ,
-        "tranche_age" : "",
+        "nb_pieces" : 557,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Tracker-Construction/dp/B06W55DYCF/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=31T9H5PJDGI02&dib=eyJ2IjoiMSJ9._K0koO9lhic1mFB8hnt9KGCGGbWNJB2AZez7hNTdxovoFSEUrbWQYRuy5t1g_WctnK0q1b9TlC8pfIPasQIPSPo2aESwbjX-C-jDYjcxzEM5EMvCxizpEz-1WHXnRDK7mKG69Is2vogWr4k69qdsWcaFrATYkFOWEEz5Yr65shrv6bc46EcB6QwPcl7Zm9mBpBZ5KBM9skcYVQvxMQ6StfqEsZNZG8Wx2WWbo12BwfdzE_YbgQVl6mNHEYKKuEPf4t9QlZZmoLT2qpVit7MJ9VLSdDVRQEWdMjFdseQG1JY.NAMLzLX4FqqhsWXfjflLTFehItXLcvlxEGzvCG5GgJg&dib_tag=se&keywords=lego+star+wars+75185&qid=1757421987&sprefix=lego+star+wars+75185%2Caps%2C60&sr=8-1"
+    },
+    {
+        "id_set" : 75186,
+        "nom_anglais" : "The Arrowhead",
+        "nom_français" : "L'Arrowhead",
+        "gamme" : "sw-as",
+        "annee" : 2017,
+        "nb_pieces" : 775,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Arrowhead-Construction/dp/B06WRRJ871/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1VOAHL0SPNFL6&dib=eyJ2IjoiMSJ9.grR04nO5OCv22Fr8PwkwHvTvOx4XrkDHTo8Zaszznn8sFyVznYjdTS3a_zuJy1du_vuIzRz3QSOwU_6ZRdoMcEUkt0gVjR1Pv1uIpEKsRiea8ntbGfHavsyBpjcfylY-DTj_jwsukZ5cCvndE8tojIqXY3P_AAueRFCMDQ0my3yFVm3fg69O8Kpvmyfu4aLQmrisU8lfB4cFZKGR9IzUlHVa9mqTmcIizBQ2ZQ_b24n98N-KN3Wk0428m2LGFJhN8SrZnnAZblEcvMsPT52hoLewB7MbRyKK2WJ0vhokCzE._oXs3QNMTetFmQdD5hwjnYtr6wWuGr_ggdhkuSTJPGM&dib_tag=se&keywords=lego+star+wars+75186&qid=1757422131&sprefix=lego+star+wars+75186%2Caps%2C103&sr=8-1"
+    },
+    {
+        "id_set" : 75187,
+        "nom_anglais" : "BB-8",
+        "nom_français" : "BB-8",
+        "gamme" : "sw-bf",
+        "annee" : 2017,
+        "nb_pieces" : 1106,
+        "tranche_age" : "10-16",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-75187-Construction/dp/B06VVPJ3B4/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=BTHLUA69TL7M&dib=eyJ2IjoiMSJ9.5vIojlqWBFoMKx3fjG7nmp8xpTjdUVsDYV_ckyVKmIFKzQZzh4Vf1R6uFBxziaGuZ7fXRSSr6455yE1b-s31dKCWbIBN9xTbklqrrOjq6xhkaFdeml4yoT7zZ6XKJ2FBULQY5kHojf5iWECTcfNson8czXTf9GauTNbr_85do6PoWCJRLEzfZVJHHdlc9V_fPLykwgyrScZR4fZKHE3WPAQKUKT5WarnaBhWucQodtBtcKXL1hu7kLJLXMf_1jTE5oP4RDlSaQtEhLZopt6l-9owpVBgGgcH2HxCqibV8Cs.5PNJtIX3P8FYKtQTUdb8F5Sjcm7BUsGBWKU7lZYDZ4k&dib_tag=se&keywords=lego+star+wars+75187&qid=1757422228&sprefix=lego+star+wars+75187%2Caps%2C87&sr=8-1"
+    },
+    {
+        "id_set" : 75188,
+        "nom_anglais" : "Resistance Bomber",
+        "nom_français" : "Bombardier de la Résistance",
+        "gamme" : "sw-post",
+        "annee" : 2017,
+        "nb_pieces" : 780,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Resistance-Construction/dp/B06W2KC4J5/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=32GY91BL2R5P5&dib=eyJ2IjoiMSJ9.8xDOflru5XE3G2YpBS7yR9IRwhhEVG0C7kS-S7HMXqxRb_pJLUS41qw_rsGkkw1zZ7fXRSSr6455yE1b-s31dBZ7UaeNZm-3944pZ4wJoxGpYKc6hKSBvCEWllwzfUe44r-Wi04FbefvrT6Gzaf0wqzAbghT2lNS4S0vWdzxSfQ3bDFjI33YzjevkOf3N5ozCEJJNmxG_rHueitygySdGljZdMachJ2a0qgEMxLb-9kHhJDHi0Zo2PaYjmWlGVhzpo7hpq0Ba8D4hP-MwbIAuc4Ywjd2PG-OKoeB5fxWWzw.clURP6AN10jkgDyqq84jIFcyvrRYGErOhZxKS0YRHx4&dib_tag=se&keywords=lego+star+wars+75188&qid=1757422317&sprefix=lego+star+wars+75188%2Caps%2C82&sr=8-1"
+    },
+    {
+        "id_set" : 75189,
+        "nom_anglais" : "First Order Heavy Assault Walker",
+        "nom_français" : "Marcheur Lourd d'Assaut du Premier Ordre",
+        "gamme" : "sw-post",
+        "annee" : 2017,
+        "nb_pieces" : 1376,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Assault-Construction/dp/B06X3V32T9/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1RW9ERMDEU8RR&dib=eyJ2IjoiMSJ9.wsn4wdDzwgCaYghkhWUukpFkFP0lCk396VH6wn4SlXemrC_L7nZs-RVjQ6s0JaePAL9884qofKnfxCnCpt-16a2XJ8Fr5a1Dd000_2WJuKCfr2JPUksdRs0HCIORG1Q4UTEpcfEMyuh3P9laPQkEAbL3I-gSVuzD3bVEmFtY3J8rcozEIWQzHc3mcGuo3_KyKDatMFlKEA20GU6-0CKq38uxLE0Y-hZ2t4TPAH-i8objdNPAcT6_bzwv82ImFPLhfiitDCSQg1r36LsDklaThgiyv8hCAE_iTtvaQEC9N3o.6yV1qBWKFgAXL-4fThAcXd_YphxzENETkYYBwGeabOQ&dib_tag=se&keywords=lego+star+wars+75189&qid=1757422392&sprefix=lego+star+wars+75189%2Caps%2C83&sr=8-1"
+    },
+    {
+        "id_set" : 75190,
+        "nom_anglais" : "First Order Star Destroyer",
+        "nom_français" : "Destroyeur Stellaire du Premier Ordre",
+        "gamme" : "sw-post",
+        "annee" : 2017,
+        "nb_pieces" : 1416,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Destroyer-Construction/dp/B06WP5BS19/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3SLFIA490IAW1&dib=eyJ2IjoiMSJ9.AMXLG-ya0dQ984OKvwEmgVPyN7HZKjYjIKEp3OLW7eqkcJCNyPP6FbeA3VZAp8gVkhc_XPz4VUBmFIeyK6bVFNj2kM5gyatl59yJlwGbX7xQLqaQW3y1ilt6yT29aNJjmfFO05PmPBFoKWFIpH6jtDioG5vV7Tmu7E4my-QqJpn4uci3Xba-NkSIgNTC3_Rwz-NxKdkd1fyMpaHU2odu_Bzh2SK_iauJl19T0tkBeTRt7erZE7gtXnkft24KwKHHbRv61no2K1bAJr3DTSP83--pdREx9EXOtKAvs_rjQGw.1T6Yz8_8FgpYsAo4cytz_0_1axyRNg-JONCUq77z2eU&dib_tag=se&keywords=lego+star+wars+75190&qid=1757422495&sprefix=lego+star+wars+75190%2Caps%2C99&sr=8-1"
+    },
+    {
+        "id_set" : 75523,
+        "nom_anglais" : "Scarif Stormtrooper",
+        "nom_français" : "Stormtrooper de Scarif",
+        "gamme" : "sw-bf",
+        "annee" : 2017,
+        "nb_pieces" : 89,
+        "tranche_age" : "7-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-75523-Construction-Scarif-Stormtrooper/dp/B01J41KZDM/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3CJBZV496CQBI&dib=eyJ2IjoiMSJ9.vPjcdITLKFATUheNGXTWRiMCPtrA8TIHQtPph4sxEzZJcA_N0JRoYvVIEWt20MZdsLFz4I9jw5NTOnzymbE3YY6lAMhwUd3qo-xHha3vWx3bIppWEeURgIiirbeAxqtJ5FbwGcoUj3PhBXOEQQ0cVPAFhpZrFCkSRTgogU0iRqfN4hXbqJecn9ME21cOfhvLAjOq_is7pYiYD0IPNvAlbtk5oe6em0jr0MNm-DJEwvaNlwke_u_utKIhh5YoOY85.FHvdRnL4LB5-MoVi40C47YbIIp_Nuyu_s0Ml4poXvT0&dib_tag=se&keywords=lego+star+wars+75523&qid=1757422644&sprefix=lego+star+wars+75523%2Caps%2C81&sr=8-1"
+    },
+    {
+        "id_set" : 75524,
+        "nom_anglais" : "Chirrut Îmwe",
+        "nom_français" : "Chirrut Îmwe",
+        "gamme" : "sw-bf",
+        "annee" : 2017,
+        "nb_pieces" : 87,
+        "tranche_age" : "8-14",
         "lien_amazon" : ""
+    },
+    {
+        "id_set" : 75525,
+        "nom_anglais" : "Baze Malbus",
+        "nom_français" : "Baze Malbus",
+        "gamme" : "sw-bf",
+        "annee" : 2017,
+        "nb_pieces" : 148,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75525-Star-Construction-Malbus/dp/B01J41KZJ6/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=Q9L7TXK37ZHK&dib=eyJ2IjoiMSJ9.N8ezKZ0_p85LkpZxJfBlw_7s3QXugJZUs_suwgT-fDt-D5saEXFh8XqcgQoElA9_HQt00QeyZYyQq8lROnDgvimDYfe0z3H_rqNAulqpFuWJBS8zJROx_6aUe9tBlng2AlAuSvK5cEWcCHOElsuPft2Ue_BZ1J_NfdEQM9X0wCQaKgzO-oGXXM6-lYiASvFAo6yeswvQE7SFTkVbXd5uDCYKL8LI2WSeRtm6M5qREfLBbWBMnJfzxQ9Slr39SroW9T21Yy0F6pDaP_ev24uj1u-tid7r98rmTdKPbphEvlo.msDrD6bplEK8cLkoUC0uTy44k45RvWiEerwxB86I8sY&dib_tag=se&keywords=lego+star+wars+75525&qid=1757423001&sprefix=lego+star+wars+75525%2Caps%2C126&sr=8-1"
+    },
+    {
+        "id_set" : 75526,
+        "nom_anglais" : "Elite TIE Fighter Pilot",
+        "nom_français" : "Pilote de Chasseur TIE d'Élite",
+        "gamme" : "sw-bf",
+        "annee" : 2017,
+        "nb_pieces" : 94,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Fighter-Construction/dp/B06WD3SJPX/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=122VPXUYPC80I&dib=eyJ2IjoiMSJ9.dABZkesTi5GR3fwF6Kxba306FEw67kPKt-OCbOmiFMdDpAbkvLb_PSqbF5MIcOgzrHss35SCSOq99co80xsoFRJ231dQty8PIoMkCrRL6UGkmoaEF9O1Q1sXFIKBC2tJK40EwCRX5M-2uzO2ABPhq6-cgIiGCgf6nn_zMOGPTG-z-FdhQ0g_mX0dUBb1gUdlYLEMdBzBgGPl_8Ut-0p6YPTf_4zDk7iC0QI-aAJJMbQ5CPfK3Q2o0LOa8TK-Uko2OyrWl5MfxieaUVxy7_kjLtBOzAp7iW-pg3XNWH7ODZI.hRcIH7EH5rxtdpRhzHbotQNNZNTFAtqaSEnWS8vSNFY&dib_tag=se&keywords=lego+star+wars+75526&qid=1757423080&sprefix=lego+star+wars+75526%2Caps%2C75&sr=8-1"
+    },
+    {
+        "id_set" : 75528,
+        "nom_anglais" : "Rey",
+        "nom_français" : "Rey",
+        "gamme" : "sw-bf",
+        "annee" : 2017,
+        "nb_pieces" : 85,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-75528-Construction/dp/B06WLL3M8Z/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=SMMYS8MYD8YK&dib=eyJ2IjoiMSJ9.AbcmLrVC9ut9sQR1fhJyQm0If0ZJ5GZA6ChOz368Pnmxrfbf-9PpswvJS82TfIlkz7PHcHv3JMDKhrQcnLvH2Ad9CIgCberJFbjaxYACk8JWQidT4EpdW5ui0UbhgPQoEsHFb__Gf54nPHhWumXuy1hfGOa-GT1qQTcTjzVR9HwE_wQb2uRg9pikYnI3Ij4dP0kAB8MHkciq34o9OLTWszDrwQn5FA4oFleJFCW_YpI.wycsxvj-M60a-LNXX2ZtFgk8rjfHQ7GM0aZtoVU-LDA&dib_tag=se&keywords=lego+star+wars+75528&qid=1757423129&sprefix=lego+star+wars+75528%2Caps%2C48&sr=8-1"
+    },
+    {
+        "id_set" : 75529,
+        "nom_anglais" : "Elite Praetorian Guard",
+        "nom_français" : "Garde Prétorien d'Élite",
+        "gamme" : "sw-bf",
+        "annee" : 2017,
+        "nb_pieces" : 92,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Praetorian-Construction/dp/B06VV6Z43M/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1E0VWTQ044DAW&dib=eyJ2IjoiMSJ9.HOzDeYmCzMbGElr2VLzvidsktLIGz6aB88kzMMVw4Y6_P4y2cZeBFQ4DfZz2xhx6kbYCr2tyWRIw7ntg1PmPRL_CYN2xx2hn9VDtj4uQaP37wrt9GpAAjgkYgDPh8jm0WchmqISpeoU9ve9zxCIY2A.8XJp-KmIgYek3_eY87Qg2Jg7P867H3A_Uqukel3KpYA&dib_tag=se&keywords=lego+star+wars+75529&qid=1757423184&sprefix=lego+star+wars+75529%2Caps%2C70&sr=8-1"
+    },
+    {
+        "id_set" : 75530,
+        "nom_anglais" : "Chewbacca",
+        "nom_français" : "Chewbacca",
+        "gamme" : "sw-bf",
+        "annee" : 2017,
+        "nb_pieces" : 179,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Chewbacca-Construction/dp/B06W2KC5GC/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=AWJLFZJHEGFZ&dib=eyJ2IjoiMSJ9.iRXBwnn5jvuIIi9oZc-jGdodwZLOYaCLIJ6vFkowkFwuDEtBnBAVt26HmgZSN948b2cs3uiMPMXbF9ctoUadyp278rQzL2DPpqhWewwSN9mHwrITaZ6BhHtWWlevtwmfc_6hBSyl7VXHpT5q8wQQlrnjtGR3al4UsVR28CVS6iPNpamGgBxJrZGWGu8MoWr-gp5IpGAICiqjzv-Ct9wlWSCPbUz99k3oLqzWLSWsmLtztAS4ucaVQQC3a7IIx8T4FR15r-t7Wr0Da35QcZzOINpCXkR6TrXjxdtoYL_v_D0.60-qHXO0phiT8xtp5nKOWTJerHpdg5cql114MYjl2sY&dib_tag=se&keywords=lego+star+wars+75530&qid=1757423234&sprefix=lego+star+wars+75530%2Caps%2C58&sr=8-1"
+    },
+    {
+        "id_set" : 75531,
+        "nom_anglais" : "Stormtrooper Commander",
+        "nom_français" : "Commandant Stormtrooper",
+        "gamme" : "sw-bf",
+        "annee" : 2017,
+        "nb_pieces" : 100,
+        "tranche_age" : "7-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Stormtrooper-Construction/dp/B06X3RZDNH/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1JWO2TV8MTBDG&dib=eyJ2IjoiMSJ9.tCu6f4_tk-vFE_dI1KBZVEVIiHDHFD3QezUl6EEHISXxoVG8bJzGRuxp8aa8ZhEeRAesqn2TFUKIgx6OIifRqLr6eq_1g9wbg3RIntxFx_peje9zPVF849OA7kJCIqVHHsU2r3RDMg4R_xWcHq4U4A.IMbzT_3H3P5vwS56GYe7W1SN7W3QietfWPoLw3cxmVU&dib_tag=se&keywords=lego+star+wars+75531&qid=1757423335&sprefix=lego+star+wars+75531%2Caps%2C66&sr=8-1"
     },
     {
         "id_set" : ,
