@@ -570,11 +570,861 @@
         "lien_amazon" : ""
     },
     {
+        "id_set" : 30383,
+        "nom_anglais" : "Naboo Starfighter",
+        "nom_français" : "Chasseur Stellaire Noubien",
+        "gamme" : "sw-poly",
+        "annee" : 2019,
+        "nb_pieces" : 48,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Polybag-30383-Naboo-Starfighter/dp/B07Q5VJMKR/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3874P8A2ZLD6D&dib=eyJ2IjoiMSJ9.Ly_igKMXhjyQtRJSzcO_sjz9_0b8TaC82yZ2vj4ouKmQ1IbK1OVHDZgc5n7gEUuP2Teeapmp81lT4OvAknnCpia2uwBu75PadwrI_fPOfaCkmoaEF9O1Q1sXFIKBC2tJex0f0bfbEABV_Yi_377NoLAVJA1z7tKfUuXmYlX8TpHQ49Z4_AurMDImZKv_-oj87XpbWeXLWkypGSh-i6l6SevTyeqEEGUcor4kFNAYtp7YtpKaD5v0cPazgSstICa7ZvCtzpBKb48yJ4BnzuuoNPnP7d0hAkVzTHix-fM-YyE.GTd8fqufEhFQl4f93-dF73wVCKvonAwBJARrF6s0mH0&dib_tag=se&keywords=lego+star+wars+30383&qid=1757325730&sprefix=lego+star+wars+30383%2Caps%2C52&sr=8-1"
+    },
+    {
+        "id_set" : 30384,
+        "nom_anglais" : "Snowspeeder",
+        "nom_français" : "Snowspeeder",
+        "gamme" : "sw-poly",
+        "annee" : 2019,
+        "nb_pieces" : 49,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Snowspeeder-Polybag-30384/dp/B0096CLCM8/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2ORZBEGK7WXU7&dib=eyJ2IjoiMSJ9.GTHqMH8uDc2r3yo0UN2PlpLNYFaz4vKqz1J3jidtdobPLgwpfCp9oWjJDtR6WkvhgwZVygWdQmHm9ygHm2Q_6UR9pw4Dr1mG9pMmr3j9IjsEzkQtD3x-GRlzZkgWLAn67WupFw4fSii3GB_RaEdNGfApel2pHHxZr8rHIh7LGMmuOxEuJmu8pJU5hzpJ8n3ghtPR7TY96-zw8jMncEy-TYfTGP-44uCgw3_NrEEQn-CvNmdDNpn3pZq7sKWFCPy1EDuLhsyOdn-vXpbMJ_YyvtowpVBgGgcH2HxCqibV8Cs.wpwiREnYjauThWkJZD7GwE_fBxdSTqn3tsFM1RmYH2g&dib_tag=se&keywords=lego+star+wars+30384&qid=1757326280&sprefix=lego+star+wars+30384%2Caps%2C258&sr=8-1"
+    },
+    {
+        "id_set" : 30461,
+        "nom_anglais" : "Podracer",
+        "nom_français" : "Module de Course",
+        "gamme" : "sw-poly",
+        "annee" : 2019,
+        "nb_pieces" : 58,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-30461-Podracer-Polybag/dp/B07Q4R42GS/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=CQUNANOHMVH6&dib=eyJ2IjoiMSJ9.NlMJ7NCo33og9Rbt0w6303AMmQKDG-g237KElwq08X0VKIny-ySFANW5EpLvguNlT2GS64G8H4mBmNrUjfbVYlNELCv5Cn5mxgMxUtrypqvnoPg_ilpm9iSNU_C3fsjB2r6cfJh6P0roaePWRtAOuTCmvFdKRLI6017gd7YKPzYp3VIiVaPKQgIf_n9ETAglKzM2bqw2_V7FBwEctvac9xtFk7Z4E_We5RsLSz5L5OmUMn8j_UfraqOSu0kMTIGeeg83pdkLfcaxzG2GRwLOLT1Z8CKl6jVlh7AGDEXuCmU.VHOUOi6SQSitZA89tzPpwugRY51oq7OcTjdMMewkbrc&dib_tag=se&keywords=lego+star+wars+30461&qid=1757326324&sprefix=lego+star+wars+30461%2Caps%2C49&sr=8-1"
+    },
+    {
+        "id_set" : 30624,
+        "nom_anglais" : "Obi-Wan Kenobi - Collectible Minifigure",
+        "nom_français" : "Obi-Wan Kenobi - Minifigurine à Collectionner",
+        "gamme" : "sw-poly",
+        "annee" : 2019,
+        "nb_pieces" : 12,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-OBI-WAN-Kenobi-Minifigure-Polybag/dp/B082FR1FGD/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=327Y55AHSBCU9&dib=eyJ2IjoiMSJ9.GwtQwD_5B7QQIHPIUOsdJ5QKNkM4uxyt9HJTnIYyIAsSCszxE2zxqIvrJeyjSxvK2cpGyyp3QQ76xtwqZEEOcxATylWnH3rfthucx4hey0QlOSUQYxJ0TuSNTws9kgSXv7WH2nYv_FU5Uvrbr9aBHK0W5qtErW5l7c5otHg9-3umVb27MaATIgwj_sjAjttax-0lf7DdFxQE-UZdhGDjEl-UvnbhUFfNRcxSTY6RAp_7cABpCNhFh0iSNU4Tn8pilKEMZBEa0UOT0CYpSclExgbLKctEz8j5GnQCDj6B-5I.kBYprk33pJ-cxtnaTocWJtAC0XRIgnZ_jFPU1j9-Jdk&dib_tag=se&keywords=lego+star+wars+30624&qid=1757326418&sprefix=lego+star+wars+30624%2Caps%2C99&sr=8-1"
+    },
+    {
+        "id_set" : 40333,
+        "nom_anglais" : "Battle of Hoth - 20th Anniversary Edition",
+        "nom_français" : "La Bataille de Hoth - Édition 20ème Anniversaire",
+        "gamme" : "sw-dc",
+        "annee" : 2019,
+        "nb_pieces" : 195,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-40333-Battle-Anniversary-Limited/dp/B07RPYRJR6/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1K8IIY4ZW7UVW&dib=eyJ2IjoiMSJ9.VghRhX4_qBbQYr6OkMeVSiubXQhk-zDZk0akMGOtreXoFSEUrbWQYRuy5t1g_WctxBwfne0QXRRr0dFsWeICPTDE2UJUH_CHVblARNNwZjCQ8BO2uyTcUXDe7cacfrOJZ-B2UgrQT0T0e3tzjIOpXReEpIragJEfJLc8JqXtMZy7ECGhT2PIX19H_ENkYtVFIrPQ8bAc0xhaDku3nkBjkHf7ibfsQ2M5e57VeEadYgc5CPfK3Q2o0LOa8TK-Uko2DDFaM3XtS-nr1DhFQSUdJFwIqk054dryPymDvDCb1M0.PgPZSWBNrROXlv73H1U75_BPbDmoqgAo9SfUbd4ABos&dib_tag=se&keywords=lego+star+wars+40333&qid=1757326559&sprefix=lego+star+wars+40333%2Caps%2C96&sr=8-1"
+    },
+    {
+        "id_set" : 40362,
+        "nom_anglais" : "Battle of Endor - 20th Anniversary Edition",
+        "nom_français" : "La Bataille d'Endor - Édition 20ème Anniversaire",
+        "gamme" : "sw-dc",
+        "annee" : 2019,
+        "nb_pieces" : 197,
+        "tranche_age" : "8+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Bataille-dEndor-Micro-construction/dp/B07YNV99ZJ/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3654IJ72QZT9U&dib=eyJ2IjoiMSJ9.03tpWPfc7KoX5BWb8RBusHAMmQKDG-g237KElwq08X0vcUpefcICitTZwgoClnDnn-vQ7IcLdtJZpnQP1HzPqpGefZNsWzDMfasWrrjG4F7hFAhs5MJ2eEm9KSNU6NtH0uj5x1VfeK5xSZIQroLL4UEB7jgLePaKutwlj_o-umWHpp233Z3ZUC7miPcRKdNz3_GOb2j3PW4ERYxy_xAVGi98RL8hg_tB_yFinOlQP7QkDD3_U1z_LBESZCXFhoUV4x7qjwTKIasOYUGKMP8PPgAurLdZN-Mo8FJbEYaSS5I.X4Ssvpmqbs8ig-P9vf8pHMbYqlgF7unPaSI1qy54f7w&dib_tag=se&keywords=lego+star+wars+40362&qid=1757326646&sprefix=lego+star+wars+40362%2Caps%2C82&sr=8-1"
+    },
+    {
+        "id_set" : 75188,
+        "nom_anglais" : "Resistance Bomber",
+        "nom_français" : "Bombardier de la Résistance",
+        "gamme" : "sw-post",
+        "annee" : 2019,
+        "nb_pieces" : 780,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Resistance-Construction/dp/B06W2KC4J5/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3GII2N2KSXVIO&dib=eyJ2IjoiMSJ9.8xDOflru5XE3G2YpBS7yR9IRwhhEVG0C7kS-S7HMXqymrC_L7nZs-RVjQ6s0JaePmhEs1cUqO-G79H2glxbZmBLaLy_b2rRye0qpQz4zZYXi13HCmHMN2CQBUVpNZvhMmJr3bRVBpO7yZeXH9PBR29UIPnWJQAI128ro3rIAVZi4e3hcx1oZg6hCcQKL_-ihPbJ8CMZajNZkygqNMFIygczLUuoVh6-0zTCzawXT4c4G7vTVPsRIwixKZgiqbzXP3NuCbHMWT-6X8e3_T-muys3SBqKUSijuxNH_LcNTrBA.rboYEW4v272N_VlCsef0SECjj_IOTZa_0mBaz3rQGMo&dib_tag=se&keywords=lego+star+wars+75188&qid=1757326724&sprefix=lego+star+wars+75188%2Caps%2C81&sr=8-1"
+    },
+    {
+        "id_set" : 75223,
+        "nom_anglais" : "Naboo Starfighter Microfighter",
+        "nom_français" : "Microfighter de Chasseur Stellaire Noubien",
+        "gamme" : "sw-mf",
+        "annee" : 2019,
+        "nb_pieces" : 62,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Microvaisseau-construction/dp/B07FP2KPXQ/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2Z5EFVJU6KWYY&dib=eyJ2IjoiMSJ9.3AMv1CqWa1U1FmWErd03ixhB8CHvmJuczUWxldKqRUHifLd8aNieFgQQqhZhRxxc_Wf8wiNffaHPCKEhK7o0dtj2kM5gyatl59yJlwGbX7xILOYfnK4sna4D4myIBedQpxKOyqCm7QlqkZgWSJMrdDwlHWdd0Yyne3-A21nh4metZ4CS6o7Q_hY95qBdbCi98g3eY-yCO89uWzxdRPTzG5-HVR7uADJZgcJP_Qalx4iNqj3q6jcWoSQVlw8kNs4kh0ALdy9GDCo44szE_TCmu_1qWGCKQ5OM9U4GulJ0mxo.OLYkZb2Ah9H5zpbuX026R9PLbSDNxHJAmhr84mdVAQc&dib_tag=se&keywords=lego+star+wars+75223&qid=1757326786&sprefix=lego+star+wars+75223%2Caps%2C66&sr=8-1"
+    },
+    {
+        "id_set" : 75224,
+        "nom_anglais" : "Sith Infiltrator Microfighter",
+        "nom_français" : "Microfighter de l'Infiltrateur Sith",
+        "gamme" : "sw-mf",
+        "annee" : 2019,
+        "nb_pieces" : 92,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Microvaisseau-construction/dp/B07FP2KS43/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1XLX4NH1MV88L&dib=eyJ2IjoiMSJ9.XkrDJqWqtvji8M-N-XnbyAHRKSigqzVa5_eT2J4W8ur2j6OpKCRaTZ1yjLnP2328rHss35SCSOq99co80xsoFTvRgu_JU7UgvUDlCoZZ_9FjsksZ3eUf6vWe1RGefYRZGBaUegzdSXei6YrptvhWd-n269r6bPceDWzaTEnSNX4w3li5pCLRgSsAUvHpQY09z492-pi34iC7_t4w8znKvbmiar4KlhG-63BtN04olV6vS62YLO9n0KFOaciY9ruZ7CvFJZ9oqGSl0j6eQBuhnqJFW2Nx5iPCAWjbZMCT6oE.IyvU9tMPq6dXxv75eBYGj5IkksPGXuujA-WT6GLqsaI&dib_tag=se&keywords=lego+star+wars+75224&qid=1757326883&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75224%2Caps%2C93&sr=8-1"
+    },
+    {
+        "id_set" : 75225,
+        "nom_anglais" : "Elite Praetorian Guard Battle Pack",
+        "nom_français" : "Pack de Combat des Gardes Prétoriens d'Élite",
+        "gamme" : "sw-post",
+        "annee" : 2019,
+        "nb_pieces" : 109,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Pr%C3%A9torienne-construction/dp/B07FNMXFPQ/ref=sr_1_7?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=177NMATA89LRF&dib=eyJ2IjoiMSJ9.0FPv2O-fQtLqrDQKVFCOmO7r_6f3xdQDiALd16AOo7oyfo5K1gVqEoVUX0mickCxUU6jirSrEmIXvF_7QgHxCcaQQw8G-4OrQvY5SVFMKIqsvBEbmfit-K6jo8e9tJX5uQ55FaTsB6rVGpsW-CRAWbAVJA1z7tKfUuXmYlX8TpHQ49Z4_AurMDImZKv_-oj8VXVUFjcTOhETrev3IDp3rAfD7li_3S9aCH5QpCWDOB0nIMREUdAOee208NAhMn3DC5N9EWnaEFiT5wx8RJ0_QfsXExjBUUhd9BzyGb6SEZU.ouqyyAKfNixELuDLP6a9oKfvdav48qnmbaTftGqCxb8&dib_tag=se&keywords=lego+star+wars+75225&qid=1757326949&sprefix=lego+star+wars+75225%2Caps%2C60&sr=8-7"
+    },
+    {
+        "id_set" : 75226,
+        "nom_anglais" : "Inferno Squad Battle Pack",
+        "nom_français" : "Pack de Combat de l'Escouade Infernale",
+        "gamme" : "sw-as",
+        "annee" : 2019,
+        "nb_pieces" : 118,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-lEscouade-construction/dp/B07FP6QRDJ/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3OCDLRYRZVCBN&dib=eyJ2IjoiMSJ9._RPGI2iCgzUeO1FXMWv7rZCWuq1jIjE6g8tW_vyJnc3Htnzue_TYlH8W5egKpXJwTyyEY1JTzNlYeY-IZUlDHVMj4Ta9j5f4TmFABHeIeB_M6HxZe21-Rj3YZalcwWwDcFc-pqD5kR99obegOJgMzXogFiAD6JyVB_1vSAfmcF7K0OaAyTy21odgLCQiROnuNfzZj6rc8rkDIZ50g5_AgY9eL6vxw3LIkJOMnKNy8DxGib0J21XkwlvksDCKIx6_UZGkCkuOuYrltyMToUe-w1LIo-I7gSPbBRFIV2kDH-s.yavSJ8lI4nUTQaECt5llMX7nJwwwfVrOVQ9tZZWhCrI&dib_tag=se&keywords=lego+star+wars+75226&qid=1757327088&sprefix=lego+star+wars+75226%2Caps%2C120&sr=8-1"
+    },
+    {
+        "id_set" : 75227,
+        "nom_anglais" : "Dath Vader Bust",
+        "nom_français" : "Buste de Dark Vador",
+        "gamme" : "sw-to",
+        "annee" : 2019,
+        "nb_pieces" : 327,
+        "tranche_age" : "14+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Darth-Vader-Celebration-Exclusive/dp/B07QZHP92B/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=69QD1F1L6AET&dib=eyJ2IjoiMSJ9.qJbSRN89UPtvRp-d4XDmrZV2GZLGanWcCDUp7bugpTN_hY0KD9ubt9FlhJ-7mFUPONGUp8PhlOnU7b0QhpDHZUpazUDWlkZ9O9dG6b04qmbi13HCmHMN2CQBUVpNZvhMykoVePZF0-5HVe85DTjNmvmdmkup0oFQ7SIXToszOCbQSTNAkifAYLetSfeG2GtdTnKOCYBUcI0pdIQ3T_b7bgIb5gP1qCos8r5s0I1bIJgDQVmRANsxx4QtNia1o19Z2EGpv9qViHVEKCji_NpKqjhOmqS8WKcy4pG6GtXRv5A.uY89m5yMoiuJmAPosTb2tWT0w0LxliP66evwBwwEIH0&dib_tag=se&keywords=lego+star+wars+75227&qid=1757327193&sprefix=lego+star+wars+75227%2Caps%2C84&sr=8-2"
+    },
+    {
+        "id_set" : 75228,
+        "nom_anglais" : "Escape Pod vs. Dewback Microfighters",
+        "nom_français" : "Microfighters Capsule de Sauvetage contre Dewback",
+        "gamme" : "sw-mf",
+        "annee" : 2019,
+        "nb_pieces" : 177,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Microfighter-construction/dp/B07FP1X893/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=EC9P0D3X52GB&dib=eyJ2IjoiMSJ9.p-GIv022_6CRQDaYHwuWXpsALhD1Di8OOdESvbGUvHqDbRoxozHodVuJchj2whak2POPbGtUEgRub_-air71BF7RD2Bh5CMRuWy_McGO_60w_iXxU8JIP8WUvOdwTN_PR1SYtv4HTGelPd6cBI3yN590dzL79z_RXB7sd1XR6auTlGGVlDoqZThDGnTOhD50Lykdy2ajHkrnUQ7c2ssFlktyfeqYj7O2dvRBuCfxCxk1KS_ShssiGyu27TrhbtgGhxC26HCHazSdFvTSCXOcCVLSdDVRQEWdMjFdseQG1JY.aFOejNfAiRmcZgM5daOTCB6rvpRVZM6_kX7u6Adto0g&dib_tag=se&keywords=lego+star+wars+75228&qid=1757327290&sprefix=lego+star+wars+75228%2Caps%2C90&sr=8-1"
+    },
+    {
+        "id_set" : 75229,
+        "nom_anglais" : "Death Star Escape",
+        "nom_français" : "Évasion de l'Étoile Noire",
+        "gamme" : "sw-to",
+        "annee" : 2019,
+        "nb_pieces" : 329,
+        "tranche_age" : "7+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-L%C3%A9vasion-construction/dp/B07FP6ZWNC/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1V15HY9WAV16O&dib=eyJ2IjoiMSJ9.DqdIaxzdXldmKtnVLArgo0y3T-qVRlv2VrmUXre7C0QSCszxE2zxqIvrJeyjSxvKYm9hMk6gbcXNG_ydjEbG3rCiPJJGtB5Fug6f9E2UG3Uo4mt07i8nAMqdT3eMVxtTxFOokAQw82_0BtEt8PnI0Txe5LlJ8lJqi1KFZa4xioKAWpSKT64cxx9ItHicHmec2LvoD_8jPaZxG1JyzftDbvNUKuo8FuWBbEhHTHY9zCmidswlp-9IMssKIXnck9-vLwWK6onJVrY7kMH0WZ4Syj1Z8CKl6jVlh7AGDEXuCmU.78yP_YEp4r6MTuUPECMS5zC6AQliZ2JVQ4v2xAjii5c&dib_tag=se&keywords=lego+star+wars+75229&qid=1757327380&sprefix=lego+star+wars+75229%2Caps%2C90&sr=8-1"
+    },
+    {
+        "id_set" : 75236,
+        "nom_anglais" : "Duel on Starkiller Base",
+        "nom_français" : "Duel sur la Base Starkiller",
+        "gamme" : "sw-post",
+        "annee" : 2019,
+        "nb_pieces" : 191,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-75236/dp/B07FNSB9H4/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=21BOGH1S1FLWJ&dib=eyJ2IjoiMSJ9.FL9SICYHSAtOL2PHlEkJhvdNw8S_CCvXhIlksbCOLLNluf0h8jncRiSlgAzBt4ZIHIXl7rdlNdESlAwz3Nggjm6D9_u3x1JiXBiVVM-5d0Ka8ntbGfHavsyBpjcfylY-D1xQR6ajSiNPh7mZV3N5x6yzvIev8EMYJjZYGi8dWbPrqUN6YCJ9hnL8SgG6XfTrKpMfZxpntHfHXJPgkmuSZ40Hl-y72oEAvo80CWjO6Mod_P5crsjJmIrRIr0nSQmjiQEtPYkhSGk70mUAD5_XsWLzeFt23qX5TI-_DLmjqZE.ViCVpK3mU2TStBlTFVJ7zOX-ocxcq0ZbqwJtlgyH76k&dib_tag=se&keywords=lego+star+wars+75236&qid=1757327498&sprefix=lego+star+wars+75236%2Caps%2C93&sr=8-1"
+    },
+    {
+        "id_set" : 75240,
+        "nom_anglais" : "Major Vonreg's TIE Fighter",
+        "nom_français" : "Le Chasseur TIE du Major Vonreg",
+        "gamme" : "sw-post",
+        "annee" : 2019,
+        "nb_pieces" : 496,
+        "tranche_age" : "8+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-75240/dp/B07FNSF256/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1B0UPM5JDEFTY&dib=eyJ2IjoiMSJ9.arbTamuOeH-ZI_ofE0V3YJ863i9nqK06w8v_fYaJo47VScK0YMpl989N6sboH7eH_vuIzRz3QSOwU_6ZRdoMcOEn6_1OoUZkXFdKRD3KhUOJO5K6kDotRUXj6uUcYnR8CsHMBKuuTWQ8eFHIznzu5BVtY1tnXiEBOOm_kBNokrp9vJN5B5IUmwQ00F2JnC_FMd7MWmZQNffaomdLI9slwsTrzMWtixJCDXKaouZtF8p4FevUrcUA9Kdtjdv0iXMKyBV28GFIfl2Y28jRTfRoS-wlaMTjPLgEtifjZs5HyF0.8HlfVjAJ23WzMhdwyK8kyEQwwV38_2ZbuxDqWU_6nZ4&dib_tag=se&keywords=lego+star+wars+75240&qid=1757327620&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75240%2Caps%2C97&sr=8-1"
+    },
+    {
+        "id_set" : 75242,
+        "nom_anglais" : "Black Ace TIE Interceptor",
+        "nom_français" : "Intercepteur TIE As Noir",
+        "gamme" : "sw-post",
+        "annee" : 2019,
+        "nb_pieces" : 396,
+        "tranche_age" : "8+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-75242/dp/B07FNTTF4K/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3QTLD067PCOLI&dib=eyJ2IjoiMSJ9.nMqNCK9F-6d1o89VhAchzV_XRAG-hhhIX4YuaGRHt4OiNvyPDt15aUlXOr0nVGO8PSOXh7nSw7gt8jEXOb3KKpiTBqYQek5hHT1UTv90uNoZn6BEpbfQIJQGffWTEcJcro8dyffSrgGXht0LKl1hZPY4y-slCqn9mAe_ISIHL9J1tmQlF1Fn7HsWzQwnWFcemUT6eAVRTvKhtS366E5-ukK_imZunWu4Fi6pOcT-JCyuLv4jN0tNNkF8QkQvTsuqjxexY6qgRnvTPzzAAGQxzO-pdREx9EXOtKAvs_rjQGw.5-QkEsDUIZsYjIoS1s6YDbE-ZlFqY3IgCk019Kug9Xo&dib_tag=se&keywords=lego+star+wars+75242&qid=1757327734&sprefix=lego+star+wars+75242%2Caps%2C91&sr=8-1"
+    },
+    {
+        "id_set" : 75248,
+        "nom_anglais" : "Resistance A-Wing Starfighter",
+        "nom_français" : "Chasseur Stellaire A-Wing de la Résistance",
+        "gamme" : "sw-post",
+        "annee" : 2019,
+        "nb_pieces" : 269,
+        "tranche_age" : "7+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Wing-Starfighter/dp/B07Q2TQ48C/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=36MX45QVNQTEU&dib=eyJ2IjoiMSJ9.q2iGtq7zRMH-mMtyUgPUarfrM8FcPHpO3lgvOeYKmAmmXaio0ORM9rE4NvQZz36jzH4mQQIK0qpYBuUmv0PMM80Rl0nBYYGpZlgITn47i9AZn6BEpbfQIJQGffWTEcJckvn3Ufwd2kaJguV0OyXdTsWP3YyMfmIFS0hcsUge0R8foJqVt1eeIG6sX2Hpa1zAz-NxKdkd1fyMpaHU2odu_HiWgVpRQ3XFwABo6PzEP679WMPBWgCd05Gyx8EwnOdN6xv6mpa2WN1N_c8rgQfDl-iHoU7m7QWlOzTyKgXCZwc.RMatcTKEW1onA6lwCaHTYvGq2FwYndAG5KylpJDGsyQ&dib_tag=se&keywords=lego+star+wars+75248&qid=1757327807&sprefix=lego+star+wars+75248%2Caps%2C72&sr=8-2"
+    },
+    {
+        "id_set" : 75249,
+        "nom_anglais" : "Resistance Y-Wing Starfighter",
+        "nom_français" : "Chasseur Stellaire Y-Wing de la Résistance",
+        "gamme" : "sw-post",
+        "annee" : 2019,
+        "nb_pieces" : 578,
+        "tranche_age" : "8+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Aventure-Multicolore-Taille-Unique/dp/B07ND9TJF7/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=23GM52BGJK1M6&dib=eyJ2IjoiMSJ9.oj02-a5iLwAnnkK1X97gMQ3jpnTsZ7_hK1dcrzw7lpTHtnzue_TYlH8W5egKpXJw4ZvOGcjoeCyQfzFhGjYk4mhVZgSjD9tYcniLEGgBy3JXnBLXUEegM9BL4ylI4wcoAysYG0fvr5R3Ho94HpfqXmstXYPglhxZMYXyNEEvu_iSIqJrYv8o-qdGIfIcc8SVPxCDltDvtUKekDHUFtto3v6oVDedTTa-h-gNMiIke8tCOJSlQ2QR7VdQFuvwEAVesMZHYQygWNnIIpX9tBRCGwD_upT4YE1W7LAjGOgdjrE.yVOZliVZTMOZ7-G9GcJxaF0K5Kqgr2a_ZfX9MqVuMgw&dib_tag=se&keywords=lego+star+wars+75249&qid=1757327905&sprefix=lego+star+wars+75249%2Caps%2C84&sr=8-2"
+    },
+    {
+        "id_set" : 75250,
+        "nom_anglais" : "Pasaana Speeder Chase",
+        "nom_français" : "Poursuite en Speeder sur Pasaana",
+        "gamme" : "sw-post",
+        "annee" : 2019,
+        "nb_pieces" : 373,
+        "tranche_age" : "8+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Course-Poursuite-Speeder-sur-Pasaana/dp/B07ND6C3RK/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=17LNAO9GC9C80&dib=eyJ2IjoiMSJ9.MXOoCXF_PCvYiQ1XftefUDX2LMPu4JhrVgynFarqTR4T6-lmkQ2RDEqmFTm7YP-aAngTnmoUe3iuwktumgvw4IacmReQf4SJ0immiuRUdNJoQq7ggDTGXZvUlvIanyKYW3nckt_oaDhB9L1-Bd5_6_Y4y-slCqn9mAe_ISIHL9JE4h_ajz_1pC9ROdK99c70w5QFc8MClsQzT06sICMNqO9J2oybmW9epFozWpqRGfQd_P5crsjJmIrRIr0nSQmjBWHyF50SQidjs6nPAOokQNsc7IcmXHXLQ4zwKdNxhYo.w1GHPEfywFdvOdxCpj91vDPj2VT0woD4ADVvfNjHNDM&dib_tag=se&keywords=lego+star+wars+75250&qid=1757328027&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75250%2Caps%2C91&sr=8-1"
+    },
+    {
+        "id_set" : 75251,
+        "nom_anglais" : "Darth Vader's Castle",
+        "nom_français" : "Le Château de Dark Vador",
+        "gamme" : "sw-af",
+        "annee" : 2019,
+        "nb_pieces" : 1060,
+        "tranche_age" : "9+",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75251-Minifigures-Exclusive-Multicolore/dp/B07J2LLQKC/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2KO917HIXJE55&dib=eyJ2IjoiMSJ9.p4nP4vp-9nRuXAYDAPjU50zl33qo_Q06c_0qGsU1BcVd-wU7Aaz2COz6XXMOv2G6_L5Zak1_8TVnVHrzdXyo-m9If6zRahpJRtW-sDChNukH6Jqx5GaBamONug36WrefmJr3bRVBpO7yZeXH9PBR25rCKL3qc_CvwVe07ClP7gn11zeHMASA0FIwPAmTLXBVIR5n_vEt-e3ezC192_jf3nle1OKJEYSWgdBUOJSORjWdQcxinGESI7JSBZ0IGbcWJNbTmGohbvWR6oIQpkJDy0YrO0kNYi5M4h5cnMEXg8U.pRyz50mZXYDE8LBnIsj322pHMPkb5uxCA_9G_KXD4Vg&dib_tag=se&keywords=lego+star+wars+75251&qid=1757328113&sprefix=lego+star+wars+75251%2Caps%2C87&sr=8-2"
+    },
+    {
+        "id_set" : 75253,
+        "nom_anglais" : "Droid Commander",
+        "nom_français" : "Commandant Droïde",
+        "gamme" : "sw",
+        "annee" : 2019,
+        "nb_pieces" : 1177,
+        "tranche_age" : "8+",
+        "lien_amazon" : "https://www.amazon.fr/Lego%C2%AE-75253-CONF_LSW_Jaws-Construction-Multicolore/dp/B07K9FLGCF/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2T3M1RBSIFV2V&dib=eyJ2IjoiMSJ9.moZgXh8moxLq0h-YADpXBYDWWpKCMnD5TQFW4Q621CiU61EdR8AGb5jpa-Clqt7optvhAXYt6MpCuF1XnQkbjz5jAZdwNUsm2bVsMW85Y8YOdhlW6tFwjSVCk_9DRxcozoVwn0sN5nwDWokclqMy0QEhf5qYY8SUXpoxq0Gvy7RPPUCZ7uxe-ORZe4CipaLtybtP-QIGGy--awRTDOMNBR7vfS8ajpOTqRg9euVaz8XTCerVaAu4viZtgfXmGMeHQQ_psin1WLqB9TA3xboN7hYwxbEY9juqZ-o9xaEfUYk.hUFmS6xoDsvpLDcx_li6ndgGrvJhoLFqBZfSGC-yyOI&dib_tag=se&keywords=lego+star+wars+75253&qid=1757328260&sprefix=lego+star+wars+75253%2Caps%2C89&sr=8-1"
+    },
+    {
+        "id_set" : 75254,
+        "nom_anglais" : "AT-ST Raider",
+        "nom_français" : "TR-TT Raider",
+        "gamme" : "sw-as",
+        "annee" : 2019,
+        "nb_pieces" : 540,
+        "tranche_age" : "8+",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-75254-Mandalorian/dp/B07Q2WB3D3/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=15F6GG38AFHAT&dib=eyJ2IjoiMSJ9.bF9hd5cg-D2b8OY1pppqqmdDEueVW9AgSh5BobrUyvJccs0DEAAY1U14R44zL0wd5YG0MSxspCH49zBZss8fZbjF_aT_xhVWpF93zjrOuOs8bWc9IgZ0skzu0IMSGFfECsHMBKuuTWQ8eFHIznzu5DCUiJDc_jF1HQYIl2bqH579wZhma7QYLtGJt6U4NuWwekavs4Psoh5Ze6VGrYiBBUAh_-AB1hTGbK7QI7nSUf5PHbEfiPgjODacMmDh4EdQMuyTs0F9cReUyrM18EkM9ThOmqS8WKcy4pG6GtXRv5A.qdCS1c3NknsCJKb0deiVIwJlfOm7zfIng85klpqf8pw&dib_tag=se&keywords=lego+star+wars+75254&qid=1757328476&sprefix=lego+star+wars+75254%2Caps%2C97&sr=8-1"
+    },
+    {
+        "id_set" : 75255,
+        "nom_anglais" : "Yoda",
+        "nom_français" : "Yoda",
+        "gamme" : "sw-bf",
+        "annee" : 2019,
+        "nb_pieces" : 1771,
+        "tranche_age" : "10+",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75255-Star-Wars-Yoda/dp/B09JWDDVNW/ref=sr_1_2_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=22QU43HJ52RJY&dib=eyJ2IjoiMSJ9.e64pQhNOtmQuMk7E-0YKNYtaroNvmWNNdCNXj59YliS9fw2F24d0A_LBUAQk-8jwAL9884qofKnfxCnCpt-16TmwecYydb6BSIxAcQAi3UDxuK05sp1qEdivF0V1ZEIE5J6cV33azRZnNmHnRZZ6Ynr-NmnSWlfuxSHcEhiVpYJ0a_AOTzaz6FXkk4YpSh2cz-NxKdkd1fyMpaHU2odu_PMCpW7P0VH4tz1P97fCkDd4FevUrcUA9Kdtjdv0iXMKmk7VuCIih2yj5wS2f_7XC9owpVBgGgcH2HxCqibV8Cs.zpX-cMflE2--TQqaLwBHVOByAnNCX0L7bz-Fj9HFTlQ&dib_tag=se&keywords=lego+star+wars+75255&qid=1757328528&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75255%2Caps%2C62&sr=8-2"
+    },
+    {
+        "id_set" : 75256,
+        "nom_anglais" : "Kylo Ren's Shuttle",
+        "nom_français" : "La Navette de Kylo Ren",
+        "gamme" : "sw-post",
+        "annee" : 2019,
+        "nb_pieces" : 1005,
+        "tranche_age" : "10+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO%C2%AE-Conf-CORE11-Ep9-Construction-75256-Multicolore/dp/B07ND9TJF6/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=QL2CCVLBR3KI&dib=eyJ2IjoiMSJ9.5baJ3J4Zdlzx_5PARDQyZE-tFcPYXCOkT-4KfhEAXBzlkIpxXLWz9HMkUXm3gx8LGMiHPaIokA4t3JVXsxC1XyHDJObpgsqWBEroW_BVEt9fjfyhE30in84nXNFsSSX3LrF-ewsnxPT55JeGCL5P2Xbg_VyaM_d93sAqhSkLJld2eVfa8p0gHMR_jSfZrAK7ArcBQMrvVo6LSqhgOChHmTZHQWJEY3tLk_jyeKqwWR8h3F2P-sd3aEkC6fwISz-26tcusDJNOw5IhYMDHaDv1BYwxbEY9juqZ-o9xaEfUYk.hjsoFprEQDCa5y5jOznjTRqTrvHaRDQLM-nepsid6GE&dib_tag=se&keywords=lego+star+wars+75256&qid=1757328655&sprefix=lego+star+wars+75256%2Caps%2C100&sr=8-1"
+    },
+    {
+        "id_set" : 75262,
+        "nom_anglais" : "Imperial Dropship - 20th Anniversary Edition",
+        "nom_français" : "Vaisseau de Transport Impérial - Édition 20ème Anniversaire",
+        "gamme" : "sw-as",
+        "annee" : 2019,
+        "nb_pieces" : 125,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-75262/dp/B07FNMTW4X/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TGR4Z9A40SOS&dib=eyJ2IjoiMSJ9.5Kly3hXqAsK_m1ENC6UF5wH1-6wDli_3mnpHv9RQp77Htnzue_TYlH8W5egKpXJwpeoCSaeaDONs6j0tXaKy55MYP7nMHr3UeAeu8olDOgCQ8BO2uyTcUXDe7cacfrOJjqZGcKj8Qso5IyMZ5T-xJ0iTjByyEJ_G4Tg_Wxxx47naaQEx8y7dshM5Hh1RQoTeyz9EyXqLlH_PHGDuZEzgVhYl9VkBSsgd2GqRTt4lHobtZNZZgPOJaKpvFZLpd4Esv3GXI8Zl-7yHEL5VcJuDCc3SBqKUSijuxNH_LcNTrBA.h04l0QPvGoyoIwj6EQW1d-Y5U3ZTv44cv25KwOKSVaY&dib_tag=se&keywords=lego+star+wars+75262&qid=1757328799&sprefix=lego+star+wars+75262%2Caps%2C100&sr=8-1"
+    },
+    {
+        "id_set" : 75522,
+        "nom_anglais" : "Droid Commander",
+        "nom_français" : "Commandant Droïde",
+        "gamme" : "sw-poly",
+        "annee" : 2019,
+        "nb_pieces" : 62,
+        "tranche_age" : "8+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-75522-Droid-Commander-Polybag/dp/B087P3661X/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=11DOYLHLWW96I&dib=eyJ2IjoiMSJ9.6f2D_PJk5SERpNcyzXE3I3VGYvo-zZn1yeIqx_BM26W9nZpMYYJZhEqSFzup-p546y7skEzTR6OMCPFfCRuBA_3KSPINErgHcpe9OOFUaTzLF3HseviQnRHdhfETMpQpnULvzzHv0jBm-ynBJh6j551TXBYd5-qCi-it5IQZR4mP2lQDxQkCACB-H-ZK8fZjQv_l1fqOHpHaUqp8IFzXpXsyUJi8V2NIsq4YiIgOiKs.fhhrvayYrFTrAlylHFlfEi38bJusgU_-kwwKpIi8Eso&dib_tag=se&keywords=lego+star+wars+75522&qid=1757328894&sprefix=lego+star+wars+75522%2Caps%2C78&sr=8-1"
+    },
+    {
+        "id_set" : 77901,
+        "nom_anglais" : "Sith Trooper Bust",
+        "nom_français" : "Buste de Sith Trooper",
+        "gamme" : "sw-post",
+        "annee" : 2019,
+        "nb_pieces" : 484,
+        "tranche_age" : "9+",
+        "lien_amazon" : ""
+    },
+    {
+        "id_set" : 30380,
+        "nom_anglais" : "Kylo Ren's Shuttle",
+        "nom_français" : "La Navette de Kylo Ren",
+        "gamme" : "sw-poly",
+        "annee" : 2018,
+        "nb_pieces" : 33,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Shuttle-30380/dp/B0793LP27M/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1XMTN9U825WE3&dib=eyJ2IjoiMSJ9.vjVYx6ihcW4izOAhJ_Neh-GncKk87mxYkrGXbrqWFhn2j6OpKCRaTZ1yjLnP2328rHss35SCSOq99co80xsoFbhuBOWNiKbco7HhXur7vXxjsksZ3eUf6vWe1RGefYRZB2edXxlVJmXfgU8G877ooUj3o1Z0j06EdqAdfYkWxq_b0IF25e5hKQMXt3SQV-1G65ErSrGRK3BNGsPOagGojcFFtYoRazPwfO_pQWHEouo5CPfK3Q2o0LOa8TK-Uko29aNOzPIQRXhkf_BCKo24uwAurLdZN-Mo8FJbEYaSS5I.VfxBlGLyf5BBjk5UqF-LS5d4CzgQv2AbimFqs8M4t_4&dib_tag=se&keywords=lego+star+wars+30380&qid=1757335588&sprefix=lego+star+wars+30380%2Caps%2C85&sr=8-1"
+    },
+    {
+        "id_set" : 30381,
+        "nom_anglais" : "Imperial TIE Fighter",
+        "nom_français" : "Chasseur TIE Impérial",
+        "gamme" : "sw-poly",
+        "annee" : 2018,
+        "nb_pieces" : 42,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Imperial-Fighter-Polybag-Bagged/dp/B07D1R2C84/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=UZFNTJF484Y8&dib=eyJ2IjoiMSJ9.2E0AHm3NlzJ1cLJXjccDZZ_UbBsZWsOYpVLiuekmYfRCpcNk06L0QxfQNBfFuH_XZdhFs2rFu5_4wgOQfAYiw99KA_HcNo4B1G2nOqDphQybALwi6rjvQm1iATQ1EjxB9lG-WxzYSWlzT4LAIhqtrsazh7rwdqaTTmCUaQsGZwsoFraDLve4cCHaMa5xzi4D3MABcVHSm20HdcNOXKfU1DgRVP5XP9XATorxjiFnNR8pwUkWo3zyf8GnLHnrzFOlQ6kccWDjpWRn1SUmEC-Ec--pdREx9EXOtKAvs_rjQGw.c0HwIi9LyUfa791JmfKyoq5I83ASOpy7p6regjpQw6k&dib_tag=se&keywords=lego+star+wars+30381&qid=1757335675&sprefix=lego+star+wars+30381%2Caps%2C76&sr=8-1"
+    },
+    {
+        "id_set" : 30498,
+        "nom_anglais" : "Imperial AT-Hauler",
+        "nom_français" : "Transporteur TT Impérial",
+        "gamme" : "sw-as",
+        "annee" : 2018,
+        "nb_pieces" : 49,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/V%C3%A9hicule-at-Hauler-Construction-30498-Multicolore/dp/B07GFPH4QV/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=395DORTXT62AD&dib=eyJ2IjoiMSJ9.TvAsZlLonsNKdrki77VhJI3NNI8TLTvHd1j8KLoIBdFnIK3LqqeEAy-8t5_ViDFN2cpGyyp3QQ76xtwqZEEOc1te758DwweBHKlkWfqFtXwcVr7BgWae9FT1x4S9F43KMIXJc90xHcfGBv4DhyJagaRgxJK00NtqVAw-O79DjbTSEKpL2lEwwtv8VJZFjnr5nG4kQBTGeKZXtn2fhnWRpzFaIVo68NXnkEpTPy2jo807yZuHlGl9gHvmjjm0k1VO_BJPnxE73TB_T6BWLZCJcaJFW2Nx5iPCAWjbZMCT6oE.eUys3NuM35jCEVq0lGRe8FLqKB5PGIMYLUjTFjxZVhM&dib_tag=se&keywords=lego+star+wars+30498&qid=1757335742&sprefix=lego+star+wars+30498%2Caps%2C105&sr=8-2"
+    },
+    {
+        "id_set" : 40288,
+        "nom_anglais" : "BB-8",
+        "nom_français" : "BB-8",
+        "gamme" : "sw-poly",
+        "annee" : 2018,
+        "nb_pieces" : 48,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-40288-LEGO%C2%AE-BB-8TM/dp/B07CKNQMSZ/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1P79138RGU4SZ&dib=eyJ2IjoiMSJ9.ppVzZI9no89ArKVeGNFgAFeb8BhIxGQLchWViMTzq4P2j6OpKCRaTZ1yjLnP2328nK0q1b9TlC8pfIPasQIPSJmH4L4Nxc3KdWDkGIEU0zCVpfOBQyC3XRkapD-LOP8OCy5Fid9WjTZTeMyXWE6HNBx-EVlHbDgHp_6cH-wGz_R0DNEz_YwR8cv0GY9iZ_mG6s4JUrTahpnqBwQJ4AZF_Uc3pXssKCFnMKuY6nWXcg47yZuHlGl9gHvmjjm0k1VOyL7Q6tzhnCdy9poeVV3upHf6mBLtcsWetT3kA-GxxDo.y1rVoHNuuo_uedsKAPdZ3EZA21zf3DnOt42IfKd8e_4&dib_tag=se&keywords=lego+star+wars+40288&qid=1757335827&sprefix=lego+star+wars+40288%2Caps%2C84&sr=8-1"
+    },
+    {
+        "id_set" : 40298,
+        "nom_anglais" : "DJ",
+        "nom_français" : "DJ",
+        "gamme" : "sw-post",
+        "annee" : 2018,
+        "nb_pieces" : 22,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-40298-Star-Wars-Polybag/dp/B078X3VKJR/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2YOWB1J8WE4JM&dib=eyJ2IjoiMSJ9.spkBR7YcPWSMBKhw4YFLR4CU8O3hMhhfzpELT9ft4hEZw7fWBt2z1uvTKiQnJSz6ZdhFs2rFu5_4wgOQfAYiwzBKHpiuA5Ff3Kz9Gh5AmVjcoiRFKxSeVMpcz_fhcgMNEN_G_nQUi5bvJc_cSa6yxa0W5qtErW5l7c5otHg9-3tkfr1u5QASR8yO58D6R2dbyFi4ebBwbhCIA36v1Cn2JXYMcY3yTyteu1XGAJoxq1J9aW7hC42285S_7UyVY3uHhYrL2SVhjwtaeXgi_13egAAurLdZN-Mo8FJbEYaSS5I.EHg8TsdKaYOOJS5VB4RiaDADI_NWsdrfJTp-t4hFw5I&dib_tag=se&keywords=lego+star+wars+40298&qid=1757335877&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+40298%2Caps%2C54&sr=8-1"
+    },
+    {
+        "id_set" : 40299,
+        "nom_anglais" : "Kessel Mine Worker",
+        "nom_français" : "Travailleur des Mines de Kessel",
+        "gamme" : "sw-post",
+        "annee" : 2018,
+        "nb_pieces" : 22,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-40299-Kessel-Worker-polybag/dp/B07DMS6W1K/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1UK1G9YFIG4S1&dib=eyJ2IjoiMSJ9.3HSxfin5VlOGoW268O_wEoCU8O3hMhhfzpELT9ft4hEvcUpefcICitTZwgoClnDnlyR6oUMfGu3GI6BN2sPlRbCiPJJGtB5Fug6f9E2UG3X1A4pXDaLo7kqPmz04BR5RbkwT948MeZDjVrFIS2gCxZnH2TbDhqlOoge15NTEfRkpAvX_ZIfetv9WfYhfjOQox-0lf7DdFxQE-UZdhGDjEl-UvnbhUFfNRcxSTY6RAp-jIB_7b7YrZJ_f2OidVDGfWkmd0mHnKgUTV5f33u0W8--pdREx9EXOtKAvs_rjQGw.mpvKkScrjMOMVcVFb2r0jNd5HfNKFXUWLLlF7qVz0m0&dib_tag=se&keywords=lego+star+wars+40299&qid=1757335977&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+40299%2Caps%2C92&sr=8-1"
+    },
+    {
+        "id_set" : 40300,
+        "nom_anglais" : "Han Solo Mudtrooper",
+        "nom_français" : "Mudtrooper Han Solo",
+        "gamme" : "sw-af",
+        "annee" : 2018,
+        "nb_pieces" : 22,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/Star-Wars-Lego-40300-Mudtrooper/dp/B07DWYYVW7/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=24PYGR2WZ4C0R&dib=eyJ2IjoiMSJ9.-kG5J0PaLKeMFhUTGvk50kopMcejjWSv-jMrwM5TQpOm6dEK7gaSuGGcnI3ou-pK6e2hZkPF2mzAomiiEaJ2cJGefZNsWzDMfasWrrjG4F7msh81i5zZMVIYYo-JExOjZpiq6J7h1_Nh1Kfm10d_H9XAe6bNlfP_uBLGYTXE1-3x7GoUl3RfaQfTdjQltUpiz-NxKdkd1fyMpaHU2odu_GJpjhXLNU5BZALDtuNHiGMWWnwdrWhxqmQQDJWsR0-hTcUKAdm0badUxhF2Fw6ymtpCXkR6TrXjxdtoYL_v_D0.gaHQwThLUGos7pqQ8GPRkB8J3T1W4m-Mz5mqNsY5vXI&dib_tag=se&keywords=lego+star+wars+40300&qid=1757336103&sprefix=lego+star+wars+40300%2Caps%2C95&sr=8-1"
+    },
+    {
+        "id_set" : 75193,
+        "nom_anglais" : "Millennium Falcon Microfighter",
+        "nom_français" : "Microfighter du Faucon Millennium",
+        "gamme" : "sw-mf",
+        "annee" : 2018,
+        "nb_pieces" : 92,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Microfighter-Construction/dp/B075GQ97SC/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=25EXVPDKA75HH&dib=eyJ2IjoiMSJ9.Gr69PuP0BqQPvkNbf62SqEveHU-i4o92RzI_8UktIeQRjP5Xh0MMafMPUcaP1QBla2cx75IxuIJ0gnNFIopPT0jhlD3rKBw_U-UnLfG5O6YDvJPLpi0AnVCMaDun6MMHbAxv2t6oNQuY8iLwaXyllagApFzojX1JUx4pDIrjVUfF1-_2eITcTDEHWSmLckXNMd7MWmZQNffaomdLI9slwlLDS9gVAbYmUT3V5LdhGg7K5lyytSNAb-PtGsdes8ok_AKA8lKtUuVhUBFoQZ88VfsXExjBUUhd9BzyGb6SEZU.o7yL28kZ7OJh2MCwYUd3Q6g95EeA5cE4S4igyuh9BqQ&dib_tag=se&keywords=lego+star+wars+75193&qid=1757336202&sprefix=lego+star+wars+75193%2Caps%2C85&sr=8-1"
+    },
+    {
+        "id_set" : 75194,
+        "nom_anglais" : "First Order TIE Fighter Microfighter",
+        "nom_français" : "Microfighter de Chasseur TIE du Premier Ordre",
+        "gamme" : "sw-mf",
+        "annee" : 2018,
+        "nb_pieces" : 91,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/75194/dp/B075GLZFTD/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=25EXXB0YP5YZ7&dib=eyJ2IjoiMSJ9.nwJtg1z1kUTzPh8LUMUF4ai0_OZLlWO8AukAXfrWdXB6nZlP2LwniGIDapIgHepIJEaWLN6cgi8CM2kfJU-m34658Qp_P-4uxcGbg3sQYAoOQjS6vKohTtHtF4DcktynH4VInksKskcqjTmOyP5v4TTVNcSGA3He4JHOf-4Rjvx6sj-hcuqlfbczc7Lqvw9inu4_9v9UffwbPucnR0N1ZjsIGQOd3mVkdWwxuqJvhD4BUbniXThdWqL256G-AGgKOYwh-8_v8-iF0XCCooRVb9pCXkR6TrXjxdtoYL_v_D0.-eOr3nxSH1hw101wKWD3tw9sNOBuhjZKWBki2oP8yEc&dib_tag=se&keywords=lego+star+wars+75194&qid=1757336279&sprefix=lego+star+wars+75194%2Caps%2C90&sr=8-1"
+    },
+    {
+        "id_set" : 75195,
+        "nom_anglais" : "Ski Speeder vs. First Order Walker Microfighters",
+        "nom_français" : "Microfighters Ski Speeder contre Marcheur du Premier Ordre",
+        "gamme" : "sw-mf",
+        "annee" : 2018,
+        "nb_pieces" : 216,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Microfighter-Construction/dp/B075GQ1V97/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=OXL7QTCVL7LI&dib=eyJ2IjoiMSJ9.Q7wQJcNfGUt2oz_uraw0-4DWWpKCMnD5TQFW4Q621Ci3Mrsin19mZMNvO2njHfFFvTbOChXNZwYRatKXs-LDJrEP5BLM94-WwH3OMwIIHd0OQjS6vKohTtHtF4DcktynsrjqLcg7A2ANC5EFJUJOY8pL8_Y5LQyCgIcCMjRVE0cezI_vot3ytgFl9wO9f4rNZS7XwoS-3OiqE6ijpAqOhqtnJu_cNxeubuisFj5SGwQnIMREUdAOee208NAhMn3DH0HZrQQN3SktI6a-vgPfc4eYf-oNdimSGe8U4ERfgxo.XVyVLM-Tyx02nGm6LPQ2bEFOVaQ7DIJ19ryQlviaPh8&dib_tag=se&keywords=lego+star+wars+75195&qid=1757336382&sprefix=lego+star+wars+75195%2Caps%2C88&sr=8-1"
+    },
+    {
+        "id_set" : 75196,
+        "nom_anglais" : "A-Wing vs. TIE Silencer Microfighters",
+        "nom_français" : "Microfighters A-Wing contre TIE Silencer",
+        "gamme" : "sw-mf",
+        "annee" : 2018,
+        "nb_pieces" : 188,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Microfighter-Wing/dp/B075GR44M6/ref=sr_1_5?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2PFPVQOTSFDRT&dib=eyJ2IjoiMSJ9.LyuhLA1g_7XcHzFXCHDvUIDWWpKCMnD5TQFW4Q621CiENpQ5kzNwPdVoDgClpePZu9oepbWF0NXcsGTeaEvD-W19hPElpovUJgPSjE82vkbCNWON128eg2R1FZAiUcECpxKOyqCm7QlqkZgWSJMrdLDmG3Y-3FuKwfwGMcc15I2Idx0zNl8RAiXvF6FGo9ylVXVUFjcTOhETrev3IDp3rHYMcY3yTyteu1XGAJoxq1LpJ8LgIuFcx_jhYCDcfmrZjFMxeQuDFYYlbjbcOpV0a_1qWGCKQ5OM9U4GulJ0mxo.SyiFBCckVthbW4eWyAuYior5jEmxBr7cBU-nkpC7M5c&dib_tag=se&keywords=lego+star+wars+75196&qid=1757336464&sprefix=lego+star+wars+75196%2Caps%2C88&sr=8-5"
+    },
+    {
+        "id_set" : 75197,
+        "nom_anglais" : "First Order Specialists Battle Pack",
+        "nom_français" : "Pack de Combat des Spécialistes du Premier Ordre",
+        "gamme" : "sw-post",
+        "annee" : 2018,
+        "nb_pieces" : 108,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Experts-Construction/dp/B075GQPB6P/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3T8Y35I74KWX3&dib=eyJ2IjoiMSJ9.i8DJ2_pK1BPR2qz5gqXHmKP646m4SaTWG5zkdIN9fkWiNvyPDt15aUlXOr0nVGO86JRACiInpk7q7A-FLNkXckGa8TzWTrvi7_7NBw_eMB2r7qM9XZcabpPJd8fArHd9lLiGXwjFWjmXM7MlPyZuHAFxpiUOXOmZ5iWOlw3iify6a1I8YBeZSC_nhV1pfSnXvgoRKCtH3b_iCUpSSAE8gvTf_4zDk7iC0QI-aAJJMbRleVsPoUNS2dmxoyiZ53vQiQEtPYkhSGk70mUAD5_XsVLSdDVRQEWdMjFdseQG1JY.ntKvEVDixa5ypP6pft7wCDRmaYESTxfsBVo3LP7xUSQ&dib_tag=se&keywords=lego+star+wars+75197&qid=1757336610&sprefix=lego+star+wars+75197%2Caps%2C100&sr=8-1"
+    },
+    {
+        "id_set" : 75198,
+        "nom_anglais" : "Tatooine Battle Pack",
+        "nom_français" : "Pack de Combat de Tatooine",
+        "gamme" : "sw-to",
+        "annee" : 2018,
+        "nb_pieces" : 97,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Tatooine-Construction/dp/B075GPN87Z/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TMOV8YO0IEGA&dib=eyJ2IjoiMSJ9.CZR5ySvMFq5Jw5S3vqnXSusOwsNATxQydMWJKFC0XwEwQxIRp9BDRPSvPn0Tm2NyAMWdykTSvQyAZLIVfiw4Hm6D9_u3x1JiXBiVVM-5d0KD0cdIY14R3rYjRUNNdrLupxKOyqCm7QlqkZgWSJMrdK9JZeLF7WKYTTsx7PNDfiWKAGAdEzHAYnSJAMzHsPWtKpMfZxpntHfHXJPgkmuSZ3YMcY3yTyteu1XGAJoxq1LWFYQC88A2nO3aM2tqcsTGxzOFDgDqGFfSSFI9TWnDA9owpVBgGgcH2HxCqibV8Cs.IqTK0wjTW2UCtpCtocPnP13j2Sj6IZRriqdQF3RcsCw&dib_tag=se&keywords=lego+star+wars+75198&qid=1757336749&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75198%2Caps%2C96&sr=8-1"
+    },
+    {
+        "id_set" : 75199,
+        "nom_anglais" : "General Grievous Combat Speeder",
+        "nom_français" : "Speeder de Combat du Général Grievous",
+        "gamme" : "sw-cw",
+        "annee" : 2018,
+        "nb_pieces" : 157,
+        "tranche_age" : "7-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Grievous-Construction/dp/B075GR9G8H/ref=sr_1_2_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZIU9I274D6UV&dib=eyJ2IjoiMSJ9.t0s-h01VyDrKnfGzc8Hzlyr7CfCGnoJOi7cmdzgZdC1CpcNk06L0QxfQNBfFuH_Xm8PgwQ42OXjZPWg85ElJDdKaOCT76QiiNFFvC8dLio9PEugVdOw7QqJ92BypMcu2srjqLcg7A2ANC5EFJUJOY7W8Y20VJs3oOnt8q_SfZTMZdHCKiWLtZIcd4bSC6aEDsSOB38BWOw1PnRQ9jPXLjVWVNFxulcg2nRewzeeaZi7s6LlJ1A5esJxQ1ZZJpROKg2A7MXDUyILT3Aras83iAe-pdREx9EXOtKAvs_rjQGw.QfEDX2fiqI10M0Fn_fUxvw295fNG-dnFKAIdyjXHlQE&dib_tag=se&keywords=lego+star+wars+75199&qid=1757336823&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75199%2Caps%2C96&sr=8-2"
+    },
+    {
+        "id_set" : 75200,
+        "nom_anglais" : "Ahch-To Island Training",
+        "nom_français" : "Entrainement sur l'Île Ahch-To",
+        "gamme" : "sw-post",
+        "annee" : 2018,
+        "nb_pieces" : 241,
+        "tranche_age" : "7-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Entra%C3%AEnement-dAhch/dp/B075GJ44GC/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=AKUS9FDQAI70&dib=eyJ2IjoiMSJ9.n1ERImpZC5mcz4IL__UnPRVNWO1iE3WfDzKCt5AJL0nRa7pCS-gr7kglcmXNwJrJT2GS64G8H4mBmNrUjfbVYgMAzthbN_Mj-FlPPICpM2kLq9I8zHwyzYUS1FNto3uwm9mZuIu-wd8I-fAWKQsr_2r_NlPE_J8-AJS3Vuv8Nlg1mXL6S8T9tmocXfn1wP3UKpMfZxpntHfHXJPgkmuSZwB3BKb04gjly0OATRzLA4vpJ8LgIuFcx_jhYCDcfmrZlbMq1vCgai37PMcgXdLF6QD_upT4YE1W7LAjGOgdjrE.5kwUMDISCYNw-b3gn12T7rioTgnx6iiY92g127ezp30&dib_tag=se&keywords=lego+star+wars+75200&qid=1757336934&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75200%2Caps%2C99&sr=8-1"
+    },
+    {
+        "id_set" : 75201,
+        "nom_anglais" : "First Order AT-ST",
+        "nom_français" : "TR-TT du Premier Ordre",
+        "gamme" : "sw-post",
+        "annee" : 2018,
+        "nb_pieces" : 370,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Premier-Construction/dp/B075GHYZ9G/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3B4UVM46ZQDYS&dib=eyJ2IjoiMSJ9.ZFsS7gh9HO8-mkpXBDXtou5Ve4Le0_6aFyOnRtBlFd3Htnzue_TYlH8W5egKpXJweFf95-aTX0M6rTyQ_LTGPlSLk9MfU5SJ4o1v_-x607UH6Jqx5GaBamONug36WrefmJr3bRVBpO7yZeXH9PBR24eERCjaKJx1kkomo54r1QaSIqJrYv8o-qdGIfIcc8SV2bhE-JMMnzosb0QsQysr9OceVchvV0gP08Si9xKw2iMG7vTVPsRIwixKZgiqbzXPlpyy3l96aqVz3QtdvQVSdf1qWGCKQ5OM9U4GulJ0mxo.jrnXS4l58RzXGO7ZasEySubzyep8iIvQ4U55ZQFoqrk&dib_tag=se&keywords=lego+star+wars+75201&qid=1757336987&sprefix=lego+star+wars+75201%2Caps%2C58&sr=8-1"
+    },
+    {
+        "id_set" : 75202,
+        "nom_anglais" : "Defense of Crait",
+        "nom_français" : "Défense de Crait",
+        "gamme" : "sw-post",
+        "annee" : 2018,
+        "nb_pieces" : 746,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-D%C3%A9fense-Construction/dp/B075GJ3YQ6/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=JYCYLPX5W2FD&dib=eyJ2IjoiMSJ9.CwxNfjOxx6HCEvGebGmeQSfZmOvgKC7VW09aKSkTDuFM_MRC2bFpn28ecw-z5fP1vTbOChXNZwYRatKXs-LDJjvRgu_JU7UgvUDlCoZZ_9HFpF-2Phw6sIelZRhXPjia4r-Wi04FbefvrT6Gzaf0wtqTEJngV_KYbo0xYItPYxx9vJN5B5IUmwQ00F2JnC_Fl4IsJESpyxXuekFg6rVzycjn8Ksdm9dKUHESYV2o1YRPHbEfiPgjODacMmDh4EdQt7Vmb3urTZ-k2OAPdIsAAhYwxbEY9juqZ-o9xaEfUYk.TAebNATpW9pu4rZHOFDvsIy-yU0eK2WVL8xOlJ5G7Ts&dib_tag=se&keywords=lego+star+wars+75202&qid=1757337081&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75201%2Caps%2C102&sr=8-1"
+    },
+    {
+        "id_set" : 75204,
+        "nom_anglais" : "Sandspeeder",
+        "nom_français" : "Sandspeeder",
+        "gamme" : "sw-post",
+        "annee" : 2018,
+        "nb_pieces" : 278,
+        "tranche_age" : "7-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75204-Star-Wars-Speeder-Sables/dp/B075GQ97S6/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3JQ6BEPL43590&dib=eyJ2IjoiMSJ9.NBxoFHqJF-agM0z-soKaCoSOMrRBywtRQV9M5of7pBDbpTiSWoe5l-YC3LLchIq92cpGyyp3QQ76xtwqZEEOc0YZv8DfkeCPq3W5KYhBdZKP4evyOXyVSOUJLhdW3LfKQIlIvwrc_4s54OawHlHIhaLkeC_mWO5eK0Ubs5CylwCN7oE2HVBbobtQU0KSa9GFzHb67lApTSuOLSm1CXL_mctLGTywDSbWdLBcc-YQhQliWIBjUbw-pTVnHqu9FOzWzJGGWWA60CrcKck5eM3Q-2UGu_X3oDmRsXpa0s_Auhc.OgOSqsfezOFis1belYTGgbynEp8eACYHw4l1BUsixVs&dib_tag=se&keywords=lego+star+wars+75204&qid=1757337200&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75204%2Caps%2C99&sr=8-1"
+    },
+    {
+        "id_set" : 75205,
+        "nom_anglais" : "Mos Eisley Cantina",
+        "nom_français" : "La Cantina de Mos Eisley",
+        "gamme" : "sw-to",
+        "annee" : 2018,
+        "nb_pieces" : 376,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-UK-75205-Mos-Ensemble-Construction/dp/B078Q6Y5VX/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=HY4WCQ9L0WCY&dib=eyJ2IjoiMSJ9.EuoBbcQHhi883K1Yfe--MHHVzUB7sxLX-twUNGgwXbXwBJkdY5c9Iv2q4e9kN4stmhEs1cUqO-G79H2glxbZmJ4sfIJTe8uL61-Pg4glgJS0582hUxf9pqeTwkzBtlpofhSkEtiZ-1iu33TYnI_NFRSwrXFau9pl_cmkCQKx5AuNCB3pPS4DuNsRDCtQtTLB4vMmJKVAtJv16QjaGHdyZo0Hl-y72oEAvo80CWjO6MoNgl1qUPgxLptif3VZqbbiSINRDsTJaYDdu_Z0djSo-YtLYu24myI6K3pjFa4dvq4.wyHdH60P7Inq8sh-JHHuamCiYoppvS2roGTvVloMw9A&dib_tag=se&keywords=lego+star+wars+75205&qid=1757337283&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75205%2Caps%2C91&sr=8-1"
+    },
+    {
+        "id_set" : 75207,
+        "nom_anglais" : "Imperial Patrol Battle Pack",
+        "nom_français" : "Pack de Combat de la Patrouille Impériale",
+        "gamme" : "sw-as",
+        "annee" : 2018,
+        "nb_pieces" : 99,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Patrouille-Construction/dp/B075GJ44F4/ref=sr_1_3?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2I83PTFF429YJ&dib=eyJ2IjoiMSJ9.GvKv8AXjgZODOubH29XazZD6qaszRtUge6jUDtUfg3HA-8cSdUOvGWwax1NAcXS--7yxoDkGLetMnaK_AjXwYTWqKC6GnDPf2jNo-GK3DR1ILOYfnK4sna4D4myIBedQKSK5M66cq50rpWr2erJicIiXMRgD7VN7-8USyEqqrU8mkjEk5AiAbSu93KzduV0nlrnyv8EuGP7PxSCwFjh68UbiszMNct_Y7KhG_JY2clXjdNPAcT6_bzwv82ImFPLh-8I_SqZhaTzSrV7QojRa7u-pdREx9EXOtKAvs_rjQGw.WbzGLwBDzW5eQrL141g96E8DOR6icfpHnqs9Qwxu8Oo&dib_tag=se&keywords=lego+star+wars+75207&qid=1757337342&sprefix=lego+star+wars+75207%2Caps%2C66&sr=8-3"
+    },
+    {
+        "id_set" : 75208,
+        "nom_anglais" : "Yoda's Hut",
+        "nom_français" : "La Maison de Yoda",
+        "gamme" : "sw-to",
+        "annee" : 2018,
+        "nb_pieces" : 229,
+        "tranche_age" : "7-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Strikes-Buildin/dp/B07894Q9WN/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=26LB0BE3BLQVI&dib=eyJ2IjoiMSJ9.JWu65dx4l9J_THstYBbJtuX21P4O3N5-dfs-TlwcOpM4xj2LIt_p-zeDAgYiBJrtsunoUVU2fBG5SxjBpj8yK9k7k2Ka0NutKh3jvb9W4SS49Abg0CG__EW1mUoDGLRXioYb7UikcziQnwCnkIEkjLd3DgmXTB6xcPlnVAB7VgBU_h90NiHzIBs4vEtp2MgHu2j6vvJavVgSm98WwWj7zli1jJVJhlYF5-X-Ike8heSWmeUz86siFBL3vJY6GAr2zzyz067P7hV75HYJXZfCAqeKH_4JL1KdKbC7O0Jqwgw.vZ0o85VuPQQak_Zni1saDe6EvmxLPH8H3WEaeYBsFWI&dib_tag=se&keywords=lego+star+wars+75208&qid=1757337417&sprefix=lego+star+wars+75208%2Caps%2C89&sr=8-2"
+    },
+    {
+        "id_set" : 75210,
+        "nom_anglais" : "Moloch's Landspeeder",
+        "nom_français" : "Le Landspeeder de Moloch",
+        "gamme" : "sw-af",
+        "annee" : 2018,
+        "nb_pieces" : 464,
+        "tranche_age" : "8-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Landspeeder-Construction/dp/B075GQBNPL/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3LD6OMPZVKTG4&dib=eyJ2IjoiMSJ9.9405MzUesh1xBlRmZxSG1BDEZDZKglYiw7JAGh2-IYFlbCljpMb6_-j0fKAiISWE0My14vtRyiLuBC1_C0y0MicALfPncKGkVYzpKaIFLBlJh0e5cE776vWMqxVIBcwuKSK5M66cq50rpWr2erJicMazh7rwdqaTTmCUaQsGZwsa8WsvNkyjFYWX_x3EIhNBzxdmuT3YfW2OCDsCdm6DB_87Ngx6utWsNLPpKzVNFPxILwBJXB5Q6olM6n2_I7vi5UwSaN4BSx2c9fsrNpAUutpCXkR6TrXjxdtoYL_v_D0.VNgSx6CFCxIFpLVRE57Kf3hMpbE6cNXCRlBnq2MbCLY&dib_tag=se&keywords=lego+star+wars+75210&qid=1757337555&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75210%2Caps%2C119&sr=8-1"
+    },
+    {
+        "id_set" : 75211,
+        "nom_anglais" : "Imperial TIE Fighter",
+        "nom_français" : "Chasseur TIE Impérial",
+        "gamme" : "sw-af",
+        "annee" : 2018,
+        "nb_pieces" : 519,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-imp%C3%A9rial-Construction/dp/B075GQPB6V/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2P8TCSW5PA74V&dib=eyJ2IjoiMSJ9.pMcKVvYv8D0C9OfqJEYZv5AWJl1h36DTTS1YGJDQhDJM_MRC2bFpn28ecw-z5fP1T7J-WCDVc3E8xb6PSRfdm3bFUBVsZ0SC56Pdpo7cweNp3n0QPD8J6FAeVNGVYRmMdhQD2atSgpgOlnuZJn3MszuORvhiD7gxhbbsnbt7tkfJHiobabWwBu93B-RRY8OhwvhkXXQLrHhpKLpUAjPHg-BIM8nCBHGDS7_mM2SPNviIARLSHkqLBXePuTavq-A7zB-CQYwl9LGZLZlI0IVD0thmH8y2JWfIC5d2sYbQuK0.2s7xajcn1JuKV7jNjW5RAVTekITVV4HCZoD2U25EEgw&dib_tag=se&keywords=lego+star+wars+75211&qid=1757337653&sprefix=lego+star+wars+75211%2Caps%2C74&sr=8-2"
+    },
+    {
+        "id_set" : 75212,
+        "nom_anglais" : "Kessel Run Millennium Falcon",
+        "nom_français" : "Le Faucon Millennium lors de la Course de Kessel",
+        "gamme" : "sw-af",
+        "annee" : 2018,
+        "nb_pieces" : 1414,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Millenium-Construction/dp/B075GQ854W/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3PW8XDF7TQYO&dib=eyJ2IjoiMSJ9.lHYuUJqOlBFZ_KhPv5nb-AYNV6LFtyOJmGpQfFydZUOaJOpqqA8YHtgec5b_3yXxTD1bKfo1zLKUhHgA-GUc-_fEkp2G28d1bqV7PE5iYzIJQ2YrFBSirOWxIX3oFaQPDTj_jwsukZ5cCvndE8tojLX-MCaDr8igkh8Bi03SOd-FVm3fg69O8Kpvmyfu4aLQzxdmuT3YfW2OCDsCdm6DB8M37_y9ZeTWjs5YOuA7zk9doPbssHTziT01nYW1yOMDzV35vbaPH9kOYkjxf8cLhBYwxbEY9juqZ-o9xaEfUYk.x_6hfYCGGoR8T0aOlAxfNA0zyhxKHBkBf77AoUtUu04&dib_tag=se&keywords=lego+star+wars+75212&qid=1757337732&sprefix=lego+star+wars+75212%2Caps%2C86&sr=8-1"
+    },
+    {
+        "id_set" : 75214,
+        "nom_anglais" : "Anakin's Jedi Starfighter",
+        "nom_français" : "Le Chasseur Jedi d'Anakin",
+        "gamme" : "sw-cw",
+        "annee" : 2018,
+        "nb_pieces" : 247,
+        "tranche_age" : "7-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Anakins-Starfighter-75214-pi%C3%A8ces/dp/B07C8L3VWL/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=11JEWTMHWUCS9&dib=eyJ2IjoiMSJ9.5qPrDU_iVbK03_hla2fcOajb81wVUfA9QfyzBUFmGyTgCuBkkmwRqg8Ui9MLjnQR7Xb7RvP7tYBmWUdCgQwdHWQV0YZXDvNPYlUKbvDOZtgQf8N64j1S-lJkfRRJg_6BcFc-pqD5kR99obegOJgMzUiv-LhqCXkmMthpppM9qZY4G0kq_Ff_eKAx_k_2shXJj7mJHiiReIfafd4RfhTyzc0BKHVc3nr98urv6ywk1sVBM0puDcBCkaoEvLhXjSaBq2wQ5tX9JlEwgiG_XK870dpCXkR6TrXjxdtoYL_v_D0.KkiXi6J2XW1-cgaKgGYGjHI_wT-cA5Q2zeqZU_17tvY&dib_tag=se&keywords=lego+star+wars+75214&qid=1757337842&sprefix=lego+star+wars+75214%2Caps%2C99&sr=8-2"
+    },
+    {
+        "id_set" : 75215,
+        "nom_anglais" : "Cloud-Rider Swoop Bikes",
+        "nom_français" : "Moto-jets des Chevaucheurs de Nuages",
+        "gamme" : "sw-af",
+        "annee" : 2018,
+        "nb_pieces" : 355,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Cloud-Rider-Construction/dp/B0792MZ1H4/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1OP5AOJCRK826&dib=eyJ2IjoiMSJ9.nlcTe7rHLLB_q-C1dUJwz1aO-isF0V-kjBWgoNBufAOaJOpqqA8YHtgec5b_3yXxZCSCsptGk-pWKUtDRrvhlpMYP7nMHr3UeAeu8olDOgDLtyUn-gwdVTcuYRodSGsjR8avjoI7jklNaubvht8C1r-GK5T0IbI-A7GTf2aJKGmvz20Yt56twUhcF4bXREjJJ95bPmIKvftrFAMYtH3i63iWgVpRQ3XFwABo6PzEP65vZmbX1MxOyWjYYY6fNZEQS5L59a8BxEvOH9jffSy7rlNRC2Fj4FqvlFEAAD4XnaM.A8DCKhRR6dq4rjnYQppJ0Q_u1kIVPt79xtYCXfDjzNo&dib_tag=se&keywords=lego+star+wars+75215&qid=1757337983&sprefix=lego+star+wars+75215%2Caps%2C95&sr=8-1"
+    },
+    {
+        "id_set" : 75216,
+        "nom_anglais" : "Snoke's Throne Room",
+        "nom_français" : "La Salle du Trône de Snoke",
+        "gamme" : "sw-post",
+        "annee" : 2018,
+        "nb_pieces" : 492,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Salle-Construction/dp/B0792QRS4Q/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2N0MSNXPY7ABE&dib=eyJ2IjoiMSJ9.uGnK1J95jjWBHYTcWEY19oYR8penGpla3BgZFui0scNd-wU7Aaz2COz6XXMOv2G6_L5Zak1_8TVnVHrzdXyo-jZc21fzasWTH-tdlKhhTiC2BnRrZggpSY9JnvI-UhtPtTmOF7nN7xSfw3o9i-d4eNqdD_aKtlMVFMJvxNmscCxalnECc7XzJCfYZG0bunBCOIYd58kFrEB9aqZgjEQVnRFTPI7ysD-so_atTvflsQ6BvYbw3c19u8Ppa0Ah81bTjfM8NuiKcuzkCpZvJSYqsVLIo-I7gSPbBRFIV2kDH-s._b-Ms_pvUO5Vau8s2c-aYNZcQHu277nyiAgqPS4UcTk&dib_tag=se&keywords=lego+star+wars+75216&qid=1757338074&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75216%2Caps%2C79&sr=8-1"
+    },
+    {
+        "id_set" : 75217,
+        "nom_anglais" : "Imperial Conveyex Transport",
+        "nom_français" : "Transport Impérial Conveyex",
+        "gamme" : "sw-af",
+        "annee" : 2018,
+        "nb_pieces" : 622,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-75217-Transport/dp/B07C8SR1DS/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AQI62FK3D683&dib=eyJ2IjoiMSJ9.XdG_ZBTmqVzhtxsrcNPLnb8iaEMECpOSV3qGYzeGrmgHsk9eogc5t3aMJoy8O3135Ch4aKbzonwuu9lxFNSbQm9If6zRahpJRtW-sDChNumVpfOBQyC3XRkapD-LOP8OUVAp_nK9erb_Ozg-uhp8IA4FHry01YKnTzhjRJB6D-RTk_agpJbvI_YLqY9ndp9uRLLSa16dveNKQE-kBPuXvA9EH_XCHO6Ypowzz1DcOUgfe9lKKLQoO8-dh9yTVbz0IA2v3sImUBrxl-UM6vlzQBI1787LbzJ17hQhLUkUAT4.qkf_uXQXbVfvYBv0_i_G-uYo_c0Dh2iTJy_x9yxRmYA&dib_tag=se&keywords=lego+star+wars+75217&qid=1757338168&sprefix=lego+star+wars+75217%2Caps%2C88&sr=8-2"
+    },
+    {
+        "id_set" : 75219,
+        "nom_anglais" : "Imperial AT-Hauler",
+        "nom_français" : "Transporteur TT Impérial",
+        "gamme" : "sw-af",
+        "annee" : 2018,
+        "nb_pieces" : 824,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-75219-at-Hauler/dp/B07BMFRXKC/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2VV3O897LTZEC&dib=eyJ2IjoiMSJ9.isES99aVF1kUgk4rJItFlfhC7YlBhhxJrCzfIiTgOIdof-FH08TSWUVFO7NBlqp3mhEs1cUqO-G79H2glxbZmGQdRjND4qoibMQw3nW0J98BV_FZ0r-fauRWwack5EPMzidYP4al8WobpgVingCmucdGlYtQ7EDw-SZ2ZcdkWFXSEKpL2lEwwtv8VJZFjnr5gUGRFXaGQDI1YpqzAmxH3pOhYa4Luy2IZ8TIC65Yps1a5j_dp_5w_eyaaSs4Uwfs2UIJWBRLCx6koEuhbZenIdowpVBgGgcH2HxCqibV8Cs.D9fWwPrxb6HiKNNofj3Tk7_POWT0UqApEHtK9VDKUQA&dib_tag=se&keywords=lego+star+wars+75219&qid=1757338231&sprefix=lego+star+wars+75219%2Caps%2C65&sr=8-2"
+    },
+    {
+        "id_set" : 75230,
+        "nom_anglais" : "Porg",
+        "nom_français" : "Porg",
+        "gamme" : "sw-bf",
+        "annee" : 2018,
+        "nb_pieces" : 811,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-75230-construction/dp/B07B36ZQRB/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1QC4R4R5BXI9M&dib=eyJ2IjoiMSJ9.TgbVC4OUCHLGuYgqmL6rzzEZXoK1WSlrWAlm9FyD_PypVytCKau1-hrgJddzY4iH96ngLURL4qmWeHTeek7uk-iveFo16OcZaBY3nZxasFCfr2JPUksdRs0HCIORG1Q4Z-B2UgrQT0T0e3tzjIOpXUcbnZwrWCym5DVXN9_JkwzzBjLhDfJcXMvek9dIQQi1NM_F4qFedzDKbZZBOPs94-ceVchvV0gP08Si9xKw2iMkDD3_U1z_LBESZCXFhoUVxV_FcUcNnCUdsZtvrbBCxewlaMTjPLgEtifjZs5HyF0._TZkL8-KrzJI0kUyHC3qnvn1A2m_Bl89lQ7zERK7b3I&dib_tag=se&keywords=lego+star+wars+75230&qid=1757338315&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75230%2Caps%2C88&sr=8-1"
+    },
+    {
+        "id_set" : 75512,
+        "nom_anglais" : "Millennium Falcon Cockpit",
+        "nom_français" : "Cockpit du Faucon Millennium",
+        "gamme" : "sw-af",
+        "annee" : 2018,
+        "nb_pieces" : 203,
+        "tranche_age" : "8-14",
+        "lien_amazon" : ""
+    },
+    {
+        "id_set" : 75533,
+        "nom_anglais" : "Boba Fett",
+        "nom_français" : "Boba Fett",
+        "gamme" : "sw-bf",
+        "annee" : 2018,
+        "nb_pieces" : 144,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-75533-Construction/dp/B075H1Q3ZH/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=68ELXK95EHW1&dib=eyJ2IjoiMSJ9.1iSEQm2AO14HfahcX3NBTp9sOXOdMu8Q0NrsEwkT1d9Ewoa9wLYRTLJanclag0KvZtVg5Lql-cR44DoLy-3S93THtZjZGBahzny0sDKijlg4iu3-7SQLjDcqyo6iV1E5e-O2RobHz0FoPjh1MgizyXr-NmnSWlfuxSHcEhiVpYK_I-y7hz6E0ZYRV4yg3EUZc4l8hMgswkKv9At52_lSTJmtM3_4Q6bTrvYXzRpI8jDx08GhXLAgXKPKw2pz6vxjFwuWpq3v5OHK0z07tdg9xx3T8g8UlLeUAUFEUO1ZE1g.adQkufIpjriuDDoozEmhQwPEQo0yIcX8UrNNhf1j1UU&dib_tag=se&keywords=lego+star+wars+75533&qid=1757338479&sprefix=lego+star+wars+75533%2Caps%2C78&sr=8-1"
+    },
+    {
+        "id_set" : 75534,
+        "nom_anglais" : "Darth Vader",
+        "nom_français" : "Dark Vador",
+        "gamme" : "sw-bf",
+        "annee" : 2018,
+        "nb_pieces" : 168,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Vador-Construction/dp/B075GWX144/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1P2BU5U4OS25F&dib=eyJ2IjoiMSJ9.Tl0O7Ky4cox4Yo4otOzUsb8cnKBN9fxas5X3cy9f0gE3vUqKNTDOWVkeNaQAGMdIxDnQ7YNpvkbOleuMgRPhdLFHh-5uXB9jnwa6JzqSS3gPZ65UGo4TT61lNtpKxOzHKwfMsH1IyUtK-pApbS-M1dIXh2N0n3IoQ2Qa1dLF2oHfAg55NI6HCOyYVewlOljlbgWL5yByyyJ17bCydI0cxv1awAmscGX55xRCqWxE4y8.zwerMpU94cjUjKiXqDgPhWd4_HYVg5QSvfy5nVFNLM0&dib_tag=se&keywords=lego+star+wars+75534&qid=1757338555&sprefix=lego+star+wars+75534%2Caps%2C80&sr=8-1"
+    },
+    {
+        "id_set" : 75535,
+        "nom_anglais" : "Han Solo",
+        "nom_français" : "Han Solo",
+        "gamme" : "sw-bf",
+        "annee" : 2018,
+        "nb_pieces" : 101,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-75535-Construction/dp/B075GR1TVS/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2X5UDSQFPTPWA&dib=eyJ2IjoiMSJ9.DDACBBVBDKddkxkuURuTZ9nsFlN8GXYzQtplLkfPKhzgOCLnXIdgPdsIdceP8-9c4flzPhDNql5zJoxpdOVwTyJpfKck7d5lymjLfAgAhmc.4uae7QFtD9vODz5oGKid69mmyz4BuLQpiTZL15Ml-Kg&dib_tag=se&keywords=lego+star+wars+75535&qid=1757338620&sprefix=lego+star+wars+75535%2Caps%2C66&sr=8-1"
+    },
+    {
+        "id_set" : 75536,
+        "nom_anglais" : "Range Trooper",
+        "nom_français" : "Range Trooper",
+        "gamme" : "sw-bf",
+        "annee" : 2018,
+        "nb_pieces" : 101,
+        "tranche_age" : "7-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Trooper-Construction/dp/B075GMFW33/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1ICZMFHDAU3L0&dib=eyJ2IjoiMSJ9.2cnCGzXsVN1pk4Ni0iQxv811UVVr-oGCkPXWqNvw_AdaG9XeE2oX2jZAaaLU3CFSb1T14Mz_mndB-1UQRPB8zFzn5gX_-esRnvDW4S-lxquqvaNbTpyIFs-cIUqA2bEqjqZGcKj8Qso5IyMZ5T-xJ4zKiXX3nBAaAQ78ygiKjF9GFZ9-9u4U6wp4jOzSCmXDKEryj6aU9d3DjD9HoZ3HMNb881JZeyOYm7NqMy9epaFx1coKouAyqf9Hn2lnnovNQ6kccWDjpWRn1SUmEC-Ec1LIo-I7gSPbBRFIV2kDH-s.QtDnHMxUcPDJYmo0ht3kqrFj0ObbmOVrY6clUJM8GQw&dib_tag=se&keywords=lego+star+wars+75536&qid=1757338704&sprefix=lego+star+wars+75536%2Caps%2C93&sr=8-1"
+    },
+    {
+        "id_set" : 75537,
+        "nom_anglais" : "Darth Maul",
+        "nom_français" : "Dark Maul",
+        "gamme" : "sw-bf",
+        "annee" : 2018,
+        "nb_pieces" : 104,
+        "tranche_age" : "8-14",
+        "lien_amazon" : ""
+    },
+    {
+        "id_set" : 30496,
+        "nom_anglais" : "U-Wing Fighter",
+        "nom_français" : "Chasseur U-Wing",
+        "gamme" : "sw-poly",
+        "annee" : 2017,
+        "nb_pieces" : 55,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/LEGO%C2%AE-Lego-30496-U-Wing-Fighter/dp/B01MR827V1/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=27BP0C1H28WSE&dib=eyJ2IjoiMSJ9.FyKsCn5fWeuOVhTW7SopSVHpFsjGUlHM55AeTCQiOwVQ5pwf7k16216vZhSYTrjxWO9Ex8pT0nx4IOCY9xsizEZ2b6ALxXoKhm1gjiSxLmmRt4UwSOw6ACZBfpKbAYH4kzbsO0AV_lEnMsRUqlK8m2IDEzdfgm_NRuBkJFpsNSyVKr-XLA3LTBCry8DXKz2PzxdmuT3YfW2OCDsCdm6DB4m6cfZ9uOq-uTb-Q1QweuPcmEiQ_VgMSIWtHxVYAA1MhYrL2SVhjwtaeXgi_13egHf6mBLtcsWetT3kA-GxxDo.ggyUq1r9qsqpPqLFv7c0Xnq1cgIK0eGcQ6K2lo1lqjM&dib_tag=se&keywords=lego+star+wars+30496&qid=1757409298&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+30496%2Caps%2C95&sr=8-1"
+    },
+    {
+        "id_set" : 30497,
+        "nom_anglais" : "First Order Heavy Assault Walker",
+        "nom_français" : "Marcheur Lourd d'Assaut du Premier Ordre",
+        "gamme" : "sw-poly",
+        "annee" : 2017,
+        "nb_pieces" : 54,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/30497-Polybag-Assault-Cat%C3%A9gorie-fant%C3%B4me/dp/B01MR826CC/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2AGMGUCKIGUYJ&dib=eyJ2IjoiMSJ9.LhFHzrcYugXlEaMHqLXA1h7PDk141NWo_tHcEgi4129Q5pwf7k16216vZhSYTrjxTS1o20QoUhs6NI8Zy0FDWZq_MpuaGNmHJdhv261e2CFe3ZC1b8pMSx5A3YRSB9w7cgocWYzEviIKsRg5FaJw0tEXJX9RvaSZlZZu6gKWjfKN9B4hUBv9el5h3xD8nUeAl65Mu4kvFQYpAGyf8pOOIlyHKX2ICtyrGJB9o1HRmTHtZNZZgPOJaKpvFZLpd4Es2yIruNB_w8Xd2vAGm5PG94eYf-oNdimSGe8U4ERfgxo.tTb0COy7N97NZAkRV9CVHWifCC7ZDR_MiWgGlXBpJfE&dib_tag=se&keywords=lego+star+wars+30497&qid=1757409443&sprefix=lego+star+wars+30497%2Caps%2C80&sr=8-1"
+    },
+    {
+        "id_set" : 30611,
+        "nom_anglais" : "R2-D2",
+        "nom_français" : "R2-D2",
+        "gamme" : "sw-poly",
+        "annee" : 2017,
+        "nb_pieces" : 70,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-30611-LEGO-R2-D2/dp/B0718YYKVQ/ref=sr_1_4?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3UHRUX7CBKCAB&dib=eyJ2IjoiMSJ9.07UGoXQDmFEDk9HoCboIQVPU8G07M_B4NcXuueEPahdJl2GD2hMCoFUZ_K-QTW6ZZdhFs2rFu5_4wgOQfAYiwya2uwBu75PadwrI_fPOfaD0IFgC0BbtYICo8sDPiD-RMIXJc90xHcfGBv4DhyJagVREigu4zxAhL3VvD1qnN35qUBrKO42SWDsRiE_p70IrWW02b43neOgN6XEMsjDNj_oQpWfzkkdvEFu1fFbVBCsaXX5WnplMBK5jmLDJp3usxS7KH1apQEPZZJf0wkjk7QD_upT4YE1W7LAjGOgdjrE.HAN7n2VZefX_71SYijibyUvXcglQ-kEVFSEyZ1BvVFs&dib_tag=se&keywords=lego+star+wars+30611&qid=1757409498&sprefix=lego+star+wars+30611%2Caps%2C55&sr=8-4"
+    },
+    {
+        "id_set" : 40176,
+        "nom_anglais" : "Scarif Stormtrooper",
+        "nom_français" : "Stormtrooper de Scarif",
+        "gamme" : "sw-poly",
+        "annee" : 2017,
+        "nb_pieces" : 25,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/LEGO%C2%AE-Star-WarsTM-Scarif-StormtrooperTM/dp/B0753ZQ81F/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=27G5Z7C6RYAAP&dib=eyJ2IjoiMSJ9.xsXoP5ytQ0nFdUyV9uVm3_KLfUzNx2HPoMmVmGI7idr2j6OpKCRaTZ1yjLnP2328Ym9hMk6gbcXNG_ydjEbG3j-5vH7HKvcW6kWDM8gywiqEX56eHSRdKpGBt76lHWUIIQYDttm1MuhGwMcv2qQRSSz73V3SiRY2tMvt5mZ7Vs_jUJiWM161qJ4GFqmJqH6SD1z9fUn4SCh9TwvK5JL82OMs4iP-kMxTO45Gk-1VrtNzE_YbgQVl6mNHEYKKuEPfQ2x40A2avTZFYD75qLVl_4tLYu24myI6K3pjFa4dvq4.UWAurQ0DVtp0dZFGdwvwWu-hcJ1_UqG6s39d3ast-rE&dib_tag=se&keywords=lego+star+wars+40176&qid=1757409586&sprefix=lego+star+wars+40176%2Caps%2C77&sr=8-1"
+    },
+    {
+        "id_set" : 40268,
+        "nom_anglais" : "R3-M2",
+        "nom_français" : "R3-M2",
+        "gamme" : "sw-poly",
+        "annee" : 2017,
+        "nb_pieces" : 22,
+        "tranche_age" : "6+",
+        "lien_amazon" : "https://www.amazon.fr/Lego-STAR-WARS-Collector-Limit%C3%A9e/dp/B071RXBFGS/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=47NZ7Y86C5F9&dib=eyJ2IjoiMSJ9.GbKoOdb2vR64wMhROK_3WYCU8O3hMhhfzpELT9ft4hF-D5saEXFh8XqcgQoElA9_logk5m0ARJC9q2oBBaVsxGhVZgSjD9tYcniLEGgBy3Je3ZC1b8pMSx5A3YRSB9w7kzbsO0AV_lEnMsRUqlK8m7v9OgXASFFT7gJgLqajbntak5X4cbRiiJe2qpWu10XFccZHKeKuj5S7SNbcRbu0pyFRK9JWS8aikSgRTNgI-Hb8ju6J0-YTjcsqHg5j_0VgzXVRVWv6gYKQ9dao2_D8B9pCXkR6TrXjxdtoYL_v_D0.xtRfGSMkzS2Q-ZzAYkZ-Xr2tIgCI2SUgQ1Dw1EgY294&dib_tag=se&keywords=lego+star+wars+40268&qid=1757409711&sprefix=lego+star+wars+40268%2Caps%2C82&sr=8-1"
+    },
+    {
+        "id_set" : 75160,
+        "nom_anglais" : "U-Wing Microfighter",
+        "nom_français" : "Microfighter U-Wing",
+        "gamme" : "sw-mf",
+        "annee" : 2017,
+        "nb_pieces" : 109,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Microvaisseau-Construction/dp/B01J41KJ5Q/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=Z12F5R45F97Y&dib=eyJ2IjoiMSJ9.r52gI4OuQaMqdBJTBq8frgHrk5algsPseW8JhjEkuwBCpcNk06L0QxfQNBfFuH_Xm8PgwQ42OXjZPWg85ElJDUj5ACJjViFdgl18m2KdbdqkmoaEF9O1Q1sXFIKBC2tJMIXJc90xHcfGBv4DhyJagUj3o1Z0j06EdqAdfYkWxq_WZ-OosFFH5MeoDlLUx8aeiD9HuAD9mspHdIQm4ujbRnkOvl0LdeapvRDzisF9F1E8WMQSpxGjmQ7GdU-ikgUXEZJoHEf_XkqhKIe6XvXWUgbLKctEz8j5GnQCDj6B-5I.6X7adUFY05PkrSTFXzS7fyzU1JHnk0CBduxJjdYd1D0&dib_tag=se&keywords=lego+star+wars+75160&qid=1757409831&sprefix=lego+star+wars+75160%2Caps%2C74&sr=8-1"
+    },
+    {
+        "id_set" : 75161,
+        "nom_anglais" : "TIE Striker Microfighter",
+        "nom_français" : "Microfighter TIE Striker",
+        "gamme" : "sw-mf",
+        "annee" : 2017,
+        "nb_pieces" : 88,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Microvaisseau-Construction/dp/B01J41KJ4M/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=23PGY4Q3FYQSG&dib=eyJ2IjoiMSJ9.0r2tXuK8RgaFnpUWGI4Yl4CU8O3hMhhfzpELT9ft4hHu_vZhsEqqt7FYd1kfvWe1MyGtXdt3m1g5RrsjlQnMNUI465rD6jdMzMgyaXPphCfoHCJ47vq1R6inS2vWsrllcgocWYzEviIKsRg5FaJw0rn1Lk5SljWk3bc41HU2vjh2eyP9Uu5gDbkoT4nlbb8XzxdmuT3YfW2OCDsCdm6DB4tKcu74EVJaz2P1VtOK4Tpf8h97qc_mLOrz1fp1zzbQIfhVQuRneWH-t5phZ6hzW3f6mBLtcsWetT3kA-GxxDo.jJmrOc5Fnm8jMEJMAC9ctRnAOThDNccAs02s9hrehbg&dib_tag=se&keywords=lego+star+wars+75161&qid=1757409892&sprefix=lego+star+wars+75161%2Caps%2C53&sr=8-1"
+    },
+    {
+        "id_set" : 75162,
+        "nom_anglais" : "Y-Wing Microfighter",
+        "nom_français" : "Microfighter Y-Wing",
+        "gamme" : "sw-mf",
+        "annee" : 2017,
+        "nb_pieces" : 90,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75162-Construction-Microvaisseau-Y-Wing/dp/B01J41KIDE/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=21NAK2VVK162A&dib=eyJ2IjoiMSJ9.KUtMW-cOG-AfFxgfgveY1nAMmQKDG-g237KElwq08X3u_vZhsEqqt7FYd1kfvWe1MyGtXdt3m1g5RrsjlQnMNUI465rD6jdMzMgyaXPphCcRy3SsQIwRj_51zOlRYtmKBmyF9IuydTv2oZoMM_bl4l4Yh2vFFtRFICy07o_p-aNTe4NcXLSqDzxgZ02EhyPYP1tc-NXEA7nlYVcKgqwNLBb1kYQRPkjdpivqwfrBleBjvlpILf1ADzQ6ZZp7FpU79LkVOl_Rz-CM3-nxwVKsigD_upT4YE1W7LAjGOgdjrE.JPWMtXf2AxPnpdTBzeInxwPYMhtOVArmGG1qNMaecUg&dib_tag=se&keywords=lego+star+wars+75162&qid=1757409966&sprefix=lego+star+wars+75162%2Caps%2C91&sr=8-1"
+    },
+    {
+        "id_set" : 75163,
+        "nom_anglais" : "Krennic's Imperial Shuttle Microfighter",
+        "nom_français" : "Microfighter de la Navette Impériale de Krennic",
+        "gamme" : "sw-mf",
+        "annee" : 2017,
+        "nb_pieces" : 78,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-SW-75163-F-50075163/dp/B07NF47ZPL/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2E77GYPP8WH7A&dib=eyJ2IjoiMSJ9.MfEh2d1x_qln7m562SjgztQsHX0_yJsAXjCLEfY35BSIg0nUqIpzvfx2xbWns4cRrwG5OxmsyJQt738jpnkuhaJW1sijJ7AuyvVjOrzGTzhoe-9aV4kcvcMiLxsmPaSYonJ2e-IYyvZMazVDrv4RqiIYZSeTmOEU5rMxb_p0vqFkfr1u5QASR8yO58D6R2dbz7BlU_b_jBymCxvoH8AiOLKww0g7iPoi04DkIcuvgzqHcFau4QCr9SsN6zfaSawdIx3GK5byyfMW5l9dtdJYBmLzeFt23qX5TI-_DLmjqZE.muhCuhqU2LlTw9e9pH-huyAiiB7y8U7sUpqxRhwre54&dib_tag=se&keywords=lego+star+wars+75163&qid=1757410025&sprefix=lego+star+wars+75163%2Caps%2C63&sr=8-2"
+    },
+    {
+        "id_set" : 75164,
+        "nom_anglais" : "Rebel Trooper Battle Pack",
+        "nom_français" : "Pack de Combat des Troupes Rebelles",
+        "gamme" : "sw-as",
+        "annee" : 2017,
+        "nb_pieces" : 120,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Rebel-Trooper-Battle-75164/dp/B01N8TPSA4/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=30XYUT53YBO5E&dib=eyJ2IjoiMSJ9.NCP2QPGm9cuNDjkMSipF2kHXIga1xgo1dccIt9qE-_z7fsOJ5SzC70Iph-aaI_l2Rg1fungNMHjyPpOiaEnCT7cYNqpVTQZqQk0Le_BXONVDMRsbtWDvyVzYUtTsvW6UZY38rLBY_55HQmzb7l45CxRN75KuhjXFN_eY7aHVVhuZkByVF6Am0lF-lxx_onIHdc52kne1DVUfyMNAWWCuE4ttbUu4eT0NOr6PhghAlZUL-N0Bd7PkOuWbKaTVNCApR3wNhak64CRq7dm9FX3yanf6mBLtcsWetT3kA-GxxDo.VX9hM6EYZSVLuBqAqlqkZnKtNdKBSdmT4Us1gAwt9QQ&dib_tag=se&keywords=lego+star+wars+75164&qid=1757410198&sprefix=lego+star+wars+75164%2Caps%2C92&sr=8-1"
+    },
+    {
+        "id_set" : 75165,
+        "nom_anglais" : "Imperial Trooper Battle Pack",
+        "nom_français" : "Pack de Combat des Troupes Impériales",
+        "gamme" : "sw-as",
+        "annee" : 2017,
+        "nb_pieces" : 112,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Construction-Combat-Soldats-lempire/dp/B01J41KZFA/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RUV7V3EJQ90V&dib=eyJ2IjoiMSJ9.sw56LP0QzWJCAqisn1SYSoeC4jWkTxk-nz9nv7GyNrBnIK3LqqeEAy-8t5_ViDFNnK0q1b9TlC8pfIPasQIPSCa2uwBu75PadwrI_fPOfaBHcwktRSuytyYn6kFe7nTGmobJK6N_jox0USlQ7pNI7590dzL79z_RXB7sd1XR6atnF-kGKIs_u2fFu5ATUOaimUT6eAVRTvKhtS366E5-uiPUe3wbvU_4xkGka1DdWJ_D2bGX6fIdhzzYxtO38OC7zxQPuh1OYkXEzJ7jhR5O0WUGu_X3oDmRsXpa0s_Auhc.jAyxl5du-yrpSQA4ZntwTqM60sUKVZak0caiEmVUPU8&dib_tag=se&keywords=lego+star+wars+75165&qid=1757410344&sprefix=lego+star+wars+75165%2Caps%2C105&sr=8-1"
+    },
+    {
+        "id_set" : 75166,
+        "nom_anglais" : "First Order Transport Speeder Battle Pack",
+        "nom_français" : "Pack de Combat du Speeder de Transport du Premier Ordre",
+        "gamme" : "sw-post",
+        "annee" : 2017,
+        "nb_pieces" : 117,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Combat-Speeder-Transport-Premier/dp/B06X6GKFM8/ref=sr_1_2_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=SMPVJ0IJO9Q7&dib=eyJ2IjoiMSJ9.Hq9I8notkRNxLgw3cCs-SUd8Ifc3LsJNb2mq7IcRYXHLsJHpKG3YA_JSx4AHa4_at_13EBm_ZPW0w_UlqiYLAlY87nZ_4Hok5BYZa3q2t82h9DrPlJzvtqATDjyi0Xfqhcr_sCKwgMpdRdNlj_pRUkEB7jgLePaKutwlj_o-umWQsz9hFUION_WsG4ZXEHQphG3QUlUwXupdiewfQEul6nMn26odxS4ig6WIPzEvL43BHRbjx9mcb_OBUb3qYabt2EGpv9qViHVEKCji_NpKqqJFW2Nx5iPCAWjbZMCT6oE.U2ulmgicce8oPVHc9xY0ju_6BiXqxUBrx9S9dlvJl5Y&dib_tag=se&keywords=lego+star+wars+75166&qid=1757410402&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75166%2Caps%2C73&sr=8-2"
+    },
+    {
+        "id_set" : 75167,
+        "nom_anglais" : "Bounty Hunter Speeder Bike Battle Pack",
+        "nom_français" : "Pack de Combat de la Moto-Jet des Chasseurs de Primes",
+        "gamme" : "sw-as",
+        "annee" : 2017,
+        "nb_pieces" : 125,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Speeder-Construction/dp/B06X8ZR7DM/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=21AZHSM3HQ2DH&dib=eyJ2IjoiMSJ9.SJUB2Y9nkPAqDjuIFIgciHAMmQKDG-g237KElwq08X2iNvyPDt15aUlXOr0nVGO8IeY7TWDdgdlu6kPjD8br4ya2uwBu75PadwrI_fPOfaDhFAhs5MJ2eEm9KSNU6NtHcHFSE54YySRDxwtNc7cOmTuORvhiD7gxhbbsnbt7tkeADMaG-3E3sJyqPGbzQ2EKMzJJdYl-eKWEdmJEsU3HFWwCOE4XDWH-mh8R8JrR3AeuLv4jN0tNNkF8QkQvTsuq3cGxclhiESkLMbdeYglrf83SBqKUSijuxNH_LcNTrBA.gc6SAtpRcRTcrGZm-ZussG7NNmtsA1io_VPcYAzc7TI&dib_tag=se&keywords=lego+star+wars+75167&qid=1757410554&sprefix=lego+star+wars+75167%2Caps%2C105&sr=8-1"
+    },
+    {
+        "id_set" : 75168,
+        "nom_anglais" : "Yoda's Jedi Starfighter",
+        "nom_français" : "Chasseur Stellaire de Yoda",
+        "gamme" : "sw-cw",
+        "annee" : 2017,
+        "nb_pieces" : 262,
+        "tranche_age" : "8-12",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Starfighter-Construction/dp/B01J41K0HS/ref=sr_1_2_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1IRAJHOSJFS4J&dib=eyJ2IjoiMSJ9._g44ixW4K_cZolQAygSw7HhP0myXEK-IJdcgRbZYF3fu_vZhsEqqt7FYd1kfvWe1m8PgwQ42OXjZPWg85ElJDQ2uBD6qe0m2utVb2C9Ps_KCgk6VHSAuDJsFAtPqxQ9SMpm4xEEro53wSgJO_CLDs0sJNHH20nsZWG0RJJl-jtHrqUN6YCJ9hnL8SgG6XfTrrQ3bYWUdYpc6M1t9j2l6UyBDWsbU-KNLkHfh8kPwo0vjvX45XKaliMNhFGPad8pKjGyfwaZm31EtKxbXySEBkXf6mBLtcsWetT3kA-GxxDo.vaTLaDMjwVGy2KLd2PE1BY-sKz4HdpB-acSvIExCf1c&dib_tag=se&keywords=lego+star+wars+75168&qid=1757410628&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75168%2Caps%2C76&sr=8-2"
+    },
+    {
+        "id_set" : 75170,
+        "nom_anglais" : "The Phantom",
+        "nom_français" : "Le Phantom",
+        "gamme" : "sw-as",
+        "annee" : 2017,
+        "nb_pieces" : 269,
+        "tranche_age" : "7-12",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Phantom-75170/dp/B01N3LZB3R/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1EC8U4C5T7GDP&dib=eyJ2IjoiMSJ9.3kkTH7Akxjx9IgZX2QikxbQbIpeOLrJYqG9Ncb3Cylq5-887HAr0BUnVhtM6yDKDmhEs1cUqO-G79H2glxbZmHMQJtC2sHy17cS86rBO4pn9sf6f8pAlJfQTqDZWZgEOmJr3bRVBpO7yZeXH9PBR213BVEDxguBv54aoWa-zHMO-LKIFEkU89Z6ibE-HxzfwAXLETNveh5HtTHOhD_0G6kun_f-5SqJsw39l4Tt9KiJ8WQxhP0zVM5JRTrwFv4bZSINRDsTJaYDdu_Z0djSo-VLIo-I7gSPbBRFIV2kDH-s.28DX601FhIBHzBbkBPSLD7dzkrbw5-Lic38uFkgxA2g&dib_tag=se&keywords=lego+star+wars+75170&qid=1757410722&sprefix=lego+star+wars+75170%2Caps%2C94&sr=8-1"
+    },
+    {
+        "id_set" : 75171,
+        "nom_anglais" : "Battle on Scarif",
+        "nom_français" : "La Bataille de Scarif",
+        "gamme" : "sw-af",
+        "annee" : 2017,
+        "nb_pieces" : 419,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-75171-Construction-Combat-Scarif/dp/B01J41KIK2/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1VANWB1J2RRV8&dib=eyJ2IjoiMSJ9.JmcSixiAZ8qLYQE2YWz3dXtB7rLxdGJl82JhM1SaMyWx6gYyfK7cgW8ZeGEztZu0PSOXh7nSw7gt8jEXOb3KKt_IEWnxZeDJsPk9jCx-CHI6K3AR5aFHciThtcq_vdGbeyJT4vHhdp9gn6lD1YfBfXZDwqHnxnO_6KhMg5Sttn3YmbeQ6bPZShXsOua6RrWdl4IsJESpyxXuekFg6rVzyXMbhVa1rrGp2-w6IePixnPjdNPAcT6_bzwv82ImFPLhlpuDRE1hnTRMMTr9ok5eXe-pdREx9EXOtKAvs_rjQGw.g_h0uSHkV2yGgem4Mhe1NxwV5_YisCVV3gj1fLhJEhA&dib_tag=se&keywords=lego+star+wars+75171&qid=1757410821&sprefix=lego+star+wars+75171%2Caps%2C90&sr=8-1"
+    },
+    {
+        "id_set" : 75176,
+        "nom_anglais" : "Resistance Transport Pod",
+        "nom_français" : "Module de Transport de la Résistance",
+        "gamme" : "sw-post",
+        "annee" : 2017,
+        "nb_pieces" : 294,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Resistance-Construction/dp/B06VVH641Z/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2H66FF9LCC2O3&dib=eyJ2IjoiMSJ9.cruHiiZk7prRtTgiF-sPh4tvvWBmxvMfwn0_GoXRZXBI8v6XbZZLglEtcpOQOiitX3_PhiBpQuizduBTMoNtyLRy8Nc3UNM_TsPTjDmnZ9oH6Jqx5GaBamONug36WrefmJr3bRVBpO7yZeXH9PBR2zwlHWdd0Yyne3-A21nh4mcY1uIW_eaFqkUXRvECMAe1Md7MWmZQNffaomdLI9slwjm1m_99s_se5fUl29uPED4aXX5WnplMBK5jmLDJp3usXAv-n6T-t1HFas31Lg7KZGBNVK-quc6x4tzuC3TjwAs.RW2YjGydTOpFtfljI8PeM9RVDZO4KBh_N_4drp9ae5o&dib_tag=se&keywords=lego+star+wars+75176&qid=1757410899&sprefix=lego+star+wars+75176%2Caps%2C82&sr=8-1"
+    },
+    {
+        "id_set" : 75177,
+        "nom_anglais" : "First Order Heavy Trooper",
+        "nom_français" : "Troupes Lourdes du Premier Ordre",
+        "gamme" : "sw-post",
+        "annee" : 2017,
+        "nb_pieces" : 554,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Walker-Construction/dp/B06VV73L7S/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3MWHIV4XQ6ZO7&dib=eyJ2IjoiMSJ9.irb9Z6oTuThjAZ1kE9bSsICU8O3hMhhfzpELT9ft4hHu_vZhsEqqt7FYd1kfvWe1ptvhAXYt6MpCuF1XnQkbj7CiPJJGtB5Fug6f9E2UG3V5rubPVdf2Q0vqzlr6NsErBo_zF5Amz82HEIpry7reCun9V2ItzO__DkbZ-8vpdTiN7oE2HVBbobtQU0KSa9GFpBZ5KBM9skcYVQvxMQ6StdsQARNrc3P4G7iFCoCioU6WsMo8gzwKr-BZDJUYlwM73vUoxa0TpYxwO89KDwaMXnf6mBLtcsWetT3kA-GxxDo.eBofQZORnzDckI9mHIWmVYoCQJcdHxVG1eGB_moj-5w&dib_tag=se&keywords=lego+star+wars+75177&qid=1757411010&sprefix=lego+star+wars+75177%2Caps%2C79&sr=8-2"
+    },
+    {
+        "id_set" : 75178,
+        "nom_anglais" : "Jakku Quadjumper",
+        "nom_français" : "Le Quadjumper de Jakku",
+        "gamme" : "sw-post",
+        "annee" : 2017,
+        "nb_pieces" : 457,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Jakku-Quadjumper-75178/dp/B06XR9V1NP/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=GW5HZNS9SKIA&dib=eyJ2IjoiMSJ9.EaNa8P8N-dub8dHC7NNtp0uk_Xgze82asfEVMWEVSsM8l5gDJjfUi-wofF79u7l5T7xrU2QnzfcR41Wn_A2vRLRKvg034N_ZzEZ-vdGdUu7LtyUn-gwdVTcuYRodSGsjPa_JOEfxbaCjp-PFM02cJ41B4W8QcCZnaWBvl3iFGsLOmYSknszf7m5c7Ww0pT3ZMd7MWmZQNffaomdLI9slwthWcAJ-GmeQlSDD7Y7eoH2-TM2Cf6je87KFNi1aUYOnL7rT2VDm1utJesQ6wXcG-mUGu_X3oDmRsXpa0s_Auhc.wCGg3C-oBJ_NKK6skSr8hg1zRgxrmXaHINdYCklJY7o&dib_tag=se&keywords=lego+star+wars+75178&qid=1757411085&sprefix=lego+star+wars+75178%2Caps%2C74&sr=8-1"
+    },
+    {
+        "id_set" : 75179,
+        "nom_anglais" : "Kylo Ren's TIE Fighter",
+        "nom_français" : "Le Chasseur TIE de Kylo Ren",
+        "gamme" : "sw-post",
+        "annee" : 2017,
+        "nb_pieces" : 630,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Fighter-Construction/dp/B06W2KC1QS/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1LS4EVOO0MHDG&dib=eyJ2IjoiMSJ9.GpyJ7uBf1fpTzbHabDGfdxwlBHDRL5N-cWb6-cRgOLqXX3ln8_oUcEZg7tRLksZZAL9884qofKnfxCnCpt-16Yu7zJbsA0IwTrnXQD8XOHac7yF_8MF3PWjOIe20D9IccFc-pqD5kR99obegOJgMzZDlxx3dkb9PISytDQmDPpkF__PyolGk2rH_HVgxZKZ4NfzZj6rc8rkDIZ50g5_Agf19n-G36CYrBNDDberdru1VUTJAsonLixpHHvjw2_haZ_VaXwyh23hIU99CynC_3lLIo-I7gSPbBRFIV2kDH-s.c_Soi4C-_re3gPfURjIQ6MlY5ZgDUEFcrbAtFgIMI1I&dib_tag=se&keywords=lego+star+wars+75179&qid=1757411305&sprefix=lego+star+wars+75179%2Caps%2C90&sr=8-1"
+    },
+    {
+        "id_set" : 75180,
+        "nom_anglais" : "Rathtar Escape",
+        "nom_français" : "L'Évasion des Rathtar",
+        "gamme" : "sw-post",
+        "annee" : 2017,
+        "nb_pieces" : 836,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75180-L%C3%89vasion-des-Rathtar/dp/B06VV6Z43K/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RGNS8N8EBJRU&dib=eyJ2IjoiMSJ9.yE-_DmSZs2dR5zCxG8Iq5nBLBemKt466qXeS_4GRHTjoFSEUrbWQYRuy5t1g_Wct2cpGyyp3QQ76xtwqZEEOc-Q7F4CXYK3YZJE9i6H0vocw_iXxU8JIP8WUvOdwTN_PR1SYtv4HTGelPd6cBI3yNzuORvhiD7gxhbbsnbt7tkcfoJqVt1eeIG6sX2Hpa1zAb3Ay_wB6j-2Iyl0wt-nnaettm1sgiOOF4xtlOR5uWVrFGWl2lEag_QVEgsPgGIPsdcrPGPTObLcQn8rgKnprK_sXExjBUUhd9BzyGb6SEZU.-0Hw5RI2lBiqjdjZinr-pi3Qo-v08MINWbKzBsja9AY&dib_tag=se&keywords=lego+star+wars+75180&qid=1757411425&sprefix=lego+star+wars+75180%2Caps%2C100&sr=8-1"
+    },
+    {
         "id_set" : ,
         "nom_anglais" : "",
         "nom_français" : "",
         "gamme" : "sw",
-        "annee" : 2019,
+        "annee" : 2017,
         "nb_pieces" : ,
         "tranche_age" : "",
         "lien_amazon" : ""
@@ -584,7 +1434,7 @@
         "nom_anglais" : "",
         "nom_français" : "",
         "gamme" : "sw",
-        "annee" : 2019,
+        "annee" : 2017,
         "nb_pieces" : ,
         "tranche_age" : "",
         "lien_amazon" : ""
@@ -594,7 +1444,7 @@
         "nom_anglais" : "",
         "nom_français" : "",
         "gamme" : "sw",
-        "annee" : 2019,
+        "annee" : 2017,
         "nb_pieces" : ,
         "tranche_age" : "",
         "lien_amazon" : ""
@@ -604,7 +1454,7 @@
         "nom_anglais" : "",
         "nom_français" : "",
         "gamme" : "sw",
-        "annee" : 2019,
+        "annee" : 2017,
         "nb_pieces" : ,
         "tranche_age" : "",
         "lien_amazon" : ""
@@ -614,7 +1464,7 @@
         "nom_anglais" : "",
         "nom_français" : "",
         "gamme" : "sw",
-        "annee" : 2019,
+        "annee" : 2017,
         "nb_pieces" : ,
         "tranche_age" : "",
         "lien_amazon" : ""
@@ -624,7 +1474,27 @@
         "nom_anglais" : "",
         "nom_français" : "",
         "gamme" : "sw",
-        "annee" : 2019,
+        "annee" : 2017,
+        "nb_pieces" : ,
+        "tranche_age" : "",
+        "lien_amazon" : ""
+    },
+    {
+        "id_set" : ,
+        "nom_anglais" : "",
+        "nom_français" : "",
+        "gamme" : "sw",
+        "annee" : 2017,
+        "nb_pieces" : ,
+        "tranche_age" : "",
+        "lien_amazon" : ""
+    },
+    {
+        "id_set" : ,
+        "nom_anglais" : "",
+        "nom_français" : "",
+        "gamme" : "sw",
+        "annee" : 2017,
         "nb_pieces" : ,
         "tranche_age" : "",
         "lien_amazon" : ""
