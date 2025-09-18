@@ -1102,7 +1102,7 @@
     {
         "id_set" : 75215,
         "nom_anglais" : "Cloud-Rider Swoop Bikes",
-        "nom_français" : "Moto-jets des Chevaucheurs de Nuages",
+        "nom_français" : "Motojets des Chevaucheurs de Nuages",
         "gamme" : "sw-af",
         "annee" : 2018,
         "nb_pieces" : 355,
@@ -1332,7 +1332,7 @@
     {
         "id_set" : 75167,
         "nom_anglais" : "Bounty Hunter Speeder Bike Battle Pack",
-        "nom_français" : "Pack de Combat de la Moto-Jet des Chasseurs de Primes",
+        "nom_français" : "Pack de Combat de la Motojet des Chasseurs de Primes",
         "gamme" : "sw-as",
         "annee" : 2017,
         "nb_pieces" : 125,
@@ -1560,13 +1560,373 @@
         "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Stormtrooper-Construction/dp/B06X3RZDNH/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1JWO2TV8MTBDG&dib=eyJ2IjoiMSJ9.tCu6f4_tk-vFE_dI1KBZVEVIiHDHFD3QezUl6EEHISXxoVG8bJzGRuxp8aa8ZhEeRAesqn2TFUKIgx6OIifRqLr6eq_1g9wbg3RIntxFx_peje9zPVF849OA7kJCIqVHHsU2r3RDMg4R_xWcHq4U4A.IMbzT_3H3P5vwS56GYe7W1SN7W3QietfWPoLw3cxmVU&dib_tag=se&keywords=lego+star+wars+75531&qid=1757423335&sprefix=lego+star+wars+75531%2Caps%2C66&sr=8-1"
     },
     {
-        "id_set" : ,
-        "nom_anglais" : "",
-        "nom_français" : "",
-        "gamme" : "sw",
-        "annee" : 2017,
-        "nb_pieces" : ,
-        "tranche_age" : "",
+        "id_set" : 30277,
+        "nom_anglais" : "First Order Star Destroyer",
+        "nom_français" : "Destroyeur Stellaire du Premier Ordre",
+        "gamme" : "sw-poly",
+        "annee" : 2016,
+        "nb_pieces" : 56,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/First-Order-Destroyer-Polybag-30277/dp/B01ELEV06I/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1GMUMHR8ZC4UH&dib=eyJ2IjoiMSJ9.dUJsY_Izhxth-qq9878O5Cjt4rTzytKxMxZ9dq_6FDwZw7fWBt2z1uvTKiQnJSz6Q0Q-5_NSZ5gODMaNQkH4gQ0YARO1HsyaFEAYUtbzuB9e3ZC1b8pMSx5A3YRSB9w7da40r5rCBh-5A9xkgaJTu-OVeCVtk_ShRUCOs2PuIA0x5RlJ_W3vMAuJuqHg6-mpv_pXXxYDVExGJXZN0fc8d3SM0IpRifTmbvU93mEq-F13U3vVdgXeDoOizFzPqWuQuwzNuC-gwO5Ny1moOh4L_8_0brQWIkJ5Ri5Iv5VgNSk.KE-oxtqCi9Nqj4THRayszx15oY85e4H5iEU62qUFjW0&dib_tag=se&keywords=lego+star+wars+30277&qid=1758183055&sprefix=lego+star+wars+30277%2Caps%2C63&sr=8-1"
+    },
+    {
+        "id_set" : 30278,
+        "nom_anglais" : "Poe's X-Wing Fighter",
+        "nom_français" : "Chasseur X-Wing de Poe",
+        "gamme" : "sw-poly",
+        "annee" : 2016,
+        "nb_pieces" : 64,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Jeux-construction-X-Wing-Fighter-30278/dp/B01A8X99SM/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2VXO9HSUAXTD0&dib=eyJ2IjoiMSJ9.m6SspUE75mbqKOU2oc_bh5QECoB_pzsz-wl60nQ8hFzu_vZhsEqqt7FYd1kfvWe16aNwgJipYYzsikaNp3pw41kzlzzr6QXTQWedaj0OKuphH46Ng4IxPqW8YgVV3akC9wCrRezxMTsaYfoQjoSY19XZ6x8DDZ6Vxd4Rg6EeuaSY6pZmtb_SpHA3EtsUSiFW_RvX2UhZvJJstv38WTizpcmKN6XWs0FtUtEnNTZtDVXT67lEhgqdeqSTC3XGCBC4lMQSavnMex9GFIAKjjLbKzHSlCT0FSSPTRDKSxnMZe0.i0kbdUIjnC9EjHdG713rvnpvaXYg3cUA2Vi5-8xcRAE&dib_tag=se&keywords=lego+star+wars+30278&qid=1758183117&sprefix=lego+star+wars+30278%2Caps%2C43&sr=8-1"
+    },
+    {
+        "id_set" : 30279,
+        "nom_anglais" : "Kylo Ren's Command Shuttle",
+        "nom_français" : "La Navette de Commandement de Kylo Ren",
+        "gamme" : "sw-poly",
+        "annee" : 2016,
+        "nb_pieces" : 43,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Command-Shuttle-30279-Bagged/dp/B01BPLZ282/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3I4CCVJQRZQ2B&dib=eyJ2IjoiMSJ9.vXCpT6TtsEYYWKx8sa4dgVlqNLjoWqpQZB80NHGik4AZw7fWBt2z1uvTKiQnJSz6LRKkxzoHxm08zTAfyspA9--VWT9QDIi-OCqetbh-zptHTj6h7bhZr1g9oagwZNAco4XnrUlYPnRT7yPFh_6v-8CRXRWSn7GE_GKbxaPvVdBNayPg74EQKZZAlJlm1YnwikungRxNccSN0_HRLqclVAnBCpy6b-Dq8tmk62dYBipvZmbX1MxOyWjYYY6fNZEQFP_FaPjlYxF7qwFShGiIMlzrlRfSOqXeAYQhKxTuXa0.c_7dqbXsk409s73uUALnu1nZamO6BzAmkevSQR09ctE&dib_tag=se&keywords=lego+star+wars+30279&qid=1758183186&sprefix=lego+star+wars+30279%2Caps%2C51&sr=8-1"
+    },
+    {
+        "id_set" : 30602,
+        "nom_anglais" : "First Order Stormtrooper",
+        "nom_français" : "Stormtrooper du Premier Ordre",
+        "gamme" : "sw-poly",
+        "annee" : 2016,
+        "nb_pieces" : 7,
+        "tranche_age" : "6-12",
+        "lien_amazon" : ""
+    },
+    {
+        "id_set" : 75113,
+        "nom_anglais" : "Rey",
+        "nom_français" : "Rey",
+        "gamme" : "sw-bf",
+        "annee" : 2016,
+        "nb_pieces" : 84,
+        "tranche_age" : "7-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Rey-75113/dp/B017B1922M/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=QMNTAKCEVSU5&dib=eyJ2IjoiMSJ9.ccz3fGh4j5YQzfPtAtQtmyug936yLW5dAdYkwypCK3UvqaWxKb1DsTSIQWxKCLyjISd3Awlql_xVS993AEk6ZyqDeu9mOckUm_rR2fvy7DX7h7mW1MiJPUZef-4ERbRHJd7ELINpIARNkTCPTjSaa_rX4jaL0W3T0jeUDLO6UCpbp3vDxmpneLkrzN4EW8Z9e94IFVVexQ5qyCAFjMvz0bNKUsIHi1u3zLpElN3eqBG6GDCcAbQDHWlmul5aBZNHMo-J-7e2WCp-5irWDAILdzcU5krpL2gVz92npBTgv-E.Stf2ekLcJlAwe8L9Ymxz0C60ra6WS4VVodIBbbCzfrk&dib_tag=se&keywords=lego+star+wars+75113&qid=1758183436&sprefix=lego+star+wars+75113%2Caps%2C57&sr=8-2"
+    },
+    {
+        "id_set" : 75114,
+        "nom_anglais" : "First Order Stormtrooper",
+        "nom_français" : "Stormtrooper du Premier Ordre",
+        "gamme" : "sw-bf",
+        "annee" : 2016,
+        "nb_pieces" : 81,
+        "tranche_age" : "7-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-First-Order-Stormtrooper-75114/dp/B017B18XI6/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3RBMLXBH15FLU&dib=eyJ2IjoiMSJ9.i5AryfUgkwxSBV4fQXaM10bzX3DPe2UHGvQs65lfeDA59evqRJn3XyNkrMi5fLtYW-pL0oHWXOYLq1Hho09lgqfwOz-E_b0ZXx2sOP1vQMtyP1CH_UYs7kJJj5Duk1jkhcr_sCKwgMpdRdNlj_pRUqTaAN_sWiT5F9G-P2Aw9nlELeton4mpCih3Bd8YpUyZWqTMG5Lf1x5OEmyMU2-Lu_H_BwaZqeCYWapoPUZ0Pvd9aW7hC42285S_7UyVY3uH6tcusDJNOw5IhYMDHaDv1AD_upT4YE1W7LAjGOgdjrE.U-RjP6-SYRg5mH4S5q6hdhqUo7uKyZGwHKmm6wdJZVQ&dib_tag=se&keywords=lego+star+wars+75114&qid=1758183490&sprefix=lego+star+wars+75114%2Caps%2C54&sr=8-2"
+    },
+    {
+        "id_set" : 75115,
+        "nom_anglais" : "Poe Dameron",
+        "nom_français" : "Poe Dameron",
+        "gamme" : "sw-bf",
+        "annee" : 2016,
+        "nb_pieces" : 102,
+        "tranche_age" : "7-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-75115-Dameron/dp/B012NOET3Y/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=P0CC2HL9DIGY&dib=eyJ2IjoiMSJ9.wPCToyS1klXCGNSE5RtdjwZvWWRuKCDOzPp2S38zjWn7fsOJ5SzC70Iph-aaI_l2KyiW5z4Gt1FV53nRGAIPKJ-q8wwl74oYHFr-VrDsRkxDMRsbtWDvyVzYUtTsvW6Uex0f0bfbEABV_Yi_377NoDEVmlwxh9GsII80MiFE0Vl0a_AOTzaz6FXkk4YpSh2cVNIa6a0awaL_SULjewjzk5Gh9olZnQx1nHnsTEfpKBIkDD3_U1z_LBESZCXFhoUVS4cXUGWVGOX1W9hEdNuknPnP7d0hAkVzTHix-fM-YyE.ct8WD2NZnav7RvKO-CtlXswyNFrrLbjMnCzBJa5QeJs&dib_tag=se&keywords=lego+star+wars+75115&qid=1758183536&sprefix=lego+star+wars+75115%2Caps%2C62&sr=8-1"
+    },
+    {
+        "id_set" : 75116,
+        "nom_anglais" : "Finn",
+        "nom_français" : "Finn",
+        "gamme" : "sw-bf",
+        "annee" : 2016,
+        "nb_pieces" : 98,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75116-Star-Wars-Figurine/dp/B012NOG3H4/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2E1T6HFDJFM3H&dib=eyJ2IjoiMSJ9.GwNMEX_9RTPAxGsb2BUmZXHte52yLNINgLdtGTSR4AfgCuBkkmwRqg8Ui9MLjnQR4T4-vWKIE14t0L1KUWUC5iqqFypsgB_ihLa4wwRIkam3jMpW_DBh3JTg1Hybuto19YDjtOywTGECIpEP61LJeQcgLQ1_s8VW-bw9oD7vcZhKEkqUCHu5DymdRpXvLf3He94IFVVexQ5qyCAFjMvz0Zf3NAoBty08yiUfHPbSHLfLuPXK5QNi9RtJr567pA2cxAF_bvOAAovn4QeAkx13jj1Z8CKl6jVlh7AGDEXuCmU.jkgSVjqDwsIImwqpzxRTXxV1Svb-YIKUgCOHfvxfCxk&dib_tag=se&keywords=lego%2Bstar%2Bwars%2B75116&qid=1758183581&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego%2Bstar%2Bwars%2B75116%2Caps%2C73&sr=8-1&th=1"
+    },
+    {
+        "id_set" : 75117,
+        "nom_anglais" : "Kylo Ren",
+        "nom_français" : "Kylo Ren",
+        "gamme" : "sw-bf",
+        "annee" : 2016,
+        "nb_pieces" : 86,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-75117-Construction/dp/B012NOG0EU/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=VMVFZJZ3Y2F5&dib=eyJ2IjoiMSJ9.bb2os2ZDaUaTc_dCH3rb_i_5J1guywooDZOEitTC8degBAAagWwwUCDAviPANMVD7QCe1-8nB6GWYJMe8BBaCYucJgPwGtkNApTiBatPBtk3Yw2y4sIwfqJAUiG4gdIaWmP0JkEfcvJ3SskERFlOH_rX4jaL0W3T0jeUDLO6UCpbp3vDxmpneLkrzN4EW8Z97UEWTDy3JfNW7hNBpdkAnvdIWjnxEc3oSyVItXF1r2n492FOrHQeEqVa5VL-M79Q9ZtU7XjeFOjEhP2veVN75eiHoU7m7QWlOzTyKgXCZwc.5ASVrzINx-ZleKQVyhavH1boekSfanzlED5LxXYaex4&dib_tag=se&keywords=lego+star+wars+75117&qid=1758183657&sprefix=lego+star+wars+75117%2Caps%2C56&sr=8-1"
+    },
+    {
+        "id_set" : 75118,
+        "nom_anglais" : "Captain Phasma",
+        "nom_français" : "Capitaine Phasma",
+        "gamme" : "sw-bf",
+        "annee" : 2016,
+        "nb_pieces" : 92,
+        "tranche_age" : "7-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75118-Figurine-Capitaine-Phasma/dp/B012NOGHE8/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=YGMDSNW30L4S&dib=eyJ2IjoiMSJ9.TzTqvs_5h5nr8uggMqajm7UQY162bAG0THBz5xC-9REvcUpefcICitTZwgoClnDnHIXl7rdlNdESlAwz3Nggjrixp6RzyXYlOmmqt2qs6IGgzH_IQ4keDs5gB6dxljS0iqAMBuv5RvHEQnQATQTFLYbwqKfYMTNBoMu1fpM1vs0cskOnu6quzH73Y0e7RWjJVUX3t62qmJKKrgbTvkDp_pKeFiGwVS_gQGovJWBY7sU5CPfK3Q2o0LOa8TK-Uko2H0HZrQQN3SktI6a-vgPfc_1qWGCKQ5OM9U4GulJ0mxo.tGATesXRwHk3rLr1MH67iJIkVYzVwhipdbIpe-zrUyA&dib_tag=se&keywords=lego+star+wars+75118&qid=1758183702&sprefix=lego+star+wars+75118%2Caps%2C58&sr=8-1"
+    },
+    {
+        "id_set" : 75119,
+        "nom_anglais" : "Sergeant Jyn Erso",
+        "nom_français" : "Sergent Jyn Erso",
+        "gamme" : "sw-bf",
+        "annee" : 2016,
+        "nb_pieces" : 104,
+        "tranche_age" : "7-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-75119-Sergeant-Constraction-Figure/dp/B01CVGV928/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=15JH6RTZK1DT8&dib=eyJ2IjoiMSJ9.YkUxsEC4ADorRwfVqzjzxm462ntN7h__XZY8ccry8-bxoVG8bJzGRuxp8aa8ZhEeSlLk7eYW5Pa3ZOBIfHMUW2hVZgSjD9tYcniLEGgBy3KF0c93TfsN9suw3tmzAL35sopz3n4CuBDm3qMEMdCYyoq8AuIDNPSg7sU_DhG0YnQnSp4IEtlONxUZV8-LdL_M2MjBb1rcxWSEFQRizMhhMTGuj5Up_UVXJ4xYFvw3jU7kTi1NUeurA-Ok4kbp8BPxIo6YNqB0RYFbQf0lRaJc51NRC2Fj4FqvlFEAAD4XnaM.4WFRVvyawLkGe6z-7gGaig1RbcoxKWRlyX41LckMu9Q&dib_tag=se&keywords=lego+star+wars+75119&qid=1758183762&sprefix=lego+star+wars+75119%2Caps%2C45&sr=8-2"
+    },
+    {
+        "id_set" : 75120,
+        "nom_anglais" : "K-2SO",
+        "nom_français" : "K-2SO",
+        "gamme" : "sw-bf",
+        "annee" : 2016,
+        "nb_pieces" : 169,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-STAR-WARS-K-2SO-75120/dp/B01CVGV914/ref=sr_1_2_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1L9XRVWH1LIVU&dib=eyJ2IjoiMSJ9.jeyKz7z2eZ0Tw-v7tCgI77mIosF1xpTg32rHrYllkGwe0cCfmt5AM3t123bFn7ODa2cx75IxuIJ0gnNFIopPT2VD-5UBlKB2E8HaSdnYmLLjNS-eri4Sp7MvyVTassK27bZP2J1QW9iH9zn3jvyd6rDmG3Y-3FuKwfwGMcc15I0rX0VpZo8zwpTgOkIaVl_2fcJwHXr_1gW0h3kl0ayAEaweoIAeBbmxvOuPd259kOwnIMREUdAOee208NAhMn3DJt3rgIuIqRP-zQP1Sy3SndpCXkR6TrXjxdtoYL_v_D0.LRu9gQeHB3LIbVmXsLhEh6Fy4BoCL50y199Irr1rNQQ&dib_tag=se&keywords=lego+star+wars+75120&qid=1758183870&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75120%2Caps%2C53&sr=8-2"
+    },
+    {
+        "id_set" : 75121,
+        "nom_anglais" : "Imperial Death Trooper",
+        "nom_français" : "Death Trooper Impérial",
+        "gamme" : "sw-bf",
+        "annee" : 2016,
+        "nb_pieces" : 106,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Imperial-Death-Trooper-75121/dp/B01CVGVCNY/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=10GEU4EZM1O55&dib=eyJ2IjoiMSJ9.jeyKz7z2eZ0Tw-v7tCgI7zh9fV95HvMt0SwmbJvD8exd-wU7Aaz2COz6XXMOv2G62eHAuvmmK3bUnGceBwqBJ30rBB57WAUasV_8jjvhp0MgefWXLcGzxFfFW6Kid5m69YDjtOywTGECIpEP61LJeY-pcWzBzKoHvEtY1zi6n2sa8WsvNkyjFYWX_x3EIhNB7bPgpBhJaR4x7NlXyOH2NXSM0IpRifTmbvU93mEq-F0-K742Ufn8cVBsmSisHRMTa9QYoYF2aBPeWvbrVTr0tfnP7d0hAkVzTHix-fM-YyE.6PpWM_Shr1xpJ_UEt2rKA2WODxUSUPNfk0m0BtRGd7A&dib_tag=se&keywords=lego+star+wars+75121&qid=1758183935&sprefix=lego+star+wars+75121%2Caps%2C48&sr=8-2"
+    },
+    {
+        "id_set" : 75125,
+        "nom_anglais" : "Resistance X-Wing Fighter",
+        "nom_français" : "Chasseur X-Wing de la Résistance",
+        "gamme" : "sw-mf",
+        "annee" : 2016,
+        "nb_pieces" : 87,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Resistance-X-Wing-FighterTM-75125/dp/B019IR53CU/ref=sr_1_2_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=RDQZN5AT7JIL&dib=eyJ2IjoiMSJ9.9BAjYdxRSBO4TVlk7p7M1lBlDfYkO0t_FqjTnOWl_o2KkFGdozxcdNmjZNEGhP1pJEaWLN6cgi8CM2kfJU-m3zeYPQWTt2uvY6N1ddZBRyoSCcDZQBnHJYq5nngx9So4kzbsO0AV_lEnMsRUqlK8mzEVmlwxh9GsII80MiFE0Vl0a_AOTzaz6FXkk4YpSh2cDGUBJVkogcnA27t4fT-pl6QOTGIZlOmC4ymCrzwXMNtrRvFTV26FlUmroqfZ4pea-piLswICWqAY0Qce9zE9vNpCXkR6TrXjxdtoYL_v_D0.aUrU3rinwibSTDrzeysz3frnOsEXcf2KX5dZ2rbCFu8&dib_tag=se&keywords=lego+star+wars+75125&qid=1758183990&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75125%2Caps%2C47&sr=8-2"
+    },
+    {
+        "id_set" : 75126,
+        "nom_anglais" : "First Order Snowspeeder",
+        "nom_français" : "Snowspeeder du Premier Ordre",
+        "gamme" : "sw-mf",
+        "annee" : 2016,
+        "nb_pieces" : 91,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75126-Construction-Snowspeeder-Premier/dp/B012NOL37E/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1B6NISRHS9MIY&dib=eyJ2IjoiMSJ9.TzOM4W2J9G-Lm9x4SOnUq96PLexbU_hu_xWEgcu3B-kweyhE4XpNvX5u0pT-5VaBnK0q1b9TlC8pfIPasQIPSEeacTMOLgwIsNUs9EDF8jCTCPKtNSwMDl9yb8_WSQkkJ8dyxXtDUnPYEpHccuIa7Uiv-LhqCXkmMthpppM9qZZCaUImgz3KoTD9RFfBHh6fCD5n72Eoq77OAgm8j7Sf5AfD7li_3S9aCH5QpCWDOB0BUbniXThdWqL256G-AGgKJIAOM0uEUYIL89VkZ1EhoHf6mBLtcsWetT3kA-GxxDo.xH1NH5gLkvTwWczz4g3m4uk9L6cQnpribvdiWBczWWs&dib_tag=se&keywords=lego+star+wars+75126&qid=1758184076&sprefix=lego+star+wars+75126%2Caps%2C64&sr=8-1"
+    },
+    {
+        "id_set" : 75127,
+        "nom_anglais" : "The Ghost",
+        "nom_français" : "Le Ghost",
+        "gamme" : "sw-mf",
+        "annee" : 2016,
+        "nb_pieces" : 104,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-75127-Star-Construction-Ghost/dp/B012NOLIVA/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1VVLLR1G574EK&dib=eyJ2IjoiMSJ9.URFPme6O8M4HDfc2PrrBn5zkJp5dI4AEwxcQ9Edp8rM49frDvR-_6DZ_oQF0RJLJHIXl7rdlNdESlAwz3Nggjl7RD2Bh5CMRuWy_McGO_63rjBiCMZPKPtROe1k-ERtL-ucQ7E1JZdcEFTYQ2syZ6UgqFVLw0gIaWcGp3RmsIrQpLaBv3XGEIvVoXFst6z67NMZ-6k0pjZLinxrs-bck1s2b5kvglx4lwrR8m_Ganw_HC4_vAjf4CM39ifzB2a5qWMELKx3_zcMzWOY4ZsUCptpCXkR6TrXjxdtoYL_v_D0.yCjat8PmoysbVOfl1Sm4vMPFDsDrmBFrybVCQIX_DFA&dib_tag=se&keywords=lego+star+wars+75127&qid=1758184134&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75127%2Caps%2C49&sr=8-1"
+    },
+    {
+        "id_set" : 75128,
+        "nom_anglais" : "TIE Advanced Prototype",
+        "nom_français" : "Prototype TIE Advanced",
+        "gamme" : "sw-mf",
+        "annee" : 2016,
+        "nb_pieces" : 93,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Wars-Microfighters-Prototype/dp/B01AW1R2W0/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3T3LF41FM14SM&dib=eyJ2IjoiMSJ9.YdCH0C-bAN-7dtRc6eGFCcn10b5zqdYGapnMsJ_b24lCpcNk06L0QxfQNBfFuH_X9bPj8YL2duS09r2D2d1KikeacTMOLgwIsNUs9EDF8jBDN_re1OGN22swvN_ckiTkggtob_w1_9oEEgzr08Rz9B2xxGXPA6FxwJItYIObT8C65kPzn5n2aPJaeMPgYvXIpBZ5KBM9skcYVQvxMQ6StTGuj5Up_UVXJ4xYFvw3jU6n44Ma9nhHTHK7muEs_mSkSqKmEnu_Qm5Roi35pzyz2e-pdREx9EXOtKAvs_rjQGw.l9yv-chjlqUp61j6ATLQackWQSRvVUOapRfBRHT4A5I&dib_tag=se&keywords=lego+star+wars+75128&qid=1758184242&sprefix=lego+star+wars+75128%2Caps%2C54&sr=8-2"
+    },
+    {
+        "id_set" : 75129,
+        "nom_anglais" : "Wookie Gunship",
+        "nom_français" : "Cannonière Wookie",
+        "gamme" : "sw-mf",
+        "annee" : 2016,
+        "nb_pieces" : 84,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-WookieeTM-Gunship-75129/dp/B01AW1R2Z2/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1AS0ZAENFBSRE&dib=eyJ2IjoiMSJ9.uUcnI3wHy56edJxvgzT3PWmyekhUaL39-pF-VgkmsJQKOwrSIuBw2g8YRbrrPffZ4T4-vWKIE14t0L1KUWUC5kOXmIlFElUscfSwrWaqASrnCor5gN9vFwloBJpegvDLU4alERluJk7uZEfN8FuO9ex3Ko6fU3P5aA5iWBJ6Ys8au26o-HMi680JC8Vua7_nw_wX0l-8WLm9VZ1Rfdv76vOkfaIW3lJR6gb38BzBWw0-K742Ufn8cVBsmSisHRMTWuwx1TzBAZ-32WvJ_Q0oTT1Z8CKl6jVlh7AGDEXuCmU.MKoLX2Y5RBr2aAAcKABmcRUk6Ymns-fk16Z2g_dKdFc&dib_tag=se&keywords=lego+star+wars+75129&qid=1758184303&sprefix=lego+star+wars+75129%2Caps%2C56&sr=8-1"
+    },
+    {
+        "id_set" : 75130,
+        "nom_anglais" : "AT-DP",
+        "nom_français" : "MD-TT",
+        "gamme" : "sw-mf",
+        "annee" : 2016,
+        "nb_pieces" : 76,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75130-Star-Construction-at-DP/dp/B012NOIT6W/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3N5OLBVV6ZEU5&dib=eyJ2IjoiMSJ9.A_cs_lbGC-GE2JrTEzzEP_oGjNq5OVt8C9qqlph2IItluf0h8jncRiSlgAzBt4ZIT2GS64G8H4mBmNrUjfbVYpsW2SH02yGkZYMnBwCCH6jjzzGcMssGMYSRmGT1oG_dda40r5rCBh-5A9xkgaJTu_cCCljHDwU2TGmuCZtEZpG5a92FSnMXd0li5IUI0CB0DOXiCjeMDudQXsB5yiBgB_12Du6aSW3zDB0_mqioZ64fe9lKKLQoO8-dh9yTVbz0CBUFfdom4de10h--uP_lGOiHoU7m7QWlOzTyKgXCZwc.MFQHLJZQje5usQX5BCLTM8RRTAzabGYwEzMWQ3QTynE&dib_tag=se&keywords=lego+star+wars+75130&qid=1758184417&sprefix=lego+star+wars+75130%2Caps%2C52&sr=8-1"
+    },
+    {
+        "id_set" : 75131,
+        "nom_anglais" : "Resistance Trooper Battle Pack",
+        "nom_français" : "Pack de Combat des Troupes de la Résistance",
+        "gamme" : "sw-post",
+        "annee" : 2016,
+        "nb_pieces" : 112,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75131-Construction-Combat-R%C3%A9sistance/dp/B013GYAQ8W/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=88CNNDWCRWHR&dib=eyJ2IjoiMSJ9.6HVzhqEvtEww1FQDHwqJ4DK_q2HqYGabLP1n09JfNGIOB9plG4Uk9rt3xlJ0_R3g4OuEIKqoeFdWhuIwIrECcwisjf6zqnng71srwVyiXvU6ZoXSplpGoNwS_KFg89zrvK5fYeEeJdsFG6e0adF62Hr-NmnSWlfuxSHcEhiVpYJKEkqUCHu5DymdRpXvLf3HpBZ5KBM9skcYVQvxMQ6StS3Rk6sldZWl0PI6Jk1KgQ6A-xiqF91N7t04EoW-bT2ut1pibX-v8HCd18V_LJTVPtpCXkR6TrXjxdtoYL_v_D0.y-cR_q4xn0dZ_x0nJcAafCawGLFCXVcOs88G0q9AfMg&dib_tag=se&keywords=lego+star+wars+75131&qid=1758184646&sprefix=lego+star+wars+75131%2Caps%2C91&sr=8-1"
+    },
+    {
+        "id_set" : 75132,
+        "nom_anglais" : "First Order Battle Pack",
+        "nom_français" : "Pack de Combat du Premier Ordre",
+        "gamme" : "sw-post",
+        "annee" : 2016,
+        "nb_pieces" : 88,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75132-Construction-Combat-Premier/dp/B013GYAPYM/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3RTK0E89TKBBW&dib=eyJ2IjoiMSJ9.0i1QeBfRFXIP8xIMaJPXv3HGFp8OMuyPdTylS8i2sD6_1_40HClQesZlro6ZifpknK0q1b9TlC8pfIPasQIPSEeacTMOLgwIsNUs9EDF8jDZ3XDIGWsmQMbMtac17ERDBPNzKkmzj8ViK2YKtKjiCoq8AuIDNPSg7sU_DhG0YnSIbjNR7wRyjr7iyfIUf2UPPrNGn_U6cimOe8Dqkv4PB3MkKE4ynkeEjUXZXnmZtMYd_P5crsjJmIrRIr0nSQmjdzTzcprcg9kLVUZpD0SRfWLzeFt23qX5TI-_DLmjqZE.g1jCRf2EINXBhDMvpm9h1o-LNh745riM-a2PxS_2LWU&dib_tag=se&keywords=lego+star+wars+75132&qid=1758184760&sprefix=lego+star+wars+75132%2Caps%2C48&sr=8-1"
+    },
+    {
+        "id_set" : 75133,
+        "nom_anglais" : "Rebel Alliance Battle Pack",
+        "nom_français" : "Pack de Combat de l'Alliance Rebelle",
+        "gamme" : "sw-as",
+        "annee" : 2016,
+        "nb_pieces" : 101,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-Combat-Rebelles/dp/B013GYAQKK/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=PF933RGMH9GB&dib=eyJ2IjoiMSJ9.ViJeQuVx972laQW_Y-l5WfiPkGxvuTarE5dJJsNFZHSy7Ynyn0Spx0bnZPKP8aB6X3_PhiBpQuizduBTMoNtyElOLKvrWqNmhaDTynU9AtlMZQYVY-8CmNpASsecD1bOAysYG0fvr5R3Ho94HpfqXnr-NmnSWlfuxSHcEhiVpYJKEkqUCHu5DymdRpXvLf3Hgp5IpGAICiqjzv-Ct9wlWUxFE-Dhezopuzgx7A8NeQE5CPfK3Q2o0LOa8TK-Uko2yNp2tTZIHwG4F6s15FbC5Hf6mBLtcsWetT3kA-GxxDo.JpoZvNkaMh2OUH5kgq7EWm_nDmf26yJGSo01uw9WDAU&dib_tag=se&keywords=lego+star+wars+75133&qid=1758184938&sprefix=lego+star+wars+75133%2Caps%2C97&sr=8-1"
+    },
+    {
+        "id_set" : 75134,
+        "nom_anglais" : "Galactic Empire Battle Pack",
+        "nom_français" : "Pack de Combat de l'Empire Galactique",
+        "gamme" : "sw-as",
+        "annee" : 2016,
+        "nb_pieces" : 109,
+        "tranche_age" : "6-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-lempire-Galactique/dp/B013GYAQRI/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=N1U6ZKXQHRVT&dib=eyJ2IjoiMSJ9.5ww8F-RyV1HkqzFRvZPfKFlNlKNuR70r-JltIQ4puv5M_MRC2bFpn28ecw-z5fP1vTbOChXNZwYRatKXs-LDJnOcN_JuW5tXNhyEKC5aijSVnx1pemsrVLHafTZsDKJ6tn8VeMgDwOG891STAJELURFnKvdD9Yq-mx8QfJul-NJLk-A7Jj5jDkCKG_cv-CU9b3Ay_wB6j-2Iyl0wt-nnaRcXAKRVRwi-NzS9NpDr-H49YOC-5SpDPmxKLIFNj3mTHZUKJd-dNooP1n4MtHbdL_nP7d0hAkVzTHix-fM-YyE.5iZUPT30QdNNL6ndLyfSWDbkGyq8l6qvTfYCBdZZRps&dib_tag=se&keywords=lego+star+wars+75134&qid=1758185103&sprefix=lego+star+wars+75134%2Caps%2C51&sr=8-1"
+    },
+    {
+        "id_set" : 75139,
+        "nom_anglais" : "Battle on Takodana",
+        "nom_français" : "La Bataille de Takodana",
+        "gamme" : "sw-post",
+        "annee" : 2016,
+        "nb_pieces" : 409,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Star-Battle-Takodana-75139/dp/B017B1BTD2/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=10YUEJHH653Z7&dib=eyJ2IjoiMSJ9.Juhh4FOhG695jXvmYAeLFxiNdhmzWiwoOEMEFMO8VKQLxAVP_U625IBDk0QD2tdbzIZxHhGhjFtGYOGpTYEIBlZWPmw7YtQQSBSNBKqjixtILOYfnK4sna4D4myIBedQW3nckt_oaDhB9L1-Bd5_6916n7tOqKM-pvnfgL-GL_xg_PYx_sRELtMgh6xbCVIbAXLETNveh5HtTHOhD_0G6uttm1sgiOOF4xtlOR5uWVoz9ckyRjzjVd3sR8XLnuNA2AIcZPn9NTwWxSYl50rHiAbLKctEz8j5GnQCDj6B-5I.J2gIFAqkrRrrZ1knxsW7JrW_JeCPnVK7xE0SkxoGI9s&dib_tag=se&keywords=lego+star+wars+75139&qid=1758185188&sprefix=lego+star+wars+75139%2Caps%2C51&sr=8-2"
+    },
+    {
+        "id_set" : 75140,
+        "nom_anglais" : "Resistance Troop Transport",
+        "nom_français" : "Transport de Troupes de la Résistance",
+        "gamme" : "sw-post",
+        "annee" : 2016,
+        "nb_pieces" : 646,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Resistance-Troop-Transporter-75140/dp/B017B1BTXW/ref=sr_1_2_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1VRSJHI1FR0E&dib=eyJ2IjoiMSJ9._pGy5__smhrHw-RJE79yNSr0gKa-hq6INrKGzhAfCJddzbWa4BfOHvVPX7AS-mgxw3KkTNl_8s04rgSXFMzogdE3AfOBtBQDveDT01XRlkTGp6D0fq3m4unUIK2szFosTmOfGxPFkWW4mn8YHbkfnUBCMn18_Qj-zuH3yexLT0U3bDFjI33YzjevkOf3N5ozpBZ5KBM9skcYVQvxMQ6StSW-QQxM-oRwKzjAYDz_EHHxkKAA5V2_a4swpNeqx0Gdt1pibX-v8HCd18V_LJTVPmUGu_X3oDmRsXpa0s_Auhc.SZk8HvNme-yq_7R7TYN09NvW56c0mUdErdWg7hRzly8&dib_tag=se&keywords=lego+star+wars+75140&qid=1758185340&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75140%2Caps%2C68&sr=8-2"
+    },
+    {
+        "id_set" : 75141,
+        "nom_anglais" : "Kanan's Speeder Bike",
+        "nom_français" : "La Motojet de Kanan",
+        "gamme" : "sw-as",
+        "annee" : 2016,
+        "nb_pieces" : 234,
+        "tranche_age" : "7-12",
+        "lien_amazon" : ""
+    },
+    {
+        "id_set" : 75145,
+        "nom_anglais" : "Eclipse Fighter",
+        "nom_français" : "Chasseur Éclipse",
+        "gamme" : "sw-as",
+        "annee" : 2016,
+        "nb_pieces" : 363,
+        "tranche_age" : "8-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75145-Construction-Vaisseau-Eclipse/dp/B01AC1DP6W/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=380L0NSAZLWVS&dib=eyJ2IjoiMSJ9.FWePL-OsleRU28FuRZypDdnlpFFw5f2ufeuHfN8byicvcUpefcICitTZwgoClnDnW-pL0oHWXOYLq1Hho09lgrdfSRPHCA6FKEtZIHIh65RYBUcOhw0mq-i4jdjxu_qhr4_nBlElET5OqHr4QrG9mjuORvhiD7gxhbbsnbt7tkde52up3J6T79Vxcm4t88aNJ95bPmIKvftrFAMYtH3i6zh22jpv0RongFsaskJV2mD7cABpCNhFh0iSNU4Tn8piU12TfBDV_zIJxkf-CLxErc3SBqKUSijuxNH_LcNTrBA.r9-ZizJ2QE4jleU9mEsv8BxOZpVrXRLPTTXHGF4iTPo&dib_tag=se&keywords=lego%2Bstar%2Bwars%2B75145&qid=1758185675&sprefix=lego%2Bstar%2Bwars%2B75145%2Caps%2C78&sr=8-1&th=1"
+    },
+    {
+        "id_set" : 75147,
+        "nom_anglais" : "StarScavenger",
+        "nom_français" : "StarScavenger",
+        "gamme" : "sw-as",
+        "annee" : 2016,
+        "nb_pieces" : 558,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75147-Star-Construction-StarScavenger/dp/B01AC1DQAW/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=SZVAL6B6YFQZ&dib=eyJ2IjoiMSJ9.kRGOm8KOcDlsw9ScX0xO2krNloVyH6PvKdvFyjWSQ49o8CcUjSeQLkHPyoNkhr8T0QgQB3mX8VsBcNgdO18ZrG6D9_u3x1JiXBiVVM-5d0Jg3u_U4m8NLmmz6G-KKggWWyFRSpsXVc_1KMYv22Dp5GstXYPglhxZMYXyNEEvu_hiEVVIwDRGaAAIMmzu0cR9GcC-u_b-tskAqscAfOCCvyU6gMQxFuaV8S7Cu3oh0C6Jz3TtFtQuTBM9QL-OaXR-A-B2SPBDJjG_bZJq4yLACXs3mOWuMLwAki9dW2cSdhE.nne5ARkgkZg0JShxXLVUYiLSvXa33sr4Pl_g8tA8UHs&dib_tag=se&keywords=lego+star+wars+75147&qid=1758185753&sprefix=lego+star+wars+75147%2Caps%2C47&sr=8-1"
+    },
+    {
+        "id_set" : 75148,
+        "nom_anglais" : "Encounter on Jakku",
+        "nom_français" : "Rencontre sur Jakku",
+        "gamme" : "sw-post",
+        "annee" : 2016,
+        "nb_pieces" : 530,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-75148-Construction-Rencontre-Jakku/dp/B01AC1DRGK/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1WZQ8MMHO67LM&dib=eyJ2IjoiMSJ9.muxHDc6YzLx8hlB0vwmtbUlMbis4gpfEjveNHufeJobu_vZhsEqqt7FYd1kfvWe1ptvhAXYt6MpCuF1XnQkbj_OiTsf--RHr_ft8hnaWx5VHrVV0g6BHLj2QGgEFzihtiqAMBuv5RvHEQnQATQTFLRN-tzLT4xI24d8jsLQUKcEjxxaHkTDII_rNRXnXNvaUzxdmuT3YfW2OCDsCdm6DB1acesB00xYcRqvFFWC_mBfTCerVaAu4viZtgfXmGMeHxNC39YIGxqiy30Kb4028G1LSdDVRQEWdMjFdseQG1JY.l37IpRV_oYvZlFFIg2vHsiwTh1X68ZAzfg6-YQEcJ6w&dib_tag=se&keywords=lego+star+wars+75148&qid=1758185868&sprefix=lego+star+wars+75148%2Caps%2C54&sr=8-1"
+    },
+    {
+        "id_set" : 75149,
+        "nom_anglais" : "Resistance X-Wing Fighter",
+        "nom_français" : "Chasseur X-Wing de la Résistance",
+        "gamme" : "sw-post",
+        "annee" : 2016,
+        "nb_pieces" : 740,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Construction-X-Wing-Fighter-R%C3%A9sistance/dp/B01AC1DSOQ/ref=sr_1_1_mod_primary_new?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1FFOJ6ZVK1LPJ&dib=eyJ2IjoiMSJ9.agFWZswQsGNLnUWpC8OooypfEVkqoEOKSQtI48o6iuuiNvyPDt15aUlXOr0nVGO83KI7atIyscfgh8AfwZM6kaXtapFfeiiWgn8UC3h621cgqBXv4zPNqhXp-mm7RGAqEO7_sAETBgga04jIMv72CYfj_JUsrUKl0Aa60m9Mc8d62e0N-HRbuiXmuP9MU4z2MZVPhajTzdZBO68qP3ScMKNo5UxqcXSPGcWLyi_b4FjyetgrCxPW1vmSRoMsGzpyKLHs-JkHGq96hugz5r7a_wD_upT4YE1W7LAjGOgdjrE.T0eqA6wzoglgLqpZ0flm_5iP_gSBXHA_thBioNjsF4M&dib_tag=se&keywords=lego+star+wars+75149&qid=1758185964&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=lego+star+wars+75149%2Caps%2C50&sr=8-1"
+    },
+    {
+        "id_set" : 75152,
+        "nom_anglais" : "Imperial Assault Hovertank",
+        "nom_français" : "Char d'Assaut Impérial",
+        "gamme" : "sw-as",
+        "annee" : 2016,
+        "nb_pieces" : 385,
+        "tranche_age" : "7-12",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Construction-Imperial-Assault-Hovertank/dp/B01CCT2PO0/ref=sr_1_8?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3RGV1ZAXJFBX4&dib=eyJ2IjoiMSJ9.wC-W6BUpvO7SSqmizfs01ua2vaUB4l2CZnav1oFTrKhC8eai8L-K8hhW_Udrh7DkzaQgX8mBGt9-ZsLPRKi8PLAo6V2wlPcXsUQXmdAVHconhq6hZLrk2dNBAdV7mL_C9YDjtOywTGECIpEP61LJeehB6zqmiJCHhCh2R987NuNCSyhH1k4uXNur4hN1bWX6sKggtpqW8Tn8pVKKKIK5BZ-HVR7uADJZgcJP_Qalx4jTCerVaAu4viZtgfXmGMeH-hRnArf2cJbbWjHa_92h-FLSdDVRQEWdMjFdseQG1JY.rO5wG-DENB1SKisPOl6QO4lU8IqqLoZEGW1nmZ4Oon8&dib_tag=se&keywords=lego+star+wars+75152&qid=1758186200&sprefix=lego+star+wars+75152%2Caps%2C81&sr=8-8"
+    },
+    {
+        "id_set" : 75154,
+        "nom_anglais" : "TIE Striker",
+        "nom_français" : "TIE Striker",
+        "gamme" : "sw-as",
+        "annee" : 2016,
+        "nb_pieces" : 543,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75154-Star-Construction-Striker/dp/B01CCT2Q5S/ref=sr_1_8?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1EM8JI3HB7ALM&dib=eyJ2IjoiMSJ9.pTovnHK57vStLqwj9BvFwIy8RsioewP-cGwljMmylNIKOwrSIuBw2g8YRbrrPffZBTZYz2oZuxtERy4dJU3mEVQ0qRdcnpa-dk1pRF7M3oxzZoufPy3zRMmZwItZqqt2vK5fYeEeJdsFG6e0adF62FN0UfR9D63ZxboTfFNh8Y1Ryc-F7yQL8JjTyqEih44BMZVPhajTzdZBO68qP3ScMKNo5UxqcXSPGcWLyi_b4Fj14Ka2jKEpkGuJ4VDdKsWmRvH7IyX_xZa-BXqNgug8ZaeKH_4JL1KdKbC7O0Jqwgw.zvZrryA9-TisHRyGdkb_WjtgsPSRFcipSt2Rkl7NXCs&dib_tag=se&keywords=lego+star+wars+75154&qid=1758186307&sprefix=lego+star+wars+75154%2Caps%2C65&sr=8-8"
+    },
+    {
+        "id_set" : 75155,
+        "nom_anglais" : "Rebel U-Wing Starfighter",
+        "nom_français" : "Chasseur Stellaire U-Wing Rebel",
+        "gamme" : "sw-af",
+        "annee" : 2016,
+        "nb_pieces" : 659,
+        "tranche_age" : "8-14",
+        "lien_amazon" : "https://www.amazon.fr/Count-Rebel-U-Wing-Fighter-Model/dp/B01CVGV9RS/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=YEH3OVBB443L&dib=eyJ2IjoiMSJ9.jN1p0iJhzSKtzq_tL5VNYRwQFAaPeKhr60fDirm4rBWaJOpqqA8YHtgec5b_3yXxvTbOChXNZwYRatKXs-LDJnlLEWpOhQXD2uiKz3MYiwPnCor5gN9vFwloBJpegvDLQIlIvwrc_4s54OawHlHIhbTRWBRzJ9v5USH8k3MomCZOJnXCtG5X0ItFsqA_5Eo4dhRml2o_D0b8JUKO0WZtlZLqkobOcQt6V7AUdgwGs8z8ju6J0-YTjcsqHg5j_0VghltcuaN9XJ5qWpTkDmtOLwD_upT4YE1W7LAjGOgdjrE.QcgrfT3dJsY70FrKrA1F3LfFiGNPoumq24gcWKZA2ec&dib_tag=se&keywords=lego+star+wars+75155&qid=1758186457&sprefix=lego+star+wars+75155%2Caps%2C60&sr=8-2"
+    },
+    {
+        "id_set" : 75156,
+        "nom_anglais" : "Krennic's Imperial Shuttle",
+        "nom_français" : "Navette Impériale de Krennic",
+        "gamme" : "sw-af",
+        "annee" : 2016,
+        "nb_pieces" : 863,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/LEGO-Krennics-Imperial-Shuttle-75156/dp/B01CVGVEBO/ref=sr_1_3?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1LC82IY25E34K&dib=eyJ2IjoiMSJ9.R1FMIiR5L6S2fV0LWpQfieUkkO6kaTrVC6aAtyiF_hlT73nMhDtcoNOHYYbv_DpQ2POPbGtUEgRub_-air71BF_ihbEZ37oI_sVms0vwTvzcpVYLigxJm9ptC9LB5wTJPyTddVmp1MjnluEwSTa2Z_-9Ay5MTPVFhx514C2QF6XK0OaAyTy21odgLCQiROnuKpMfZxpntHfHXJPgkmuSZ6K_GSqBah7FqiPN2OfPUtdCi65pxC4RMHmivZgrxWBynYz_Dnt24gxaZFYi0r2fYO-pdREx9EXOtKAvs_rjQGw.h3-t-gXbhErG1mvlvXZ-M4Qdkl3N-4HLoEm2J1FoiFM&dib_tag=se&keywords=lego+star+wars+75156&qid=1758186514&sprefix=lego+star+wars+75156%2Caps%2C58&sr=8-3"
+    },
+    {
+        "id_set" : 75157,
+        "nom_anglais" : "Captain Rex's AT-TE",
+        "nom_français" : "Le RT-TT du Captaine Rex",
+        "gamme" : "sw-as",
+        "annee" : 2016,
+        "nb_pieces" : 972,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-75157-Construction-LAT-Te-Capitaine/dp/B01AC1DWQ0/ref=sr_1_3?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3L9RTEF2X8YWR&dib=eyJ2IjoiMSJ9.JcUCTNrC9gnj7yamv-E7_NQWHF4EPV7XAILMqLWyfahqsWe8zqFgfaC39H1Lwapx_YkGFgqB7DLOXEv6xEySXVGDs1fD8ei0FHJfNxzBjIr9sf6f8pAlJfQTqDZWZgEOYrciOsrBIV22rL9MSzvT4oeERCjaKJx1kkomo54r1QYwc9fEptaLXWJMY8hsWkwawpZqdCexsIsH2NbIz4Coyji5WD1zFa7UOQiYmN1t4nfqTLH8_EExxpYLV-cIRrmQnlGTPLx_MipA9-HEy---QOwlaMTjPLgEtifjZs5HyF0.d54yHqlutdpSM3wtLy9GpBnoScMzO1bYPuAtZe9zs3w&dib_tag=se&keywords=lego+star+wars+75157&qid=1758186657&sprefix=lego+star+wars+75157%2Caps%2C61&sr=8-3"
+    },
+    {
+        "id_set" : 75158,
+        "nom_anglais" : "Rebel Combat Frigate",
+        "nom_français" : "Frégate de Combat Rebelle",
+        "gamme" : "sw-as",
+        "annee" : 2016,
+        "nb_pieces" : 936,
+        "tranche_age" : "9-14",
+        "lien_amazon" : "https://www.amazon.fr/Lego-Star-Wars-75158-Fr%C3%A9gate/dp/B01D9QOM4G/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2MIX88Y95ZRRJ&dib=eyJ2IjoiMSJ9.I2B88_wRLxsCtWs6lSOoTFGYNOwLvrxseS1hR_fsQwcwfs-_7oMepJA0w-Q92kx9ZsL5Rodh9iGRdtDWCNtX6RE_xMpQRNcPmKzhckPitOs0ZPYG4PQVFPneRqyq-qTXzd-Wsridw_OfhlD3lobKNKksDK9FJWHyDvXsoKyti2atBfHgZRoiRhaCRaw-M60jCeAKpx0UiLzQh1GJjWHC78L517SxUhNrCEJFlVSRgbPrPsZEQSUaNYco7h-zXiOMKuefC-4PRIkrHK0-gy6fd_nP7d0hAkVzTHix-fM-YyE.5tRIjIdC2eSYT828gbeMyN9EvPe0Hg_DnfYF_HMjmdU&dib_tag=se&keywords=lego+star+wars+75158&qid=1758186751&sprefix=lego+star+wars+75158%2Caps%2C43&sr=8-1"
+    },
+    {
+        "id_set" : 75159,
+        "nom_anglais" : "Death Star",
+        "nom_français" : "L'Étoile Noire",
+        "gamme" : "sw-ucs",
+        "annee" : 2016,
+        "nb_pieces" : 4016,
+        "tranche_age" : "14+",
         "lien_amazon" : ""
     },
     {
@@ -1574,57 +1934,7 @@
         "nom_anglais" : "",
         "nom_français" : "",
         "gamme" : "sw",
-        "annee" : 2017,
-        "nb_pieces" : ,
-        "tranche_age" : "",
-        "lien_amazon" : ""
-    },
-    {
-        "id_set" : ,
-        "nom_anglais" : "",
-        "nom_français" : "",
-        "gamme" : "sw",
-        "annee" : 2017,
-        "nb_pieces" : ,
-        "tranche_age" : "",
-        "lien_amazon" : ""
-    },
-    {
-        "id_set" : ,
-        "nom_anglais" : "",
-        "nom_français" : "",
-        "gamme" : "sw",
-        "annee" : 2017,
-        "nb_pieces" : ,
-        "tranche_age" : "",
-        "lien_amazon" : ""
-    },
-    {
-        "id_set" : ,
-        "nom_anglais" : "",
-        "nom_français" : "",
-        "gamme" : "sw",
-        "annee" : 2017,
-        "nb_pieces" : ,
-        "tranche_age" : "",
-        "lien_amazon" : ""
-    },
-    {
-        "id_set" : ,
-        "nom_anglais" : "",
-        "nom_français" : "",
-        "gamme" : "sw",
-        "annee" : 2017,
-        "nb_pieces" : ,
-        "tranche_age" : "",
-        "lien_amazon" : ""
-    },
-    {
-        "id_set" : ,
-        "nom_anglais" : "",
-        "nom_français" : "",
-        "gamme" : "sw",
-        "annee" : 2017,
+        "annee" : 2015,
         "nb_pieces" : ,
         "tranche_age" : "",
         "lien_amazon" : ""
